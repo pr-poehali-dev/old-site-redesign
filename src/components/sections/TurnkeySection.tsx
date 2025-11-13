@@ -305,6 +305,14 @@ export const TurnkeySection = () => {
                           </h4>
                           <p className="text-xs text-muted-foreground pl-6">Да, принимаем клиентов из любых регионов. Для удалённых клиентов можем организовать восстановление деталей с доставкой СДЭК — вы снимаете детали сами.</p>
                         </div>
+                        
+                        <div className="bg-background rounded-lg p-4 border">
+                          <h4 className="font-bold text-sm mb-2 flex items-start gap-2">
+                            <Icon name="MessageCircle" className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                            Как я буду узнавать о ходе работ?
+                          </h4>
+                          <p className="text-xs text-muted-foreground pl-6">Мастер звонит вам по телефону и сообщает о каждом важном этапе: завершение диагностики с финальной стоимостью, начало восстановления, готовность к установке и завершение всех работ. Вы всегда в курсе, на какой стадии находится ваш автомобиль.</p>
+                        </div>
                       </div>
                     </div>
                   </div>
