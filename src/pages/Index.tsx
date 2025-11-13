@@ -6,57 +6,52 @@ import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Icon from '@/components/ui/icon';
 
-interface Product {
+interface Service {
   id: number;
   name: string;
   category: string;
   price: number;
-  inStock: boolean;
-  image: string;
-  unit: string;
+  duration: string;
+  popular: boolean;
+  description: string;
 }
 
-const products: Product[] = [
-  { id: 1, name: 'Цемент М500', category: 'Цемент', price: 350, inStock: true, image: '/placeholder.svg', unit: 'мешок 50кг' },
-  { id: 2, name: 'Песок строительный', category: 'Песок', price: 800, inStock: true, image: '/placeholder.svg', unit: 'м³' },
-  { id: 3, name: 'Щебень гранитный', category: 'Щебень', price: 1200, inStock: true, image: '/placeholder.svg', unit: 'м³' },
-  { id: 4, name: 'Кирпич керамический', category: 'Кирпич', price: 25, inStock: true, image: '/placeholder.svg', unit: 'шт' },
-  { id: 5, name: 'Блок газобетонный', category: 'Блоки', price: 180, inStock: true, image: '/placeholder.svg', unit: 'шт' },
-  { id: 6, name: 'Арматура А500С', category: 'Металл', price: 45000, inStock: true, image: '/placeholder.svg', unit: 'тонна' },
-  { id: 7, name: 'Доска обрезная', category: 'Пиломатериалы', price: 8500, inStock: false, image: '/placeholder.svg', unit: 'м³' },
-  { id: 8, name: 'Утеплитель минеральный', category: 'Утеплители', price: 450, inStock: true, image: '/placeholder.svg', unit: 'упаковка' },
-  { id: 9, name: 'Гипсокартон ГКЛ', category: 'Отделка', price: 320, inStock: true, image: '/placeholder.svg', unit: 'лист' },
-  { id: 10, name: 'Профиль для ГКЛ', category: 'Металл', price: 85, inStock: true, image: '/placeholder.svg', unit: 'шт' },
-  { id: 11, name: 'Шпаклёвка финишная', category: 'Отделка', price: 420, inStock: true, image: '/placeholder.svg', unit: 'мешок 25кг' },
-  { id: 12, name: 'Грунтовка глубокого проникновения', category: 'Отделка', price: 280, inStock: true, image: '/placeholder.svg', unit: '10л' },
+const services: Service[] = [
+  { id: 1, name: 'Восстановление шлицев переднего моста', category: 'Передний мост', price: 15000, duration: '2-3 дня', popular: true, description: 'Полное восстановление изношенных шлицевых соединений' },
+  { id: 2, name: 'Восстановление шлицев заднего моста', category: 'Задний мост', price: 14000, duration: '2-3 дня', popular: true, description: 'Восстановление шлицов полуосей и дифференциала' },
+  { id: 3, name: 'Ремонт раздаточной коробки', category: 'Раздатка', price: 18000, duration: '3-4 дня', popular: false, description: 'Восстановление шлицевых валов раздаточной коробки' },
+  { id: 4, name: 'Восстановление ШРУС', category: 'ШРУС', price: 8000, duration: '1-2 дня', popular: true, description: 'Ремонт внутренних и наружных шарниров' },
+  { id: 5, name: 'Восстановление кардана', category: 'Кардан', price: 12000, duration: '2 дня', popular: false, description: 'Восстановление шлицев карданного вала' },
+  { id: 6, name: 'Ремонт КПП (шлицы первичного вала)', category: 'КПП', price: 16000, duration: '3-4 дня', popular: false, description: 'Восстановление изношенных шлицев первичного вала' },
+  { id: 7, name: 'Балансировка карданного вала', category: 'Кардан', price: 3500, duration: '1 день', popular: true, description: 'Динамическая балансировка после восстановления' },
+  { id: 8, name: 'Диагностика трансмиссии', category: 'Диагностика', price: 1500, duration: '1-2 часа', popular: true, description: 'Проверка состояния всех шлицевых соединений' },
 ];
 
-const categories = ['Все категории', ...Array.from(new Set(products.map(p => p.category)))];
+const categories = ['Все услуги', ...Array.from(new Set(services.map(s => s.category)))];
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('Все категории');
+  const [selectedCategory, setSelectedCategory] = useState('Все услуги');
   const [priceRange, setPriceRange] = useState('all');
-  const [stockFilter, setStockFilter] = useState('all');
-  const [activeSection, setActiveSection] = useState('catalog');
+  const [popularFilter, setPopularFilter] = useState('all');
 
-  const filteredProducts = useMemo(() => {
-    return products.filter(product => {
-      const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'Все категории' || product.category === selectedCategory;
-      const matchesStock = stockFilter === 'all' || (stockFilter === 'in-stock' && product.inStock) || (stockFilter === 'out-of-stock' && !product.inStock);
+  const filteredServices = useMemo(() => {
+    return services.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                           service.description.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesCategory = selectedCategory === 'Все услуги' || service.category === selectedCategory;
+      const matchesPopular = popularFilter === 'all' || (popularFilter === 'popular' && service.popular);
       
       let matchesPrice = true;
-      if (priceRange === 'low') matchesPrice = product.price < 500;
-      else if (priceRange === 'medium') matchesPrice = product.price >= 500 && product.price < 5000;
-      else if (priceRange === 'high') matchesPrice = product.price >= 5000;
+      if (priceRange === 'low') matchesPrice = service.price < 5000;
+      else if (priceRange === 'medium') matchesPrice = service.price >= 5000 && service.price < 15000;
+      else if (priceRange === 'high') matchesPrice = service.price >= 15000;
 
-      return matchesSearch && matchesCategory && matchesStock && matchesPrice;
+      return matchesSearch && matchesCategory && matchesPopular && matchesPrice;
     });
-  }, [searchQuery, selectedCategory, priceRange, stockFilter]);
+  }, [searchQuery, selectedCategory, priceRange, popularFilter]);
 
   const scrollToSection = (section: string) => {
-    setActiveSection(section);
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -68,14 +63,14 @@ const Index = () => {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Icon name="Building2" className="h-8 w-8 text-primary" />
+            <Icon name="Wrench" className="h-8 w-8 text-primary" />
             <span className="text-xl font-bold text-secondary">МегаШлиц</span>
           </div>
           
           <nav className="hidden md:flex items-center gap-6">
             <button onClick={() => scrollToSection('hero')} className="text-sm font-medium hover:text-primary transition-colors">Главная</button>
             <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary transition-colors">О компании</button>
-            <button onClick={() => scrollToSection('catalog')} className="text-sm font-medium hover:text-primary transition-colors">Каталог</button>
+            <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
             <button onClick={() => scrollToSection('portfolio')} className="text-sm font-medium hover:text-primary transition-colors">Портфолио</button>
             <button onClick={() => scrollToSection('faq')} className="text-sm font-medium hover:text-primary transition-colors">Вопросы</button>
             <button onClick={() => scrollToSection('contacts')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
@@ -92,18 +87,18 @@ const Index = () => {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              Строительные материалы для профессионалов
+              Восстановление шлицевых соединений
             </h1>
             <p className="text-xl text-muted-foreground">
-              Полный ассортимент качественных материалов с доставкой по всему региону
+              Профессиональный ремонт трансмиссии полноприводных автомобилей в Москве
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" onClick={() => scrollToSection('catalog')}>
-                Перейти в каталог
+              <Button size="lg" onClick={() => scrollToSection('services')}>
+                Наши услуги
                 <Icon name="ArrowRight" className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" onClick={() => scrollToSection('contacts')}>
-                Получить консультацию
+                Записаться на ремонт
               </Button>
             </div>
           </div>
@@ -115,38 +110,38 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
             <p className="text-lg text-muted-foreground">
-              МегаШлиц — ведущий поставщик строительных материалов с 2005 года. 
-              Мы работаем с крупными застройщиками и частными заказчиками, 
-              обеспечивая стабильные поставки качественной продукции.
+              МегаШлиц — специализированный автосервис по восстановлению шлицевых соединений. 
+              Работаем с полноприводными автомобилями всех марок. Используем современное оборудование 
+              и оригинальные технологии восстановления.
             </p>
             <div className="grid md:grid-cols-3 gap-8 pt-8">
               <div className="space-y-2">
                 <Icon name="Award" className="h-12 w-12 mx-auto text-primary" />
-                <h3 className="text-2xl font-bold">18 лет</h3>
-                <p className="text-muted-foreground">на рынке</p>
+                <h3 className="text-2xl font-bold">12 лет</h3>
+                <p className="text-muted-foreground">опыта работы</p>
               </div>
               <div className="space-y-2">
-                <Icon name="Users" className="h-12 w-12 mx-auto text-primary" />
-                <h3 className="text-2xl font-bold">2000+</h3>
-                <p className="text-muted-foreground">довольных клиентов</p>
+                <Icon name="Car" className="h-12 w-12 mx-auto text-primary" />
+                <h3 className="text-2xl font-bold">3500+</h3>
+                <p className="text-muted-foreground">отремонтированных авто</p>
               </div>
               <div className="space-y-2">
-                <Icon name="Package" className="h-12 w-12 mx-auto text-primary" />
-                <h3 className="text-2xl font-bold">5000+</h3>
-                <p className="text-muted-foreground">наименований товаров</p>
+                <Icon name="Shield" className="h-12 w-12 mx-auto text-primary" />
+                <h3 className="text-2xl font-bold">Гарантия</h3>
+                <p className="text-muted-foreground">до 24 месяцев</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="catalog" className="py-20 border-t bg-muted/30">
+      <section id="services" className="py-20 border-t bg-muted/30">
         <div className="container">
           <div className="space-y-8">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">Каталог товаров</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Наши услуги</h2>
               <p className="text-lg text-muted-foreground">
-                Найдите всё необходимое для вашего строительства
+                Полный спектр работ по восстановлению трансмиссии
               </p>
             </div>
 
@@ -155,7 +150,7 @@ const Index = () => {
                 <div className="relative">
                   <Icon name="Search" className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
                   <Input
-                    placeholder="Поиск по названию..."
+                    placeholder="Поиск услуги..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="pl-10"
@@ -180,20 +175,19 @@ const Index = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Любая цена</SelectItem>
-                  <SelectItem value="low">До 500 ₽</SelectItem>
-                  <SelectItem value="medium">500 - 5000 ₽</SelectItem>
-                  <SelectItem value="high">Более 5000 ₽</SelectItem>
+                  <SelectItem value="low">До 5 000 ₽</SelectItem>
+                  <SelectItem value="medium">5 000 - 15 000 ₽</SelectItem>
+                  <SelectItem value="high">Более 15 000 ₽</SelectItem>
                 </SelectContent>
               </Select>
 
-              <Select value={stockFilter} onValueChange={setStockFilter}>
+              <Select value={popularFilter} onValueChange={setPopularFilter}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Наличие" />
+                  <SelectValue placeholder="Популярность" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">Все товары</SelectItem>
-                  <SelectItem value="in-stock">В наличии</SelectItem>
-                  <SelectItem value="out-of-stock">Под заказ</SelectItem>
+                  <SelectItem value="all">Все услуги</SelectItem>
+                  <SelectItem value="popular">Популярные</SelectItem>
                 </SelectContent>
               </Select>
 
@@ -201,9 +195,9 @@ const Index = () => {
                 variant="outline" 
                 onClick={() => {
                   setSearchQuery('');
-                  setSelectedCategory('Все категории');
+                  setSelectedCategory('Все услуги');
                   setPriceRange('all');
-                  setStockFilter('all');
+                  setPopularFilter('all');
                 }}
               >
                 <Icon name="X" className="mr-2 h-4 w-4" />
@@ -212,53 +206,52 @@ const Index = () => {
             </div>
 
             <div className="text-sm text-muted-foreground">
-              Найдено товаров: <span className="font-semibold text-foreground">{filteredProducts.length}</span>
+              Найдено услуг: <span className="font-semibold text-foreground">{filteredServices.length}</span>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredProducts.map((product) => (
-                <Card key={product.id} className="group hover:shadow-lg transition-all duration-300">
+              {filteredServices.map((service) => (
+                <Card key={service.id} className="group hover:shadow-lg transition-all duration-300">
                   <CardHeader className="p-0">
                     <div className="aspect-square bg-muted rounded-t-lg flex items-center justify-center overflow-hidden">
-                      <Icon name="Package" className="h-20 w-20 text-muted-foreground group-hover:scale-110 transition-transform duration-300" />
+                      <Icon name="Settings" className="h-20 w-20 text-muted-foreground group-hover:scale-110 transition-transform duration-300" />
                     </div>
                   </CardHeader>
                   <CardContent className="pt-4">
                     <div className="space-y-2">
-                      <Badge variant="outline" className="text-xs">{product.category}</Badge>
-                      <CardTitle className="text-lg">{product.name}</CardTitle>
-                      <CardDescription className="text-sm">{product.unit}</CardDescription>
+                      <Badge variant="outline" className="text-xs">{service.category}</Badge>
+                      <CardTitle className="text-lg">{service.name}</CardTitle>
+                      <CardDescription className="text-sm line-clamp-2">{service.description}</CardDescription>
                       <div className="flex items-baseline gap-2">
-                        <span className="text-2xl font-bold text-primary">{product.price.toLocaleString('ru-RU')}</span>
+                        <span className="text-2xl font-bold text-primary">{service.price.toLocaleString('ru-RU')}</span>
                         <span className="text-sm text-muted-foreground">₽</span>
                       </div>
-                      {product.inStock ? (
-                        <Badge className="bg-green-500">
-                          <Icon name="Check" className="mr-1 h-3 w-3" />
-                          В наличии
-                        </Badge>
-                      ) : (
-                        <Badge variant="secondary">
-                          <Icon name="Clock" className="mr-1 h-3 w-3" />
-                          Под заказ
+                      <div className="flex items-center gap-2">
+                        <Icon name="Clock" className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm text-muted-foreground">{service.duration}</span>
+                      </div>
+                      {service.popular && (
+                        <Badge className="bg-amber-500">
+                          <Icon name="Star" className="mr-1 h-3 w-3" />
+                          Популярное
                         </Badge>
                       )}
                     </div>
                   </CardContent>
                   <CardFooter className="pt-0">
                     <Button className="w-full">
-                      <Icon name="ShoppingCart" className="mr-2 h-4 w-4" />
-                      Заказать
+                      <Icon name="Calendar" className="mr-2 h-4 w-4" />
+                      Записаться
                     </Button>
                   </CardFooter>
                 </Card>
               ))}
             </div>
 
-            {filteredProducts.length === 0 && (
+            {filteredServices.length === 0 && (
               <div className="text-center py-12">
-                <Icon name="Package" className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Товары не найдены</h3>
+                <Icon name="Search" className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
+                <h3 className="text-xl font-semibold mb-2">Услуги не найдены</h3>
                 <p className="text-muted-foreground">Попробуйте изменить параметры поиска</p>
               </div>
             )}
@@ -269,17 +262,17 @@ const Index = () => {
       <section id="portfolio" className="py-20 border-t">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Портфолио проектов</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Выполненные работы</h2>
             <p className="text-lg text-muted-foreground">
-              Наши материалы используются в крупнейших строительных проектах
+              Примеры успешно выполненных ремонтов
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: 'ЖК "Северный"', description: 'Поставка материалов для строительства жилого комплекса на 500 квартир', icon: 'Building' },
-              { title: 'Торговый центр "Метро"', description: 'Полное обеспечение материалами для возведения ТЦ площадью 15000 м²', icon: 'Store' },
-              { title: 'Школа №42', description: 'Комплексная поставка материалов для реконструкции школы', icon: 'School' },
+              { title: 'Toyota Land Cruiser 200', description: 'Восстановление шлицев переднего моста. Замена ШРУСов. Полная диагностика трансмиссии.', icon: 'Car' },
+              { title: 'Nissan Patrol Y62', description: 'Ремонт раздаточной коробки с восстановлением всех шлицевых соединений.', icon: 'Wrench' },
+              { title: 'Mitsubishi Pajero Sport', description: 'Восстановление карданного вала, балансировка, замена крестовин.', icon: 'Settings' },
             ].map((project, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
@@ -304,10 +297,10 @@ const Index = () => {
 
             <div className="space-y-4">
               {[
-                { q: 'Какие способы оплаты вы принимаете?', a: 'Мы принимаем оплату наличными, банковским переводом и по картам. Для юридических лиц возможна отсрочка платежа.' },
-                { q: 'Осуществляете ли вы доставку?', a: 'Да, мы доставляем товары по всему региону. Стоимость доставки рассчитывается индивидуально в зависимости от объёма и расстояния.' },
-                { q: 'Есть ли у вас система скидок?', a: 'Для постоянных клиентов и при заказе больших объёмов действует гибкая система скидок.' },
-                { q: 'Можно ли забрать товар самовывозом?', a: 'Конечно! У нас есть склад с удобным подъездом, где вы можете самостоятельно забрать заказ.' },
+                { q: 'Как понять, что шлицы изношены?', a: 'Основные признаки: вибрация при разгоне, стук в трансмиссии, люфт в соединениях. Рекомендуем пройти диагностику.' },
+                { q: 'Сколько времени занимает ремонт?', a: 'В зависимости от сложности работ — от 1 до 4 дней. Точные сроки озвучим после диагностики.' },
+                { q: 'Какая гарантия на работы?', a: 'Предоставляем гарантию от 12 до 24 месяцев в зависимости от типа восстановления и условий эксплуатации.' },
+                { q: 'Работаете ли вы с внедорожниками?', a: 'Да, специализируемся именно на полноприводных автомобилях и внедорожниках всех марок.' },
               ].map((faq, index) => (
                 <Card key={index}>
                   <CardHeader>
@@ -331,7 +324,7 @@ const Index = () => {
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Контакты</h2>
             <p className="text-lg text-muted-foreground">
-              Свяжитесь с нами любым удобным способом
+              Свяжитесь с нами для консультации или записи на ремонт
             </p>
           </div>
 
@@ -339,10 +332,10 @@ const Index = () => {
             <Card>
               <CardHeader>
                 <Icon name="MapPin" className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Адрес</CardTitle>
+                <CardTitle>Адрес сервиса</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">г. Москва, ул. Строительная, д. 42</p>
+                <p className="text-muted-foreground">г. Москва, ул. Автомобильная, д. 15, стр. 3</p>
               </CardContent>
             </Card>
 
@@ -352,7 +345,7 @@ const Index = () => {
                 <CardTitle>Телефон</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                <p className="text-muted-foreground">+7 (495) 777-88-99</p>
               </CardContent>
             </Card>
 
@@ -372,7 +365,7 @@ const Index = () => {
                 <CardTitle>Режим работы</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Пн-Пт: 8:00 - 20:00<br />Сб-Вс: 9:00 - 18:00</p>
+                <p className="text-muted-foreground">Пн-Пт: 9:00 - 20:00<br />Сб: 10:00 - 18:00<br />Вс: выходной</p>
               </CardContent>
             </Card>
           </div>
@@ -383,11 +376,11 @@ const Index = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Icon name="Building2" className="h-6 w-6" />
+              <Icon name="Wrench" className="h-6 w-6" />
               <span className="font-bold">МегаШлиц</span>
             </div>
             <p className="text-sm text-secondary-foreground/80">
-              © 2024 МегаШлиц. Все права защищены.
+              © 2024 МегаШлиц. Восстановление шлицевых соединений.
             </p>
           </div>
         </div>
