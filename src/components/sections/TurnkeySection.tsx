@@ -2,8 +2,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import { useState } from 'react';
 
 export const TurnkeySection = () => {
+  const [activeTooltip, setActiveTooltip] = useState<number | null>(null);
+  
   const scrollToContacts = () => {
     const element = document.getElementById('contacts');
     if (element) {
@@ -219,12 +222,15 @@ export const TurnkeySection = () => {
                       </div>
                       
                       <div className="mt-6 space-y-4">
-                        <div className="space-y-2 animate-in slide-in-from-left duration-700">
+                        <div className="space-y-2 animate-in slide-in-from-left duration-700 relative">
                           <div className="flex items-center justify-between text-xs mb-1">
                             <span className="font-semibold">Hyundai/Kia АКПП</span>
                             <span className="text-green-600 font-bold">-68 000 ₽</span>
                           </div>
-                          <div className="flex gap-2 items-center">
+                          <div 
+                            className="flex gap-2 items-center relative"
+                            onClick={() => setActiveTooltip(activeTooltip === 1 ? null : 1)}
+                          >
                             <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700 transition-all duration-1000 ease-out hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '43.4%'}}>
                               138 000 ₽ новая
                             </div>
@@ -232,14 +238,28 @@ export const TurnkeySection = () => {
                               69 990 ₽ восст.
                             </div>
                           </div>
+                          {activeTooltip === 1 && (
+                            <div className="absolute -bottom-20 left-0 right-0 bg-primary text-primary-foreground rounded-lg p-3 shadow-lg z-10 animate-in slide-in-from-top duration-300">
+                              <div className="flex items-start gap-2">
+                                <Icon name="TrendingDown" className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                                <div className="text-xs">
+                                  <p className="font-bold mb-1">Экономия 68 000 ₽ (49%)</p>
+                                  <p className="opacity-90">473003B630 • Новая 138 000 ₽ → Восст. 69 990 ₽</p>
+                                </div>
+                              </div>
+                            </div>
+                          )}
                         </div>
                         
-                        <div className="space-y-2 animate-in slide-in-from-left duration-700 delay-150">
+                        <div className="space-y-2 animate-in slide-in-from-left duration-700 delay-150 relative">
                           <div className="flex items-center justify-between text-xs mb-1">
                             <span className="font-semibold">Hyundai/Kia МКПП</span>
                             <span className="text-green-600 font-bold">-168 000 ₽</span>
                           </div>
-                          <div className="flex gap-2 items-center">
+                          <div 
+                            className="flex gap-2 items-center relative"
+                            onClick={() => setActiveTooltip(activeTooltip === 2 ? null : 2)}
+                          >
                             <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700 transition-all duration-1000 ease-out delay-150 hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '78%'}}>
                               248 000 ₽ новая
                             </div>
@@ -247,14 +267,28 @@ export const TurnkeySection = () => {
                               79 990 ₽ восст.
                             </div>
                           </div>
+                          {activeTooltip === 2 && (
+                            <div className="absolute -bottom-20 left-0 right-0 bg-primary text-primary-foreground rounded-lg p-3 shadow-lg z-10 animate-in slide-in-from-top duration-300">
+                              <div className="flex items-start gap-2">
+                                <Icon name="TrendingDown" className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                                <div className="text-xs">
+                                  <p className="font-bold mb-1">Экономия 168 000 ₽ (68%)</p>
+                                  <p className="opacity-90">473003B620 • Новая 248 000 ₽ → Восст. 79 990 ₽</p>
+                                </div>
+                              </div>
+                            </div>
+                          )}
                         </div>
                         
-                        <div className="space-y-2 animate-in slide-in-from-left duration-700 delay-300">
+                        <div className="space-y-2 animate-in slide-in-from-left duration-700 delay-300 relative">
                           <div className="flex items-center justify-between text-xs mb-1">
                             <span className="font-semibold">Volkswagen Tiguan</span>
                             <span className="text-green-600 font-bold">-203 000 ₽</span>
                           </div>
-                          <div className="flex gap-2 items-center">
+                          <div 
+                            className="flex gap-2 items-center relative"
+                            onClick={() => setActiveTooltip(activeTooltip === 3 ? null : 3)}
+                          >
                             <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700 transition-all duration-1000 ease-out delay-300 hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '100%'}}>
                               318 000 ₽ новая
                             </div>
@@ -262,6 +296,17 @@ export const TurnkeySection = () => {
                               114 990 ₽ восст.
                             </div>
                           </div>
+                          {activeTooltip === 3 && (
+                            <div className="absolute -bottom-20 left-0 right-0 bg-primary text-primary-foreground rounded-lg p-3 shadow-lg z-10 animate-in slide-in-from-top duration-300">
+                              <div className="flex items-start gap-2">
+                                <Icon name="TrendingDown" className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                                <div className="text-xs">
+                                  <p className="font-bold mb-1">Экономия 203 000 ₽ (64%)</p>
+                                  <p className="opacity-90">0AU409053T • Новая 318 000 ₽ → Восст. 114 990 ₽</p>
+                                </div>
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
