@@ -26,36 +26,46 @@ export const ContactsSection = ({
   useEffect(() => {
     const initWidget = () => {
       if (typeof window.CDEKWidget !== 'undefined') {
-        new window.CDEKWidget({
-          root: 'cdek-widget',
-          apiKey: 'ng05CFQnsAf96MaU3c9kZjNDB0gEa5qU',
-          defaultLocation: 'Нижний Новгород',
-          from: 'Нижний Новгород',
-          goods: [{
-            length: 40,
-            width: 15,
-            height: 15,
-            weight: 4
-          }],
-          onReady() {
-            console.log('CDEK Widget ready');
-          }
-        });
+        try {
+          new window.CDEKWidget({
+            root: 'cdek-widget',
+            servicepath: 'https://api.cdek.ru/v2/',
+            defaultLocation: 'Нижний Новгород',
+            from: {
+              country_code: 'RU',
+              city: 'Нижний Новгород',
+              postal_code: '603000',
+              code: 270
+            },
+            goods: [{
+              length: 40,
+              width: 15,
+              height: 15,
+              weight: 4000
+            }],
+            hideFilters: {
+              haveCashless: false,
+              haveCard: false,
+              type: false
+            },
+            onReady() {
+              console.log('CDEK Widget готов');
+            },
+            onCalculate() {
+              console.log('Расчет выполнен');
+            }
+          });
+        } catch (error) {
+          console.error('Ошибка инициализации виджета СДЭК:', error);
+        }
       }
     };
 
-    if (typeof window.CDEKWidget !== 'undefined') {
+    const timeout = setTimeout(() => {
       initWidget();
-    } else {
-      const checkInterval = setInterval(() => {
-        if (typeof window.CDEKWidget !== 'undefined') {
-          clearInterval(checkInterval);
-          initWidget();
-        }
-      }, 100);
+    }, 500);
 
-      return () => clearInterval(checkInterval);
-    }
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
