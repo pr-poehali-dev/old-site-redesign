@@ -30,8 +30,10 @@ export const Header = ({
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-3 cursor-pointer group">
-          <img src="https://cdn.poehali.dev/files/801cdf4b-ac79-4038-902c-da3dda6718fe.jpg" alt="Мега Шлиц" className="h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110" />
-          <span className="text-xl font-extrabold text-secondary group-hover:text-primary transition-colors duration-300">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
+          <div className="h-14 w-14 bg-black rounded-lg flex items-center justify-center">
+            <img src="https://cdn.poehali.dev/files/801cdf4b-ac79-4038-902c-da3dda6718fe.jpg" alt="Мега Шлиц" className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110" />
+          </div>
+          <span className="text-xl font-black text-secondary group-hover:text-primary transition-colors duration-300">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
         </div>
         
         <nav className="hidden md:flex items-center gap-6">

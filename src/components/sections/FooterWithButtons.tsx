@@ -15,7 +15,7 @@ export const FooterWithButtons = ({ viewCount, showScrollTop }: FooterWithButton
               <div className="flex items-center gap-4 mb-4">
                 <img src="https://cdn.poehali.dev/files/801cdf4b-ac79-4038-902c-da3dda6718fe.jpg" alt="Мега Шлиц" className="h-20 w-20 object-contain" />
                 <div className="flex flex-col">
-                  <span className="text-2xl font-extrabold">Мега Шлиц<sup className="text-sm ml-0.5">®</sup></span>
+                  <span className="text-2xl font-black">Мега Шлиц<sup className="text-sm ml-0.5">®</sup></span>
                   <span className="text-sm text-zinc-400">Патент РФ № 2829377</span>
                 </div>
               </div>
