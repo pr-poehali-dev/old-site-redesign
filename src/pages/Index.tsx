@@ -271,7 +271,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Ремонт за 1-5 дня. Не нужно ждать заказа запчастей из-за границы
+                  Ремонт от 1-5 дней. Не нужно ждать заказа запчастей из-за границы
                 </p>
               </CardContent>
             </Card>
