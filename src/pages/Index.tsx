@@ -199,13 +199,13 @@ const Index = () => {
                       и запатентованные технологии восстановления.
                     </p>
                     
-                    <div className="flex items-center gap-2 pt-2">
-                      <div className="bg-primary/10 p-2 rounded-lg">
-                        <Icon name="Award" className="h-5 w-5 text-primary" />
+                    <div className="flex items-center gap-3 pt-2">
+                      <div className="bg-primary/10 p-2.5 rounded-lg">
+                        <Icon name="Award" className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-sm">Патент РФ № 2829377</h4>
-                        <p className="text-xs text-muted-foreground">
+                        <h4 className="font-bold text-base">Патент РФ № 2829377</h4>
+                        <p className="text-sm text-muted-foreground">
                           Способ восстановления шлицевого соединения на полноприводных автомобилях
                         </p>
                       </div>
