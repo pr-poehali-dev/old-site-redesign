@@ -1,10 +1,11 @@
 import { useState, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { Header } from '@/components/sections/Header';
+import { ServicesSection } from '@/components/sections/ServicesSection';
+import { ContactForm } from '@/components/sections/ContactForm';
+import { ContactsSection } from '@/components/sections/ContactsSection';
 
 interface Service {
   id: number;
@@ -128,116 +129,17 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-3 cursor-pointer group">
-            <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="МегаШлиц" className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
-            <span className="text-xl font-bold text-secondary group-hover:text-primary transition-colors duration-300">МегаШлиц<sup className="text-xs ml-0.5">®</sup></span>
-          </div>
-          
-          <nav className="hidden md:flex items-center gap-6">
-            <button onClick={() => scrollToSection('hero')} className="text-sm font-medium hover:text-primary transition-colors">Главная</button>
-            <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary transition-colors">О компании</button>
-            <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
-            <button onClick={() => scrollToSection('portfolio')} className="text-sm font-medium hover:text-primary transition-colors">Портфолио</button>
-            <button onClick={() => scrollToSection('faq')} className="text-sm font-medium hover:text-primary transition-colors">Вопросы</button>
-            <button onClick={() => scrollToSection('contacts')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
-          </nav>
-
-          <div className="flex items-center gap-2">
-            <Button 
-              className="hidden lg:flex bg-[#25D366] hover:bg-[#20BA5A]"
-              onClick={() => window.open('https://wa.me/79202520352', '_blank')}
-            >
-              <Icon name="MessageCircle" className="mr-2 h-4 w-4" />
-              WhatsApp
-            </Button>
-            <Button 
-              className="hidden md:flex"
-              onClick={() => setQuickConsultOpen(!quickConsultOpen)}
-            >
-              <Icon name="Headphones" className="mr-2 h-4 w-4" />
-              Консультация
-            </Button>
-            <button 
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 hover:bg-muted rounded-md transition-colors"
-            >
-              <Icon name={mobileMenuOpen ? "X" : "Menu"} className="h-6 w-6" />
-            </button>
-          </div>
-        </div>
-
-        {quickConsultOpen && (
-          <div className="hidden md:block border-t bg-background animate-in slide-in-from-top duration-300">
-            <div className="container py-6">
-              <Card className="max-w-md mx-auto">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <span className="flex items-center gap-2">
-                      <Icon name="Headphones" className="h-5 w-5 text-primary" />
-                      Быстрая консультация
-                    </span>
-                    <button onClick={() => setQuickConsultOpen(false)} className="hover:bg-muted p-1 rounded">
-                      <Icon name="X" className="h-4 w-4" />
-                    </button>
-                  </CardTitle>
-                  <CardDescription>Оставьте контакты, мы свяжемся с вами</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  {quickFormStatus === 'success' && (
-                    <div className="mb-4 p-3 bg-primary/10 text-primary rounded-md text-sm">
-                      ✓ Спасибо! Мы скоро свяжемся с вами.
-                    </div>
-                  )}
-                  {quickFormStatus === 'error' && (
-                    <div className="mb-4 p-3 bg-destructive/10 text-destructive rounded-md text-sm">
-                      Ошибка. Позвоните нам: +7 (831) 260-11-23
-                    </div>
-                  )}
-                  <form onSubmit={handleQuickFormSubmit} className="space-y-3">
-                    <Input 
-                      placeholder="Ваше имя" 
-                      required 
-                      value={quickFormData.name}
-                      onChange={(e) => setQuickFormData({...quickFormData, name: e.target.value})}
-                      disabled={quickFormStatus === 'sending'}
-                    />
-                    <Input 
-                      type="tel" 
-                      placeholder="+7 (___) ___-__-__" 
-                      required 
-                      value={quickFormData.phone}
-                      onChange={(e) => setQuickFormData({...quickFormData, phone: e.target.value})}
-                      disabled={quickFormStatus === 'sending'}
-                    />
-                    <Button type="submit" className="w-full" disabled={quickFormStatus === 'sending'}>
-                      {quickFormStatus === 'sending' ? 'Отправка...' : 'Перезвоните мне'}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        )}
-
-        {mobileMenuOpen && (
-          <div className="md:hidden border-t bg-background animate-in slide-in-from-top duration-300">
-            <nav className="container py-4 flex flex-col gap-2">
-              <button onClick={() => scrollToSection('hero')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Главная</button>
-              <button onClick={() => scrollToSection('about')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">О компании</button>
-              <button onClick={() => scrollToSection('services')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Услуги</button>
-              <button onClick={() => scrollToSection('portfolio')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Портфолио</button>
-              <button onClick={() => scrollToSection('faq')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Вопросы</button>
-              <button onClick={() => scrollToSection('contacts')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Контакты</button>
-              <Button className="mt-2" onClick={() => scrollToSection('contacts')}>
-                <Icon name="Phone" className="mr-2 h-4 w-4" />
-                Связаться
-              </Button>
-            </nav>
-          </div>
-        )}
-      </header>
+      <Header
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+        quickConsultOpen={quickConsultOpen}
+        setQuickConsultOpen={setQuickConsultOpen}
+        quickFormData={quickFormData}
+        setQuickFormData={setQuickFormData}
+        quickFormStatus={quickFormStatus}
+        handleQuickFormSubmit={handleQuickFormSubmit}
+        scrollToSection={scrollToSection}
+      />
 
       <section id="hero" className="relative py-20 md:py-32 bg-gradient-to-br from-primary/10 via-primary/5 to-background">
         <div className="container">
@@ -352,129 +254,18 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-20 border-t bg-muted/30">
-        <div className="container">
-          <div className="space-y-8">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">Наши услуги</h2>
-              <p className="text-lg text-muted-foreground">
-                Полный спектр работ по восстановлению трансмиссии
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-4 gap-4">
-              <div className="md:col-span-4">
-                <div className="relative">
-                  <Icon name="Search" className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
-                  <Input
-                    placeholder="Поиск услуги..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="pl-10"
-                  />
-                </div>
-              </div>
-
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Категория" />
-                </SelectTrigger>
-                <SelectContent>
-                  {categories.map((cat) => (
-                    <SelectItem key={cat} value={cat}>{cat}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
-              <Select value={priceRange} onValueChange={setPriceRange}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Цена" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Любая цена</SelectItem>
-                  <SelectItem value="low">До 5 000 ₽</SelectItem>
-                  <SelectItem value="medium">5 000 - 15 000 ₽</SelectItem>
-                  <SelectItem value="high">Более 15 000 ₽</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <Select value={popularFilter} onValueChange={setPopularFilter}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Популярность" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Все услуги</SelectItem>
-                  <SelectItem value="popular">Популярные</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <Button 
-                variant="outline" 
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('Все услуги');
-                  setPriceRange('all');
-                  setPopularFilter('all');
-                }}
-              >
-                <Icon name="X" className="mr-2 h-4 w-4" />
-                Сбросить
-              </Button>
-            </div>
-
-            <div className="text-sm text-muted-foreground">
-              Найдено услуг: <span className="font-semibold text-foreground">{filteredServices.length}</span>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredServices.map((service) => (
-                <Card key={service.id} className="group hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="p-0">
-                    <div className="aspect-square bg-muted rounded-t-lg flex items-center justify-center overflow-hidden">
-                      <Icon name="Settings" className="h-20 w-20 text-muted-foreground group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-4">
-                    <div className="space-y-2">
-                      <Badge variant="outline" className="text-xs">{service.category}</Badge>
-                      <CardTitle className="text-lg">{service.name}</CardTitle>
-                      <CardDescription className="text-sm line-clamp-2">{service.description}</CardDescription>
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-2xl font-bold text-primary">{service.price.toLocaleString('ru-RU')}</span>
-                        <span className="text-sm text-muted-foreground">₽</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Icon name="Clock" className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm text-muted-foreground">{service.duration}</span>
-                      </div>
-                      {service.popular && (
-                        <Badge className="bg-amber-500">
-                          <Icon name="Star" className="mr-1 h-3 w-3" />
-                          Популярное
-                        </Badge>
-                      )}
-                    </div>
-                  </CardContent>
-                  <CardFooter className="pt-0">
-                    <Button className="w-full">
-                      <Icon name="Send" className="mr-2 h-4 w-4" />
-                      Заказать
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-
-            {filteredServices.length === 0 && (
-              <div className="text-center py-12">
-                <Icon name="Search" className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Услуги не найдены</h3>
-                <p className="text-muted-foreground">Попробуйте изменить параметры поиска</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+      <ServicesSection
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+        priceRange={priceRange}
+        setPriceRange={setPriceRange}
+        popularFilter={popularFilter}
+        setPopularFilter={setPopularFilter}
+        filteredServices={filteredServices}
+        categories={categories}
+      />
 
       <section id="portfolio" className="py-20 border-t">
         <div className="container">
@@ -571,202 +362,14 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 border-t bg-gradient-to-br from-primary/5 to-background">
-        <div className="container">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center space-y-4 mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold">Отправить заявку</h2>
-              <p className="text-lg text-muted-foreground">
-                Оставьте заявку и мы свяжемся с вами в ближайшее время
-              </p>
-            </div>
+      <ContactForm
+        formData={formData}
+        setFormData={setFormData}
+        formStatus={formStatus}
+        handleFormSubmit={handleFormSubmit}
+      />
 
-            <Card>
-              <CardContent className="pt-6">
-                {formStatus === 'success' && (
-                  <div className="mb-4 p-4 bg-primary/10 text-primary rounded-md">
-                    ✓ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
-                  </div>
-                )}
-                {formStatus === 'error' && (
-                  <div className="mb-4 p-4 bg-destructive/10 text-destructive rounded-md">
-                    Ошибка отправки. Попробуйте позже или позвоните нам напрямую.
-                  </div>
-                )}
-                <form className="space-y-4" onSubmit={handleFormSubmit}>
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Ваше имя <span className="text-destructive">*</span>
-                    </label>
-                    <Input 
-                      id="name" 
-                      placeholder="Иван Иванов" 
-                      required 
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      disabled={formStatus === 'sending'}
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                      Телефон <span className="text-destructive">*</span>
-                    </label>
-                    <Input 
-                      id="phone" 
-                      type="tel" 
-                      placeholder="+7 (___) ___-__-__" 
-                      required 
-                      value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                      disabled={formStatus === 'sending'}
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="detail" className="block text-sm font-medium mb-2">
-                      Какую деталь нужно восстановить?
-                    </label>
-                    <Input 
-                      id="detail" 
-                      placeholder="Например: полуось переднего моста Land Cruiser"
-                      value={formData.detail}
-                      onChange={(e) => setFormData({...formData, detail: e.target.value})}
-                      disabled={formStatus === 'sending'}
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Дополнительная информация
-                    </label>
-                    <textarea 
-                      id="message"
-                      rows={4}
-                      className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                      placeholder="Опишите состояние детали, сроки, способ доставки..."
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      disabled={formStatus === 'sending'}
-                    />
-                  </div>
-
-                  <Button type="submit" className="w-full" size="lg" disabled={formStatus === 'sending'}>
-                    <Icon name="Send" className="mr-2 h-5 w-5" />
-                    {formStatus === 'sending' ? 'Отправка...' : 'Отправить заявку'}
-                  </Button>
-
-                  <p className="text-xs text-muted-foreground text-center">
-                    Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
-                  </p>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section id="contacts" className="py-20 border-t">
-        <div className="container">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Контакты</h2>
-            <p className="text-lg text-muted-foreground">
-              Свяжитесь с нами для консультации или отправки заявки
-            </p>
-          </div>
-
-          <div className="max-w-6xl mx-auto space-y-8">
-            <div className="space-y-4">
-              <div className="w-full h-[400px] rounded-lg overflow-hidden border shadow-lg">
-                <iframe
-                  src="https://yandex.ru/map-widget/v1/?ll=44.013733%2C56.291732&z=16&l=map&pt=44.013733,56.291732,pm2rdm"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  allowFullScreen
-                  style={{ position: 'relative' }}
-                ></iframe>
-              </div>
-              <div className="flex justify-center">
-                <Button 
-                  size="lg"
-                  onClick={() => window.open('https://yandex.ru/maps/?rtext=~56.291732,44.013733', '_blank')}
-                  className="gap-2"
-                >
-                  <Icon name="Navigation" className="h-5 w-5" />
-                  Построить маршрут
-                </Button>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card>
-                <CardHeader>
-                  <Icon name="MapPin" className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>Производственный цех</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">г. Нижний Новгород, Восточный проезд, 11/1</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <Icon name="Phone" className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>Телефон</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">+7 (831) 260-11-23</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <Icon name="Mail" className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>Email</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">megashlic@yandex.ru</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <Icon name="MessageCircle" className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>WhatsApp</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">+7 (920) 252-03-52</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <Icon name="Clock" className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>График работы</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-1 text-muted-foreground">
-                    <p>Пн-Пт: 9:00 - 18:00</p>
-                    <p>Сб: 10:00 - 15:00</p>
-                    <p>Вс: выходной</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <Icon name="Truck" className="h-8 w-8 text-primary mb-2" />
-                  <CardTitle>Доставка</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Работаем с транспортными компаниями по всей России</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactsSection />
 
       <footer className="border-t py-8 bg-secondary text-secondary-foreground">
         <div className="container">
