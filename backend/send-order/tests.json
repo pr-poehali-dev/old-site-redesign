@@ -1,0 +1,42 @@
+{
+  "tests": [
+    {
+      "name": "Test OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": "",
+      "bodyMatcher": "exact"
+    },
+    {
+      "name": "Test POST with valid order data",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Тестов",
+        "phone": "+7 (999) 123-45-67",
+        "detail": "Полуось переднего моста",
+        "message": "Требуется срочное восстановление"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "message": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test POST without required fields",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "detail": "Деталь без имени"
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

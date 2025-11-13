@@ -35,6 +35,8 @@ const Index = () => {
   const [priceRange, setPriceRange] = useState('all');
   const [popularFilter, setPopularFilter] = useState('all');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: '', phone: '', detail: '', message: '' });
+  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   const filteredServices = useMemo(() => {
     return services.filter(service => {
@@ -58,6 +60,33 @@ const Index = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setMobileMenuOpen(false);
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('sending');
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/fd96c7e7-0adf-485f-a51a-abcd609b660d', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        setFormData({ name: '', phone: '', detail: '', message: '' });
+        setTimeout(() => setFormStatus('idle'), 5000);
+      } else {
+        setFormStatus('error');
+        setTimeout(() => setFormStatus('idle'), 5000);
+      }
+    } catch (error) {
+      setFormStatus('error');
+      setTimeout(() => setFormStatus('idle'), 5000);
+    }
   };
 
   return (
@@ -464,7 +493,17 @@ const Index = () => {
 
             <Card>
               <CardContent className="pt-6">
-                <form className="space-y-4">
+                {formStatus === 'success' && (
+                  <div className="mb-4 p-4 bg-primary/10 text-primary rounded-md">
+                    ✓ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
+                  </div>
+                )}
+                {formStatus === 'error' && (
+                  <div className="mb-4 p-4 bg-destructive/10 text-destructive rounded-md">
+                    Ошибка отправки. Попробуйте позже или позвоните нам напрямую.
+                  </div>
+                )}
+                <form className="space-y-4" onSubmit={handleFormSubmit}>
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Ваше имя <span className="text-destructive">*</span>
@@ -473,6 +512,9 @@ const Index = () => {
                       id="name" 
                       placeholder="Иван Иванов" 
                       required 
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      disabled={formStatus === 'sending'}
                     />
                   </div>
 
@@ -485,6 +527,9 @@ const Index = () => {
                       type="tel" 
                       placeholder="+7 (___) ___-__-__" 
                       required 
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      disabled={formStatus === 'sending'}
                     />
                   </div>
 
@@ -494,7 +539,10 @@ const Index = () => {
                     </label>
                     <Input 
                       id="detail" 
-                      placeholder="Например: полуось переднего моста Land Cruiser" 
+                      placeholder="Например: полуось переднего моста Land Cruiser"
+                      value={formData.detail}
+                      onChange={(e) => setFormData({...formData, detail: e.target.value})}
+                      disabled={formStatus === 'sending'}
                     />
                   </div>
 
@@ -507,12 +555,15 @@ const Index = () => {
                       rows={4}
                       className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
                       placeholder="Опишите состояние детали, сроки, способ доставки..."
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      disabled={formStatus === 'sending'}
                     />
                   </div>
 
-                  <Button type="submit" className="w-full" size="lg">
+                  <Button type="submit" className="w-full" size="lg" disabled={formStatus === 'sending'}>
                     <Icon name="Send" className="mr-2 h-5 w-5" />
-                    Отправить заявку
+                    {formStatus === 'sending' ? 'Отправка...' : 'Отправить заявку'}
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center">
