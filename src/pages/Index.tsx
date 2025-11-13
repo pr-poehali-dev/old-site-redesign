@@ -192,7 +192,7 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="grid md:grid-cols-[1fr,auto] gap-6 items-center">
                   <div className="space-y-4">
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       <span className="font-bold text-foreground">Мега Шлиц<sup>®</sup></span> — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
                       Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
                       специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
