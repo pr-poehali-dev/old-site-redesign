@@ -409,7 +409,7 @@ const Index = () => {
                 <CardTitle className="text-xl">Высокая прочность</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Применяется сталь, легированная титаном и подвергнутая термической обработке.</p>
+                <p className="text-muted-foreground">Используется легированная титаном сталь с дальнейшей термообработкой</p>
               </CardContent>
             </Card>
 
