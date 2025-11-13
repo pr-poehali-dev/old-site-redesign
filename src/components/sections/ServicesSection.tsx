@@ -54,7 +54,7 @@ export const ServicesSection = ({
   };
 
   return (
-    <section id="services" className="py-8 border-t bg-muted/30">
+    <section id="services" className="py-8 bg-muted/30">
       <div className="container">
         <div className="space-y-6">
           <div className="text-center space-y-1">

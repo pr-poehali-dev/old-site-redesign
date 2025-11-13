@@ -18,7 +18,7 @@ interface GalleryCarouselSectionProps {
 
 export const GalleryCarouselSection = ({ services }: GalleryCarouselSectionProps) => {
   return (
-    <section className="py-16 border-t bg-muted/20">
+    <section className="py-16 bg-muted/20">
       <div className="container">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">Наши работы</h2>

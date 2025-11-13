@@ -5,7 +5,7 @@ import Icon from '@/components/ui/icon';
 export const AboutAndAdvantagesSection = () => {
   return (
     <>
-      <section id="about" className="py-12 border-t bg-gradient-to-b from-background to-muted/30">
+      <section id="about" className="py-12 bg-gradient-to-b from-background to-muted/30">
         <div className="container">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
@@ -74,7 +74,7 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="advantages" className="py-12 border-t bg-gradient-to-b from-muted/30 to-background">
+      <section id="advantages" className="py-12 bg-gradient-to-b from-muted/30 to-background">
         <div className="container">
           <div className="text-center space-y-2 mb-10">
             <h2 className="text-3xl md:text-4xl font-bold">Преимущества нашей технологии</h2>
@@ -141,7 +141,7 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="process" className="py-12 border-t bg-gradient-to-b from-muted/50 to-background">
+      <section id="process" className="py-12 bg-gradient-to-b from-muted/50 to-background">
         <div className="container">
           <div className="text-center space-y-2 mb-10">
             <h2 className="text-3xl md:text-4xl font-bold">Как мы работаем</h2>

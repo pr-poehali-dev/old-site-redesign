@@ -20,7 +20,7 @@ export const ContactsSection = ({
 
 
   return (
-    <section id="contacts" className="py-12 border-t bg-gradient-to-b from-muted/30 to-background">
+    <section id="contacts" className="py-12 bg-gradient-to-b from-muted/30 to-background">
       <div className="container">
         <div className="text-center space-y-2 mb-10">
           <h2 className="text-3xl md:text-4xl font-bold">Оставить заявку</h2>
