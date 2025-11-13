@@ -8,21 +8,58 @@ interface FooterWithButtonsProps {
 export const FooterWithButtons = ({ viewCount, showScrollTop }: FooterWithButtonsProps) => {
   return (
     <>
-      <footer className="border-t py-4 bg-secondary text-secondary-foreground">
+      <footer className="border-t py-8 bg-secondary text-secondary-foreground">
         <div className="container">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="Мега Шлиц" className="h-10 w-10 object-contain" />
-              <span className="font-extrabold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <p className="text-sm text-secondary-foreground/80">
-                © 2024 Мега Шлиц. Восстановление шлицевых соединений.
-              </p>
-              <div className="flex items-center gap-2 text-xs text-secondary-foreground/60">
-                <Icon name="Eye" className="h-4 w-4" />
-                <span>Просмотров: {viewCount.toLocaleString('ru-RU')}</span>
+          <div className="grid md:grid-cols-3 gap-8 mb-6">
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 mb-4">
+                <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="Мега Шлиц" className="h-10 w-10 object-contain" />
+                <span className="font-extrabold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
               </div>
+              <p className="text-sm text-secondary-foreground/70">
+                Восстановление шлицевых соединений деталей трансмиссии с использованием запатентованной технологии
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <h3 className="font-bold text-base mb-3">Контакты</h3>
+              <a href="tel:+79202520352" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
+                <Icon name="Phone" className="h-4 w-4 flex-shrink-0" />
+                +7 (920) 252-03-52
+              </a>
+              <a href="mailto:megashlic@yandex.ru" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
+                <Icon name="Mail" className="h-4 w-4 flex-shrink-0" />
+                megashlic@yandex.ru
+              </a>
+              <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
+                <Icon name="MessageCircle" className="h-4 w-4 flex-shrink-0" />
+                WhatsApp
+              </a>
+            </div>
+
+            <div className="space-y-3">
+              <h3 className="font-bold text-base mb-3">Адрес и режим работы</h3>
+              <div className="flex items-start gap-2 text-sm">
+                <Icon name="MapPin" className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                <span>г. Нижний Новгород,<br />Восточный проезд, 11/1</span>
+              </div>
+              <div className="flex items-start gap-2 text-sm">
+                <Icon name="Clock" className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                <div>
+                  <div>Пн-Пт: 9:30 - 17:30</div>
+                  <div className="text-secondary-foreground/60">Сб-Вс: выходной</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-secondary-foreground/20 pt-4 flex flex-col md:flex-row justify-between items-center gap-3">
+            <p className="text-sm text-secondary-foreground/70">
+              © 2024 Мега Шлиц. Все права защищены.
+            </p>
+            <div className="flex items-center gap-2 text-xs text-secondary-foreground/60">
+              <Icon name="Eye" className="h-4 w-4" />
+              <span>Просмотров: {viewCount.toLocaleString('ru-RU')}</span>
             </div>
           </div>
         </div>
