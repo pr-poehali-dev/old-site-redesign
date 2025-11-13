@@ -318,7 +318,13 @@ export const TurnkeySection = () => {
                         
                         <div className={`space-y-2 animate-in slide-in-from-left duration-700 delay-300 relative transition-all duration-300 ${activeTooltip === 3 ? 'z-20' : 'z-0'} bg-primary/5 rounded-lg p-3 border-2 border-primary/20`}>
                           <div className="flex items-center justify-between text-xs mb-1">
-                            <span className="font-semibold text-base">Volkswagen Tiguan 🔥</span>
+                            <div className="flex items-center gap-2">
+                              <span className="font-semibold text-base">Volkswagen Tiguan 🔥</span>
+                              <Badge className="text-[10px] py-0 px-1.5 h-4">
+                                <Icon name="Star" className="h-2.5 w-2.5 mr-0.5" />
+                                Популярное
+                              </Badge>
+                            </div>
                             <span className="text-green-600 font-bold text-sm">-203 000 ₽</span>
                           </div>
                           <div 
