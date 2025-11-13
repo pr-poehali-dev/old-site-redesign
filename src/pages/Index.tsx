@@ -167,8 +167,6 @@ const Index = () => {
 
       <HeroSection scrollToSection={scrollToSection} />
 
-      <GalleryCarouselSection services={services} />
-
       <AboutAndAdvantagesSection />
 
       <ServicesSection
