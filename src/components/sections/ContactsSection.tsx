@@ -22,7 +22,7 @@ export const ContactsSection = () => {
 
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card>
+            <Card className="animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ animationDelay: '0ms' }}>
               <CardHeader>
                 <Icon name="MapPin" className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Производственный цех</CardTitle>
@@ -32,7 +32,7 @@ export const ContactsSection = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ animationDelay: '100ms' }}>
               <CardHeader>
                 <Icon name="Phone" className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Телефон</CardTitle>
@@ -42,7 +42,7 @@ export const ContactsSection = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ animationDelay: '200ms' }}>
               <CardHeader>
                 <Icon name="Mail" className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Email</CardTitle>
@@ -52,7 +52,7 @@ export const ContactsSection = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ animationDelay: '300ms' }}>
               <CardHeader>
                 <Icon name="MessageCircle" className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>WhatsApp</CardTitle>
@@ -62,7 +62,7 @@ export const ContactsSection = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ animationDelay: '400ms' }}>
               <CardHeader>
                 <Icon name="Clock" className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>График работы</CardTitle>
@@ -75,7 +75,7 @@ export const ContactsSection = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ animationDelay: '500ms' }}>
               <CardHeader>
                 <Icon name="Truck" className="h-8 w-8 text-primary mb-2" />
                 <CardTitle>Доставка</CardTitle>
