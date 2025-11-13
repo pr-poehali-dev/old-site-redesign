@@ -183,44 +183,50 @@ const Index = () => {
 
       <section id="about" className="py-12 border-t">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center space-y-4 mb-10">
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
-            <p className="text-base text-muted-foreground">
-              МегаШлиц — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
-              Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
-              специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
-              и запатентованные технологии восстановления.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 pt-6">
-              <div className="space-y-1">
-                <Icon name="Award" className="h-10 w-10 mx-auto text-primary" />
-                <h3 className="text-xl font-bold">5+ лет</h3>
-                <p className="text-sm text-muted-foreground">опыта работы</p>
-              </div>
-              <div className="space-y-1">
-                <Icon name="Car" className="h-10 w-10 mx-auto text-primary" />
-                <h3 className="text-xl font-bold">5000+</h3>
-                <p className="text-sm text-muted-foreground">восстановленных деталей</p>
-              </div>
-              <div className="space-y-1">
-                <Icon name="Shield" className="h-10 w-10 mx-auto text-primary" />
-                <h3 className="text-xl font-bold">Гарантия</h3>
-                <p className="text-sm text-muted-foreground">18 месяцев без ограничения пробега</p>
-              </div>
-            </div>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center space-y-2 mb-6">
-              <h3 className="text-xl md:text-2xl font-bold">Запатентованная технология</h3>
-              <p className="text-sm text-muted-foreground">
-                Наша технология восстановления защищена патентом РФ
-              </p>
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            <div className="space-y-6">
+              <div>
+                <p className="text-base text-muted-foreground">
+                  МегаШлиц — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
+                  Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
+                  специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
+                  и запатентованные технологии восстановления.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4">
+                <Card className="text-center p-4">
+                  <Icon name="Award" className="h-10 w-10 mx-auto text-primary mb-2" />
+                  <h3 className="text-lg font-bold">5+ лет</h3>
+                  <p className="text-xs text-muted-foreground">опыта работы</p>
+                </Card>
+                <Card className="text-center p-4">
+                  <Icon name="Car" className="h-10 w-10 mx-auto text-primary mb-2" />
+                  <h3 className="text-lg font-bold">5000+</h3>
+                  <p className="text-xs text-muted-foreground">восстановленных деталей</p>
+                </Card>
+                <Card className="text-center p-4">
+                  <Icon name="Shield" className="h-10 w-10 mx-auto text-primary mb-2" />
+                  <h3 className="text-lg font-bold">Гарантия</h3>
+                  <p className="text-xs text-muted-foreground">18 месяцев без ограничения пробега</p>
+                </Card>
+              </div>
             </div>
 
-            <Card className="hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <div className="mb-4">
+                <h3 className="text-xl md:text-2xl font-bold mb-2">Запатентованная технология</h3>
+                <p className="text-sm text-muted-foreground">
+                  Наша технология восстановления защищена патентом РФ
+                </p>
+              </div>
+
+              <Card className="hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <div className="bg-primary/10 p-2 rounded-lg">
@@ -232,6 +238,17 @@ const Index = () => {
                           Способ восстановления шлицевого соединения на полноприводных автомобилях
                         </p>
                       </div>
+                    </div>
+
+                    <div className="relative group">
+                      <div className="overflow-hidden rounded-lg border-4 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
+                        <img 
+                          src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
+                          alt="Патент РФ № 2829377"
+                          className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 rounded-lg pointer-events-none" />
                     </div>
 
                     <div className="space-y-2 text-xs">
@@ -260,20 +277,9 @@ const Index = () => {
                       </p>
                     </div>
                   </div>
-
-                  <div className="relative group">
-                    <div className="overflow-hidden rounded-lg border-4 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
-                      <img 
-                        src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
-                        alt="Патент РФ № 2829377"
-                        className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 rounded-lg pointer-events-none" />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
