@@ -83,7 +83,7 @@ const Index = () => {
         </div>
       </header>
 
-      <section id="hero" className="relative py-20 md:py-32 bg-gradient-to-b from-secondary/5 to-background">
+      <section id="hero" className="relative py-20 md:py-32 bg-gradient-to-br from-primary/10 via-primary/5 to-background">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
