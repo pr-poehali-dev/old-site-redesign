@@ -2,10 +2,27 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export const TurnkeySection = () => {
   const [activeTooltip, setActiveTooltip] = useState<number | null>(null);
+  const diagramRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (diagramRef.current && !diagramRef.current.contains(event.target as Node)) {
+        setActiveTooltip(null);
+      }
+    };
+
+    if (activeTooltip !== null) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [activeTooltip]);
   
   const scrollToContacts = () => {
     const element = document.getElementById('contacts');
@@ -221,7 +238,7 @@ export const TurnkeySection = () => {
                         </p>
                       </div>
                       
-                      <div className="mt-6">
+                      <div className="mt-6" ref={diagramRef}>
                         <div className="flex items-center justify-between mb-3">
                           <div className="flex items-center gap-2 text-xs text-muted-foreground">
                             <Icon name="MousePointerClick" className="h-3.5 w-3.5 text-primary animate-pulse" />
