@@ -20,11 +20,11 @@ export const ContactsSection = ({
 
 
   return (
-    <section id="contacts" className="py-12 bg-gradient-to-b from-muted/30 to-background">
+    <section id="contacts" className="py-8 bg-gradient-to-b from-muted/30 to-background">
       <div className="container">
-        <div className="text-center space-y-2 mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold">Оставить заявку</h2>
-          <p className="text-muted-foreground text-lg">
+        <div className="text-center space-y-1 mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold">Оставить заявку</h2>
+          <p className="text-muted-foreground text-sm">
             Заполните форму или позвоните нам
           </p>
         </div>

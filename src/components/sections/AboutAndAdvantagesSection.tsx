@@ -5,10 +5,10 @@ import Icon from '@/components/ui/icon';
 export const AboutAndAdvantagesSection = () => {
   return (
     <>
-      <section id="about" className="py-12 bg-gradient-to-b from-background to-muted/30">
+      <section id="about" className="py-8 bg-gradient-to-b from-background to-muted/30">
         <div className="container">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
+          <div className="text-center space-y-1 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">О компании</h2>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-4">
@@ -74,11 +74,11 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="advantages" className="py-12 bg-gradient-to-b from-muted/30 to-background">
+      <section id="advantages" className="py-8 bg-gradient-to-b from-muted/30 to-background">
         <div className="container">
-          <div className="text-center space-y-2 mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold">Преимущества нашей технологии</h2>
-            <p className="text-muted-foreground text-lg">Почему восстановление выгоднее покупки новой детали</p>
+          <div className="text-center space-y-1 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Преимущества нашей технологии</h2>
+            <p className="text-muted-foreground text-sm">Почему восстановление выгоднее покупки новой детали</p>
           </div>
 
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -141,11 +141,11 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="process" className="py-12 bg-background">
+      <section id="process" className="py-8 bg-background">
         <div className="container">
-          <div className="text-center space-y-2 mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold">Как мы работаем</h2>
-            <p className="text-muted-foreground text-lg">
+          <div className="text-center space-y-1 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Как мы работаем</h2>
+            <p className="text-muted-foreground text-sm">
               Простой и понятный процесс восстановления
             </p>
           </div>

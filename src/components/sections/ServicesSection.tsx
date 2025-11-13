@@ -58,8 +58,8 @@ export const ServicesSection = ({
       <div className="container">
         <div className="space-y-6">
           <div className="text-center space-y-1">
-            <h2 className="text-3xl md:text-4xl font-bold">Наши услуги</h2>
-            <p className="text-muted-foreground">
+            <h2 className="text-2xl md:text-3xl font-bold">Наши услуги</h2>
+            <p className="text-muted-foreground text-sm">
               Полный спектр работ по восстановлению трансмиссии
             </p>
           </div>
