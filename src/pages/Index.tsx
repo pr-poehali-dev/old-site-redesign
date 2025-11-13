@@ -375,9 +375,7 @@ const Index = () => {
         <div className="container">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Преимущества нашей технологии</h2>
-            <p className="text-lg text-muted-foreground">
-              Почему восстановление выгоднее замены
-            </p>
+            <p className="text-lg text-muted-foreground">Почему восстановление выгоднее покупки новой детали</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
