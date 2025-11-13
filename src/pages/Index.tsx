@@ -42,6 +42,7 @@ const Index = () => {
   const [quickFormData, setQuickFormData] = useState({ name: '', phone: '' });
   const [quickFormStatus, setQuickFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [viewCount, setViewCount] = useState<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,6 +50,14 @@ const Index = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const storedCount = localStorage.getItem('megashlic_view_count');
+    const currentCount = storedCount ? parseInt(storedCount, 10) : 0;
+    const newCount = currentCount + 1;
+    setViewCount(newCount);
+    localStorage.setItem('megashlic_view_count', newCount.toString());
   }, []);
 
   const filteredServices = useMemo(() => {
@@ -387,9 +396,15 @@ const Index = () => {
               <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="МегаШлиц" className="h-10 w-10 object-contain" />
               <span className="font-bold">МегаШлиц<sup className="text-xs ml-0.5">®</sup></span>
             </div>
-            <p className="text-sm text-secondary-foreground/80">
-              © 2024 МегаШлиц. Восстановление шлицевых соединений.
-            </p>
+            <div className="flex flex-col items-center gap-2">
+              <p className="text-sm text-secondary-foreground/80">
+                © 2024 МегаШлиц. Восстановление шлицевых соединений.
+              </p>
+              <div className="flex items-center gap-2 text-xs text-secondary-foreground/60">
+                <Icon name="Eye" className="h-4 w-4" />
+                <span>Просмотров: {viewCount.toLocaleString('ru-RU')}</span>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
