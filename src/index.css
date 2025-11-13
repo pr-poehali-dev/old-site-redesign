@@ -111,8 +111,8 @@
     height: 100%;
     background-image: url("https://cdn.poehali.dev/files/0f422959-a5e9-4d23-9144-a5dc6d125bbc.jpg");
     background-repeat: repeat;
-    background-size: 200px;
-    opacity: 0.08;
+    background-size: 180px;
+    opacity: 0.15;
     z-index: 0;
     pointer-events: none;
   }
