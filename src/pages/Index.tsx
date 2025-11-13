@@ -62,9 +62,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="МегаШлиц" className="h-10 w-10 object-contain" />
-            <span className="text-xl font-bold text-secondary">МегаШлиц</span>
+          <div className="flex items-center gap-3">
+            <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="МегаШлиц" className="h-12 w-12 object-contain" />
+            <span className="text-xl font-bold text-secondary">МегаШлиц<sup className="text-xs ml-0.5">®</sup></span>
           </div>
           
           <nav className="hidden md:flex items-center gap-6">
@@ -437,8 +437,8 @@ const Index = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="МегаШлиц" className="h-8 w-8 object-contain" />
-              <span className="font-bold">МегаШлиц</span>
+              <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="МегаШлиц" className="h-10 w-10 object-contain" />
+              <span className="font-bold">МегаШлиц<sup className="text-xs ml-0.5">®</sup></span>
             </div>
             <p className="text-sm text-secondary-foreground/80">
               © 2024 МегаШлиц. Восстановление шлицевых соединений.
