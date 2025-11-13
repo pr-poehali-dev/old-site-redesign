@@ -183,7 +183,7 @@ const Index = () => {
 
       <section id="about" className="py-20 border-t">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-16">
             <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
             <p className="text-lg text-muted-foreground">
               МегаШлиц — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
@@ -207,6 +207,72 @@ const Index = () => {
                 <p className="text-muted-foreground">до 24 месяцев</p>
               </div>
             </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center space-y-4 mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold">Запатентованная технология</h3>
+              <p className="text-muted-foreground">
+                Наша технология восстановления защищена патентом РФ
+              </p>
+            </div>
+
+            <Card className="hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-primary/10 p-3 rounded-lg">
+                        <Icon name="Award" className="h-8 w-8 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-xl mb-2">Патент РФ № 2829377</h4>
+                        <p className="text-muted-foreground">
+                          Способ восстановления шлицевого соединения на полноприводных автомобилях
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3 text-sm">
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
+                        <span>Патентообладатель: Борисов Александр Вячеславович</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
+                        <span>Приоритет изобретения: 29 марта 2024 г.</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
+                        <span>Дата регистрации: 30 октября 2024 г.</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
+                        <span>Срок действия патента: до 29 марта 2044 г.</span>
+                      </div>
+                    </div>
+
+                    <div className="pt-4">
+                      <p className="text-sm text-muted-foreground">
+                        Наша запатентованная технология гарантирует высочайшее качество восстановления 
+                        и долговечность отремонтированных деталей.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="relative group">
+                    <div className="overflow-hidden rounded-lg border-4 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
+                      <img 
+                        src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
+                        alt="Патент РФ № 2829377"
+                        className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 rounded-lg pointer-events-none" />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -395,76 +461,6 @@ const Index = () => {
                 <p className="text-muted-foreground">
                   Сохраняем оригинальные детали без замены дорогостоящих узлов
                 </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 border-t bg-muted/30">
-        <div className="container">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Сертификаты и патенты</h2>
-            <p className="text-lg text-muted-foreground">
-              Запатентованная технология восстановления шлицевых соединений
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <Card className="hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 p-3 rounded-lg">
-                        <Icon name="Award" className="h-8 w-8 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-xl mb-2">Патент РФ № 2829377</h3>
-                        <p className="text-muted-foreground">
-                          Способ восстановления шлицевого соединения на полноприводных автомобилях
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="space-y-3 text-sm">
-                      <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
-                        <span>Патентообладатель: Борисов Александр Вячеславович</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
-                        <span>Приоритет изобретения: 29 марта 2024 г.</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
-                        <span>Дата регистрации: 30 октября 2024 г.</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
-                        <span>Срок действия патента: до 29 марта 2044 г.</span>
-                      </div>
-                    </div>
-
-                    <div className="pt-4">
-                      <p className="text-sm text-muted-foreground">
-                        Наша запатентованная технология гарантирует высочайшее качество восстановления 
-                        и долговечность отремонтированных деталей.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="relative group">
-                    <div className="overflow-hidden rounded-lg border-4 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
-                      <img 
-                        src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
-                        alt="Патент РФ № 2829377"
-                        className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 rounded-lg pointer-events-none" />
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </div>
