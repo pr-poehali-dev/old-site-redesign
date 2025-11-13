@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
@@ -41,6 +41,15 @@ const Index = () => {
   const [quickConsultOpen, setQuickConsultOpen] = useState(false);
   const [quickFormData, setQuickFormData] = useState({ name: '', phone: '' });
   const [quickFormStatus, setQuickFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const filteredServices = useMemo(() => {
     return services.filter(service => {
@@ -397,6 +406,16 @@ const Index = () => {
           Написать в WhatsApp
         </span>
       </a>
+
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-6 right-24 z-50 bg-primary hover:bg-primary/90 text-primary-foreground p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-in fade-in slide-in-from-bottom-4"
+          aria-label="Вернуться наверх"
+        >
+          <Icon name="ArrowUp" className="h-6 w-6" />
+        </button>
+      )}
     </div>
   );
 };
