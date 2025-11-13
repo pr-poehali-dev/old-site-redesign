@@ -29,33 +29,80 @@ export const TurnkeySection = () => {
                     <Icon name="Wrench" className="h-6 w-6 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Что входит в услугу?</h3>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <Icon name="Check" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Диагностика полного привода и раздаточной коробки</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Icon name="Check" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Демонтаж неисправных деталей</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Icon name="Check" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Восстановление шлицевых соединений по запатентованной технологии</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Icon name="Check" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Установка восстановленных деталей</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Icon name="Check" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Замена всех расходных комплектующих: сальники, фильтр, масло</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Icon name="Check" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Тест-драйв и проверка работы полного привода</span>
-                      </li>
-                    </ul>
+                    <h3 className="text-xl font-bold mb-4">Что входит в услугу?</h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="bg-muted/30 rounded-lg p-4 border">
+                        <div className="flex items-start gap-3">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="Search" className="h-4 w-4 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-sm mb-1">Диагностика</h4>
+                            <p className="text-xs text-muted-foreground">Полная проверка привода и раздаточной коробки</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-muted/30 rounded-lg p-4 border">
+                        <div className="flex items-start gap-3">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="Settings" className="h-4 w-4 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-sm mb-1">Демонтаж</h4>
+                            <p className="text-xs text-muted-foreground">Снятие всех неисправных деталей</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-muted/30 rounded-lg p-4 border">
+                        <div className="flex items-start gap-3">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="Zap" className="h-4 w-4 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-sm mb-1">Восстановление</h4>
+                            <p className="text-xs text-muted-foreground">Ремонт шлицев по запатентованной технологии</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-muted/30 rounded-lg p-4 border">
+                        <div className="flex items-start gap-3">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="Package" className="h-4 w-4 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-sm mb-1">Замена расходников</h4>
+                            <p className="text-xs text-muted-foreground">Новые сальники, фильтр, масло</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-muted/30 rounded-lg p-4 border">
+                        <div className="flex items-start gap-3">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="Wrench" className="h-4 w-4 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-sm mb-1">Установка</h4>
+                            <p className="text-xs text-muted-foreground">Монтаж восстановленных деталей</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-muted/30 rounded-lg p-4 border">
+                        <div className="flex items-start gap-3">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="CheckCircle" className="h-4 w-4 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-sm mb-1">Тест-драйв</h4>
+                            <p className="text-xs text-muted-foreground">Проверка работы полного привода</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
