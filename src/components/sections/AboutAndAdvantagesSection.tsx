@@ -253,29 +253,31 @@ export const AboutAndAdvantagesSection = () => {
 
       <section id="faq" className="py-8 border-t">
         <div className="container">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center space-y-1 mb-6">
-              <h2 className="text-3xl md:text-4xl font-bold">Частые вопросы</h2>
-            </div>
+          <div className="text-center space-y-1 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold">Частые вопросы</h2>
+          </div>
 
-            <div className="space-y-2">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { q: 'Как понять, что шлицы изношены?', a: 'Вибрация при разгоне, металлический стук при трогании, рывки при переключении передач, гул со стороны раздатки.' },
-                { q: 'Сколько времени занимает восстановление?', a: 'От 1 до 5 рабочих дней. Обычно справляемся за 2 дня.' },
-                { q: 'Можно ли восстановить сильно изношенные шлицы?', a: 'Да, наша технология позволяет восстанавливать даже критически изношенные шлицы с полной термообработкой.' },
-                { q: 'Какая гарантия на восстановленные детали?', a: 'Гарантия 18 месяцев без ограничения пробега с официальным талоном.' },
-                { q: 'Нужно ли снимать детали самостоятельно?', a: 'Да, мы работаем только с уже снятыми деталями. Привезите их к нам или отправьте через СДЭК.' },
-                { q: 'Работаете со всеми марками?', a: 'Восстанавливаем шлицы на всех полноприводных моделях. Звоните — проконсультируем.' },
+                { q: 'Как понять, что шлицы изношены?', a: 'Вибрация при разгоне, металлический стук при трогании, рывки при переключении передач, гул со стороны раздатки.', icon: 'AlertCircle' },
+                { q: 'Сколько времени занимает восстановление?', a: 'От 1 до 5 рабочих дней. Обычно справляемся за 2 дня.', icon: 'Clock' },
+                { q: 'Можно ли восстановить сильно изношенные шлицы?', a: 'Да, наша технология позволяет восстанавливать даже критически изношенные шлицы с полной термообработкой.', icon: 'CheckCircle' },
+                { q: 'Какая гарантия на восстановленные детали?', a: 'Гарантия 18 месяцев без ограничения пробега с официальным талоном.', icon: 'Shield' },
+                { q: 'Нужно ли снимать детали самостоятельно?', a: 'Да, мы работаем только с уже снятыми деталями. Привезите их к нам или отправьте через СДЭК.', icon: 'Package' },
+                { q: 'Работаете со всеми марками?', a: 'Восстанавливаем шлицы на всех полноприводных моделях. Звоните — проконсультируем.', icon: 'Car' },
               ].map((faq, index) => (
-                <Card key={index} className="hover:shadow-md transition-shadow">
-                  <CardContent className="p-4">
-                    <div className="flex items-start gap-3">
-                      <Icon name="HelpCircle" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h3 className="font-semibold text-base mb-1">{faq.q}</h3>
-                        <p className="text-sm text-muted-foreground">{faq.a}</p>
+                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
+                  <CardHeader>
+                    <div className="relative mx-auto mb-2">
+                      <div className="w-16 h-16 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
+                        <Icon name={faq.icon} className="h-8 w-8 text-primary" />
                       </div>
                     </div>
+                    <CardTitle className="text-base">{faq.q}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{faq.a}</p>
                   </CardContent>
                 </Card>
               ))}
