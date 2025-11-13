@@ -90,7 +90,7 @@ const Index = () => {
               Восстановление шлицевых соединений
             </h1>
             <p className="text-xl text-muted-foreground">
-              Профессиональное восстановление шлицевого соединения полноприводных автомобилей по всей стране
+              Производственная компания по восстановлению шлицевых соединений трансмиссии по всей стране
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" onClick={() => scrollToSection('services')}>
@@ -98,7 +98,7 @@ const Index = () => {
                 <Icon name="ArrowRight" className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" onClick={() => scrollToSection('contacts')}>
-                Записаться на ремонт
+                Отправить заявку
               </Button>
             </div>
           </div>
@@ -110,9 +110,9 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
             <p className="text-lg text-muted-foreground">
-              МегаШлиц — специализированный автосервис по восстановлению шлицевых соединений. 
-              Работаем с полноприводными автомобилями всех марок. Используем современное оборудование 
-              и оригинальные технологии восстановления.
+              МегаШлиц — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
+              Работаем с автосервисами и дилерскими центрами по всей России. Используем промышленное оборудование 
+              и запатентованные технологии металлизации.
             </p>
             <div className="grid md:grid-cols-3 gap-8 pt-8">
               <div className="space-y-2">
@@ -122,8 +122,8 @@ const Index = () => {
               </div>
               <div className="space-y-2">
                 <Icon name="Car" className="h-12 w-12 mx-auto text-primary" />
-                <h3 className="text-2xl font-bold">3500+</h3>
-                <p className="text-muted-foreground">отремонтированных авто</p>
+                <h3 className="text-2xl font-bold">5000+</h3>
+                <p className="text-muted-foreground">восстановленных деталей</p>
               </div>
               <div className="space-y-2">
                 <Icon name="Shield" className="h-12 w-12 mx-auto text-primary" />
@@ -301,8 +301,8 @@ const Index = () => {
                   </CardContent>
                   <CardFooter className="pt-0">
                     <Button className="w-full">
-                      <Icon name="Calendar" className="mr-2 h-4 w-4" />
-                      Записаться
+                      <Icon name="Send" className="mr-2 h-4 w-4" />
+                      Заказать
                     </Button>
                   </CardFooter>
                 </Card>
@@ -323,17 +323,17 @@ const Index = () => {
       <section id="portfolio" className="py-20 border-t">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Выполненные работы</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Наши работы</h2>
             <p className="text-lg text-muted-foreground">
-              Примеры успешно выполненных ремонтов
+              Примеры успешно восстановленных деталей
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: 'Toyota Land Cruiser 200', description: 'Восстановление шлицев переднего моста. Замена ШРУСов. Полная диагностика трансмиссии.', icon: 'Car' },
-              { title: 'Nissan Patrol Y62', description: 'Ремонт раздаточной коробки с восстановлением всех шлицевых соединений.', icon: 'Wrench' },
-              { title: 'Mitsubishi Pajero Sport', description: 'Восстановление карданного вала, балансировка, замена крестовин.', icon: 'Settings' },
+              { title: 'Полуось переднего моста', description: 'Восстановление изношенных шлицев полуоси Land Cruiser 200. Металлизация с последующей механической обработкой.', icon: 'Settings' },
+              { title: 'Вал раздаточной коробки', description: 'Восстановление шлицевого соединения вала раздатки Nissan Patrol. Твердость покрытия HRC 58-62.', icon: 'Wrench' },
+              { title: 'Карданный вал', description: 'Восстановление шлицев карданного вала Pajero Sport. Напыление + термообработка + балансировка.', icon: 'Cog' },
             ].map((project, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
@@ -358,10 +358,10 @@ const Index = () => {
 
             <div className="space-y-4">
               {[
-                { q: 'Как понять, что шлицы изношены?', a: 'Основные признаки: вибрация при разгоне, стук в трансмиссии, люфт в соединениях. Рекомендуем пройти диагностику.' },
-                { q: 'Сколько времени занимает ремонт?', a: 'В зависимости от сложности работ — от 1 до 4 дней. Точные сроки озвучим после диагностики.' },
-                { q: 'Какая гарантия на работы?', a: 'Предоставляем гарантию от 12 до 24 месяцев в зависимости от типа восстановления и условий эксплуатации.' },
-                { q: 'Работаете ли вы с внедорожниками?', a: 'Да, специализируемся именно на полноприводных автомобилях и внедорожниках всех марок.' },
+                { q: 'Какие детали можно восстановить?', a: 'Восстанавливаем шлицевые соединения полуосей, валов КПП и раздатки, карданов, ШРУСов. Работаем с деталями любых марок автомобилей.' },
+                { q: 'Сколько времени занимает восстановление?', a: 'В зависимости от сложности детали — от 1 до 4 дней. Срочные заказы выполняем за 24 часа с доплатой 50%.' },
+                { q: 'Какая гарантия на восстановленные детали?', a: 'Предоставляем гарантию от 12 до 24 месяцев. Восстановленное покрытие превосходит заводское по износостойкости.' },
+                { q: 'Как отправить деталь на восстановление?', a: 'Принимаем детали в производственном цехе в Москве или работаем через транспортные компании по всей России.' },
               ].map((faq, index) => (
                 <Card key={index}>
                   <CardHeader>
@@ -385,7 +385,7 @@ const Index = () => {
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Контакты</h2>
             <p className="text-lg text-muted-foreground">
-              Свяжитесь с нами для консультации или записи на ремонт
+              Свяжитесь с нами для консультации или отправки заявки
             </p>
           </div>
 
@@ -393,10 +393,10 @@ const Index = () => {
             <Card>
               <CardHeader>
                 <Icon name="MapPin" className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Адрес сервиса</CardTitle>
+                <CardTitle>Производственный цех</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">г. Москва, ул. Автомобильная, д. 15, стр. 3</p>
+                <p className="text-muted-foreground">г. Москва, Промышленная зона «Черкизово»</p>
               </CardContent>
             </Card>
 
