@@ -3,6 +3,7 @@ import { Header } from '@/components/sections/Header';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { GalleryCarouselSection } from '@/components/sections/GalleryCarouselSection';
 import { AboutAndAdvantagesSection } from '@/components/sections/AboutAndAdvantagesSection';
+import { TurnkeySection } from '@/components/sections/TurnkeySection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
 import { ContactsSection } from '@/components/sections/ContactsSection';
 import { FooterWithButtons } from '@/components/sections/FooterWithButtons';
@@ -167,6 +168,8 @@ const Index = () => {
       <HeroSection scrollToSection={scrollToSection} />
 
       <AboutAndAdvantagesSection />
+
+      <TurnkeySection />
 
       <ServicesSection
         searchQuery={searchQuery}
