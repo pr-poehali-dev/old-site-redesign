@@ -144,8 +144,6 @@ export const ContactsSection = () => {
           )}
 
           <div className="space-y-4">
-
-          <div className="space-y-4">
             <div className="w-full h-[400px] rounded-lg overflow-hidden border shadow-lg">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?ll=43.915409%2C56.253487&z=16&l=map&pt=43.915409,56.253487,pm2rdm"
