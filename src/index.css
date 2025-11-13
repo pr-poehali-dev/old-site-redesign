@@ -98,30 +98,8 @@
   }
 
   body {
+    @apply bg-background text-foreground;
     font-family: "Open Sans", sans-serif;
-    background-color: #ffffff;
-    background-image: url("https://cdn.poehali.dev/files/0f422959-a5e9-4d23-9144-a5dc6d125bbc.jpg");
-    background-repeat: repeat;
-    background-size: 200px;
-    background-attachment: fixed;
-  }
-
-  body > #root {
-    position: relative;
-    min-height: 100vh;
-  }
-
-  section,
-  main {
-    background-color: rgba(255, 255, 255, 0.8) !important;
-  }
-
-  header {
-    background-color: rgb(255, 255, 255) !important;
-  }
-
-  footer {
-    background-color: rgba(0, 0, 0, 0.95) !important;
   }
 
   h1,
