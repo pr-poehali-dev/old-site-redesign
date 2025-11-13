@@ -199,7 +199,7 @@ export const TurnkeySection = () => {
                       <Icon name="TrendingDown" className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold mb-2">Экономия до 70% по сравнению с покупкой новых деталей</h3>
+                      <h3 className="text-lg font-bold mb-2">Экономия от 68 000 до 203 000 ₽ по сравнению с новыми деталями</h3>
                       <div className="space-y-2 text-sm text-muted-foreground">
                         <p>
                           <span className="font-semibold">Hyundai/Kia:</span> Новая раздаточная коробка (473003B630) стоит 138 000 ₽, восстановление с установкой — от 69 990 ₽. 
