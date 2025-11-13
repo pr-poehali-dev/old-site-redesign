@@ -33,7 +33,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   }, []);
 
   return (
-    <section id="hero" className="relative py-24 md:py-36 overflow-hidden">
+    <section id="hero" className="relative py-20 md:py-28 overflow-hidden">
       <div className="absolute inset-0 z-0">
         {backgroundImages.map((image, index) => (
           <img

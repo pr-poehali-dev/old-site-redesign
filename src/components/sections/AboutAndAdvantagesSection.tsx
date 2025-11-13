@@ -4,13 +4,13 @@ import Icon from '@/components/ui/icon';
 export const AboutAndAdvantagesSection = () => {
   return (
     <>
-      <section id="about" className="py-12 border-t">
+      <section id="about" className="py-8 border-t">
         <div className="container">
-          <div className="text-center mb-8">
+          <div className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="max-w-4xl mx-auto space-y-4">
             <Card>
               <CardContent className="p-6">
                 <div className="space-y-6">
@@ -67,9 +67,9 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="advantages" className="py-12 border-t">
+      <section id="advantages" className="py-8 border-t">
         <div className="container">
-          <div className="text-center space-y-2 mb-8">
+          <div className="text-center space-y-1 mb-6">
             <h2 className="text-3xl md:text-4xl font-bold">Преимущества нашей технологии</h2>
             <p className="text-muted-foreground">Почему восстановление выгоднее покупки новой детали</p>
           </div>
@@ -124,9 +124,9 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="process" className="py-12 border-t bg-muted/30">
+      <section id="process" className="py-8 border-t bg-muted/30">
         <div className="container">
-          <div className="text-center space-y-2 mb-8">
+          <div className="text-center space-y-1 mb-6">
             <h2 className="text-3xl md:text-4xl font-bold">Как мы работаем</h2>
             <p className="text-muted-foreground">
               Порядок работы восстановления
@@ -134,7 +134,7 @@ export const AboutAndAdvantagesSection = () => {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               <Card className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '0ms' }}>
                 <CardHeader>
                   <div className="relative mx-auto mb-4">
@@ -251,14 +251,14 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-12 border-t">
+      <section id="faq" className="py-8 border-t">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center space-y-2 mb-8">
+            <div className="text-center space-y-1 mb-6">
               <h2 className="text-3xl md:text-4xl font-bold">Частые вопросы</h2>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-2">
               {[
                 { q: 'Как понять, что шлицы изношены?', a: 'Вибрация при разгоне, металлический стук при трогании, рывки при переключении передач, гул со стороны раздатки.' },
                 { q: 'Сколько времени занимает восстановление?', a: 'От 1 до 5 рабочих дней. Обычно справляемся за 2 дня.' },
