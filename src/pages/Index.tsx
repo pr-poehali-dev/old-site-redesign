@@ -81,7 +81,7 @@ const Index = () => {
           <div className="flex items-center gap-2">
             <Button 
               className="hidden md:flex bg-[#25D366] hover:bg-[#20BA5A]"
-              onClick={() => window.open('https://wa.me/78312601123', '_blank')}
+              onClick={() => window.open('https://wa.me/79202520352', '_blank')}
             >
               <Icon name="MessageCircle" className="mr-2 h-4 w-4" />
               WhatsApp
@@ -478,7 +478,7 @@ const Index = () => {
                 <CardTitle>Телефон</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">+7 (920) 252-03-52</p>
+                <p className="text-muted-foreground">+7 (831) 260-11-23</p>
               </CardContent>
             </Card>
 
@@ -495,10 +495,10 @@ const Index = () => {
             <Card>
               <CardHeader>
                 <Icon name="MessageCircle" className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>WhatsApp (производство)</CardTitle>
+                <CardTitle>WhatsApp</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">+7 (831) 260-11-23</p>
+                <p className="text-muted-foreground">+7 (920) 252-03-52</p>
               </CardContent>
             </Card>
           </div>
@@ -520,7 +520,7 @@ const Index = () => {
       </footer>
 
       <a
-        href="https://wa.me/78312601123"
+        href="https://wa.me/79202520352"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
