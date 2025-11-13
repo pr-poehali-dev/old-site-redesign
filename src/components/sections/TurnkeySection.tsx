@@ -111,6 +111,14 @@ export const TurnkeySection = () => {
                         
                         <div className="bg-background rounded-lg p-4 border hover:border-primary/30 transition-all">
                           <div className="flex items-center justify-between mb-2">
+                            <h4 className="font-bold text-sm">Hyundai / Kia с МКПП</h4>
+                            <span className="text-primary font-bold text-lg">от 79 990 ₽</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground">Восстановление вала + дифференциал с установкой</p>
+                        </div>
+                        
+                        <div className="bg-background rounded-lg p-4 border hover:border-primary/30 transition-all">
+                          <div className="flex items-center justify-between mb-2">
                             <h4 className="font-bold text-sm">Volkswagen Tiguan</h4>
                             <span className="text-primary font-bold text-lg">от 34 990 ₽</span>
                           </div>
