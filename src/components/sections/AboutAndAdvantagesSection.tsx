@@ -334,7 +334,7 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-12 border-t bg-gradient-to-b from-background to-muted/30">
+      <section id="faq" className="py-12 bg-gradient-to-b from-background to-muted/30">
         <div className="container">
           <div className="text-center space-y-2 mb-10">
             <h2 className="text-3xl md:text-4xl font-bold">Частые вопросы</h2>
