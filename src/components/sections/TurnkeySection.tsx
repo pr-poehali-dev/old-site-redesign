@@ -67,7 +67,7 @@ export const TurnkeySection = () => {
                       </div>
                       <div>
                         <h4 className="font-bold mb-1">Сроки</h4>
-                        <p className="text-sm text-muted-foreground">От 3 до 7 дней</p>
+                        <p className="text-sm text-muted-foreground">1 день</p>
                       </div>
                     </div>
 
