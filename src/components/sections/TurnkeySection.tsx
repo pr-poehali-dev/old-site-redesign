@@ -180,7 +180,7 @@ export const TurnkeySection = () => {
                         
                         <div className="bg-background rounded-lg p-3 border hover:border-primary/30 transition-all">
                           <h4 className="font-bold text-sm mb-1">Volkswagen Tiguan</h4>
-                          <span className="text-primary font-bold text-lg">от 34 990 ₽</span>
+                          <span className="text-primary font-bold text-lg">от 114 990 ₽</span>
                         </div>
                       </div>
                       <div className="mt-3 space-y-1.5">
