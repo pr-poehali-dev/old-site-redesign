@@ -108,8 +108,17 @@
 
   body > #root {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.75);
     min-height: 100vh;
+  }
+
+  section,
+  main {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  header,
+  footer {
+    background-color: rgba(0, 0, 0, 0.95) !important;
   }
 
   h1,
