@@ -148,7 +148,7 @@ export const TurnkeySection = () => {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-4">Работаем с марками</h3>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                      <div className="grid grid-cols-3 gap-3 max-w-md">
                         <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
                           <span className="font-semibold text-sm">Hyundai</span>
                         </div>
@@ -157,21 +157,6 @@ export const TurnkeySection = () => {
                         </div>
                         <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
                           <span className="font-semibold text-sm">Volkswagen</span>
-                        </div>
-                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
-                          <span className="font-semibold text-sm">Mazda</span>
-                        </div>
-                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
-                          <span className="font-semibold text-sm">Land Rover</span>
-                        </div>
-                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
-                          <span className="font-semibold text-sm">Volvo</span>
-                        </div>
-                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
-                          <span className="font-semibold text-sm">Ford</span>
-                        </div>
-                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
-                          <span className="font-semibold text-sm">Haval</span>
                         </div>
                       </div>
                       <p className="text-xs text-muted-foreground mt-4">
