@@ -102,7 +102,7 @@
     font-family: "Open Sans", sans-serif;
     background-image: url("https://cdn.poehali.dev/files/0f422959-a5e9-4d23-9144-a5dc6d125bbc.jpg");
     background-repeat: repeat;
-    background-size: 400px;
+    background-size: 300px;
     background-position: center;
     background-attachment: fixed;
   }
@@ -114,7 +114,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.85);
     z-index: -1;
   }
 
