@@ -182,7 +182,7 @@ const Index = () => {
                       <Icon name="X" className="h-4 w-4" />
                     </button>
                   </CardTitle>
-                  <CardDescription>Оставьте контакты, мы перезвоним в течение 15 минут</CardDescription>
+                  <CardDescription>Оставьте контакты, мы свяжемся с вами</CardDescription>
                 </CardHeader>
                 <CardContent>
                   {quickFormStatus === 'success' && (
