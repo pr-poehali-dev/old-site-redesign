@@ -233,7 +233,7 @@ const Index = () => {
               </Card>
               <Card className="text-center p-3">
                 <Icon name="Car" className="h-8 w-8 mx-auto text-primary mb-1" />
-                <h3 className="text-base font-bold">5000+</h3>
+                <h3 className="text-base font-bold">3000+</h3>
                 <p className="text-xs text-muted-foreground">восстановленных деталей</p>
               </Card>
               <Card className="text-center p-3">
