@@ -345,6 +345,7 @@ export const TurnkeySection = () => {
                           )}
                         </div>
                         </div>
+                        </div>
                       </div>
                     </div>
                   </div>
