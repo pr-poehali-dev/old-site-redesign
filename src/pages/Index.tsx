@@ -63,7 +63,7 @@ const Index = () => {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Icon name="Wrench" className="h-8 w-8 text-primary" />
+            <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="МегаШлиц" className="h-10 w-10 object-contain" />
             <span className="text-xl font-bold text-secondary">МегаШлиц</span>
           </div>
           
@@ -437,7 +437,7 @@ const Index = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Icon name="Wrench" className="h-6 w-6" />
+              <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="МегаШлиц" className="h-8 w-8 object-contain" />
               <span className="font-bold">МегаШлиц</span>
             </div>
             <p className="text-sm text-secondary-foreground/80">
