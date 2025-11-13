@@ -409,9 +409,7 @@ const Index = () => {
                 <CardTitle className="text-xl">Высокая прочность</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Технология напыления создает соединение прочнее заводского
-                </p>
+                <p className="text-muted-foreground">Применяется сталь, легированная титаном и подвергнутая термической обработке.</p>
               </CardContent>
             </Card>
 
