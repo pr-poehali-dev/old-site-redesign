@@ -13,6 +13,7 @@ interface Service {
   duration: string;
   popular: boolean;
   description: string;
+  image?: string;
 }
 
 interface ServicesSectionProps {
@@ -53,7 +54,16 @@ export const ServicesSection = ({
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {filteredServices.map((service) => (
-              <Card key={service.id} className="hover:shadow-lg transition-shadow">
+              <Card key={service.id} className="hover:shadow-lg transition-shadow overflow-hidden">
+                {service.image && (
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.name}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
                 <CardHeader>
                   <CardTitle className="text-xl">{service.name}</CardTitle>
                   <CardDescription>{service.description}</CardDescription>
