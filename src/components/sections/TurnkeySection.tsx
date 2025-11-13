@@ -103,7 +103,7 @@ export const TurnkeySection = () => {
                       <div className="grid md:grid-cols-2 gap-4 max-w-2xl">
                         <div className="bg-background rounded-lg p-4 border hover:border-primary/30 transition-all">
                           <div className="flex items-center justify-between mb-2">
-                            <h4 className="font-bold text-sm">Hyundai Tucson / Kia Sportage</h4>
+                            <h4 className="font-bold text-sm">Hyundai / Kia с АКПП</h4>
                             <span className="text-primary font-bold text-lg">от 69 990 ₽</span>
                           </div>
                           <p className="text-xs text-muted-foreground">Восстановление вала + дифференциал с установкой</p>
