@@ -37,6 +37,9 @@ const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', detail: '', message: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [quickConsultOpen, setQuickConsultOpen] = useState(false);
+  const [quickFormData, setQuickFormData] = useState({ name: '', phone: '' });
+  const [quickFormStatus, setQuickFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   const filteredServices = useMemo(() => {
     return services.filter(service => {
@@ -89,6 +92,40 @@ const Index = () => {
     }
   };
 
+  const handleQuickFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setQuickFormStatus('sending');
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/fd96c7e7-0adf-485f-a51a-abcd609b660d', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...quickFormData,
+          detail: 'Быстрая консультация',
+          message: 'Запрос на консультацию из шапки сайта'
+        }),
+      });
+
+      if (response.ok) {
+        setQuickFormStatus('success');
+        setQuickFormData({ name: '', phone: '' });
+        setTimeout(() => {
+          setQuickFormStatus('idle');
+          setQuickConsultOpen(false);
+        }, 3000);
+      } else {
+        setQuickFormStatus('error');
+        setTimeout(() => setQuickFormStatus('idle'), 5000);
+      }
+    } catch (error) {
+      setQuickFormStatus('error');
+      setTimeout(() => setQuickFormStatus('idle'), 5000);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -109,7 +146,7 @@ const Index = () => {
 
           <div className="flex items-center gap-2">
             <Button 
-              className="hidden md:flex bg-[#25D366] hover:bg-[#20BA5A]"
+              className="hidden lg:flex bg-[#25D366] hover:bg-[#20BA5A]"
               onClick={() => window.open('https://wa.me/79202520352', '_blank')}
             >
               <Icon name="MessageCircle" className="mr-2 h-4 w-4" />
@@ -117,10 +154,10 @@ const Index = () => {
             </Button>
             <Button 
               className="hidden md:flex"
-              onClick={() => scrollToSection('contacts')}
+              onClick={() => setQuickConsultOpen(!quickConsultOpen)}
             >
-              <Icon name="Phone" className="mr-2 h-4 w-4" />
-              Связаться
+              <Icon name="Headphones" className="mr-2 h-4 w-4" />
+              Консультация
             </Button>
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -130,6 +167,59 @@ const Index = () => {
             </button>
           </div>
         </div>
+
+        {quickConsultOpen && (
+          <div className="hidden md:block border-t bg-background animate-in slide-in-from-top duration-300">
+            <div className="container py-6">
+              <Card className="max-w-md mx-auto">
+                <CardHeader>
+                  <CardTitle className="flex items-center justify-between">
+                    <span className="flex items-center gap-2">
+                      <Icon name="Headphones" className="h-5 w-5 text-primary" />
+                      Быстрая консультация
+                    </span>
+                    <button onClick={() => setQuickConsultOpen(false)} className="hover:bg-muted p-1 rounded">
+                      <Icon name="X" className="h-4 w-4" />
+                    </button>
+                  </CardTitle>
+                  <CardDescription>Оставьте контакты, мы перезвоним в течение 15 минут</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  {quickFormStatus === 'success' && (
+                    <div className="mb-4 p-3 bg-primary/10 text-primary rounded-md text-sm">
+                      ✓ Спасибо! Мы скоро свяжемся с вами.
+                    </div>
+                  )}
+                  {quickFormStatus === 'error' && (
+                    <div className="mb-4 p-3 bg-destructive/10 text-destructive rounded-md text-sm">
+                      Ошибка. Позвоните нам: +7 (831) 260-11-23
+                    </div>
+                  )}
+                  <form onSubmit={handleQuickFormSubmit} className="space-y-3">
+                    <Input 
+                      placeholder="Ваше имя" 
+                      required 
+                      value={quickFormData.name}
+                      onChange={(e) => setQuickFormData({...quickFormData, name: e.target.value})}
+                      disabled={quickFormStatus === 'sending'}
+                    />
+                    <Input 
+                      type="tel" 
+                      placeholder="+7 (___) ___-__-__" 
+                      required 
+                      value={quickFormData.phone}
+                      onChange={(e) => setQuickFormData({...quickFormData, phone: e.target.value})}
+                      disabled={quickFormStatus === 'sending'}
+                    />
+                    <Button type="submit" className="w-full" disabled={quickFormStatus === 'sending'}>
+                      {quickFormStatus === 'sending' ? 'Отправка...' : 'Перезвоните мне'}
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        )}
 
         {mobileMenuOpen && (
           <div className="md:hidden border-t bg-background animate-in slide-in-from-top duration-300">
