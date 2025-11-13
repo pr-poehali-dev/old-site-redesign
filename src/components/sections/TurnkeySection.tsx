@@ -234,7 +234,11 @@ export const TurnkeySection = () => {
                         <h4 className="font-bold">Hyundai / Kia МКПП</h4>
                       </div>
                       <div className="text-3xl font-bold text-primary mb-1">79 990 ₽</div>
-                      <p className="text-xs text-muted-foreground">ремонт под ключ</p>
+                      <p className="text-xs text-muted-foreground mb-2">ремонт под ключ</p>
+                      <div className="flex items-center justify-center gap-1 text-xs text-muted-foreground mt-3 pt-3 border-t">
+                        <Icon name="Users" className="h-3 w-3" />
+                        <span>Более 50 клиентов</span>
+                      </div>
                     </div>
                     
                     <div className="bg-gradient-to-br from-background to-muted/30 rounded-lg p-5 border-2 border-primary/20 hover:border-primary/40 transition-all text-center">
@@ -243,7 +247,11 @@ export const TurnkeySection = () => {
                         <h4 className="font-bold">Volkswagen Tiguan</h4>
                       </div>
                       <div className="text-3xl font-bold text-primary mb-1">114 990 ₽</div>
-                      <p className="text-xs text-muted-foreground">ремонт под ключ</p>
+                      <p className="text-xs text-muted-foreground mb-2">ремонт под ключ</p>
+                      <div className="flex items-center justify-center gap-1 text-xs text-muted-foreground mt-3 pt-3 border-t">
+                        <Icon name="Users" className="h-3 w-3" />
+                        <span>Более 80 клиентов</span>
+                      </div>
                     </div>
                   </div>
                   <p className="text-xs text-muted-foreground text-center mt-4">
