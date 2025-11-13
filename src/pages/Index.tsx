@@ -193,7 +193,7 @@ const Index = () => {
                 <div className="grid md:grid-cols-[1fr,auto] gap-6 items-center">
                   <div className="space-y-4">
                     <p className="text-sm text-muted-foreground">
-                      МегаШлиц — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
+                      Мега Шлиц<sup>®</sup> — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
                       Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
                       специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
                       и запатентованные технологии восстановления.
@@ -557,12 +557,12 @@ const Index = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="МегаШлиц" className="h-10 w-10 object-contain" />
-              <span className="font-bold">МегаШлиц<sup className="text-xs ml-0.5">®</sup></span>
+              <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="Мега Шлиц" className="h-10 w-10 object-contain" />
+              <span className="font-bold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <p className="text-sm text-secondary-foreground/80">
-                © 2024 МегаШлиц. Восстановление шлицевых соединений.
+                © 2024 Мега Шлиц. Восстановление шлицевых соединений.
               </p>
               <div className="flex items-center gap-2 text-xs text-secondary-foreground/60">
                 <Icon name="Eye" className="h-4 w-4" />
