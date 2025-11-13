@@ -258,23 +258,35 @@ export const AboutAndAdvantagesSection = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="mb-4 p-3 bg-muted/50 rounded-lg">
-                    <p className="text-sm font-medium mb-2">📦 Типичные параметры деталей для расчета:</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-muted-foreground">
-                      <div className="flex items-center gap-2">
-                        <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
-                        <span><strong>Вал раздатки:</strong> 3-5 кг, 40×15×15 см</span>
+                    <p className="text-sm font-medium mb-3">📦 Типичные параметры деталей для расчета:</p>
+                    <div className="grid grid-cols-2 gap-3 text-xs text-muted-foreground">
+                      <div className="flex items-start gap-2">
+                        <Icon name="Package" className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-medium text-foreground">Вал раздатки</div>
+                          <div>3-5 кг, 40×15×15 см</div>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
-                        <span><strong>Дифференциал:</strong> 3-5 кг, 35×35×25 см</span>
+                      <div className="flex items-start gap-2">
+                        <Icon name="Package" className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-medium text-foreground">Дифференциал</div>
+                          <div>3-5 кг, 35×35×25 см</div>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
-                        <span><strong>Раздатка в сборе:</strong> 18-25 кг, 50×40×35 см</span>
+                      <div className="flex items-start gap-2">
+                        <Icon name="Package" className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-medium text-foreground">Раздатка в сборе</div>
+                          <div>18-25 кг, 50×40×35 см</div>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
-                        <span><strong>Корзина фрикционов:</strong> 300 г, 25×25×10 см</span>
+                      <div className="flex items-start gap-2">
+                        <Icon name="Package" className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-medium text-foreground">Корзина фрикционов</div>
+                          <div>300 г, 25×25×10 см</div>
+                        </div>
                       </div>
                     </div>
                   </div>
