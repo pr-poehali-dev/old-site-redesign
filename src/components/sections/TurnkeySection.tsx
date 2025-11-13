@@ -316,19 +316,19 @@ export const TurnkeySection = () => {
                           )}
                         </div>
                         
-                        <div className={`space-y-2 animate-in slide-in-from-left duration-700 delay-300 relative transition-all duration-300 ${activeTooltip === 3 ? 'z-20' : 'z-0'}`}>
+                        <div className={`space-y-2 animate-in slide-in-from-left duration-700 delay-300 relative transition-all duration-300 ${activeTooltip === 3 ? 'z-20' : 'z-0'} bg-primary/5 rounded-lg p-3 border-2 border-primary/20`}>
                           <div className="flex items-center justify-between text-xs mb-1">
-                            <span className="font-semibold">Volkswagen Tiguan 🔥</span>
-                            <span className="text-green-600 font-bold">-203 000 ₽</span>
+                            <span className="font-semibold text-base">Volkswagen Tiguan 🔥</span>
+                            <span className="text-green-600 font-bold text-sm">-203 000 ₽</span>
                           </div>
                           <div 
                             className="flex gap-2 items-center relative"
                             onClick={() => setActiveTooltip(activeTooltip === 3 ? null : 3)}
                           >
-                            <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700 transition-all duration-1000 ease-out delay-300 hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '100%'}}>
+                            <div className="flex-1 bg-red-100 rounded-full h-7 flex items-center px-3 text-xs font-semibold text-red-700 transition-all duration-1000 ease-out delay-300 hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '100%'}}>
                               318 000 ₽ новая
                             </div>
-                            <div className="flex-1 bg-green-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-green-700 transition-all duration-1000 ease-out delay-500 hover:bg-green-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '36%'}}>
+                            <div className="flex-1 bg-green-100 rounded-full h-7 flex items-center px-3 text-xs font-semibold text-green-700 transition-all duration-1000 ease-out delay-500 hover:bg-green-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '36%'}}>
                               114 990 ₽ восст.
                             </div>
                           </div>
