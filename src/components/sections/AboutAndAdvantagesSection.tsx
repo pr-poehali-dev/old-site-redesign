@@ -227,6 +227,24 @@ export const AboutAndAdvantagesSection = () => {
                   </p>
                 </CardContent>
               </Card>
+              <Card className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '500ms' }}>
+                <CardHeader>
+                  <div className="relative mx-auto mb-4">
+                    <div className="w-24 h-24 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
+                      <Icon name="PackageCheck" className="h-12 w-12 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold">
+                      6
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl">Отправка</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Отправляем восстановленную деталь обратно через СДЭК
+                  </p>
+                </CardContent>
+              </Card>
             </div>
 
             <div className="max-w-4xl mx-auto mt-6">
@@ -277,27 +295,6 @@ export const AboutAndAdvantagesSection = () => {
                       <p>• Используйте параметры деталей выше</p>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-              <Card className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '500ms' }}>
-                <CardHeader>
-                  <div className="relative mx-auto mb-4">
-                    <div className="w-24 h-24 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
-                      <Icon name="PackageCheck" className="h-12 w-12 text-primary" />
-                    </div>
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold">
-                      6
-                    </div>
-                  </div>
-                  <CardTitle className="text-xl">Отправка</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Отправляем восстановленную деталь обратно через СДЭК
-                  </p>
                 </CardContent>
               </Card>
             </div>
