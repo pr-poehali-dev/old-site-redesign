@@ -141,6 +141,47 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
+                <div className="border-t pt-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <Icon name="Settings" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-4">Работаем с марками</h3>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
+                          <span className="font-semibold text-sm">Hyundai</span>
+                        </div>
+                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
+                          <span className="font-semibold text-sm">Kia</span>
+                        </div>
+                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
+                          <span className="font-semibold text-sm">Volkswagen</span>
+                        </div>
+                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
+                          <span className="font-semibold text-sm">Mazda</span>
+                        </div>
+                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
+                          <span className="font-semibold text-sm">Land Rover</span>
+                        </div>
+                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
+                          <span className="font-semibold text-sm">Volvo</span>
+                        </div>
+                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
+                          <span className="font-semibold text-sm">Ford</span>
+                        </div>
+                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
+                          <span className="font-semibold text-sm">Haval</span>
+                        </div>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-4">
+                        <Icon name="Info" className="h-3 w-3 inline mr-1" />
+                        Если вашей марки нет в списке — позвоните, мы работаем с большинством моделей с полным приводом
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="bg-muted/50 rounded-lg p-6 space-y-4">
                   <div className="flex items-start gap-3">
                     <Icon name="Info" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
