@@ -61,7 +61,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               Наши услуги
               <Icon name="ArrowRight" className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="secondary" className="bg-white text-slate-900 hover:bg-white/90 font-semibold" onClick={() => scrollToSection('contacts')}>
+            <Button size="lg" onClick={() => scrollToSection('contacts')}>
               Отправить заявку
             </Button>
           </div>
