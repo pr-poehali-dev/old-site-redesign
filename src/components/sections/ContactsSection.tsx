@@ -14,47 +14,6 @@ export const ContactsSection = () => {
         </div>
 
         <div className="max-w-6xl mx-auto space-y-8">
-          <div className="space-y-4">
-            <div className="w-full h-[400px] rounded-lg overflow-hidden border shadow-lg">
-              <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=43.915409%2C56.253487&z=16&l=map&pt=43.915409,56.253487,pm2rdm"
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allowFullScreen
-                style={{ position: 'relative' }}
-              ></iframe>
-            </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button 
-                size="lg"
-                onClick={() => window.open('https://yandex.ru/maps/-/CLCXuB~N', '_blank')}
-                className="gap-2"
-              >
-                <Icon name="Navigation" className="h-5 w-5" />
-                Построить маршрут
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                onClick={() => window.location.href = 'tel:+79202520352'}
-                className="gap-2"
-              >
-                <Icon name="Phone" className="h-5 w-5" />
-                Позвонить
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                onClick={() => window.location.href = 'mailto:megashlic@yandex.ru'}
-                className="gap-2"
-              >
-                <Icon name="Mail" className="h-5 w-5" />
-                Написать Email
-              </Button>
-            </div>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card>
               <CardHeader>
@@ -119,6 +78,47 @@ export const ContactsSection = () => {
                 <p className="text-muted-foreground">Работаем с транспортными компаниями по всей России</p>
               </CardContent>
             </Card>
+          </div>
+
+          <div className="space-y-4">
+            <div className="w-full h-[400px] rounded-lg overflow-hidden border shadow-lg">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=43.915409%2C56.253487&z=16&l=map&pt=43.915409,56.253487,pm2rdm"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen
+                style={{ position: 'relative' }}
+              ></iframe>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button 
+                size="lg"
+                onClick={() => window.open('https://yandex.ru/maps/-/CLCXuB~N', '_blank')}
+                className="gap-2"
+              >
+                <Icon name="Navigation" className="h-5 w-5" />
+                Построить маршрут
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                onClick={() => window.location.href = 'tel:+79202520352'}
+                className="gap-2"
+              >
+                <Icon name="Phone" className="h-5 w-5" />
+                Позвонить
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                onClick={() => window.location.href = 'mailto:megashlic@yandex.ru'}
+                className="gap-2"
+              >
+                <Icon name="Mail" className="h-5 w-5" />
+                Написать Email
+              </Button>
+            </div>
           </div>
         </div>
       </div>
