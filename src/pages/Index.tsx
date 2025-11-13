@@ -26,14 +26,15 @@ const services: Service[] = [
   { id: 5, name: 'Вал раздатки Tiguan под оригинальный корпус дифференциала', category: 'Раздатка', price: 20000, duration: '1-3 дня', popular: true, description: 'Восстановление вала раздаточной коробки Volkswagen Tiguan под оригинальный корпус дифференциала. Точное соответствие стандартам', image: 'https://cdn.poehali.dev/files/d850d4f8-78b4-4b63-b223-ab3fcd4b27a2.jpg' },
   { id: 6, name: 'Дифференциал Tiguan под оригинальный вал раздатки', category: 'Раздатка', price: 20000, duration: '1-3 дня', popular: true, description: 'Восстановление дифференциала Volkswagen Tiguan с адаптацией под оригинальный вал раздаточной коробки. Полная совместимость со штатными деталями', image: 'https://cdn.poehali.dev/files/b3566624-d327-4f7d-9698-b55c4cc7560f.jpg' },
   { id: 7, name: 'Комплект вал + чашка Tiguan под оригинальный размер', category: 'Раздатка', price: 35000, duration: '1-3 дня', popular: true, description: 'Полный комплект: вал раздатки и чашка дифференциала Volkswagen Tiguan. Восстановление в оригинальный размер с точным соблюдением заводских параметров', image: 'https://cdn.poehali.dev/files/7c988958-4822-4b53-8f44-c03391e2be03.jpeg' },
-  { id: 8, name: 'Восстановление шлицев переднего моста', category: 'Передний мост', price: 15000, duration: '2-3 дня', popular: true, description: 'Полное восстановление изношенных шлицевых соединений' },
-  { id: 9, name: 'Восстановление шлицев заднего моста', category: 'Задний мост', price: 14000, duration: '2-3 дня', popular: true, description: 'Восстановление шлицов полуосей и дифференциала' },
-  { id: 10, name: 'Ремонт раздаточной коробки', category: 'Раздатка', price: 18000, duration: '3-4 дня', popular: false, description: 'Восстановление шлицевых валов раздаточной коробки' },
-  { id: 11, name: 'Восстановление ШРУС', category: 'ШРУС', price: 8000, duration: '1-2 дня', popular: true, description: 'Ремонт внутренних и наружных шарниров' },
-  { id: 12, name: 'Восстановление кардана', category: 'Кардан', price: 12000, duration: '2 дня', popular: false, description: 'Восстановление шлицев карданного вала' },
-  { id: 13, name: 'Ремонт КПП (шлицы первичного вала)', category: 'КПП', price: 16000, duration: '3-4 дня', popular: false, description: 'Восстановление изношенных шлицев первичного вала' },
-  { id: 14, name: 'Балансировка карданного вала', category: 'Кардан', price: 3500, duration: '1 день', popular: true, description: 'Динамическая балансировка после восстановления' },
-  { id: 15, name: 'Диагностика трансмиссии', category: 'Диагностика', price: 1500, duration: '1-2 часа', popular: true, description: 'Проверка состояния всех шлицевых соединений' },
+  { id: 8, name: 'Раздатка Tiguan под оригинальный размер на обмен', category: 'Раздатка', price: 35000, duration: 'В наличии', popular: true, description: 'Готовая раздаточная коробка Volkswagen Tiguan в сборе на обмен. Восстановлена в оригинальный размер. Гарантия 18 месяцев', image: 'https://cdn.poehali.dev/files/91489e6b-a3d8-4934-8dec-a8899a6b6b63.jpg' },
+  { id: 9, name: 'Восстановление шлицев переднего моста', category: 'Передний мост', price: 15000, duration: '2-3 дня', popular: true, description: 'Полное восстановление изношенных шлицевых соединений' },
+  { id: 10, name: 'Восстановление шлицев заднего моста', category: 'Задний мост', price: 14000, duration: '2-3 дня', popular: true, description: 'Восстановление шлицов полуосей и дифференциала' },
+  { id: 11, name: 'Ремонт раздаточной коробки', category: 'Раздатка', price: 18000, duration: '3-4 дня', popular: false, description: 'Восстановление шлицевых валов раздаточной коробки' },
+  { id: 12, name: 'Восстановление ШРУС', category: 'ШРУС', price: 8000, duration: '1-2 дня', popular: true, description: 'Ремонт внутренних и наружных шарниров' },
+  { id: 13, name: 'Восстановление кардана', category: 'Кардан', price: 12000, duration: '2 дня', popular: false, description: 'Восстановление шлицев карданного вала' },
+  { id: 14, name: 'Ремонт КПП (шлицы первичного вала)', category: 'КПП', price: 16000, duration: '3-4 дня', popular: false, description: 'Восстановление изношенных шлицев первичного вала' },
+  { id: 15, name: 'Балансировка карданного вала', category: 'Кардан', price: 3500, duration: '1 день', popular: true, description: 'Динамическая балансировка после восстановления' },
+  { id: 16, name: 'Диагностика трансмиссии', category: 'Диагностика', price: 1500, duration: '1-2 часа', popular: true, description: 'Проверка состояния всех шлицевых соединений' },
 ];
 
 const categories = ['Все услуги', ...Array.from(new Set(services.map(s => s.category)))];
