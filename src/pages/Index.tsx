@@ -228,7 +228,7 @@ const Index = () => {
             <div className="grid grid-cols-3 gap-3">
               <Card className="text-center p-3">
                 <Icon name="Award" className="h-8 w-8 mx-auto text-primary mb-1" />
-                <h3 className="text-base font-bold">5+ лет</h3>
+                <h3 className="text-base font-bold">3+ лет</h3>
                 <p className="text-xs text-muted-foreground">опыта работы</p>
               </Card>
               <Card className="text-center p-3">
