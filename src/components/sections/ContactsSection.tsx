@@ -179,55 +179,7 @@ export const ContactsSection = ({
             ></iframe>
           </div>
 
-          <Card>
-            <CardHeader className="pb-3">
-              <CardTitle className="text-lg flex items-center gap-2">
-                <Icon name="Truck" className="h-5 w-5 text-primary" />
-                Рассчитать доставку СДЭК
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="mb-4 p-3 bg-muted/50 rounded-lg">
-                <p className="text-sm font-medium mb-2">📦 Типичные параметры деталей для расчета:</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
-                    <span><strong>Вал раздатки:</strong> 3-5 кг, 40×15×15 см</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
-                    <span><strong>Дифференциал:</strong> 5-10 кг, 35×35×25 см</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
-                    <span><strong>Раздатка в сборе:</strong> 18-25 кг, 50×40×35 см</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
-                    <span><strong>Корзина фрикционов:</strong> 300 г, 25×25×10 см</span>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-3">
-                <a 
-                  href="https://www.cdek.ru/ru/calculate" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block w-full"
-                >
-                  <Button className="w-full" size="lg" variant="outline">
-                    <Icon name="ExternalLink" className="mr-2 h-5 w-5" />
-                    Открыть калькулятор СДЭК
-                  </Button>
-                </a>
-                <div className="text-xs text-muted-foreground space-y-1">
-                  <p className="font-medium">Для расчета укажите:</p>
-                  <p>• Откуда: Нижний Новгород, 603000</p>
-                  <p>• Используйте параметры деталей выше</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+
         </div>
       </div>
     </section>
