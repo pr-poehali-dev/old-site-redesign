@@ -182,6 +182,30 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 border-t bg-muted/30">
+        <div className="container">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">Наши работы</h2>
+            <p className="text-lg text-muted-foreground">Примеры восстановленных деталей трансмиссии</p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="relative group">
+              <div className="overflow-hidden rounded-lg border-2 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/files/2f9eb982-2a71-488e-b732-fc642b3ef8e8.jpg"
+                  alt="Восстановленные валы раздаточной коробки"
+                  className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <p className="text-sm text-muted-foreground text-center mt-4">
+                Восстановленные валы раздаточной коробки с новыми шлицевыми соединениями
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="about" className="py-20 border-t">
         <div className="container">
           <div className="text-center mb-12">
@@ -220,24 +244,6 @@ const Index = () => {
                       />
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4 text-center">Наши работы</h3>
-                <div className="relative group">
-                  <div className="overflow-hidden rounded-lg border-2 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
-                    <img 
-                      src="https://cdn.poehali.dev/files/2f9eb982-2a71-488e-b732-fc642b3ef8e8.jpg"
-                      alt="Восстановленные валы раздаточной коробки"
-                      className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <p className="text-sm text-muted-foreground text-center mt-3">
-                    Восстановленные валы раздаточной коробки с новыми шлицевыми соединениями
-                  </p>
                 </div>
               </CardContent>
             </Card>
