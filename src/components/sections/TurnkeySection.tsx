@@ -320,7 +320,7 @@ export const TurnkeySection = () => {
                           <div className="flex items-center justify-between text-xs mb-1">
                             <div className="flex items-center gap-2">
                               <span className="font-semibold text-base">Volkswagen Tiguan 🔥</span>
-                              <Badge className="text-[10px] py-0 px-1.5 h-4">
+                              <Badge className="text-[10px] py-0 px-1.5 h-4 animate-pulse">
                                 <Icon name="Star" className="h-2.5 w-2.5 mr-0.5" />
                                 Популярное
                               </Badge>
