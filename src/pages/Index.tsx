@@ -181,13 +181,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-8 border-t">
+      <section id="about" className="py-20 border-t">
         <div className="container">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold">О компании</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="max-w-4xl mx-auto space-y-8">
             <Card>
               <CardContent className="p-6">
                 <div className="grid md:grid-cols-[1fr,auto] gap-6 items-center">
