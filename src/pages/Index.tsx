@@ -34,6 +34,7 @@ const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState('Все услуги');
   const [priceRange, setPriceRange] = useState('all');
   const [popularFilter, setPopularFilter] = useState('all');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const filteredServices = useMemo(() => {
     return services.filter(service => {
@@ -56,6 +57,7 @@ const Index = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -76,11 +78,36 @@ const Index = () => {
             <button onClick={() => scrollToSection('contacts')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
           </nav>
 
-          <Button>
-            <Icon name="Phone" className="mr-2 h-4 w-4" />
-            Связаться
-          </Button>
+          <div className="flex items-center gap-4">
+            <Button className="hidden md:flex">
+              <Icon name="Phone" className="mr-2 h-4 w-4" />
+              Связаться
+            </Button>
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 hover:bg-muted rounded-md transition-colors"
+            >
+              <Icon name={mobileMenuOpen ? "X" : "Menu"} className="h-6 w-6" />
+            </button>
+          </div>
         </div>
+
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t bg-background">
+            <nav className="container py-4 flex flex-col gap-2">
+              <button onClick={() => scrollToSection('hero')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Главная</button>
+              <button onClick={() => scrollToSection('about')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">О компании</button>
+              <button onClick={() => scrollToSection('services')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Услуги</button>
+              <button onClick={() => scrollToSection('portfolio')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Портфолио</button>
+              <button onClick={() => scrollToSection('faq')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Вопросы</button>
+              <button onClick={() => scrollToSection('contacts')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Контакты</button>
+              <Button className="mt-2" onClick={() => scrollToSection('contacts')}>
+                <Icon name="Phone" className="mr-2 h-4 w-4" />
+                Связаться
+              </Button>
+            </nav>
+          </div>
+        )}
       </header>
 
       <section id="hero" className="relative py-20 md:py-32 bg-gradient-to-br from-primary/10 via-primary/5 to-background">
