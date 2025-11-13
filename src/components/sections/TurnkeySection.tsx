@@ -318,7 +318,7 @@ export const TurnkeySection = () => {
                         
                         <div className={`space-y-2 animate-in slide-in-from-left duration-700 delay-300 relative transition-all duration-300 ${activeTooltip === 3 ? 'z-20' : 'z-0'}`}>
                           <div className="flex items-center justify-between text-xs mb-1">
-                            <span className="font-semibold">Volkswagen Tiguan</span>
+                            <span className="font-semibold">Volkswagen Tiguan 🔥</span>
                             <span className="text-green-600 font-bold">-203 000 ₽</span>
                           </div>
                           <div 
