@@ -37,6 +37,8 @@ export const Header = ({
         <nav className="hidden md:flex items-center gap-6">
           <button onClick={() => scrollToSection('hero')} className="text-sm font-medium hover:text-primary transition-colors">Главная</button>
           <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary transition-colors">О компании</button>
+          <button onClick={() => scrollToSection('advantages')} className="text-sm font-medium hover:text-primary transition-colors">Преимущества</button>
+          <button onClick={() => scrollToSection('process')} className="text-sm font-medium hover:text-primary transition-colors">Как мы работаем</button>
           <button onClick={() => scrollToSection('faq')} className="text-sm font-medium hover:text-primary transition-colors">Вопросы</button>
           <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
           <button onClick={() => scrollToSection('contacts')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
@@ -124,6 +126,8 @@ export const Header = ({
           <nav className="container py-4 flex flex-col gap-2">
             <button onClick={() => scrollToSection('hero')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Главная</button>
             <button onClick={() => scrollToSection('about')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">О компании</button>
+            <button onClick={() => scrollToSection('advantages')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Преимущества</button>
+            <button onClick={() => scrollToSection('process')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Как мы работаем</button>
             <button onClick={() => scrollToSection('faq')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Вопросы</button>
             <button onClick={() => scrollToSection('services')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Услуги</button>
             <button onClick={() => scrollToSection('contacts')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Контакты</button>

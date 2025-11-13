@@ -244,7 +244,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 border-t">
+      <section id="advantages" className="py-20 border-t">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Преимущества нашей технологии</h2>
@@ -301,7 +301,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 border-t bg-muted/30">
+      <section id="process" className="py-20 border-t bg-muted/30">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Как мы работаем</h2>
