@@ -441,35 +441,6 @@ const Index = () => {
         categories={categories}
       />
 
-      <section id="portfolio" className="py-20 border-t">
-        <div className="container">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Наши работы</h2>
-            <p className="text-lg text-muted-foreground">
-              Примеры успешно восстановленных деталей
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: 'Полуось переднего моста', description: 'Восстановление изношенных шлицев полуоси Land Cruiser 200. Металлизация с последующей механической обработкой.', icon: 'Settings' },
-              { title: 'Вал раздаточной коробки', description: 'Восстановление шлицевого соединения вала раздатки Nissan Patrol. Твердость покрытия HRC 58-62.', icon: 'Wrench' },
-              { title: 'Карданный вал', description: 'Восстановление шлицев карданного вала Pajero Sport. Напыление + термообработка + балансировка.', icon: 'Cog' },
-            ].map((project, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <Icon name={project.icon as any} className="h-12 w-12 text-primary mb-4" />
-                  <CardTitle>{project.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">{project.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 border-t bg-muted/30">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
