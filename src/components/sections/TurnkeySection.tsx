@@ -303,14 +303,23 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-4 flex flex-col md:flex-row gap-3">
                   <Button 
                     size="lg" 
+                    className="w-full md:w-auto"
+                    onClick={() => window.location.href = 'tel:+79202520352'}
+                  >
+                    <Icon name="Phone" className="mr-2 h-5 w-5" />
+                    Позвонить сейчас
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline"
                     className="w-full md:w-auto"
                     onClick={scrollToContacts}
                   >
                     <Icon name="Send" className="mr-2 h-5 w-5" />
-                    Рассчитать стоимость ремонта
+                    Рассчитать стоимость
                   </Button>
                 </div>
               </div>
