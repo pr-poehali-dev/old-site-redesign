@@ -246,15 +246,19 @@ export const TurnkeySection = () => {
                         </p>
                       </div>
                       
-                      <div className="mt-6" ref={diagramRef}>
-                        <div className="flex items-center justify-between mb-3">
-                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                            <Icon name="MousePointerClick" className="h-3.5 w-3.5 text-primary animate-pulse" />
-                            <span className="font-medium">Нажмите на диаграмму для деталей</span>
+                      <div className="mt-6 relative" ref={diagramRef}>
+                        {activeTooltip !== null && (
+                          <div className="absolute inset-0 -m-6 bg-black/20 rounded-lg animate-in fade-in duration-300 pointer-events-none" />
+                        )}
+                        <div className="relative z-10">
+                          <div className="flex items-center justify-between mb-3">
+                            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                              <Icon name="MousePointerClick" className="h-3.5 w-3.5 text-primary animate-pulse" />
+                              <span className="font-medium">Нажмите на диаграмму для деталей</span>
+                            </div>
                           </div>
-                        </div>
                         <div className="space-y-4">
-                        <div className="space-y-2 animate-in slide-in-from-left duration-700 relative">
+                        <div className={`space-y-2 animate-in slide-in-from-left duration-700 relative transition-all duration-300 ${activeTooltip === 1 ? 'z-20' : 'z-0'}`}>
                           <div className="flex items-center justify-between text-xs mb-1">
                             <span className="font-semibold">Hyundai/Kia АКПП</span>
                             <span className="text-green-600 font-bold">-68 000 ₽</span>
@@ -283,7 +287,7 @@ export const TurnkeySection = () => {
                           )}
                         </div>
                         
-                        <div className="space-y-2 animate-in slide-in-from-left duration-700 delay-150 relative">
+                        <div className={`space-y-2 animate-in slide-in-from-left duration-700 delay-150 relative transition-all duration-300 ${activeTooltip === 2 ? 'z-20' : 'z-0'}`}>
                           <div className="flex items-center justify-between text-xs mb-1">
                             <span className="font-semibold">Hyundai/Kia МКПП</span>
                             <span className="text-green-600 font-bold">-168 000 ₽</span>
@@ -312,7 +316,7 @@ export const TurnkeySection = () => {
                           )}
                         </div>
                         
-                        <div className="space-y-2 animate-in slide-in-from-left duration-700 delay-300 relative">
+                        <div className={`space-y-2 animate-in slide-in-from-left duration-700 delay-300 relative transition-all duration-300 ${activeTooltip === 3 ? 'z-20' : 'z-0'}`}>
                           <div className="flex items-center justify-between text-xs mb-1">
                             <span className="font-semibold">Volkswagen Tiguan</span>
                             <span className="text-green-600 font-bold">-203 000 ₽</span>
@@ -340,7 +344,7 @@ export const TurnkeySection = () => {
                             </div>
                           )}
                         </div>
-                      </div>
+                        </div>
                       </div>
                     </div>
                   </div>
