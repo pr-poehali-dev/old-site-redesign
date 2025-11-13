@@ -160,8 +160,17 @@ const Index = () => {
         scrollToSection={scrollToSection}
       />
 
-      <section id="hero" className="relative py-20 md:py-32 bg-gradient-to-br from-primary/10 via-primary/5 to-background">
-        <div className="container">
+      <section id="hero" className="relative py-32 md:py-48 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://cdn.poehali.dev/files/2f9eb982-2a71-488e-b732-fc642b3ef8e8.jpg"
+            alt="Восстановление шлицевых соединений"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85"></div>
+        </div>
+        
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
               Восстановление шлицевых соединений
@@ -177,30 +186,6 @@ const Index = () => {
               <Button size="lg" variant="outline" onClick={() => scrollToSection('contacts')}>
                 Отправить заявку
               </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 border-t bg-muted/30">
-        <div className="container">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Наши работы</h2>
-            <p className="text-lg text-muted-foreground">Примеры восстановленных деталей трансмиссии</p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="relative group">
-              <div className="overflow-hidden rounded-lg border-2 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
-                <img 
-                  src="https://cdn.poehali.dev/files/2f9eb982-2a71-488e-b732-fc642b3ef8e8.jpg"
-                  alt="Восстановленные валы раздаточной коробки"
-                  className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <p className="text-sm text-muted-foreground text-center mt-4">
-                Восстановленные валы раздаточной коробки с новыми шлицевыми соединениями
-              </p>
             </div>
           </div>
         </div>
