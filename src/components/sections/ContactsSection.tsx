@@ -1,8 +1,15 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Icon from '@/components/ui/icon';
 
 export const ContactsSection = () => {
+  const [calcCity, setCalcCity] = useState('');
+  const [calcWeight, setCalcWeight] = useState('5');
+  const [showCalc, setShowCalc] = useState(false);
+
   return (
     <section id="contacts" className="py-20 border-t">
       <div className="container">
@@ -74,10 +81,69 @@ export const ContactsSection = () => {
                 <CardTitle>Доставка</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Работаем с транспортной компанией СДЭК по всей России</p>
+                <p className="text-muted-foreground mb-3">Работаем с транспортной компанией СДЭК по всей России</p>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={() => setShowCalc(!showCalc)}
+                  className="w-full"
+                >
+                  <Icon name="Calculator" className="mr-2 h-4 w-4" />
+                  {showCalc ? 'Скрыть калькулятор' : 'Рассчитать доставку'}
+                </Button>
               </CardContent>
             </Card>
           </div>
+
+          {showCalc && (
+            <Card className="animate-in slide-in-from-top duration-300">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Icon name="Calculator" className="h-6 w-6 text-primary" />
+                  Калькулятор доставки СДЭК
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Ваш город</label>
+                    <Input 
+                      placeholder="Например: Москва"
+                      value={calcCity}
+                      onChange={(e) => setCalcCity(e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Вес посылки (кг)</label>
+                    <Select value={calcWeight} onValueChange={setCalcWeight}>
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="1">До 1 кг</SelectItem>
+                        <SelectItem value="5">До 5 кг</SelectItem>
+                        <SelectItem value="10">До 10 кг</SelectItem>
+                        <SelectItem value="20">До 20 кг</SelectItem>
+                        <SelectItem value="30">Более 20 кг</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+                <Button 
+                  className="w-full"
+                  onClick={() => window.open('https://www.cdek.ru/ru/calculate', '_blank')}
+                >
+                  <Icon name="ExternalLink" className="mr-2 h-4 w-4" />
+                  Рассчитать на сайте СДЭК
+                </Button>
+                <p className="text-xs text-muted-foreground text-center">
+                  Точный расчет стоимости и сроков доставки на официальном сайте СДЭК
+                </p>
+              </CardContent>
+            </Card>
+          )}
+
+          <div className="space-y-4">
 
           <div className="space-y-4">
             <div className="w-full h-[400px] rounded-lg overflow-hidden border shadow-lg">
