@@ -221,7 +221,11 @@ export const TurnkeySection = () => {
                         <h4 className="font-bold text-base">Hyundai / Kia АКПП</h4>
                       </div>
                       <div className="text-4xl font-bold text-primary mb-1">69 990 ₽</div>
-                      <p className="text-xs text-muted-foreground">ремонт под ключ</p>
+                      <p className="text-xs text-muted-foreground mb-2">ремонт под ключ</p>
+                      <div className="flex items-center justify-center gap-1 text-xs text-primary/70 mt-3 pt-3 border-t border-primary/20">
+                        <Icon name="Users" className="h-3 w-3" />
+                        <span className="font-semibold">Более 200 клиентов</span>
+                      </div>
                     </div>
                     
                     <div className="bg-gradient-to-br from-background to-muted/30 rounded-lg p-5 border-2 border-primary/20 hover:border-primary/40 transition-all text-center">
