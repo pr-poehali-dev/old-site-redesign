@@ -38,7 +38,6 @@ export const Header = ({
           <button onClick={() => scrollToSection('hero')} className="text-sm font-medium hover:text-primary transition-colors">Главная</button>
           <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary transition-colors">О компании</button>
           <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
-          <button onClick={() => scrollToSection('portfolio')} className="text-sm font-medium hover:text-primary transition-colors">Портфолио</button>
           <button onClick={() => scrollToSection('faq')} className="text-sm font-medium hover:text-primary transition-colors">Вопросы</button>
           <button onClick={() => scrollToSection('contacts')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
         </nav>
@@ -126,7 +125,6 @@ export const Header = ({
             <button onClick={() => scrollToSection('hero')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Главная</button>
             <button onClick={() => scrollToSection('about')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">О компании</button>
             <button onClick={() => scrollToSection('services')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Услуги</button>
-            <button onClick={() => scrollToSection('portfolio')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Портфолио</button>
             <button onClick={() => scrollToSection('faq')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Вопросы</button>
             <button onClick={() => scrollToSection('contacts')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Контакты</button>
             <Button className="mt-2" onClick={() => scrollToSection('contacts')}>
