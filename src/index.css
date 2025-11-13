@@ -98,24 +98,32 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: "Open Sans", sans-serif;
+    background-color: #ffffff;
     background-image: url("https://cdn.poehali.dev/files/0f422959-a5e9-4d23-9144-a5dc6d125bbc.jpg");
     background-repeat: repeat;
-    background-size: 300px;
+    background-size: 250px;
     background-position: center;
-    background-attachment: fixed;
+    background-blend-mode: multiply;
+    opacity: 1;
   }
 
-  body::before {
+  body::after {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.85);
-    z-index: -1;
+    background: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body > * {
+    position: relative;
+    z-index: 1;
   }
 
   h1,
