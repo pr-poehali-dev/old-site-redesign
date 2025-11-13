@@ -242,6 +242,50 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
+                <div className="border-t pt-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <Icon name="HelpCircle" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-4">Часто задаваемые вопросы</h3>
+                      <div className="space-y-4">
+                        <div className="bg-background rounded-lg p-4 border">
+                          <h4 className="font-bold text-sm mb-2 flex items-start gap-2">
+                            <Icon name="MessageCircle" className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                            Можно ли оставить автомобиль у вас на время ремонта?
+                          </h4>
+                          <p className="text-xs text-muted-foreground pl-6">Да, автомобиль остаётся у нас на весь срок ремонта (3-7 дней). Вы можете забрать его в удобное время после завершения работ.</p>
+                        </div>
+                        
+                        <div className="bg-background rounded-lg p-4 border">
+                          <h4 className="font-bold text-sm mb-2 flex items-start gap-2">
+                            <Icon name="MessageCircle" className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                            Что делать, если проблема повторится?
+                          </h4>
+                          <p className="text-xs text-muted-foreground pl-6">На все работы действует гарантия 18 месяцев. Если проблема повторится в течение гарантийного срока — устраним бесплатно.</p>
+                        </div>
+                        
+                        <div className="bg-background rounded-lg p-4 border">
+                          <h4 className="font-bold text-sm mb-2 flex items-start gap-2">
+                            <Icon name="MessageCircle" className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                            Нужно ли мне самому снимать детали?
+                          </h4>
+                          <p className="text-xs text-muted-foreground pl-6">Нет, это услуга под ключ. Мы сами демонтируем неисправные детали, восстанавливаем их и устанавливаем обратно.</p>
+                        </div>
+                        
+                        <div className="bg-background rounded-lg p-4 border">
+                          <h4 className="font-bold text-sm mb-2 flex items-start gap-2">
+                            <Icon name="MessageCircle" className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                            Можно ли приехать из другого региона?
+                          </h4>
+                          <p className="text-xs text-muted-foreground pl-6">Да, принимаем клиентов из любых регионов. Для удалённых клиентов можем организовать восстановление деталей с доставкой СДЭК — вы снимаете детали сами.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="bg-muted/50 rounded-lg p-6 space-y-4">
                   <div className="flex items-start gap-3">
                     <Icon name="Info" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
