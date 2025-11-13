@@ -428,19 +428,6 @@ const Index = () => {
         </div>
       </section>
 
-      <ServicesSection
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-        priceRange={priceRange}
-        setPriceRange={setPriceRange}
-        popularFilter={popularFilter}
-        setPopularFilter={setPopularFilter}
-        filteredServices={filteredServices}
-        categories={categories}
-      />
-
       <section id="faq" className="py-20 border-t">
         <div className="container">
           <div className="max-w-3xl mx-auto">
@@ -471,6 +458,19 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <ServicesSection
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+        priceRange={priceRange}
+        setPriceRange={setPriceRange}
+        popularFilter={popularFilter}
+        setPopularFilter={setPopularFilter}
+        filteredServices={filteredServices}
+        categories={categories}
+      />
 
       <ContactForm
         formData={formData}
