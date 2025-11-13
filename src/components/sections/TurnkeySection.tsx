@@ -221,7 +221,14 @@ export const TurnkeySection = () => {
                         </p>
                       </div>
                       
-                      <div className="mt-6 space-y-4">
+                      <div className="mt-6">
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <Icon name="MousePointerClick" className="h-3.5 w-3.5 text-primary animate-pulse" />
+                            <span className="font-medium">Нажмите на диаграмму для деталей</span>
+                          </div>
+                        </div>
+                        <div className="space-y-4">
                         <div className="space-y-2 animate-in slide-in-from-left duration-700 relative">
                           <div className="flex items-center justify-between text-xs mb-1">
                             <span className="font-semibold">Hyundai/Kia АКПП</span>
@@ -308,6 +315,7 @@ export const TurnkeySection = () => {
                             </div>
                           )}
                         </div>
+                      </div>
                       </div>
                     </div>
                   </div>
