@@ -251,25 +251,6 @@ const Index = () => {
                       <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 rounded-lg pointer-events-none" />
                     </div>
 
-                    <div className="space-y-1 text-xs">
-                      <div className="flex items-center gap-1.5">
-                        <Icon name="CheckCircle2" className="h-3 w-3 text-primary" />
-                        <span>Патентообладатель: Борисов Александр Вячеславович</span>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <Icon name="CheckCircle2" className="h-3 w-3 text-primary" />
-                        <span>Приоритет изобретения: 29 марта 2024 г.</span>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <Icon name="CheckCircle2" className="h-3 w-3 text-primary" />
-                        <span>Дата регистрации: 30 октября 2024 г.</span>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <Icon name="CheckCircle2" className="h-3 w-3 text-primary" />
-                        <span>Срок действия патента: до 29 марта 2044 г.</span>
-                      </div>
-                    </div>
-
                     <div className="pt-1">
                       <p className="text-xs text-muted-foreground">
                         Наша запатентованная технология гарантирует высочайшее качество восстановления 
