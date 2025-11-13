@@ -159,10 +159,6 @@ export const TurnkeySection = () => {
                           <span className="font-semibold text-sm">Volkswagen</span>
                         </div>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-4">
-                        <Icon name="Info" className="h-3 w-3 inline mr-1" />
-                        Если вашей марки нет в списке — позвоните, мы работаем с большинством моделей с полным приводом
-                      </p>
                     </div>
                   </div>
                 </div>
