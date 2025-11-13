@@ -187,7 +187,7 @@ export const ContactsSection = ({
             <CardContent>
               <div className="w-full h-[400px] rounded-lg overflow-hidden border">
                 <iframe
-                  src="https://widgets.cdek.ru/calculator/iframe.html?apikey=YOUR_API_KEY"
+                  src="https://widgets.cdek.ru/calculator/iframe.html?apikey=ng05CFQnsAf96MaU3c9kZjNDB0gEa5qU"
                   width="100%"
                   height="100%"
                   frameBorder="0"
