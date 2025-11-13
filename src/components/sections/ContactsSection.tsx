@@ -168,17 +168,30 @@ export const ContactsSection = ({
             <p>Пн-Пт: 9:30 - 17:30 | Сб-Вс: выходной</p>
           </div>
 
-          <div className="w-full h-[300px] rounded-lg overflow-hidden border">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=43.915409%2C56.253487&z=16&l=map&pt=43.915409,56.253487,pm2rdm"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allowFullScreen
-              style={{ position: 'relative' }}
-            ></iframe>
-          </div>
+          <div className="space-y-4">
+            <div className="w-full h-[300px] rounded-lg overflow-hidden border-2 shadow-lg">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=43.915409%2C56.253487&z=16&l=map&pt=43.915409,56.253487,pm2rdm"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen
+                style={{ position: 'relative' }}
+              ></iframe>
+            </div>
 
+            <a 
+              href="https://yandex.ru/maps/?rtext=~56.253487,43.915409&rtt=auto" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Button className="w-full" size="lg" variant="outline">
+                <Icon name="Navigation" className="mr-2 h-5 w-5" />
+                Проложить маршрут
+              </Button>
+            </a>
+          </div>
 
         </div>
       </div>
