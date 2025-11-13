@@ -200,10 +200,19 @@ export const TurnkeySection = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold mb-2">Экономия до 70% по сравнению с покупкой новых деталей</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Новая раздаточная коробка для Hyundai/Kia стоит от 250 000 ₽, а восстановление с установкой — всего от 69 990 ₽. 
-                        Вы получаете такое же качество, полную гарантию 18 месяцев и экономите более 180 000 рублей!
-                      </p>
+                      <div className="space-y-2 text-sm text-muted-foreground">
+                        <p>
+                          <span className="font-semibold">Hyundai/Kia:</span> Новая раздаточная коробка стоит от 250 000 ₽, восстановление с установкой — от 69 990 ₽. 
+                          <span className="text-primary font-semibold"> Экономия более 180 000 ₽!</span>
+                        </p>
+                        <p>
+                          <span className="font-semibold">Volkswagen Tiguan:</span> Новая раздаточная коробка стоит 380 145 ₽, восстановление с установкой — от 114 990 ₽. 
+                          <span className="text-primary font-semibold"> Экономия более 265 000 ₽!</span>
+                        </p>
+                        <p className="text-xs pt-2 border-t">
+                          Вы получаете такое же качество работы, полную гарантию 18 месяцев и огромную экономию!
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
