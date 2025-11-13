@@ -176,6 +176,29 @@ export const ContactsSection = ({
               style={{ position: 'relative' }}
             ></iframe>
           </div>
+
+          <Card>
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg flex items-center gap-2">
+                <Icon name="Truck" className="h-5 w-5 text-primary" />
+                Рассчитать доставку СДЭК
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="w-full h-[400px] rounded-lg overflow-hidden border">
+                <iframe
+                  src="https://widgets.cdek.ru/calculator/iframe.html?apikey=YOUR_API_KEY"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  style={{ position: 'relative' }}
+                ></iframe>
+              </div>
+              <p className="text-xs text-muted-foreground mt-3 text-center">
+                Введите ваш город и параметры посылки для расчета стоимости доставки
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
