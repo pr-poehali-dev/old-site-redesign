@@ -217,6 +217,53 @@ export const TurnkeySection = () => {
                           Вы получаете такое же качество работы, полную гарантию 18 месяцев и существенную экономию!
                         </p>
                       </div>
+                      
+                      <div className="mt-6 space-y-4">
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between text-xs mb-1">
+                            <span className="font-semibold">Hyundai/Kia АКПП</span>
+                            <span className="text-green-600 font-bold">-68 000 ₽</span>
+                          </div>
+                          <div className="flex gap-2 items-center">
+                            <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700" style={{width: '43.4%'}}>
+                              138 000 ₽ новая
+                            </div>
+                            <div className="flex-1 bg-green-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-green-700" style={{width: '22%'}}>
+                              69 990 ₽ восст.
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between text-xs mb-1">
+                            <span className="font-semibold">Hyundai/Kia МКПП</span>
+                            <span className="text-green-600 font-bold">-168 000 ₽</span>
+                          </div>
+                          <div className="flex gap-2 items-center">
+                            <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700" style={{width: '78%'}}>
+                              248 000 ₽ новая
+                            </div>
+                            <div className="flex-1 bg-green-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-green-700" style={{width: '25%'}}>
+                              79 990 ₽ восст.
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between text-xs mb-1">
+                            <span className="font-semibold">Volkswagen Tiguan</span>
+                            <span className="text-green-600 font-bold">-203 000 ₽</span>
+                          </div>
+                          <div className="flex gap-2 items-center">
+                            <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700" style={{width: '100%'}}>
+                              318 000 ₽ новая
+                            </div>
+                            <div className="flex-1 bg-green-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-green-700" style={{width: '36%'}}>
+                              114 990 ₽ восст.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
