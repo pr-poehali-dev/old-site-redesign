@@ -234,10 +234,6 @@ export const TurnkeySection = () => {
                           <span className="text-sm">Безналичный расчёт</span>
                         </div>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-4">
-                        <Icon name="Info" className="h-3 w-3 inline mr-1" />
-                        Возможна оплата в рассрочку — уточняйте детали у менеджера
-                      </p>
                     </div>
                   </div>
                 </div>
