@@ -273,6 +273,9 @@ export const AboutAndAdvantagesSection = () => {
                       <div className="w-16 h-16 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
                         <Icon name={faq.icon} className="h-8 w-8 text-primary" />
                       </div>
+                      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs">
+                        {index + 1}
+                      </div>
                     </div>
                     <CardTitle className="text-base">{faq.q}</CardTitle>
                   </CardHeader>
