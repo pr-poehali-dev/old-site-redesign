@@ -106,7 +106,7 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="border-t pt-6">
+                <div className="border-t-2 border-dashed border-primary/20 pt-8 mt-8">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
                       <Icon name="ListOrdered" className="h-6 w-6 text-primary" />
@@ -158,7 +158,7 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="border-t pt-6">
+                <div className="border-t-2 border-dashed border-primary/20 pt-8 mt-8">
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="flex items-start gap-3">
                       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
@@ -207,7 +207,7 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="border-t pt-6">
+                <div className="border-t-2 border-dashed border-primary/20 pt-8 mt-8">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
                       <Icon name="Car" className="h-6 w-6 text-primary" />
@@ -244,7 +244,7 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="border-t pt-6">
+                <div className="border-t-2 border-dashed border-primary/20 pt-8 mt-8">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
                       <Icon name="Settings" className="h-6 w-6 text-primary" />
@@ -266,7 +266,7 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="border-t pt-6">
+                <div className="border-t-2 border-dashed border-primary/20 pt-8 mt-8">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
                       <Icon name="CreditCard" className="h-6 w-6 text-primary" />
@@ -291,7 +291,7 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="border-t pt-6">
+                <div className="border-t-2 border-dashed border-primary/20 pt-8 mt-8">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
                       <Icon name="HelpCircle" className="h-6 w-6 text-primary" />
