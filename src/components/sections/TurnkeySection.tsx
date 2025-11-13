@@ -100,7 +100,7 @@ export const TurnkeySection = () => {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-4">Примеры цен для популярных моделей</h3>
-                      <div className="grid md:grid-cols-2 gap-4">
+                      <div className="grid md:grid-cols-2 gap-4 max-w-2xl">
                         <div className="bg-background rounded-lg p-4 border hover:border-primary/30 transition-all">
                           <div className="flex items-center justify-between mb-2">
                             <h4 className="font-bold text-sm">Hyundai Tucson / Kia Sportage</h4>
@@ -115,22 +115,6 @@ export const TurnkeySection = () => {
                             <span className="text-primary font-bold text-lg">от 34 990 ₽</span>
                           </div>
                           <p className="text-xs text-muted-foreground">Комплект вал + чашка с установкой</p>
-                        </div>
-                        
-                        <div className="bg-background rounded-lg p-4 border hover:border-primary/30 transition-all">
-                          <div className="flex items-center justify-between mb-2">
-                            <h4 className="font-bold text-sm">Mazda CX-7 / CX-9</h4>
-                            <span className="text-primary font-bold text-lg">от 39 990 ₽</span>
-                          </div>
-                          <p className="text-xs text-muted-foreground">Восстановление шлицевых соединений с установкой</p>
-                        </div>
-                        
-                        <div className="bg-background rounded-lg p-4 border hover:border-primary/30 transition-all">
-                          <div className="flex items-center justify-between mb-2">
-                            <h4 className="font-bold text-sm">Land Rover / Volvo</h4>
-                            <span className="text-primary font-bold text-lg">от 44 990 ₽</span>
-                          </div>
-                          <p className="text-xs text-muted-foreground">Полный комплекс работ с установкой</p>
                         </div>
                       </div>
                       <p className="text-xs text-muted-foreground mt-4">
