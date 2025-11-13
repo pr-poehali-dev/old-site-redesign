@@ -267,7 +267,7 @@ export const AboutAndAdvantagesSection = () => {
                 { q: 'Нужно ли снимать детали самостоятельно?', a: 'Да, мы работаем только с уже снятыми деталями. Привезите их к нам или отправьте через СДЭК.', icon: 'Package' },
                 { q: 'Работаете со всеми марками?', a: 'Восстанавливаем шлицы на всех полноприводных моделях. Звоните — проконсультируем.', icon: 'Car' },
               ].map((faq, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
+                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: `${index * 100}ms` }}>
                   <CardHeader>
                     <div className="relative mx-auto mb-2">
                       <div className="w-16 h-16 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
