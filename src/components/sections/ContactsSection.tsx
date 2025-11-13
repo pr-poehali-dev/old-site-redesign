@@ -17,7 +17,7 @@ export const ContactsSection = () => {
           <div className="space-y-4">
             <div className="w-full h-[400px] rounded-lg overflow-hidden border shadow-lg">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=44.013733%2C56.291732&z=16&l=map&pt=44.013733,56.291732,pm2rdm"
+                src="https://yandex.ru/map-widget/v1/?ll=44.026092%2C56.282476&z=16&l=map&pt=44.026092,56.282476,pm2rdm"
                 width="100%"
                 height="100%"
                 frameBorder="0"
@@ -28,7 +28,7 @@ export const ContactsSection = () => {
             <div className="flex justify-center">
               <Button 
                 size="lg"
-                onClick={() => window.open('https://yandex.ru/maps/?rtext=~56.291732,44.013733', '_blank')}
+                onClick={() => window.open('https://yandex.ru/maps/-/CLCXuB~N', '_blank')}
                 className="gap-2"
               >
                 <Icon name="Navigation" className="h-5 w-5" />
