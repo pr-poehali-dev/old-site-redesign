@@ -202,8 +202,12 @@ export const TurnkeySection = () => {
                       <h3 className="text-lg font-bold mb-2">Экономия от 68 000 до 203 000 ₽ по сравнению с новыми деталями</h3>
                       <div className="space-y-2 text-sm text-muted-foreground">
                         <p>
-                          <span className="font-semibold">Hyundai/Kia:</span> Новая раздаточная коробка (473003B630) стоит 138 000 ₽, восстановление с установкой — от 69 990 ₽. 
+                          <span className="font-semibold">Hyundai/Kia с АКПП:</span> Новая раздаточная коробка (473003B630) стоит 138 000 ₽, восстановление с установкой — от 69 990 ₽. 
                           <span className="text-primary font-semibold"> Экономия 68 000 ₽!</span>
+                        </p>
+                        <p>
+                          <span className="font-semibold">Hyundai/Kia с МКПП:</span> Новая раздаточная коробка (473003B620) стоит 248 000 ₽, восстановление с установкой — от 79 990 ₽. 
+                          <span className="text-primary font-semibold"> Экономия 168 000 ₽!</span>
                         </p>
                         <p>
                           <span className="font-semibold">Volkswagen Tiguan:</span> Новая раздаточная коробка (0AU409053T) стоит 318 000 ₽, восстановление с установкой — от 114 990 ₽. 
