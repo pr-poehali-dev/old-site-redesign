@@ -90,7 +90,7 @@ const Index = () => {
               Восстановление шлицевых соединений
             </h1>
             <p className="text-xl text-muted-foreground">
-              Профессиональный ремонт трансмиссии полноприводных автомобилей в Москве
+              Профессиональный ремонт трансмиссии полноприводных автомобилей по всей стране
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" onClick={() => scrollToSection('services')}>
