@@ -80,10 +80,7 @@ export const ServicesSection = ({
                   </div>
                 )}
                 <CardHeader className="pb-3">
-                  <CardTitle 
-                    className="text-sm leading-tight line-clamp-3 cursor-help" 
-                    title={service.name}
-                  >
+                  <CardTitle className="text-sm leading-tight line-clamp-3">
                     {service.name}
                   </CardTitle>
                 </CardHeader>
