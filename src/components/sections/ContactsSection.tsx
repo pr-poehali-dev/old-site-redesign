@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -11,12 +11,53 @@ interface ContactsSectionProps {
   handleFormSubmit: (e: React.FormEvent) => void;
 }
 
+declare global {
+  interface Window {
+    CDEKWidget: any;
+  }
+}
+
 export const ContactsSection = ({
   formData,
   setFormData,
   formStatus,
   handleFormSubmit,
 }: ContactsSectionProps) => {
+  useEffect(() => {
+    const initWidget = () => {
+      if (typeof window.CDEKWidget !== 'undefined') {
+        new window.CDEKWidget({
+          root: 'cdek-widget',
+          apiKey: 'ng05CFQnsAf96MaU3c9kZjNDB0gEa5qU',
+          defaultLocation: 'Нижний Новгород',
+          from: 'Нижний Новгород',
+          goods: [{
+            length: 40,
+            width: 15,
+            height: 15,
+            weight: 4
+          }],
+          onReady() {
+            console.log('CDEK Widget ready');
+          }
+        });
+      }
+    };
+
+    if (typeof window.CDEKWidget !== 'undefined') {
+      initWidget();
+    } else {
+      const checkInterval = setInterval(() => {
+        if (typeof window.CDEKWidget !== 'undefined') {
+          clearInterval(checkInterval);
+          initWidget();
+        }
+      }, 100);
+
+      return () => clearInterval(checkInterval);
+    }
+  }, []);
+
   return (
     <section id="contacts" className="py-8 border-t bg-gradient-to-br from-primary/5 to-background">
       <div className="container">
@@ -206,15 +247,7 @@ export const ContactsSection = ({
                   </div>
                 </div>
               </div>
-              <div className="w-full h-[400px] rounded-lg overflow-hidden border">
-                <iframe
-                  src="https://widgets.cdek.ru/calculator/iframe.html?apikey=ng05CFQnsAf96MaU3c9kZjNDB0gEa5qU"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  style={{ position: 'relative' }}
-                ></iframe>
-              </div>
+              <div id="cdek-widget" className="w-full min-h-[400px] rounded-lg border p-4 bg-background"></div>
               <p className="text-xs text-muted-foreground mt-3 text-center">
                 Используйте указанные выше параметры для расчета стоимости доставки в ваш город
               </p>
