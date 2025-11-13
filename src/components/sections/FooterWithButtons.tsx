@@ -8,7 +8,7 @@ interface FooterWithButtonsProps {
 export const FooterWithButtons = ({ viewCount, showScrollTop }: FooterWithButtonsProps) => {
   return (
     <>
-      <footer className="border-t py-8 bg-secondary text-secondary-foreground">
+      <footer className="border-t border-zinc-800 py-8 bg-black text-white">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-6">
             <div className="space-y-3">
@@ -18,10 +18,10 @@ export const FooterWithButtons = ({ viewCount, showScrollTop }: FooterWithButton
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xl font-extrabold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
-                  <span className="text-xs text-secondary-foreground/60">Патент РФ № 2829377</span>
+                  <span className="text-xs text-zinc-400">Патент РФ № 2829377</span>
                 </div>
               </div>
-              <p className="text-sm text-secondary-foreground/70 leading-relaxed">
+              <p className="text-sm text-zinc-400 leading-relaxed">
                 Восстановление шлицевых соединений деталей трансмиссии с использованием запатентованной технологии
               </p>
             </div>
@@ -62,11 +62,11 @@ export const FooterWithButtons = ({ viewCount, showScrollTop }: FooterWithButton
             </div>
           </div>
 
-          <div className="border-t border-secondary-foreground/20 pt-4 flex flex-col md:flex-row justify-between items-center gap-3">
-            <p className="text-sm text-secondary-foreground/70">
+          <div className="border-t border-zinc-800 pt-4 flex flex-col md:flex-row justify-between items-center gap-3">
+            <p className="text-sm text-zinc-400">
               © 2024 Мега Шлиц. Все права защищены.
             </p>
-            <div className="flex items-center gap-2 text-xs text-secondary-foreground/60">
+            <div className="flex items-center gap-2 text-xs text-zinc-400">
               <Icon name="Eye" className="h-4 w-4" />
               <span>Просмотров: {viewCount.toLocaleString('ru-RU')}</span>
             </div>
