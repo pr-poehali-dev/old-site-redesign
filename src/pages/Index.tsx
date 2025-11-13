@@ -585,46 +585,59 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <Icon name="MapPin" className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Производственный цех</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">г. Нижний Новгород, Восточный проезд, 11/1</p>
-              </CardContent>
-            </Card>
+          <div className="max-w-6xl mx-auto space-y-8">
+            <div className="w-full h-[400px] rounded-lg overflow-hidden border shadow-lg">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=44.013733%2C56.291732&z=16&l=map&pt=44.013733,56.291732,pm2rdm"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen
+                style={{ position: 'relative' }}
+              ></iframe>
+            </div>
 
-            <Card>
-              <CardHeader>
-                <Icon name="Phone" className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Телефон</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">+7 (831) 260-11-23</p>
-              </CardContent>
-            </Card>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader>
+                  <Icon name="MapPin" className="h-8 w-8 text-primary mb-2" />
+                  <CardTitle>Производственный цех</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">г. Нижний Новгород, Восточный проезд, 11/1</p>
+                </CardContent>
+              </Card>
 
-            <Card>
-              <CardHeader>
-                <Icon name="Mail" className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Email</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">megashlic@yandex.ru</p>
-              </CardContent>
-            </Card>
+              <Card>
+                <CardHeader>
+                  <Icon name="Phone" className="h-8 w-8 text-primary mb-2" />
+                  <CardTitle>Телефон</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">+7 (831) 260-11-23</p>
+                </CardContent>
+              </Card>
 
-            <Card>
-              <CardHeader>
-                <Icon name="MessageCircle" className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>WhatsApp</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">+7 (920) 252-03-52</p>
-              </CardContent>
-            </Card>
+              <Card>
+                <CardHeader>
+                  <Icon name="Mail" className="h-8 w-8 text-primary mb-2" />
+                  <CardTitle>Email</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">megashlic@yandex.ru</p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <Icon name="MessageCircle" className="h-8 w-8 text-primary mb-2" />
+                  <CardTitle>WhatsApp</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">+7 (920) 252-03-52</p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
