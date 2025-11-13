@@ -12,13 +12,13 @@ export const FooterWithButtons = ({ viewCount, showScrollTop }: FooterWithButton
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-6">
             <div className="space-y-3">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="relative w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 p-2 shadow-lg border border-primary/10">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="relative w-16 h-16 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 p-2 shadow-lg border border-primary/10">
                   <img src="https://cdn.poehali.dev/files/c116f9e4-e2c2-4aa5-884f-61b41ae2b38d.jpg" alt="Мега Шлиц" className="h-full w-full object-contain" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl font-extrabold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
-                  <span className="text-xs text-zinc-400">Патент РФ № 2829377</span>
+                  <span className="text-2xl font-extrabold">Мега Шлиц<sup className="text-sm ml-0.5">®</sup></span>
+                  <span className="text-sm text-zinc-400">Патент РФ № 2829377</span>
                 </div>
               </div>
               <p className="text-sm text-zinc-400 leading-relaxed">
