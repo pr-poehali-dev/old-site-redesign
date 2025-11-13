@@ -206,8 +206,8 @@ export const TurnkeySection = () => {
                           <span className="text-primary font-semibold"> Экономия 68 000 ₽!</span>
                         </p>
                         <p>
-                          <span className="font-semibold">Volkswagen Tiguan:</span> Новая раздаточная коробка стоит 380 145 ₽, восстановление с установкой — от 114 990 ₽. 
-                          <span className="text-primary font-semibold"> Экономия 265 000 ₽!</span>
+                          <span className="font-semibold">Volkswagen Tiguan:</span> Новая раздаточная коробка (0AU409053T) стоит 318 000 ₽, восстановление с установкой — от 114 990 ₽. 
+                          <span className="text-primary font-semibold"> Экономия 203 000 ₽!</span>
                         </p>
                         <p className="text-xs pt-2 border-t">
                           Вы получаете такое же качество работы, полную гарантию 18 месяцев и существенную экономию!
