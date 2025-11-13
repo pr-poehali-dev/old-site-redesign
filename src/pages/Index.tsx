@@ -194,7 +194,7 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-8 pt-8">
               <div className="space-y-2">
                 <Icon name="Award" className="h-12 w-12 mx-auto text-primary" />
-                <h3 className="text-2xl font-bold">12 лет</h3>
+                <h3 className="text-2xl font-bold">5+ лет</h3>
                 <p className="text-muted-foreground">опыта работы</p>
               </div>
               <div className="space-y-2">
