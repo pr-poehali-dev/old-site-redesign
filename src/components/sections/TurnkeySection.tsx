@@ -167,39 +167,30 @@ export const TurnkeySection = () => {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-4">Примеры цен для популярных моделей</h3>
-                      <div className="grid md:grid-cols-2 gap-4 max-w-2xl">
-                        <div className="bg-background rounded-lg p-4 border hover:border-primary/30 transition-all">
-                          <div className="flex items-center justify-between mb-2">
-                            <h4 className="font-bold text-sm">Hyundai / Kia с АКПП</h4>
-                            <span className="text-primary font-bold text-lg">от 69 990 ₽</span>
-                          </div>
-                          <p className="text-xs text-muted-foreground">Восстановление вала + дифференциал с установкой</p>
+                      <div className="grid md:grid-cols-3 gap-3">
+                        <div className="bg-background rounded-lg p-3 border hover:border-primary/30 transition-all">
+                          <h4 className="font-bold text-sm mb-1">Hyundai / Kia АКПП</h4>
+                          <span className="text-primary font-bold text-lg">от 69 990 ₽</span>
                         </div>
                         
-                        <div className="bg-background rounded-lg p-4 border hover:border-primary/30 transition-all">
-                          <div className="flex items-center justify-between mb-2">
-                            <h4 className="font-bold text-sm">Hyundai / Kia с МКПП</h4>
-                            <span className="text-primary font-bold text-lg">от 79 990 ₽</span>
-                          </div>
-                          <p className="text-xs text-muted-foreground">Восстановление вала + дифференциал с установкой</p>
+                        <div className="bg-background rounded-lg p-3 border hover:border-primary/30 transition-all">
+                          <h4 className="font-bold text-sm mb-1">Hyundai / Kia МКПП</h4>
+                          <span className="text-primary font-bold text-lg">от 79 990 ₽</span>
                         </div>
                         
-                        <div className="bg-background rounded-lg p-4 border hover:border-primary/30 transition-all">
-                          <div className="flex items-center justify-between mb-2">
-                            <h4 className="font-bold text-sm">Volkswagen Tiguan</h4>
-                            <span className="text-primary font-bold text-lg">от 34 990 ₽</span>
-                          </div>
-                          <p className="text-xs text-muted-foreground">Комплект вал + чашка с установкой</p>
+                        <div className="bg-background rounded-lg p-3 border hover:border-primary/30 transition-all">
+                          <h4 className="font-bold text-sm mb-1">Volkswagen Tiguan</h4>
+                          <span className="text-primary font-bold text-lg">от 34 990 ₽</span>
                         </div>
                       </div>
-                      <div className="mt-4 space-y-2">
+                      <div className="mt-3 space-y-1.5">
                         <p className="text-xs text-muted-foreground">
                           <Icon name="Info" className="h-3 w-3 inline mr-1" />
                           Точная стоимость зависит от состояния деталей и объёма работ
                         </p>
                         <p className="text-xs text-muted-foreground">
                           <Icon name="AlertCircle" className="h-3 w-3 inline mr-1" />
-                          Для МКПП требуется более сложная технология восстановления шлицевых соединений, поэтому стоимость выше
+                          Для МКПП требуется более сложная технология восстановления шлицевых соединений
                         </p>
                       </div>
                     </div>
