@@ -211,6 +211,135 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 border-t bg-muted/30">
+        <div className="container">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">Как мы работаем</h2>
+            <p className="text-lg text-muted-foreground">
+              Порядок работы восстановления
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Card className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '0ms' }}>
+                <CardHeader>
+                  <div className="relative mx-auto mb-4">
+                    <div className="w-24 h-24 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
+                      <Icon name="Send" className="h-12 w-12 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold">
+                      1
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl">Заявка</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Оставьте заявку на сайте или позвоните нам для консультации
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '100ms' }}>
+                <CardHeader>
+                  <div className="relative mx-auto mb-4">
+                    <div className="w-24 h-24 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
+                      <Icon name="Truck" className="h-12 w-12 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold">
+                      2
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl">Доставка</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Отправьте деталь через СДЭК или привезите лично в цех
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '200ms' }}>
+                <CardHeader>
+                  <div className="relative mx-auto mb-4">
+                    <div className="w-24 h-24 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
+                      <Icon name="Tag" className="h-12 w-12 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold">
+                      3
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl">Маркировка</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Принимаем деталь, маркируем и проводим диагностику
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '300ms' }}>
+                <CardHeader>
+                  <div className="relative mx-auto mb-4">
+                    <div className="w-24 h-24 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
+                      <Icon name="Settings" className="h-12 w-12 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold">
+                      4
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl">Восстановление</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Металлизация шлицев и механическая обработка
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '400ms' }}>
+                <CardHeader>
+                  <div className="relative mx-auto mb-4">
+                    <div className="w-24 h-24 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
+                      <Icon name="Banknote" className="h-12 w-12 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold">
+                      5
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl">Оплата</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Оплата после выполнения работ любым удобным способом
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '500ms' }}>
+                <CardHeader>
+                  <div className="relative mx-auto mb-4">
+                    <div className="w-24 h-24 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
+                      <Icon name="PackageCheck" className="h-12 w-12 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center font-bold">
+                      6
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl">Отправка</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Отправляем восстановленную деталь обратно через СДЭК
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 border-t">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
