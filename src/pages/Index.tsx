@@ -586,15 +586,27 @@ const Index = () => {
           </div>
 
           <div className="max-w-6xl mx-auto space-y-8">
-            <div className="w-full h-[400px] rounded-lg overflow-hidden border shadow-lg">
-              <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=44.013733%2C56.291732&z=16&l=map&pt=44.013733,56.291732,pm2rdm"
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allowFullScreen
-                style={{ position: 'relative' }}
-              ></iframe>
+            <div className="space-y-4">
+              <div className="w-full h-[400px] rounded-lg overflow-hidden border shadow-lg">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?ll=44.013733%2C56.291732&z=16&l=map&pt=44.013733,56.291732,pm2rdm"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  allowFullScreen
+                  style={{ position: 'relative' }}
+                ></iframe>
+              </div>
+              <div className="flex justify-center">
+                <Button 
+                  size="lg"
+                  onClick={() => window.open('https://yandex.ru/maps/?rtext=~56.291732,44.013733', '_blank')}
+                  className="gap-2"
+                >
+                  <Icon name="Navigation" className="h-5 w-5" />
+                  Построить маршрут
+                </Button>
+              </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
