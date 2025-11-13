@@ -119,7 +119,7 @@ export const TurnkeySection = () => {
                       </div>
                       <div>
                         <h4 className="font-bold mb-1">Сроки</h4>
-                        <p className="text-sm text-muted-foreground">1 день</p>
+                        <p className="text-sm text-muted-foreground">1 день (стандарт) / 3-7 дней (сложные случаи)</p>
                       </div>
                     </div>
 
