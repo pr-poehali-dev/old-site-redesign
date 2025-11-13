@@ -205,7 +205,7 @@ const Index = () => {
               <div className="space-y-2">
                 <Icon name="Shield" className="h-12 w-12 mx-auto text-primary" />
                 <h3 className="text-2xl font-bold">Гарантия</h3>
-                <p className="text-muted-foreground">до 24 месяцев</p>
+                <p className="text-muted-foreground">18 месяцев без ограничения пробега</p>
               </div>
             </div>
           </div>
