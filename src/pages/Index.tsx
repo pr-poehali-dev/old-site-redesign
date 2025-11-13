@@ -386,7 +386,42 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-20 border-t bg-muted/30">
+      <section className="py-20 border-t bg-muted/30">
+        <div className="container">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">Галерея работ</h2>
+            <p className="text-lg text-muted-foreground">
+              Фотографии процесса восстановления и готовых деталей
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400&h=400&fit=crop',
+              'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=400&h=400&fit=crop',
+              'https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=400&h=400&fit=crop',
+              'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=400&h=400&fit=crop',
+              'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=400&h=400&fit=crop',
+              'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=400&fit=crop',
+              'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=400&fit=crop',
+              'https://images.unsplash.com/photo-1581092160607-ee67d6e5f3e7?w=400&h=400&fit=crop',
+            ].map((img, index) => (
+              <div 
+                key={index} 
+                className="aspect-square overflow-hidden rounded-lg bg-muted hover:shadow-lg transition-all duration-300 cursor-pointer group"
+              >
+                <img 
+                  src={img} 
+                  alt={`Работа ${index + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className="py-20 border-t">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <div className="text-center space-y-4 mb-12">
