@@ -325,9 +325,7 @@ const Index = () => {
                   <CardTitle className="text-xl">Восстановление</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">
-                    Восстановление шлицевого соединения с термообработкой до состояния новых
-                  </p>
+                  <p className="text-muted-foreground">Восстановление шлицевого соединения с термообработкой </p>
                 </CardContent>
               </Card>
 
