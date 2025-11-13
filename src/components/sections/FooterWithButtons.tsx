@@ -12,11 +12,13 @@ export const FooterWithButtons = ({ viewCount, showScrollTop }: FooterWithButton
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-6">
             <div className="space-y-3">
-              <div className="flex items-center gap-2 mb-4">
-                <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="Мега Шлиц" className="h-10 w-10 object-contain" />
-                <span className="font-extrabold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center shadow-lg p-1">
+                  <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="Мега Шлиц" className="h-full w-full object-contain" />
+                </div>
+                <span className="text-lg font-extrabold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
               </div>
-              <p className="text-sm text-secondary-foreground/70">
+              <p className="text-sm text-secondary-foreground/70 leading-relaxed">
                 Восстановление шлицевых соединений деталей трансмиссии с использованием запатентованной технологии
               </p>
             </div>
