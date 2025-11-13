@@ -20,7 +20,7 @@ interface Service {
 
 const services: Service[] = [
   { id: 1, name: 'Восстановление шлицев вала раздатки Hyundai/Kia', category: 'Раздатка', price: 10000, duration: '1-2 дня', popular: true, description: 'Восстановление в оригинальный размер на станках ЧПУ с термообработкой. Быстрое выполнение за 1-2 дня', image: 'https://cdn.poehali.dev/files/f668d529-788d-49c9-8c2d-c97a6c3ae8a1.jpg' },
-  { id: 2, name: 'Восстановление вала раздатки + дифференциал в усиленное шлицевое Hyundai/Kia', category: 'Раздатка', price: 25000, duration: '3-4 дня', popular: true, description: 'Комплексное восстановление вала раздатки и дифференциала с усиленным шлицевым соединением. Повышенная прочность и долговечность', image: 'https://cdn.poehali.dev/files/d28fc2e5-f77d-4575-9e54-ee54ff497afb.jpg' },
+  { id: 2, name: 'Восстановление вала + дифференциал в усиленное шлицевое Hyundai/Kia', category: 'Раздатка', price: 25000, duration: '3-4 дня', popular: true, description: 'Комплексное восстановление вала раздатки и дифференциала с усиленным шлицевым соединением. Повышенная прочность и долговечность', image: 'https://cdn.poehali.dev/files/d28fc2e5-f77d-4575-9e54-ee54ff497afb.jpg' },
   { id: 3, name: 'Восстановление шлицев переднего моста', category: 'Передний мост', price: 15000, duration: '2-3 дня', popular: true, description: 'Полное восстановление изношенных шлицевых соединений' },
   { id: 4, name: 'Восстановление шлицев заднего моста', category: 'Задний мост', price: 14000, duration: '2-3 дня', popular: true, description: 'Восстановление шлицов полуосей и дифференциала' },
   { id: 5, name: 'Ремонт раздаточной коробки', category: 'Раздатка', price: 18000, duration: '3-4 дня', popular: false, description: 'Восстановление шлицевых валов раздаточной коробки' },
