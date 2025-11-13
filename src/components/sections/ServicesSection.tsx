@@ -73,11 +73,11 @@ export const ServicesSection = ({
                 onClick={() => setSelectedService(service)}
               >
                 {service.image && (
-                  <div className="relative h-32 overflow-hidden bg-muted">
+                  <div className="relative h-48 overflow-hidden bg-muted">
                     <img 
                       src={service.image} 
                       alt={service.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     <div className="absolute bottom-3 left-3 right-3">
