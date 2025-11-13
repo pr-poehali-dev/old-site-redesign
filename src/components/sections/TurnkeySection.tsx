@@ -60,6 +60,58 @@ export const TurnkeySection = () => {
                 </div>
 
                 <div className="border-t pt-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <Icon name="ListOrdered" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-4">Этапы работы</h3>
+                      <div className="space-y-4">
+                        <div className="flex items-start gap-3">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <span className="text-primary font-bold text-sm">1</span>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-sm mb-1">Консультация и диагностика</h4>
+                            <p className="text-xs text-muted-foreground">Записываетесь на приём, привозите автомобиль. Мастер проводит диагностику и называет точную стоимость</p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-start gap-3">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <span className="text-primary font-bold text-sm">2</span>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-sm mb-1">Демонтаж и восстановление</h4>
+                            <p className="text-xs text-muted-foreground">Снимаем неисправные детали, восстанавливаем их по запатентованной технологии. Держим в курсе хода работ</p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-start gap-3">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <span className="text-primary font-bold text-sm">3</span>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-sm mb-1">Установка и проверка</h4>
+                            <p className="text-xs text-muted-foreground">Устанавливаем восстановленные детали, меняем расходники, заправляем маслом. Проводим тест-драйв</p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-start gap-3">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <span className="text-primary font-bold text-sm">4</span>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-sm mb-1">Выдача автомобиля</h4>
+                            <p className="text-xs text-muted-foreground">Передаём вам готовый автомобиль с гарантией 18 месяцев и всеми документами</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border-t pt-6">
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="flex items-start gap-3">
                       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
