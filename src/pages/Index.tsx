@@ -166,13 +166,7 @@ const Index = () => {
       />
 
       <section id="hero" className="relative py-32 md:py-48 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://cdn.poehali.dev/files/2f9eb982-2a71-488e-b732-fc642b3ef8e8.jpg"
-            alt="Восстановление шлицевых соединений"
-            className="w-full h-full object-cover animate-in fade-in zoom-in-110 duration-1000"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50 animate-in fade-in duration-700"></div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         </div>
         
         <div className="container relative z-10">
