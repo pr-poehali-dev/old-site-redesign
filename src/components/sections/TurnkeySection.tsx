@@ -15,12 +15,20 @@ export const TurnkeySection = () => {
       }
     };
 
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setActiveTooltip(null);
+      }
+    };
+
     if (activeTooltip !== null) {
       document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscapeKey);
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscapeKey);
     };
   }, [activeTooltip]);
   
