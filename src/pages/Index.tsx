@@ -609,7 +609,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card>
                 <CardHeader>
                   <Icon name="MapPin" className="h-8 w-8 text-primary mb-2" />
@@ -647,6 +647,30 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">+7 (920) 252-03-52</p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <Icon name="Clock" className="h-8 w-8 text-primary mb-2" />
+                  <CardTitle>График работы</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-1 text-muted-foreground">
+                    <p>Пн-Пт: 9:00 - 18:00</p>
+                    <p>Сб: 10:00 - 15:00</p>
+                    <p>Вс: выходной</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <Icon name="Truck" className="h-8 w-8 text-primary mb-2" />
+                  <CardTitle>Доставка</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Работаем с транспортными компаниями по всей России</p>
                 </CardContent>
               </Card>
             </div>
