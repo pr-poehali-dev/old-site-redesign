@@ -266,7 +266,7 @@ export const TurnkeySection = () => {
                             <Icon name="MessageCircle" className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                             Можно ли оставить автомобиль у вас на время ремонта?
                           </h4>
-                          <p className="text-xs text-muted-foreground pl-6">Да, автомобиль остаётся у нас на весь срок ремонта (3-7 дней). Вы можете забрать его в удобное время после завершения работ.</p>
+                          <p className="text-xs text-muted-foreground pl-6">Да, автомобиль остаётся у нас на весь срок ремонта. Стандартный ремонт проходит в течение дня, сложные случаи могут занять 3-7 дней. Вы можете забрать автомобиль в удобное время после завершения работ.</p>
                         </div>
                         
                         <div className="bg-background rounded-lg p-4 border">
