@@ -31,7 +31,7 @@ export const Header = ({
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-3 cursor-pointer group">
           <img src="https://cdn.poehali.dev/files/95ca077b-94b5-42c3-a7a7-f99244c50369.jpg" alt="Мега Шлиц" className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
-          <span className="text-xl font-bold text-secondary group-hover:text-primary transition-colors duration-300">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
+          <span className="text-xl font-extrabold text-secondary group-hover:text-primary transition-colors duration-300">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
         </div>
         
         <nav className="hidden md:flex items-center gap-6">
