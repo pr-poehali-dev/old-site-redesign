@@ -68,21 +68,20 @@ export const ServicesSection = ({
             {filteredServices.map((service, index) => (
               <Card 
                 key={service.id} 
-                className="hover:shadow-xl transition-all duration-300 overflow-hidden group animate-in fade-in slide-in-from-bottom-4 cursor-pointer" 
+                className="hover:shadow-xl transition-all duration-300 overflow-hidden group animate-in fade-in slide-in-from-bottom-4 cursor-pointer p-0" 
                 style={{ animationDelay: `${index * 50}ms` }}
                 onClick={() => setSelectedService(service)}
               >
                 {service.image && (
-                  <div className="relative h-48 overflow-hidden bg-muted">
+                  <div className="relative h-48 overflow-hidden bg-white">
                     <img 
                       src={service.image} 
                       alt={service.name}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-2"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     <div className="absolute bottom-3 left-3 right-3">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-white text-sm bg-black/40 backdrop-blur-sm px-2 py-1 rounded">
+                        <div className="flex items-center gap-2 text-foreground text-sm bg-background/90 backdrop-blur-sm px-2 py-1 rounded border">
                           <Icon name="Clock" className="h-3 w-3" />
                           <span>{service.duration}</span>
                         </div>
@@ -96,12 +95,12 @@ export const ServicesSection = ({
                     </div>
                   </div>
                 )}
-                <CardHeader className="pb-3">
+                <CardHeader className="pb-3 px-4 pt-4">
                   <CardTitle className="text-sm leading-tight line-clamp-3">
                     {service.name}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-0">
+                <CardContent className="pt-0 px-4 pb-4">
                   <div className="flex items-baseline gap-1">
                     <span className="text-xs text-muted-foreground">от</span>
                     <span className="text-2xl font-bold text-primary">{service.price.toLocaleString('ru-RU')}</span>
