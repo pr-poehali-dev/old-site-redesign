@@ -74,7 +74,7 @@ export const ContactsSection = () => {
                 <CardTitle>Доставка</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Работаем с транспортными компаниями по всей России</p>
+                <p className="text-muted-foreground">Работаем с транспортной компанией СДЭК по всей России</p>
               </CardContent>
             </Card>
           </div>
