@@ -187,10 +187,10 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
-            <div className="space-y-6">
+          <div className="grid lg:grid-cols-2 gap-8">
+            <div className="space-y-6 flex flex-col justify-center">
               <div>
-                <p className="text-base text-muted-foreground">
+                <p className="text-base text-muted-foreground text-center lg:text-left">
                   МегаШлиц — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
                   Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
                   специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
@@ -217,8 +217,8 @@ const Index = () => {
               </div>
             </div>
 
-            <div>
-              <div className="mb-4">
+            <div className="flex flex-col justify-center">
+              <div className="mb-4 text-center lg:text-left">
                 <h3 className="text-xl md:text-2xl font-bold mb-2">Запатентованная технология</h3>
                 <p className="text-sm text-muted-foreground">
                   Наша технология восстановления защищена патентом РФ
