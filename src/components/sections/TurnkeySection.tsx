@@ -49,7 +49,7 @@ export const TurnkeySection = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <Icon name="Check" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Заправка раздатки маслом</span>
+                        <span>Замена всех расходных комплектующих: сальники, фильтр, масло</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Icon name="Check" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
