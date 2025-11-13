@@ -17,12 +17,12 @@ export const ContactForm = ({
   handleFormSubmit,
 }: ContactFormProps) => {
   return (
-    <section className="py-20 border-t bg-gradient-to-br from-primary/5 to-background">
+    <section className="py-12 border-t bg-gradient-to-br from-primary/5 to-background">
       <div className="container">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center space-y-4 mb-8">
+          <div className="text-center space-y-2 mb-6">
             <h2 className="text-3xl md:text-4xl font-bold">Отправить заявку</h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-muted-foreground">
               Оставьте заявку и мы свяжемся с вами в ближайшее время
             </p>
           </div>

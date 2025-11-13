@@ -42,12 +42,12 @@ export const ServicesSection = ({
   categories,
 }: ServicesSectionProps) => {
   return (
-    <section id="services" className="py-20 border-t bg-muted/30">
+    <section id="services" className="py-12 border-t bg-muted/30">
       <div className="container">
-        <div className="space-y-8">
-          <div className="text-center space-y-4">
+        <div className="space-y-6">
+          <div className="text-center space-y-2">
             <h2 className="text-3xl md:text-4xl font-bold">Наши услуги</h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-muted-foreground">
               Полный спектр работ по восстановлению трансмиссии
             </p>
           </div>

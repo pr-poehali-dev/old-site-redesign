@@ -8,7 +8,7 @@ interface FooterWithButtonsProps {
 export const FooterWithButtons = ({ viewCount, showScrollTop }: FooterWithButtonsProps) => {
   return (
     <>
-      <footer className="border-t py-8 bg-secondary text-secondary-foreground">
+      <footer className="border-t py-6 bg-secondary text-secondary-foreground">
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">

@@ -11,16 +11,16 @@ export const ContactsSection = () => {
   const [showCalc, setShowCalc] = useState(false);
 
   return (
-    <section id="contacts" className="py-20 border-t">
+    <section id="contacts" className="py-12 border-t">
       <div className="container">
-        <div className="text-center space-y-4 mb-12">
+        <div className="text-center space-y-2 mb-8">
           <h2 className="text-3xl md:text-4xl font-bold">Контакты</h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-muted-foreground">
             Свяжитесь с нами для консультации или отправки заявки
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto space-y-8">
+        <div className="max-w-6xl mx-auto space-y-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ animationDelay: '0ms' }}>
               <CardHeader>

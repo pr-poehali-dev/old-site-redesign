@@ -4,13 +4,13 @@ import Icon from '@/components/ui/icon';
 export const AboutAndAdvantagesSection = () => {
   return (
     <>
-      <section id="about" className="py-20 border-t">
+      <section id="about" className="py-12 border-t">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-4xl mx-auto space-y-6">
             <Card>
               <CardContent className="p-6">
                 <div className="space-y-6">
@@ -67,14 +67,14 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="advantages" className="py-20 border-t">
+      <section id="advantages" className="py-12 border-t">
         <div className="container">
-          <div className="text-center space-y-4 mb-12">
+          <div className="text-center space-y-2 mb-8">
             <h2 className="text-3xl md:text-4xl font-bold">Преимущества нашей технологии</h2>
-            <p className="text-lg text-muted-foreground">Почему восстановление выгоднее покупки новой детали</p>
+            <p className="text-muted-foreground">Почему восстановление выгоднее покупки новой детали</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Icon name="DollarSign" className="h-12 w-12 mx-auto text-primary mb-4" />
@@ -124,17 +124,17 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="process" className="py-20 border-t bg-muted/30">
+      <section id="process" className="py-12 border-t bg-muted/30">
         <div className="container">
-          <div className="text-center space-y-4 mb-12">
+          <div className="text-center space-y-2 mb-8">
             <h2 className="text-3xl md:text-4xl font-bold">Как мы работаем</h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-muted-foreground">
               Порядок работы восстановления
             </p>
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '0ms' }}>
                 <CardHeader>
                   <div className="relative mx-auto mb-4">
@@ -251,7 +251,7 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-16 border-t">
+      <section id="faq" className="py-12 border-t">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <div className="text-center space-y-2 mb-8">
