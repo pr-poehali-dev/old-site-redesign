@@ -13,9 +13,9 @@ export const AboutAndAdvantagesSection = () => {
 
           <div className="max-w-4xl mx-auto space-y-4">
             <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
-              <CardContent className="p-8">
-                <div className="space-y-6">
-                  <p className="text-lg leading-relaxed text-muted-foreground">
+              <CardContent className="p-5">
+                <div className="space-y-4">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
                     <span className="font-bold text-foreground">Мега Шлиц<sup>®</sup></span> — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
                     Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
                     специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
@@ -27,8 +27,8 @@ export const AboutAndAdvantagesSection = () => {
                       <Icon name="Award" className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-base">Патент РФ № 2829377</h4>
-                      <p className="text-sm text-muted-foreground">
+                      <h4 className="font-bold text-sm">Патент РФ № 2829377</h4>
+                      <p className="text-xs text-muted-foreground">
                         Способ восстановления шлицевого соединения на полноприводных автомобилях
                       </p>
                     </div>
@@ -47,27 +47,27 @@ export const AboutAndAdvantagesSection = () => {
               </CardContent>
             </Card>
 
-            <div className="grid grid-cols-3 gap-4">
-              <Card className="text-center p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-3">
-                  <Icon name="Award" className="h-8 w-8 text-primary" />
+            <div className="grid grid-cols-3 gap-3">
+              <Card className="text-center p-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-2">
+                  <Icon name="Award" className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold mb-1">3+ лет</h3>
-                <p className="text-sm text-muted-foreground">опыта работы</p>
+                <h3 className="text-base font-bold mb-0.5">3+ лет</h3>
+                <p className="text-xs text-muted-foreground">опыта работы</p>
               </Card>
-              <Card className="text-center p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-3">
-                  <Icon name="Car" className="h-8 w-8 text-primary" />
+              <Card className="text-center p-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-2">
+                  <Icon name="Car" className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold mb-1">3000+</h3>
-                <p className="text-sm text-muted-foreground">восстановленных деталей</p>
+                <h3 className="text-base font-bold mb-0.5">3000+</h3>
+                <p className="text-xs text-muted-foreground">восстановленных деталей</p>
               </Card>
-              <Card className="text-center p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-3">
-                  <Icon name="Shield" className="h-8 w-8 text-primary" />
+              <Card className="text-center p-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-2">
+                  <Icon name="Shield" className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold mb-1">Гарантия</h3>
-                <p className="text-sm text-muted-foreground">18 месяцев без ограничения пробега</p>
+                <h3 className="text-base font-bold mb-0.5">Гарантия</h3>
+                <p className="text-xs text-muted-foreground">18 месяцев без ограничения пробега</p>
               </Card>
             </div>
           </div>
@@ -81,16 +81,16 @@ export const AboutAndAdvantagesSection = () => {
             <p className="text-muted-foreground text-sm">Почему восстановление выгоднее покупки новой детали</p>
           </div>
 
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-              <CardHeader>
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <Icon name="DollarSign" className="h-10 w-10 text-primary" />
+              <CardHeader className="pb-2">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-2">
+                  <Icon name="DollarSign" className="h-7 w-7 text-primary" />
                 </div>
-                <CardTitle className="text-xl">Экономия до 70%</CardTitle>
+                <CardTitle className="text-base">Экономия до 70%</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="pt-0">
+                <p className="text-xs text-muted-foreground leading-relaxed">
                   Восстановление обходится в 3-5 раз дешевле покупки новых деталей
                 </p>
               </CardContent>
@@ -151,21 +151,21 @@ export const AboutAndAdvantagesSection = () => {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '0ms' }}>
-                <CardHeader>
-                  <div className="relative mx-auto mb-4">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto shadow-lg">
-                      <Icon name="Send" className="h-12 w-12 text-primary" />
+                <CardHeader className="pb-2">
+                  <div className="relative mx-auto mb-2">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto">
+                      <Icon name="Send" className="h-8 w-8 text-primary" />
                     </div>
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full w-9 h-9 flex items-center justify-center font-bold shadow-md">
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">
                       1
                     </div>
                   </div>
-                  <CardTitle className="text-xl mb-2">Заявка</CardTitle>
+                  <CardTitle className="text-base mb-1">Заявка</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
+                <CardContent className="pt-0">
+                  <p className="text-xs text-muted-foreground leading-relaxed">
                     Оставьте заявку на сайте или позвоните нам для консультации
                   </p>
                 </CardContent>
