@@ -21,14 +21,15 @@ interface Service {
 const services: Service[] = [
   { id: 1, name: 'Восстановление шлицев вала раздатки Hyundai/Kia', category: 'Раздатка', price: 10000, duration: '1-2 дня', popular: true, description: 'Восстановление в оригинальный размер на станках ЧПУ с термообработкой. Быстрое выполнение за 1-2 дня', image: 'https://cdn.poehali.dev/files/f668d529-788d-49c9-8c2d-c97a6c3ae8a1.jpg' },
   { id: 2, name: 'Восстановление вала + дифференциал в усиленное шлицевое Hyundai/Kia', category: 'Раздатка', price: 25000, duration: '1-3 дня', popular: true, description: 'Комплексное восстановление вала раздатки и дифференциала с усиленным шлицевым соединением. Повышенная прочность и долговечность', image: 'https://cdn.poehali.dev/files/d28fc2e5-f77d-4575-9e54-ee54ff497afb.jpg' },
-  { id: 3, name: 'Восстановление шлицев переднего моста', category: 'Передний мост', price: 15000, duration: '2-3 дня', popular: true, description: 'Полное восстановление изношенных шлицевых соединений' },
-  { id: 4, name: 'Восстановление шлицев заднего моста', category: 'Задний мост', price: 14000, duration: '2-3 дня', popular: true, description: 'Восстановление шлицов полуосей и дифференциала' },
-  { id: 5, name: 'Ремонт раздаточной коробки', category: 'Раздатка', price: 18000, duration: '3-4 дня', popular: false, description: 'Восстановление шлицевых валов раздаточной коробки' },
-  { id: 6, name: 'Восстановление ШРУС', category: 'ШРУС', price: 8000, duration: '1-2 дня', popular: true, description: 'Ремонт внутренних и наружных шарниров' },
-  { id: 7, name: 'Восстановление кардана', category: 'Кардан', price: 12000, duration: '2 дня', popular: false, description: 'Восстановление шлицев карданного вала' },
-  { id: 8, name: 'Ремонт КПП (шлицы первичного вала)', category: 'КПП', price: 16000, duration: '3-4 дня', popular: false, description: 'Восстановление изношенных шлицев первичного вала' },
-  { id: 9, name: 'Балансировка карданного вала', category: 'Кардан', price: 3500, duration: '1 день', popular: true, description: 'Динамическая балансировка после восстановления' },
-  { id: 10, name: 'Диагностика трансмиссии', category: 'Диагностика', price: 1500, duration: '1-2 часа', popular: true, description: 'Проверка состояния всех шлицевых соединений' },
+  { id: 3, name: 'Раздатка в сборе на обмен под оригинальный корпус дифференциала Hyundai/Kia', category: 'Раздатка', price: 35000, duration: 'В наличии', popular: true, description: 'Готовая раздаточная коробка в сборе на обмен. Подходит под оригинальный корпус дифференциала. Гарантия 18 месяцев', image: 'https://cdn.poehali.dev/files/cdd533fb-0c2a-466e-8ed2-c8b1ad2ce8d7.jpg' },
+  { id: 4, name: 'Восстановление шлицев переднего моста', category: 'Передний мост', price: 15000, duration: '2-3 дня', popular: true, description: 'Полное восстановление изношенных шлицевых соединений' },
+  { id: 5, name: 'Восстановление шлицев заднего моста', category: 'Задний мост', price: 14000, duration: '2-3 дня', popular: true, description: 'Восстановление шлицов полуосей и дифференциала' },
+  { id: 6, name: 'Ремонт раздаточной коробки', category: 'Раздатка', price: 18000, duration: '3-4 дня', popular: false, description: 'Восстановление шлицевых валов раздаточной коробки' },
+  { id: 7, name: 'Восстановление ШРУС', category: 'ШРУС', price: 8000, duration: '1-2 дня', popular: true, description: 'Ремонт внутренних и наружных шарниров' },
+  { id: 8, name: 'Восстановление кардана', category: 'Кардан', price: 12000, duration: '2 дня', popular: false, description: 'Восстановление шлицев карданного вала' },
+  { id: 9, name: 'Ремонт КПП (шлицы первичного вала)', category: 'КПП', price: 16000, duration: '3-4 дня', popular: false, description: 'Восстановление изношенных шлицев первичного вала' },
+  { id: 10, name: 'Балансировка карданного вала', category: 'Кардан', price: 3500, duration: '1 день', popular: true, description: 'Динамическая балансировка после восстановления' },
+  { id: 11, name: 'Диагностика трансмиссии', category: 'Диагностика', price: 1500, duration: '1-2 часа', popular: true, description: 'Проверка состояния всех шлицевых соединений' },
 ];
 
 const categories = ['Все услуги', ...Array.from(new Set(services.map(s => s.category)))];
