@@ -135,6 +135,67 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 border-t">
+        <div className="container">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">Преимущества нашей технологии</h2>
+            <p className="text-lg text-muted-foreground">
+              Почему восстановление выгоднее замены
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Icon name="DollarSign" className="h-12 w-12 mx-auto text-primary mb-4" />
+                <CardTitle className="text-xl">Экономия до 70%</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Восстановление обходится в 3-5 раз дешевле покупки новых деталей
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Icon name="Zap" className="h-12 w-12 mx-auto text-primary mb-4" />
+                <CardTitle className="text-xl">Быстрые сроки</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Ремонт за 1-4 дня. Не нужно ждать заказа запчастей из-за границы
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Icon name="Wrench" className="h-12 w-12 mx-auto text-primary mb-4" />
+                <CardTitle className="text-xl">Высокая прочность</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Технология напыления создает соединение прочнее заводского
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Icon name="Recycle" className="h-12 w-12 mx-auto text-primary mb-4" />
+                <CardTitle className="text-xl">Безопасно для узлов</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Сохраняем оригинальные детали без замены дорогостоящих узлов
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="services" className="py-20 border-t bg-muted/30">
         <div className="container">
           <div className="space-y-8">
