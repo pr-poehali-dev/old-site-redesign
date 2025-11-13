@@ -37,11 +37,20 @@ export const ContactsSection = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                onClick={() => window.location.href = 'tel:+78312601123'}
+                onClick={() => window.location.href = 'tel:+79202520352'}
                 className="gap-2"
               >
                 <Icon name="Phone" className="h-5 w-5" />
                 Позвонить
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                onClick={() => window.location.href = 'mailto:megashlic@yandex.ru'}
+                className="gap-2"
+              >
+                <Icon name="Mail" className="h-5 w-5" />
+                Написать Email
               </Button>
             </div>
           </div>
@@ -63,7 +72,7 @@ export const ContactsSection = () => {
                 <CardTitle>Телефон</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">+7 (831) 260-11-23</p>
+                <p className="text-muted-foreground">+7 (920) 252-03-52</p>
               </CardContent>
             </Card>
 
