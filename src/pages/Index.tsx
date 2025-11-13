@@ -4,7 +4,6 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { GalleryCarouselSection } from '@/components/sections/GalleryCarouselSection';
 import { AboutAndAdvantagesSection } from '@/components/sections/AboutAndAdvantagesSection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
-import { ContactForm } from '@/components/sections/ContactForm';
 import { ContactsSection } from '@/components/sections/ContactsSection';
 import { FooterWithButtons } from '@/components/sections/FooterWithButtons';
 
@@ -182,14 +181,12 @@ const Index = () => {
         categories={categories}
       />
 
-      <ContactForm
+      <ContactsSection
         formData={formData}
         setFormData={setFormData}
         formStatus={formStatus}
         handleFormSubmit={handleFormSubmit}
       />
-
-      <ContactsSection />
 
       <FooterWithButtons viewCount={viewCount} showScrollTop={showScrollTop} />
     </div>
