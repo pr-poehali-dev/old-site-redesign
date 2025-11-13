@@ -181,80 +181,80 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-20 border-t">
+      <section id="about" className="py-12 border-t">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center space-y-6 mb-16">
+          <div className="max-w-3xl mx-auto text-center space-y-4 mb-10">
             <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               МегаШлиц — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
               Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
               специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
               и запатентованные технологии восстановления.
             </p>
-            <div className="grid md:grid-cols-3 gap-8 pt-8">
-              <div className="space-y-2">
-                <Icon name="Award" className="h-12 w-12 mx-auto text-primary" />
-                <h3 className="text-2xl font-bold">5+ лет</h3>
-                <p className="text-muted-foreground">опыта работы</p>
+            <div className="grid md:grid-cols-3 gap-6 pt-6">
+              <div className="space-y-1">
+                <Icon name="Award" className="h-10 w-10 mx-auto text-primary" />
+                <h3 className="text-xl font-bold">5+ лет</h3>
+                <p className="text-sm text-muted-foreground">опыта работы</p>
               </div>
-              <div className="space-y-2">
-                <Icon name="Car" className="h-12 w-12 mx-auto text-primary" />
-                <h3 className="text-2xl font-bold">5000+</h3>
-                <p className="text-muted-foreground">восстановленных деталей</p>
+              <div className="space-y-1">
+                <Icon name="Car" className="h-10 w-10 mx-auto text-primary" />
+                <h3 className="text-xl font-bold">5000+</h3>
+                <p className="text-sm text-muted-foreground">восстановленных деталей</p>
               </div>
-              <div className="space-y-2">
-                <Icon name="Shield" className="h-12 w-12 mx-auto text-primary" />
-                <h3 className="text-2xl font-bold">Гарантия</h3>
-                <p className="text-muted-foreground">18 месяцев без ограничения пробега</p>
+              <div className="space-y-1">
+                <Icon name="Shield" className="h-10 w-10 mx-auto text-primary" />
+                <h3 className="text-xl font-bold">Гарантия</h3>
+                <p className="text-sm text-muted-foreground">18 месяцев без ограничения пробега</p>
               </div>
             </div>
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="text-center space-y-4 mb-8">
-              <h3 className="text-2xl md:text-3xl font-bold">Запатентованная технология</h3>
-              <p className="text-muted-foreground">
+            <div className="text-center space-y-2 mb-6">
+              <h3 className="text-xl md:text-2xl font-bold">Запатентованная технология</h3>
+              <p className="text-sm text-muted-foreground">
                 Наша технология восстановления защищена патентом РФ
               </p>
             </div>
 
             <Card className="hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary/10 p-3 rounded-lg">
-                        <Icon name="Award" className="h-8 w-8 text-primary" />
+              <CardContent className="p-6">
+                <div className="grid md:grid-cols-2 gap-6 items-center">
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="bg-primary/10 p-2 rounded-lg">
+                        <Icon name="Award" className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-xl mb-2">Патент РФ № 2829377</h4>
-                        <p className="text-muted-foreground">
+                        <h4 className="font-bold text-lg mb-1">Патент РФ № 2829377</h4>
+                        <p className="text-sm text-muted-foreground">
                           Способ восстановления шлицевого соединения на полноприводных автомобилях
                         </p>
                       </div>
                     </div>
 
-                    <div className="space-y-3 text-sm">
+                    <div className="space-y-2 text-xs">
                       <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
+                        <Icon name="CheckCircle2" className="h-4 w-4 text-primary" />
                         <span>Патентообладатель: Борисов Александр Вячеславович</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
+                        <Icon name="CheckCircle2" className="h-4 w-4 text-primary" />
                         <span>Приоритет изобретения: 29 марта 2024 г.</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
+                        <Icon name="CheckCircle2" className="h-4 w-4 text-primary" />
                         <span>Дата регистрации: 30 октября 2024 г.</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-5 w-5 text-primary" />
+                        <Icon name="CheckCircle2" className="h-4 w-4 text-primary" />
                         <span>Срок действия патента: до 29 марта 2044 г.</span>
                       </div>
                     </div>
 
-                    <div className="pt-4">
-                      <p className="text-sm text-muted-foreground">
+                    <div className="pt-2">
+                      <p className="text-xs text-muted-foreground">
                         Наша запатентованная технология гарантирует высочайшее качество восстановления 
                         и долговечность восстановленных деталей.
                       </p>
