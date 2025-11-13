@@ -93,7 +93,7 @@ const Index = () => {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden border-t bg-background">
+          <div className="md:hidden border-t bg-background animate-in slide-in-from-top duration-300">
             <nav className="container py-4 flex flex-col gap-2">
               <button onClick={() => scrollToSection('hero')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Главная</button>
               <button onClick={() => scrollToSection('about')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">О компании</button>
