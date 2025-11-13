@@ -172,10 +172,10 @@ const Index = () => {
         
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
               Восстановление шлицевых соединений
             </h1>
-            <p className="text-xl text-muted-foreground animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+            <p className="text-xl text-white/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
               Производственная компания по восстановлению шлицевых соединений трансмиссии по всей стране
             </p>
             <div className="flex flex-wrap gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
@@ -183,7 +183,7 @@ const Index = () => {
                 Наши услуги
                 <Icon name="ArrowRight" className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" onClick={() => scrollToSection('contacts')}>
+              <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 hover:text-white backdrop-blur-sm" onClick={() => scrollToSection('contacts')}>
                 Отправить заявку
               </Button>
             </div>
