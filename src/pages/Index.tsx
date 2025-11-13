@@ -397,14 +397,14 @@ const Index = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400&h=400&fit=crop',
-              'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=400&h=400&fit=crop',
-              'https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=400&h=400&fit=crop',
-              'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=400&h=400&fit=crop',
-              'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=400&h=400&fit=crop',
-              'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=400&fit=crop',
-              'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=400&fit=crop',
-              'https://images.unsplash.com/photo-1581092160607-ee67d6e5f3e7?w=400&h=400&fit=crop',
+              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/96c20d62-17ac-4514-bba8-a36e3442d0da.jpg',
+              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/cff3532b-c50c-4441-bc30-33af77a3bea6.jpg',
+              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/99b1c7e3-2f34-4512-9d07-9c30a801f51f.jpg',
+              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/1d99926f-1ef6-42ce-ae00-0485464534a9.jpg',
+              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/d004d95e-3662-40fc-86c6-17bb8672cf10.jpg',
+              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/7469e23e-d800-4e36-b70c-b5edbddf946d.jpg',
+              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/a85c07d7-892c-45a5-b6df-ffdda8176bfb.jpg',
+              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/bdf0dd8f-7542-4347-a5ae-801bd2a68e2c.jpg',
             ].map((img, index) => (
               <div 
                 key={index} 
