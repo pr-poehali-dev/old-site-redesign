@@ -224,6 +224,24 @@ const Index = () => {
               </CardContent>
             </Card>
 
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-4 text-center">Наши работы</h3>
+                <div className="relative group">
+                  <div className="overflow-hidden rounded-lg border-2 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
+                    <img 
+                      src="https://cdn.poehali.dev/files/2f9eb982-2a71-488e-b732-fc642b3ef8e8.jpg"
+                      alt="Восстановленные валы раздаточной коробки"
+                      className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <p className="text-sm text-muted-foreground text-center mt-3">
+                    Восстановленные валы раздаточной коробки с новыми шлицевыми соединениями
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
             <div className="grid grid-cols-3 gap-3">
               <Card className="text-center p-3">
                 <Icon name="Award" className="h-8 w-8 mx-auto text-primary mb-1" />
