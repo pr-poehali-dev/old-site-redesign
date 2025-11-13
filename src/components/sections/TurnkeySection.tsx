@@ -272,6 +272,19 @@ export const TurnkeySection = () => {
                         <div className="bg-background rounded-lg p-4 border">
                           <h4 className="font-bold text-sm mb-2 flex items-start gap-2">
                             <Icon name="MessageCircle" className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                            Что такое стандартный и сложный ремонт?
+                          </h4>
+                          <p className="text-xs text-muted-foreground pl-6 mb-2">
+                            <span className="font-semibold">Стандартный (1 день):</span> восстановление вала или дифференциала, замена корзины фрикционов, установка деталей на обмен.
+                          </p>
+                          <p className="text-xs text-muted-foreground pl-6">
+                            <span className="font-semibold">Сложный (3-7 дней):</span> восстановление МКПП, одновременное восстановление вала + дифференциала, ремонт при сильном износе корпуса.
+                          </p>
+                        </div>
+                        
+                        <div className="bg-background rounded-lg p-4 border">
+                          <h4 className="font-bold text-sm mb-2 flex items-start gap-2">
+                            <Icon name="MessageCircle" className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                             Что делать, если проблема повторится?
                           </h4>
                           <p className="text-xs text-muted-foreground pl-6">На все работы действует гарантия 18 месяцев. Если проблема повторится в течение гарантийного срока — устраним бесплатно.</p>
