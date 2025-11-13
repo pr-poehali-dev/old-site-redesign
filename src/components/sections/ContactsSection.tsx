@@ -186,7 +186,7 @@ export const ContactsSection = ({
               rel="noopener noreferrer"
               className="block"
             >
-              <Button className="w-full bg-green-600 hover:bg-green-700 text-white" size="lg">
+              <Button className="w-full" size="lg">
                 <Icon name="Navigation" className="mr-2 h-5 w-5" />
                 Проложить маршрут
               </Button>

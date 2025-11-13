@@ -316,7 +316,7 @@ export const AboutAndAdvantagesSection = () => {
                       rel="noopener noreferrer"
                       className="block w-full"
                     >
-                      <Button className="w-full" size="lg" variant="outline">
+                      <Button className="w-full" size="lg">
                         <Icon name="ExternalLink" className="mr-2 h-5 w-5" />
                         Открыть калькулятор СДЭК
                       </Button>
