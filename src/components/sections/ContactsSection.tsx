@@ -33,6 +33,94 @@ export const ContactsSection = ({
         </div>
 
         <div className="max-w-6xl mx-auto space-y-6">
+          <Card className="bg-gradient-to-br from-primary/5 to-background">
+            <CardHeader>
+              <CardTitle className="text-xl">Оставить заявку</CardTitle>
+              <p className="text-sm text-muted-foreground">Заполните форму и мы свяжемся с вами</p>
+            </CardHeader>
+            <CardContent>
+              {formStatus === 'success' && (
+                <div className="mb-4 p-3 bg-primary/10 text-primary rounded-md text-sm">
+                  ✓ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
+                </div>
+              )}
+              {formStatus === 'error' && (
+                <div className="mb-4 p-3 bg-destructive/10 text-destructive rounded-md text-sm">
+                  Ошибка отправки. Попробуйте позже или позвоните нам напрямую.
+                </div>
+              )}
+              <form className="space-y-4" onSubmit={handleFormSubmit}>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                      Ваше имя <span className="text-destructive">*</span>
+                    </label>
+                    <Input 
+                      id="name" 
+                      placeholder="Иван Иванов" 
+                      required 
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      disabled={formStatus === 'sending'}
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                      Телефон <span className="text-destructive">*</span>
+                    </label>
+                    <Input 
+                      id="phone" 
+                      type="tel" 
+                      placeholder="+7 (___) ___-__-__" 
+                      required 
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      disabled={formStatus === 'sending'}
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="detail" className="block text-sm font-medium mb-2">
+                    Какую деталь нужно восстановить?
+                  </label>
+                  <Input 
+                    id="detail" 
+                    placeholder="Например: полуось переднего моста Land Cruiser"
+                    value={formData.detail}
+                    onChange={(e) => setFormData({...formData, detail: e.target.value})}
+                    disabled={formStatus === 'sending'}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    Дополнительная информация
+                  </label>
+                  <textarea 
+                    id="message"
+                    rows={3}
+                    className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+                    placeholder="Опишите состояние детали, сроки, способ доставки..."
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    disabled={formStatus === 'sending'}
+                  />
+                </div>
+
+                <Button type="submit" className="w-full" size="lg" disabled={formStatus === 'sending'}>
+                  <Icon name="Send" className="mr-2 h-5 w-5" />
+                  {formStatus === 'sending' ? 'Отправка...' : 'Отправить заявку'}
+                </Button>
+
+                <p className="text-xs text-muted-foreground text-center">
+                  Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
+                </p>
+              </form>
+            </CardContent>
+          </Card>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             <Card>
               <CardHeader className="pb-3">
@@ -181,94 +269,6 @@ export const ContactsSection = ({
               </CardContent>
             </Card>
           )}
-
-          <Card className="bg-gradient-to-br from-primary/5 to-background">
-            <CardHeader>
-              <CardTitle className="text-xl">Оставить заявку</CardTitle>
-              <p className="text-sm text-muted-foreground">Заполните форму и мы свяжемся с вами</p>
-            </CardHeader>
-            <CardContent>
-              {formStatus === 'success' && (
-                <div className="mb-4 p-3 bg-primary/10 text-primary rounded-md text-sm">
-                  ✓ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
-                </div>
-              )}
-              {formStatus === 'error' && (
-                <div className="mb-4 p-3 bg-destructive/10 text-destructive rounded-md text-sm">
-                  Ошибка отправки. Попробуйте позже или позвоните нам напрямую.
-                </div>
-              )}
-              <form className="space-y-4" onSubmit={handleFormSubmit}>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Ваше имя <span className="text-destructive">*</span>
-                    </label>
-                    <Input 
-                      id="name" 
-                      placeholder="Иван Иванов" 
-                      required 
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      disabled={formStatus === 'sending'}
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                      Телефон <span className="text-destructive">*</span>
-                    </label>
-                    <Input 
-                      id="phone" 
-                      type="tel" 
-                      placeholder="+7 (___) ___-__-__" 
-                      required 
-                      value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                      disabled={formStatus === 'sending'}
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="detail" className="block text-sm font-medium mb-2">
-                    Какую деталь нужно восстановить?
-                  </label>
-                  <Input 
-                    id="detail" 
-                    placeholder="Например: полуось переднего моста Land Cruiser"
-                    value={formData.detail}
-                    onChange={(e) => setFormData({...formData, detail: e.target.value})}
-                    disabled={formStatus === 'sending'}
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Дополнительная информация
-                  </label>
-                  <textarea 
-                    id="message"
-                    rows={3}
-                    className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                    placeholder="Опишите состояние детали, сроки, способ доставки..."
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    disabled={formStatus === 'sending'}
-                  />
-                </div>
-
-                <Button type="submit" className="w-full" size="lg" disabled={formStatus === 'sending'}>
-                  <Icon name="Send" className="mr-2 h-5 w-5" />
-                  {formStatus === 'sending' ? 'Отправка...' : 'Отправить заявку'}
-                </Button>
-
-                <p className="text-xs text-muted-foreground text-center">
-                  Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
-                </p>
-              </form>
-            </CardContent>
-          </Card>
 
           <div className="space-y-4">
             <div className="w-full h-[400px] rounded-lg overflow-hidden border shadow-lg">
