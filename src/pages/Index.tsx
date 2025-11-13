@@ -181,16 +181,16 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-12 border-t">
+      <section id="about" className="py-8 border-t">
         <div className="container">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
+          <div className="text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">О компании</h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div className="space-y-6 flex flex-col justify-center">
+          <div className="grid lg:grid-cols-2 gap-6">
+            <div className="space-y-4 flex flex-col justify-center">
               <div>
-                <p className="text-base text-muted-foreground text-center lg:text-left">
+                <p className="text-sm text-muted-foreground text-center lg:text-left">
                   МегаШлиц — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
                   Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
                   специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
@@ -198,50 +198,50 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
-                <Card className="text-center p-4">
-                  <Icon name="Award" className="h-10 w-10 mx-auto text-primary mb-2" />
-                  <h3 className="text-lg font-bold">5+ лет</h3>
+              <div className="grid grid-cols-3 gap-3">
+                <Card className="text-center p-3">
+                  <Icon name="Award" className="h-8 w-8 mx-auto text-primary mb-1" />
+                  <h3 className="text-base font-bold">5+ лет</h3>
                   <p className="text-xs text-muted-foreground">опыта работы</p>
                 </Card>
-                <Card className="text-center p-4">
-                  <Icon name="Car" className="h-10 w-10 mx-auto text-primary mb-2" />
-                  <h3 className="text-lg font-bold">5000+</h3>
+                <Card className="text-center p-3">
+                  <Icon name="Car" className="h-8 w-8 mx-auto text-primary mb-1" />
+                  <h3 className="text-base font-bold">5000+</h3>
                   <p className="text-xs text-muted-foreground">восстановленных деталей</p>
                 </Card>
-                <Card className="text-center p-4">
-                  <Icon name="Shield" className="h-10 w-10 mx-auto text-primary mb-2" />
-                  <h3 className="text-lg font-bold">Гарантия</h3>
+                <Card className="text-center p-3">
+                  <Icon name="Shield" className="h-8 w-8 mx-auto text-primary mb-1" />
+                  <h3 className="text-base font-bold">Гарантия</h3>
                   <p className="text-xs text-muted-foreground">18 месяцев без ограничения пробега</p>
                 </Card>
               </div>
             </div>
 
             <div className="flex flex-col justify-center">
-              <div className="mb-4 text-center lg:text-left">
-                <h3 className="text-xl md:text-2xl font-bold mb-2">Запатентованная технология</h3>
-                <p className="text-sm text-muted-foreground">
+              <div className="mb-3 text-center lg:text-left">
+                <h3 className="text-lg md:text-xl font-bold mb-1">Запатентованная технология</h3>
+                <p className="text-xs text-muted-foreground">
                   Наша технология восстановления защищена патентом РФ
                 </p>
               </div>
 
               <Card className="hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="bg-primary/10 p-2 rounded-lg">
-                        <Icon name="Award" className="h-6 w-6 text-primary" />
+                <CardContent className="p-4">
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-2">
+                      <div className="bg-primary/10 p-1.5 rounded-lg">
+                        <Icon name="Award" className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-lg mb-1">Патент РФ № 2829377</h4>
-                        <p className="text-sm text-muted-foreground">
+                        <h4 className="font-bold text-base mb-0.5">Патент РФ № 2829377</h4>
+                        <p className="text-xs text-muted-foreground">
                           Способ восстановления шлицевого соединения на полноприводных автомобилях
                         </p>
                       </div>
                     </div>
 
                     <div className="relative group">
-                      <div className="overflow-hidden rounded-lg border-4 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
+                      <div className="overflow-hidden rounded-lg border-2 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
                         <img 
                           src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
                           alt="Патент РФ № 2829377"
@@ -251,26 +251,26 @@ const Index = () => {
                       <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 rounded-lg pointer-events-none" />
                     </div>
 
-                    <div className="space-y-2 text-xs">
-                      <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-4 w-4 text-primary" />
+                    <div className="space-y-1 text-xs">
+                      <div className="flex items-center gap-1.5">
+                        <Icon name="CheckCircle2" className="h-3 w-3 text-primary" />
                         <span>Патентообладатель: Борисов Александр Вячеславович</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-4 w-4 text-primary" />
+                      <div className="flex items-center gap-1.5">
+                        <Icon name="CheckCircle2" className="h-3 w-3 text-primary" />
                         <span>Приоритет изобретения: 29 марта 2024 г.</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-4 w-4 text-primary" />
+                      <div className="flex items-center gap-1.5">
+                        <Icon name="CheckCircle2" className="h-3 w-3 text-primary" />
                         <span>Дата регистрации: 30 октября 2024 г.</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Icon name="CheckCircle2" className="h-4 w-4 text-primary" />
+                      <div className="flex items-center gap-1.5">
+                        <Icon name="CheckCircle2" className="h-3 w-3 text-primary" />
                         <span>Срок действия патента: до 29 марта 2044 г.</span>
                       </div>
                     </div>
 
-                    <div className="pt-2">
+                    <div className="pt-1">
                       <p className="text-xs text-muted-foreground">
                         Наша запатентованная технология гарантирует высочайшее качество восстановления 
                         и долговечность восстановленных деталей.
