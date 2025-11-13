@@ -169,8 +169,6 @@ const Index = () => {
 
       <AboutAndAdvantagesSection />
 
-      <TurnkeySection />
-
       <ServicesSection
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -183,6 +181,8 @@ const Index = () => {
         filteredServices={filteredServices}
         categories={categories}
       />
+
+      <TurnkeySection />
 
       <ContactsSection
         formData={formData}
