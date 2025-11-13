@@ -423,7 +423,7 @@ const Index = () => {
                 <CardTitle>Производственный цех</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">г. Москва, Промышленная зона «Черкизово»</p>
+                <p className="text-muted-foreground">г. Нижний Новгород, Восточный проезд, 11/1</p>
               </CardContent>
             </Card>
 
@@ -433,7 +433,7 @@ const Index = () => {
                 <CardTitle>Телефон</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">+7 (495) 777-88-99</p>
+                <p className="text-muted-foreground">+7 (920) 252-03-52</p>
               </CardContent>
             </Card>
 
@@ -443,17 +443,17 @@ const Index = () => {
                 <CardTitle>Email</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">info@megashlic.ru</p>
+                <p className="text-muted-foreground">megashlic@yandex.ru</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <Icon name="Clock" className="h-8 w-8 text-primary mb-2" />
-                <CardTitle>Режим работы</CardTitle>
+                <Icon name="MessageCircle" className="h-8 w-8 text-primary mb-2" />
+                <CardTitle>WhatsApp (производство)</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Пн-Пт: 9:00 - 20:00<br />Сб: 10:00 - 18:00<br />Вс: выходной</p>
+                <p className="text-muted-foreground">+7 (831) 260-11-23</p>
               </CardContent>
             </Card>
           </div>
