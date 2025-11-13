@@ -114,7 +114,66 @@ export const ContactsSection = ({
             </CardContent>
           </Card>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <Card className="border-2 shadow-lg bg-gradient-to-br from-card to-card/50">
+            <CardContent className="p-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <Icon name="Phone" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">Телефон</p>
+                      <a href="tel:+79202520352" className="text-lg font-semibold hover:text-primary transition-colors">
+                        +7 (920) 252-03-52
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <Icon name="Mail" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">Email</p>
+                      <a href="mailto:megashlic@yandex.ru" className="text-lg font-semibold hover:text-primary transition-colors break-all">
+                        megashlic@yandex.ru
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <Icon name="MapPin" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">Адрес</p>
+                      <p className="text-lg font-semibold">
+                        г. Нижний Новгород,<br />Восточный проезд, 11/1
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <Icon name="Clock" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">Режим работы</p>
+                      <p className="text-lg font-semibold">
+                        Пн-Пт: 9:30 - 17:30<br />
+                        <span className="text-muted-foreground text-base">Сб-Вс: выходной</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <a 
               href="tel:+79202520352"
               className="flex flex-col items-center gap-3 p-5 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
@@ -144,28 +203,8 @@ export const ContactsSection = ({
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center shadow-lg">
                 <Icon name="Mail" className="h-7 w-7 text-primary" />
               </div>
-              <span className="text-sm font-semibold text-center">Email</span>
+              <span className="text-sm font-semibold text-center">Написать</span>
             </a>
-
-            <button 
-              onClick={() => {
-                const element = document.querySelector('iframe');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="flex flex-col items-center gap-3 p-5 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center shadow-lg">
-                <Icon name="MapPin" className="h-7 w-7 text-primary" />
-              </div>
-              <span className="text-sm font-semibold text-center">Адрес</span>
-            </button>
-          </div>
-
-          <div className="text-center text-sm text-muted-foreground space-y-1">
-            <p>г. Нижний Новгород, Восточный проезд, 11/1</p>
-            <p>Пн-Пт: 9:30 - 17:30 | Сб-Вс: выходной</p>
           </div>
 
           <div className="space-y-4">
