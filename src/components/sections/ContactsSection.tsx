@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -11,62 +11,13 @@ interface ContactsSectionProps {
   handleFormSubmit: (e: React.FormEvent) => void;
 }
 
-declare global {
-  interface Window {
-    CDEKWidget: any;
-  }
-}
-
 export const ContactsSection = ({
   formData,
   setFormData,
   formStatus,
   handleFormSubmit,
 }: ContactsSectionProps) => {
-  useEffect(() => {
-    const initWidget = () => {
-      if (typeof window.CDEKWidget !== 'undefined') {
-        try {
-          new window.CDEKWidget({
-            root: 'cdek-widget',
-            servicepath: 'https://api.cdek.ru/v2/',
-            defaultLocation: 'Нижний Новгород',
-            from: {
-              country_code: 'RU',
-              city: 'Нижний Новгород',
-              postal_code: '603000',
-              code: 270
-            },
-            goods: [{
-              length: 40,
-              width: 15,
-              height: 15,
-              weight: 4000
-            }],
-            hideFilters: {
-              haveCashless: false,
-              haveCard: false,
-              type: false
-            },
-            onReady() {
-              console.log('CDEK Widget готов');
-            },
-            onCalculate() {
-              console.log('Расчет выполнен');
-            }
-          });
-        } catch (error) {
-          console.error('Ошибка инициализации виджета СДЭК:', error);
-        }
-      }
-    };
 
-    const timeout = setTimeout(() => {
-      initWidget();
-    }, 500);
-
-    return () => clearTimeout(timeout);
-  }, []);
 
   return (
     <section id="contacts" className="py-8 border-t bg-gradient-to-br from-primary/5 to-background">
@@ -257,10 +208,24 @@ export const ContactsSection = ({
                   </div>
                 </div>
               </div>
-              <div id="cdek-widget" className="w-full min-h-[400px] rounded-lg border p-4 bg-background"></div>
-              <p className="text-xs text-muted-foreground mt-3 text-center">
-                Используйте указанные выше параметры для расчета стоимости доставки в ваш город
-              </p>
+              <div className="space-y-3">
+                <a 
+                  href="https://www.cdek.ru/ru/calculate" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full"
+                >
+                  <Button className="w-full" size="lg" variant="outline">
+                    <Icon name="ExternalLink" className="mr-2 h-5 w-5" />
+                    Открыть калькулятор СДЭК
+                  </Button>
+                </a>
+                <div className="text-xs text-muted-foreground space-y-1">
+                  <p className="font-medium">Для расчета укажите:</p>
+                  <p>• Откуда: Нижний Новгород, 603000</p>
+                  <p>• Используйте параметры деталей выше</p>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
