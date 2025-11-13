@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import Icon from '@/components/ui/icon';
 
 interface Service {
@@ -41,6 +43,16 @@ export const ServicesSection = ({
   filteredServices,
   categories,
 }: ServicesSectionProps) => {
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+
+  const scrollToForm = () => {
+    setSelectedService(null);
+    const element = document.getElementById('contacts');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="services" className="py-8 border-t bg-muted/30">
       <div className="container">
@@ -54,7 +66,12 @@ export const ServicesSection = ({
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
             {filteredServices.map((service, index) => (
-              <Card key={service.id} className="hover:shadow-xl transition-all duration-300 overflow-hidden group animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: `${index * 50}ms` }}>
+              <Card 
+                key={service.id} 
+                className="hover:shadow-xl transition-all duration-300 overflow-hidden group animate-in fade-in slide-in-from-bottom-4 cursor-pointer" 
+                style={{ animationDelay: `${index * 50}ms` }}
+                onClick={() => setSelectedService(service)}
+              >
                 {service.image && (
                   <div className="relative h-56 overflow-hidden bg-muted">
                     <img 
@@ -103,6 +120,44 @@ export const ServicesSection = ({
           )}
         </div>
       </div>
+
+      <Dialog open={selectedService !== null} onOpenChange={(open) => !open && setSelectedService(null)}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-lg leading-tight pr-6">{selectedService?.name}</DialogTitle>
+            <DialogDescription className="space-y-3 pt-3">
+              <div className="flex items-baseline gap-2">
+                <span className="text-xs text-muted-foreground">от</span>
+                <span className="text-3xl font-bold text-primary">{selectedService?.price.toLocaleString('ru-RU')}</span>
+                <span className="text-sm text-muted-foreground">₽</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Icon name="Clock" className="h-4 w-4" />
+                <span>{selectedService?.duration}</span>
+              </div>
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-3 pt-4">
+            <Button 
+              className="w-full" 
+              size="lg"
+              onClick={() => window.location.href = 'tel:+79202520352'}
+            >
+              <Icon name="Phone" className="mr-2 h-5 w-5" />
+              Позвонить
+            </Button>
+            <Button 
+              variant="outline" 
+              className="w-full" 
+              size="lg"
+              onClick={scrollToForm}
+            >
+              <Icon name="Send" className="mr-2 h-5 w-5" />
+              Оставить заявку
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
