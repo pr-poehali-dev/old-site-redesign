@@ -240,7 +240,7 @@ const Index = () => {
                       </div>
                     </div>
 
-                    <div className="relative group">
+                    <div className="relative group max-w-xs mx-auto">
                       <div className="overflow-hidden rounded-lg border-2 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
                         <img 
                           src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
