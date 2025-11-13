@@ -34,19 +34,30 @@ export const Header = ({
           <span className="text-xl font-extrabold text-secondary group-hover:text-primary transition-colors duration-300">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
         </div>
         
+        <div className="hidden lg:flex items-center gap-4">
+          <a href="tel:+79202520352" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
+            <Icon name="Phone" className="h-4 w-4" />
+            +7 (920) 252-03-52
+          </a>
+          <span className="text-muted-foreground">|</span>
+          <a href="mailto:megashlic@yandex.ru" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
+            <Icon name="Mail" className="h-4 w-4" />
+            megashlic@yandex.ru
+          </a>
+        </div>
+
         <nav className="hidden md:flex items-center gap-6">
           <button onClick={() => scrollToSection('hero')} className="text-sm font-medium hover:text-primary transition-colors">Главная</button>
           <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary transition-colors">О компании</button>
           <button onClick={() => scrollToSection('advantages')} className="text-sm font-medium hover:text-primary transition-colors">Преимущества</button>
           <button onClick={() => scrollToSection('process')} className="text-sm font-medium hover:text-primary transition-colors">Как мы работаем</button>
-          <button onClick={() => scrollToSection('faq')} className="text-sm font-medium hover:text-primary transition-colors">Вопросы</button>
           <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
           <button onClick={() => scrollToSection('contacts')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
         </nav>
 
         <div className="flex items-center gap-2">
           <Button 
-            className="hidden lg:flex bg-[#25D366] hover:bg-[#20BA5A]"
+            className="hidden lg:flex"
             onClick={() => window.open('https://wa.me/79202520352', '_blank')}
           >
             <Icon name="MessageCircle" className="mr-2 h-4 w-4" />
