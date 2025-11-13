@@ -205,7 +205,7 @@ const Index = () => {
                     <div>
                       <h4 className="font-bold text-base">Патент РФ № 2829377</h4>
                       <p className="text-sm text-muted-foreground">
-                        Восстановление шлицевого соединения с термообработкой до состояния новых
+                        Способ восстановления шлицевого соединения на полноприводных автомобилях
                       </p>
                     </div>
                   </div>
@@ -326,7 +326,7 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Металлизация шлицев и механическая обработка
+                    Восстановление шлицевого соединения с термообработкой до состояния новых
                   </p>
                 </CardContent>
               </Card>
