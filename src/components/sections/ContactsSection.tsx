@@ -200,7 +200,7 @@ export const ContactsSection = ({
                   </div>
                   <div className="flex items-center gap-2">
                     <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
-                    <span><strong>Раздатка в сборе:</strong> 25-35 кг, 50×40×35 см</span>
+                    <span><strong>Раздатка в сборе:</strong> 18-25 кг, 50×40×35 см</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
