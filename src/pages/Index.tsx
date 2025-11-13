@@ -190,29 +190,27 @@ const Index = () => {
           <div className="max-w-4xl mx-auto space-y-8">
             <Card>
               <CardContent className="p-6">
-                <div className="grid md:grid-cols-[1fr,auto] gap-6 items-center">
-                  <div className="space-y-4">
-                    <p className="text-lg leading-relaxed text-muted-foreground">
-                      <span className="font-bold text-foreground">Мега Шлиц<sup>®</sup></span> — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
-                      Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
-                      специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
-                      и запатентованные технологии восстановления.
-                    </p>
-                    
-                    <div className="flex items-center gap-3 pt-2">
-                      <div className="bg-primary/10 p-2.5 rounded-lg">
-                        <Icon name="Award" className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-base">Патент РФ № 2829377</h4>
-                        <p className="text-sm text-muted-foreground">
-                          Способ восстановления шлицевого соединения на полноприводных автомобилях
-                        </p>
-                      </div>
+                <div className="space-y-6">
+                  <p className="text-lg leading-relaxed text-muted-foreground">
+                    <span className="font-bold text-foreground">Мега Шлиц<sup>®</sup></span> — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
+                    Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
+                    специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
+                    и запатентованные технологии восстановления.
+                  </p>
+                  
+                  <div className="flex items-center gap-3">
+                    <div className="bg-primary/10 p-2.5 rounded-lg">
+                      <Icon name="Award" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-base">Патент РФ № 2829377</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Способ восстановления шлицевого соединения на полноприводных автомобилях
+                      </p>
                     </div>
                   </div>
 
-                  <div className="relative group w-80 lg:w-96 flex-shrink-0 mx-auto md:mx-0">
+                  <div className="relative group max-w-2xl mx-auto">
                     <div className="overflow-hidden rounded-lg border-2 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
                       <img 
                         src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
