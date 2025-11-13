@@ -8,7 +8,13 @@ interface HeroSectionProps {
 export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   return (
     <section id="hero" className="relative py-32 md:py-48 overflow-hidden">
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://cdn.poehali.dev/files/f668d529-788d-49c9-8c2d-c97a6c3ae8a1.jpg"
+          alt="Восстановление шлицевых соединений"
+          className="w-full h-full object-cover animate-in fade-in zoom-in-110 duration-1000"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50 animate-in fade-in duration-700"></div>
       </div>
       
       <div className="container relative z-10">
