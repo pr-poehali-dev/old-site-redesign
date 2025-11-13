@@ -196,7 +196,7 @@ export const ContactsSection = ({
                   </div>
                   <div className="flex items-center gap-2">
                     <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
-                    <span><strong>Дифференциал:</strong> 8-12 кг, 35×35×25 см</span>
+                    <span><strong>Дифференциал:</strong> 5-10 кг, 35×35×25 см</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
