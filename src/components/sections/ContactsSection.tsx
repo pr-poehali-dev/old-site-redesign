@@ -185,6 +185,27 @@ export const ContactsSection = ({
               </CardTitle>
             </CardHeader>
             <CardContent>
+              <div className="mb-4 p-3 bg-muted/50 rounded-lg">
+                <p className="text-sm font-medium mb-2">📦 Типичные параметры деталей для расчета:</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
+                    <span><strong>Вал раздатки:</strong> 3-5 кг, 40×15×15 см</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
+                    <span><strong>Дифференциал:</strong> 8-12 кг, 35×35×25 см</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
+                    <span><strong>Раздатка в сборе:</strong> 25-35 кг, 50×40×35 см</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
+                    <span><strong>Корзина фрикционов:</strong> 1-2 кг, 25×25×10 см</span>
+                  </div>
+                </div>
+              </div>
               <div className="w-full h-[400px] rounded-lg overflow-hidden border">
                 <iframe
                   src="https://widgets.cdek.ru/calculator/iframe.html?apikey=ng05CFQnsAf96MaU3c9kZjNDB0gEa5qU"
@@ -195,7 +216,7 @@ export const ContactsSection = ({
                 ></iframe>
               </div>
               <p className="text-xs text-muted-foreground mt-3 text-center">
-                Введите ваш город и параметры посылки для расчета стоимости доставки
+                Используйте указанные выше параметры для расчета стоимости доставки в ваш город
               </p>
             </CardContent>
           </Card>
