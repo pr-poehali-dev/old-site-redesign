@@ -165,20 +165,20 @@ const Index = () => {
           <img 
             src="https://cdn.poehali.dev/files/2f9eb982-2a71-488e-b732-fc642b3ef8e8.jpg"
             alt="Восстановление шлицевых соединений"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover animate-in fade-in zoom-in-110 duration-1000"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-background/92 via-background/85 to-background/80 animate-in fade-in duration-700"></div>
         </div>
         
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
               Восстановление шлицевых соединений
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
               Производственная компания по восстановлению шлицевых соединений трансмиссии по всей стране
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
               <Button size="lg" onClick={() => scrollToSection('services')}>
                 Наши услуги
                 <Icon name="ArrowRight" className="ml-2 h-5 w-5" />
