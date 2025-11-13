@@ -114,65 +114,6 @@ export const ContactsSection = ({
             </CardContent>
           </Card>
 
-          <Card className="border-2 shadow-lg bg-gradient-to-br from-card to-card/50">
-            <CardContent className="p-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <Icon name="Phone" className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-1">Телефон</p>
-                      <a href="tel:+79202520352" className="text-lg font-semibold hover:text-primary transition-colors">
-                        +7 (920) 252-03-52
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <Icon name="Mail" className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-1">Email</p>
-                      <a href="mailto:megashlic@yandex.ru" className="text-lg font-semibold hover:text-primary transition-colors break-all">
-                        megashlic@yandex.ru
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <Icon name="MapPin" className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-1">Адрес</p>
-                      <p className="text-lg font-semibold">
-                        г. Нижний Новгород,<br />Восточный проезд, 11/1
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <Icon name="Clock" className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-1">Режим работы</p>
-                      <p className="text-lg font-semibold">
-                        Пн-Пт: 9:30 - 17:30<br />
-                        <span className="text-muted-foreground text-base">Сб-Вс: выходной</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <a 
               href="tel:+79202520352"
