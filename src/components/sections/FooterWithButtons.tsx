@@ -27,6 +27,10 @@ export const FooterWithButtons = ({ viewCount, showScrollTop }: FooterWithButton
                 <Icon name="Phone" className="h-4 w-4 flex-shrink-0" />
                 +7 (920) 252-03-52
               </a>
+              <a href="tel:+78312601123" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
+                <Icon name="Phone" className="h-4 w-4 flex-shrink-0" />
+                +7 (831) 260-11-23 <span className="text-xs text-secondary-foreground/60">(производство)</span>
+              </a>
               <a href="mailto:megashlic@yandex.ru" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
                 <Icon name="Mail" className="h-4 w-4 flex-shrink-0" />
                 megashlic@yandex.ru
