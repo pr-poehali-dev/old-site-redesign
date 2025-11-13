@@ -125,10 +125,16 @@ export const TurnkeySection = () => {
                           <p className="text-xs text-muted-foreground">Комплект вал + чашка с установкой</p>
                         </div>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-4">
-                        <Icon name="Info" className="h-3 w-3 inline mr-1" />
-                        Точная стоимость зависит от состояния деталей и объёма работ
-                      </p>
+                      <div className="mt-4 space-y-2">
+                        <p className="text-xs text-muted-foreground">
+                          <Icon name="Info" className="h-3 w-3 inline mr-1" />
+                          Точная стоимость зависит от состояния деталей и объёма работ
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          <Icon name="AlertCircle" className="h-3 w-3 inline mr-1" />
+                          Для МКПП требуется более сложная технология восстановления шлицевых соединений, поэтому стоимость выше
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
