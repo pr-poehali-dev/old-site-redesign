@@ -78,8 +78,18 @@ const Index = () => {
             <button onClick={() => scrollToSection('contacts')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
           </nav>
 
-          <div className="flex items-center gap-4">
-            <Button className="hidden md:flex">
+          <div className="flex items-center gap-2">
+            <Button 
+              className="hidden md:flex bg-[#25D366] hover:bg-[#20BA5A]"
+              onClick={() => window.open('https://wa.me/78312601123', '_blank')}
+            >
+              <Icon name="MessageCircle" className="mr-2 h-4 w-4" />
+              WhatsApp
+            </Button>
+            <Button 
+              className="hidden md:flex"
+              onClick={() => scrollToSection('contacts')}
+            >
               <Icon name="Phone" className="mr-2 h-4 w-4" />
               Связаться
             </Button>
