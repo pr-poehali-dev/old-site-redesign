@@ -5,15 +5,15 @@ import Icon from '@/components/ui/icon';
 export const AboutAndAdvantagesSection = () => {
   return (
     <>
-      <section id="about" className="py-8 border-t">
+      <section id="about" className="py-12 border-t bg-gradient-to-b from-background to-muted/30">
         <div className="container">
-          <div className="text-center mb-6">
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold">О компании</h2>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-4">
-            <Card>
-              <CardContent className="p-6">
+            <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
+              <CardContent className="p-8">
                 <div className="space-y-6">
                   <p className="text-lg leading-relaxed text-muted-foreground">
                     <span className="font-bold text-foreground">Мега Шлиц<sup>®</sup></span> — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
@@ -47,76 +47,92 @@ export const AboutAndAdvantagesSection = () => {
               </CardContent>
             </Card>
 
-            <div className="grid grid-cols-3 gap-3">
-              <Card className="text-center p-3">
-                <Icon name="Award" className="h-8 w-8 mx-auto text-primary mb-1" />
-                <h3 className="text-base font-bold">3+ лет</h3>
-                <p className="text-xs text-muted-foreground">опыта работы</p>
+            <div className="grid grid-cols-3 gap-4">
+              <Card className="text-center p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-3">
+                  <Icon name="Award" className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold mb-1">3+ лет</h3>
+                <p className="text-sm text-muted-foreground">опыта работы</p>
               </Card>
-              <Card className="text-center p-3">
-                <Icon name="Car" className="h-8 w-8 mx-auto text-primary mb-1" />
-                <h3 className="text-base font-bold">3000+</h3>
-                <p className="text-xs text-muted-foreground">восстановленных деталей</p>
+              <Card className="text-center p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-3">
+                  <Icon name="Car" className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold mb-1">3000+</h3>
+                <p className="text-sm text-muted-foreground">восстановленных деталей</p>
               </Card>
-              <Card className="text-center p-3">
-                <Icon name="Shield" className="h-8 w-8 mx-auto text-primary mb-1" />
-                <h3 className="text-base font-bold">Гарантия</h3>
-                <p className="text-xs text-muted-foreground">18 месяцев без ограничения пробега</p>
+              <Card className="text-center p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-3">
+                  <Icon name="Shield" className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold mb-1">Гарантия</h3>
+                <p className="text-sm text-muted-foreground">18 месяцев без ограничения пробега</p>
               </Card>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="advantages" className="py-8 border-t">
+      <section id="advantages" className="py-12 border-t bg-gradient-to-b from-muted/30 to-background">
         <div className="container">
-          <div className="text-center space-y-1 mb-6">
+          <div className="text-center space-y-2 mb-10">
             <h2 className="text-3xl md:text-4xl font-bold">Преимущества нашей технологии</h2>
-            <p className="text-muted-foreground">Почему восстановление выгоднее покупки новой детали</p>
+            <p className="text-muted-foreground text-lg">Почему восстановление выгоднее покупки новой детали</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Card className="text-center hover:shadow-lg transition-shadow">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
               <CardHeader>
-                <Icon name="DollarSign" className="h-12 w-12 mx-auto text-primary mb-4" />
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Icon name="DollarSign" className="h-10 w-10 text-primary" />
+                </div>
                 <CardTitle className="text-xl">Экономия до 70%</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground leading-relaxed">
                   Восстановление обходится в 3-5 раз дешевле покупки новых деталей
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
               <CardHeader>
-                <Icon name="Zap" className="h-12 w-12 mx-auto text-primary mb-4" />
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Icon name="Zap" className="h-10 w-10 text-primary" />
+                </div>
                 <CardTitle className="text-xl">Быстрые сроки</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground leading-relaxed">
                   Ремонт от 1-5 дней. Не нужно ждать заказа запчастей из-за границы
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
               <CardHeader>
-                <Icon name="Wrench" className="h-12 w-12 mx-auto text-primary mb-4" />
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Icon name="Wrench" className="h-10 w-10 text-primary" />
+                </div>
                 <CardTitle className="text-xl">Высокая прочность</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Используется легированная титаном сталь с дальнейшей термообработкой</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Используется легированная титаном сталь с дальнейшей термообработкой
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
               <CardHeader>
-                <Icon name="Recycle" className="h-12 w-12 mx-auto text-primary mb-4" />
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Icon name="Recycle" className="h-10 w-10 text-primary" />
+                </div>
                 <CardTitle className="text-xl">Безопасно для узлов</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground leading-relaxed">
                   Сохраняем оригинальные детали без замены дорогостоящих узлов
                 </p>
               </CardContent>
@@ -318,14 +334,15 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-8 border-t">
+      <section id="faq" className="py-12 border-t bg-gradient-to-b from-background to-muted/30">
         <div className="container">
-          <div className="text-center space-y-1 mb-6">
+          <div className="text-center space-y-2 mb-10">
             <h2 className="text-3xl md:text-4xl font-bold">Частые вопросы</h2>
+            <p className="text-muted-foreground text-lg">Ответы на популярные вопросы о восстановлении</p>
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { q: 'Как понять, что шлицы изношены?', a: 'Вибрация при разгоне, стук при трогании, рывки при переключении передач, гул со стороны раздатки.', icon: 'TriangleAlert' },
                 { q: 'Сколько времени занимает восстановление?', a: 'От 1 до 5 рабочих дней. Обычно справляемся за 2 дня.', icon: 'Clock' },
@@ -334,20 +351,20 @@ export const AboutAndAdvantagesSection = () => {
                 { q: 'Нужно ли снимать детали самостоятельно?', a: 'Работаем с уже снятыми деталями. Привезите к нам или отправьте через СДЭК.', icon: 'Truck' },
                 { q: 'Работаете со всеми марками?', a: 'Восстанавливаем шлицы на всех полноприводных моделях.', icon: 'Car' },
               ].map((faq, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: `${index * 100}ms` }}>
+                <Card key={index} className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: `${index * 100}ms` }}>
                   <CardHeader>
-                    <div className="relative mx-auto mb-2">
-                      <div className="w-16 h-16 rounded-full border-4 border-dashed border-primary/30 flex items-center justify-center mx-auto">
-                        <Icon name={faq.icon} className="h-8 w-8 text-primary" />
+                    <div className="relative mx-auto mb-3">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto shadow-lg">
+                        <Icon name={faq.icon} className="h-9 w-9 text-primary" />
                       </div>
-                      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs">
+                      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm shadow-md">
                         {index + 1}
                       </div>
                     </div>
-                    <CardTitle className="text-base">{faq.q}</CardTitle>
+                    <CardTitle className="text-lg mb-2">{faq.q}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">{faq.a}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
                   </CardContent>
                 </Card>
               ))}

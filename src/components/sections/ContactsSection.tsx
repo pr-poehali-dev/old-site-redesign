@@ -20,17 +20,17 @@ export const ContactsSection = ({
 
 
   return (
-    <section id="contacts" className="py-8 border-t bg-gradient-to-br from-primary/5 to-background">
+    <section id="contacts" className="py-12 border-t bg-gradient-to-b from-muted/30 to-background">
       <div className="container">
-        <div className="text-center space-y-1 mb-6">
+        <div className="text-center space-y-2 mb-10">
           <h2 className="text-3xl md:text-4xl font-bold">Оставить заявку</h2>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-lg">
             Заполните форму или позвоните нам
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-4">
-          <Card>
+        <div className="max-w-4xl mx-auto space-y-6">
+          <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
             <CardContent className="pt-6">
               {formStatus === 'success' && (
                 <div className="mb-4 p-3 bg-primary/10 text-primary rounded-md text-sm">
@@ -114,37 +114,37 @@ export const ContactsSection = ({
             </CardContent>
           </Card>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <a 
               href="tel:+79202520352"
-              className="flex flex-col items-center gap-2 p-4 rounded-lg border bg-card hover:bg-accent transition-colors"
+              className="flex flex-col items-center gap-3 p-5 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Icon name="Phone" className="h-5 w-5 text-primary" />
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center shadow-lg">
+                <Icon name="Phone" className="h-7 w-7 text-primary" />
               </div>
-              <span className="text-xs font-medium text-center">Позвонить</span>
+              <span className="text-sm font-semibold text-center">Позвонить</span>
             </a>
 
             <a 
               href="https://wa.me/79202520352"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-2 p-4 rounded-lg border bg-card hover:bg-accent transition-colors"
+              className="flex flex-col items-center gap-3 p-5 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Icon name="MessageCircle" className="h-5 w-5 text-primary" />
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center shadow-lg">
+                <Icon name="MessageCircle" className="h-7 w-7 text-primary" />
               </div>
-              <span className="text-xs font-medium text-center">WhatsApp</span>
+              <span className="text-sm font-semibold text-center">WhatsApp</span>
             </a>
 
             <a 
               href="mailto:megashlic@yandex.ru"
-              className="flex flex-col items-center gap-2 p-4 rounded-lg border bg-card hover:bg-accent transition-colors"
+              className="flex flex-col items-center gap-3 p-5 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Icon name="Mail" className="h-5 w-5 text-primary" />
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center shadow-lg">
+                <Icon name="Mail" className="h-7 w-7 text-primary" />
               </div>
-              <span className="text-xs font-medium text-center">Email</span>
+              <span className="text-sm font-semibold text-center">Email</span>
             </a>
 
             <button 
@@ -154,12 +154,12 @@ export const ContactsSection = ({
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="flex flex-col items-center gap-2 p-4 rounded-lg border bg-card hover:bg-accent transition-colors"
+              className="flex flex-col items-center gap-3 p-5 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Icon name="MapPin" className="h-5 w-5 text-primary" />
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center shadow-lg">
+                <Icon name="MapPin" className="h-7 w-7 text-primary" />
               </div>
-              <span className="text-xs font-medium text-center">Адрес</span>
+              <span className="text-sm font-semibold text-center">Адрес</span>
             </button>
           </div>
 
