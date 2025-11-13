@@ -25,7 +25,7 @@ export const ContactsSection = () => {
                 style={{ position: 'relative' }}
               ></iframe>
             </div>
-            <div className="flex justify-center">
+            <div className="flex flex-wrap justify-center gap-4">
               <Button 
                 size="lg"
                 onClick={() => window.open('https://yandex.ru/maps/-/CLCXuB~N', '_blank')}
@@ -33,6 +33,15 @@ export const ContactsSection = () => {
               >
                 <Icon name="Navigation" className="h-5 w-5" />
                 Построить маршрут
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                onClick={() => window.location.href = 'tel:+78312601123'}
+                className="gap-2"
+              >
+                <Icon name="Phone" className="h-5 w-5" />
+                Позвонить
               </Button>
             </div>
           </div>
