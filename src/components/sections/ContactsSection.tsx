@@ -204,7 +204,7 @@ export const ContactsSection = ({
                   </div>
                   <div className="flex items-center gap-2">
                     <Icon name="Package" className="h-4 w-4 flex-shrink-0" />
-                    <span><strong>Корзина фрикционов:</strong> 1-2 кг, 25×25×10 см</span>
+                    <span><strong>Корзина фрикционов:</strong> 300 г, 25×25×10 см</span>
                   </div>
                 </div>
               </div>
