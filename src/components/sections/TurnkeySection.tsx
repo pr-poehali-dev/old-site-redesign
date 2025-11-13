@@ -135,12 +135,27 @@ export const TurnkeySection = () => {
 
                     <div className="flex items-start gap-3">
                       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
-                        <Icon name="DollarSign" className="h-5 w-5 text-primary" />
+                        <Icon name="Percent" className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold mb-1">Стоимость</h4>
-                        <p className="text-sm text-muted-foreground">Рассчитывается индивидуально</p>
+                        <h4 className="font-bold mb-1">Экономия</h4>
+                        <p className="text-sm text-muted-foreground">До 70% от новых деталей</p>
                       </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-6 border-2 border-primary/20">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <Icon name="TrendingDown" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold mb-2">Экономия до 70% по сравнению с покупкой новых деталей</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Новая раздаточная коробка для Hyundai/Kia стоит от 250 000 ₽, а восстановление с установкой — всего от 69 990 ₽. 
+                        Вы получаете такое же качество, полную гарантию 18 месяцев и экономите более 180 000 рублей!
+                      </p>
                     </div>
                   </div>
                 </div>
