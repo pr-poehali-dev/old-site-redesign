@@ -452,6 +452,79 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 border-t bg-gradient-to-br from-primary/5 to-background">
+        <div className="container">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center space-y-4 mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold">Отправить заявку</h2>
+              <p className="text-lg text-muted-foreground">
+                Оставьте заявку и мы свяжемся с вами в ближайшее время
+              </p>
+            </div>
+
+            <Card>
+              <CardContent className="pt-6">
+                <form className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                      Ваше имя <span className="text-destructive">*</span>
+                    </label>
+                    <Input 
+                      id="name" 
+                      placeholder="Иван Иванов" 
+                      required 
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                      Телефон <span className="text-destructive">*</span>
+                    </label>
+                    <Input 
+                      id="phone" 
+                      type="tel" 
+                      placeholder="+7 (___) ___-__-__" 
+                      required 
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="detail" className="block text-sm font-medium mb-2">
+                      Какую деталь нужно восстановить?
+                    </label>
+                    <Input 
+                      id="detail" 
+                      placeholder="Например: полуось переднего моста Land Cruiser" 
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                      Дополнительная информация
+                    </label>
+                    <textarea 
+                      id="message"
+                      rows={4}
+                      className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+                      placeholder="Опишите состояние детали, сроки, способ доставки..."
+                    />
+                  </div>
+
+                  <Button type="submit" className="w-full" size="lg">
+                    <Icon name="Send" className="mr-2 h-5 w-5" />
+                    Отправить заявку
+                  </Button>
+
+                  <p className="text-xs text-muted-foreground text-center">
+                    Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
+                  </p>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="contacts" className="py-20 border-t">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
