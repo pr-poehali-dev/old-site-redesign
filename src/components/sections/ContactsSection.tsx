@@ -63,8 +63,7 @@ export const ContactsSection = () => {
               <CardContent>
                 <div className="space-y-1 text-muted-foreground">
                   <p>Пн-Пт: 9:30 - 17:30</p>
-                  <p>Сб: выходной</p>
-                  <p>Вс: выходной</p>
+                  <p>Сб-Вс: выходной</p>
                 </div>
               </CardContent>
             </Card>
