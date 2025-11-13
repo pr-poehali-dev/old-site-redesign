@@ -441,41 +441,6 @@ const Index = () => {
         categories={categories}
       />
 
-      <section className="py-20 border-t bg-muted/30">
-        <div className="container">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Галерея работ</h2>
-            <p className="text-lg text-muted-foreground">
-              Фотографии процесса восстановления и готовых деталей
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/96c20d62-17ac-4514-bba8-a36e3442d0da.jpg',
-              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/cff3532b-c50c-4441-bc30-33af77a3bea6.jpg',
-              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/99b1c7e3-2f34-4512-9d07-9c30a801f51f.jpg',
-              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/1d99926f-1ef6-42ce-ae00-0485464534a9.jpg',
-              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/d004d95e-3662-40fc-86c6-17bb8672cf10.jpg',
-              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/7469e23e-d800-4e36-b70c-b5edbddf946d.jpg',
-              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/a85c07d7-892c-45a5-b6df-ffdda8176bfb.jpg',
-              'https://cdn.poehali.dev/projects/8ee1c24b-26fc-4abd-acc6-886bdb63cd67/files/bdf0dd8f-7542-4347-a5ae-801bd2a68e2c.jpg',
-            ].map((img, index) => (
-              <div 
-                key={index} 
-                className="aspect-square overflow-hidden rounded-lg bg-muted hover:shadow-lg transition-all duration-300 cursor-pointer group"
-              >
-                <img 
-                  src={img} 
-                  alt={`Работа ${index + 1}`}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="faq" className="py-20 border-t">
         <div className="container">
           <div className="max-w-3xl mx-auto">
