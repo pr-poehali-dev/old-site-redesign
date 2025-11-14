@@ -11,7 +11,7 @@ export const RutubeSection = () => {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid md:grid-cols-3 gap-3 md:gap-4">
             <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
               <div className="relative" style={{ paddingBottom: '56.25%' }}>
                 <iframe
@@ -28,6 +28,18 @@ export const RutubeSection = () => {
               <div className="relative" style={{ paddingBottom: '56.25%' }}>
                 <iframe
                   src="https://rutube.ru/play/embed/5a6ae8d4fe853385c5407283678149ed/"
+                  frameBorder="0"
+                  allow="clipboard-write; autoplay"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                ></iframe>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
+              <div className="relative" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://rutube.ru/play/embed/cc980b113b77037430a3b1067666c8e1/"
                   frameBorder="0"
                   allow="clipboard-write; autoplay"
                   allowFullScreen
