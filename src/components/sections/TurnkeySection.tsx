@@ -199,47 +199,47 @@ export const TurnkeySection = () => {
 
                 <TurnkeyPricingCards />
 
-                <div className="border-t border-dashed border-primary/20 pt-4 mt-4">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Settings" className="h-5 w-5 text-primary" />
+                <div className="border-t border-dashed border-primary/20 pt-3 md:pt-4 mt-3 md:mt-4">
+                  <div className="flex items-start gap-2 md:gap-3 mb-2 md:mb-3">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
+                      <Icon name="Settings" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold mb-3">Работаем с марками</h3>
-                      <div className="grid grid-cols-3 gap-3 max-w-md">
-                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
-                          <span className="font-semibold text-sm">Hyundai</span>
+                      <h3 className="text-base md:text-lg font-bold mb-2 md:mb-3">Работаем с марками</h3>
+                      <div className="grid grid-cols-3 gap-2 md:gap-3 max-w-md">
+                        <div className="bg-background rounded-lg p-2 md:p-3 border text-center hover:border-primary/30 transition-all">
+                          <span className="font-semibold text-xs md:text-sm">Hyundai</span>
                         </div>
-                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
-                          <span className="font-semibold text-sm">Kia</span>
+                        <div className="bg-background rounded-lg p-2 md:p-3 border text-center hover:border-primary/30 transition-all">
+                          <span className="font-semibold text-xs md:text-sm">Kia</span>
                         </div>
-                        <div className="bg-background rounded-lg p-3 border text-center hover:border-primary/30 transition-all">
-                          <span className="font-semibold text-sm">Volkswagen</span>
+                        <div className="bg-background rounded-lg p-2 md:p-3 border text-center hover:border-primary/30 transition-all">
+                          <span className="font-semibold text-xs md:text-sm">Volkswagen</span>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="border-t border-dashed border-primary/20 pt-4 mt-4">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
-                      <Icon name="CreditCard" className="h-5 w-5 text-primary" />
+                <div className="border-t border-dashed border-primary/20 pt-3 md:pt-4 mt-3 md:mt-4">
+                  <div className="flex items-start gap-2 md:gap-3 mb-2 md:mb-3">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
+                      <Icon name="CreditCard" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold mb-3">Способы оплаты</h3>
-                      <div className="grid md:grid-cols-3 gap-4">
-                        <div className="flex items-center gap-3 bg-background rounded-lg p-3 border">
-                          <Icon name="Banknote" className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span className="text-sm">Наличные</span>
+                      <h3 className="text-base md:text-lg font-bold mb-2 md:mb-3">Способы оплаты</h3>
+                      <div className="grid md:grid-cols-3 gap-2 md:gap-4">
+                        <div className="flex items-center gap-2 md:gap-3 bg-background rounded-lg p-2 md:p-3 border">
+                          <Icon name="Banknote" className="h-4 w-4 md:h-5 md:w-5 text-primary flex-shrink-0" />
+                          <span className="text-xs md:text-sm">Наличные</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-background rounded-lg p-3 border">
-                          <Icon name="CreditCard" className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span className="text-sm">Банковская карта</span>
+                        <div className="flex items-center gap-2 md:gap-3 bg-background rounded-lg p-2 md:p-3 border">
+                          <Icon name="CreditCard" className="h-4 w-4 md:h-5 md:w-5 text-primary flex-shrink-0" />
+                          <span className="text-xs md:text-sm">Банковская карта</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-background rounded-lg p-3 border">
-                          <Icon name="Building" className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span className="text-sm">Безналичный расчёт</span>
+                        <div className="flex items-center gap-2 md:gap-3 bg-background rounded-lg p-2 md:p-3 border">
+                          <Icon name="Building" className="h-4 w-4 md:h-5 md:w-5 text-primary flex-shrink-0" />
+                          <span className="text-xs md:text-sm">Безналичный расчёт</span>
                         </div>
                       </div>
                     </div>
