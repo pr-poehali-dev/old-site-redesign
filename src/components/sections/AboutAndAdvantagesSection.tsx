@@ -267,7 +267,7 @@ export const AboutAndAdvantagesSection = () => {
               </Card>
             </div>
 
-            <div className="max-w-4xl mx-auto mt-6">
+            <div className="max-w-5xl mx-auto mt-6">
               <Card>
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg flex items-center gap-2">
