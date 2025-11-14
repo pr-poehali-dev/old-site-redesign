@@ -49,7 +49,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       </div>
       
       <div className="container relative z-10">
-        <div className="max-w-3xl mx-auto text-center space-y-3 md:space-y-4">
+        <div className="max-w-5xl mx-auto text-center space-y-3 md:space-y-4">
           <h1 className="text-2xl md:text-5xl font-bold tracking-tight text-white animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
             Восстановление шлицевых соединений
           </h1>

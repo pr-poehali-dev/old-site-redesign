@@ -11,7 +11,7 @@ export const AboutAndAdvantagesSection = () => {
             <h2 className="text-xl md:text-3xl font-bold">О компании</h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-2 md:space-y-3">
+          <div className="max-w-5xl mx-auto space-y-2 md:space-y-3">
             <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
               <CardContent className="p-3 md:p-4">
                 <div className="space-y-2 md:space-y-3">

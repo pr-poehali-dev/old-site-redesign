@@ -30,7 +30,7 @@ export const GalleryCarouselSection = ({ services }: GalleryCarouselSectionProps
             align: "start",
             loop: true,
           }}
-          className="w-full max-w-6xl mx-auto"
+          className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent>
             {services.map((service) => (

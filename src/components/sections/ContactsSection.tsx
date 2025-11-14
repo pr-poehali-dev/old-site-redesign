@@ -29,7 +29,7 @@ export const ContactsSection = ({
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-3 md:space-y-4">
+        <div className="max-w-5xl mx-auto space-y-3 md:space-y-4">
           <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
             <CardContent className="pt-4 md:pt-5 p-3 md:p-5">
               {formStatus === 'success' && (
