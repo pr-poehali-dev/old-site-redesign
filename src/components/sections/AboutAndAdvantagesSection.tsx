@@ -17,13 +17,7 @@ export const AboutAndAdvantagesSection = () => {
                 <div className="space-y-2 md:space-y-3">
                   <div className="grid md:grid-cols-2 gap-3 md:gap-4 items-center">
                     <div className="space-y-3">
-                      <div className="flex items-center gap-2 md:gap-3 flex-wrap mb-2">
-                        <h3 className="text-lg md:text-xl font-bold">Мега Шлиц<sup className="text-xs">®</sup></h3>
-                        <div className="flex items-center gap-2 bg-primary/5 px-2.5 py-1.5 rounded-lg">
-                          <Icon name="Award" className="h-4 w-4 text-primary" />
-                          <span className="font-bold text-xs md:text-sm">Патент РФ № 2829377</span>
-                        </div>
-                      </div>
+                      <h3 className="text-lg md:text-xl font-bold mb-2">Мега Шлиц<sup className="text-xs">®</sup></h3>
                       
                       <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
                         Производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
