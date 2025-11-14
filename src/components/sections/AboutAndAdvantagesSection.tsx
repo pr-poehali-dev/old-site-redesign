@@ -25,64 +25,64 @@ export const AboutAndAdvantagesSection = () => {
                         Работаем с автосервисами и дилерскими центрами по всей России.
                       </p>
                       
-                      <div className="space-y-4 pt-2">
-                        <div className="space-y-3">
-                          <h4 className="text-base md:text-lg font-bold text-center">Как добиться качества</h4>
-                          <div className="grid gap-2">
-                            <div className="flex items-center gap-3 p-3 bg-primary/10 rounded-lg border border-primary/20">
-                              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                <Icon name="Settings2" className="h-5 w-5 text-primary" />
+                      <div className="space-y-3 pt-2">
+                        <div className="space-y-2">
+                          <h4 className="text-sm md:text-base font-bold text-center">Как добиться качества</h4>
+                          <div className="grid gap-1.5">
+                            <div className="flex items-center gap-2 p-2 bg-primary/10 rounded-lg border border-primary/20">
+                              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                <Icon name="Settings2" className="h-4 w-4 text-primary" />
                               </div>
-                              <p className="text-sm md:text-base font-medium">Оборудование с ЧПУ для высокоточной обработки</p>
+                              <p className="text-xs md:text-sm font-medium">Оборудование с ЧПУ для высокоточной обработки</p>
                             </div>
-                            <div className="flex items-center gap-3 p-3 bg-primary/10 rounded-lg border border-primary/20">
-                              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                <Icon name="Zap" className="h-5 w-5 text-primary" />
+                            <div className="flex items-center gap-2 p-2 bg-primary/10 rounded-lg border border-primary/20">
+                              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                <Icon name="Zap" className="h-4 w-4 text-primary" />
                               </div>
-                              <p className="text-sm md:text-base font-medium">Металл с добавлением титана для долговечности</p>
+                              <p className="text-xs md:text-sm font-medium">Металл с добавлением титана для долговечности</p>
                             </div>
-                            <div className="flex items-center gap-3 p-3 bg-primary/10 rounded-lg border border-primary/20">
-                              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                <Icon name="Flame" className="h-5 w-5 text-primary" />
+                            <div className="flex items-center gap-2 p-2 bg-primary/10 rounded-lg border border-primary/20">
+                              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                <Icon name="Flame" className="h-4 w-4 text-primary" />
                               </div>
-                              <p className="text-sm md:text-base font-medium">Термообработка для улучшения прочности</p>
+                              <p className="text-xs md:text-sm font-medium">Термообработка для улучшения прочности</p>
                             </div>
                           </div>
                         </div>
 
-                        <div className="space-y-3 pt-2">
-                          <h4 className="text-base md:text-lg font-bold text-center">Производственный процесс</h4>
-                          <p className="text-sm md:text-base text-foreground/80 leading-relaxed text-center">
+                        <div className="space-y-2 pt-1">
+                          <h4 className="text-sm md:text-base font-bold text-center">Производственный процесс</h4>
+                          <p className="text-xs md:text-sm text-foreground/80 text-center">
                             Восстановление деталей — это сложный технологический процесс. Каждый этап требует значительных временных и трудовых затрат.
                           </p>
-                          <div className="grid grid-cols-2 gap-3">
-                            <div className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20 hover:shadow-lg transition-all">
-                              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                                <Icon name="Cog" className="h-6 w-6 text-primary" />
+                          <div className="grid grid-cols-2 gap-2">
+                            <div className="flex flex-col items-center gap-1 p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
+                              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                                <Icon name="Cog" className="h-4 w-4 text-primary" />
                               </div>
-                              <h5 className="font-bold text-sm text-center">ЧПУ обработка</h5>
-                              <p className="text-xs text-muted-foreground text-center">Высокая точность</p>
+                              <h5 className="font-bold text-xs text-center">ЧПУ обработка</h5>
+                              <p className="text-[10px] text-muted-foreground text-center">Высокая точность</p>
                             </div>
-                            <div className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20 hover:shadow-lg transition-all">
-                              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                                <Icon name="Scale" className="h-6 w-6 text-primary" />
+                            <div className="flex flex-col items-center gap-1 p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
+                              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                                <Icon name="Scale" className="h-4 w-4 text-primary" />
                               </div>
-                              <h5 className="font-bold text-sm text-center">Балансировка</h5>
-                              <p className="text-xs text-muted-foreground text-center">Проверка на стенде</p>
+                              <h5 className="font-bold text-xs text-center">Балансировка</h5>
+                              <p className="text-[10px] text-muted-foreground text-center">Проверка на стенде</p>
                             </div>
-                            <div className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20 hover:shadow-lg transition-all">
-                              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                                <Icon name="Flame" className="h-6 w-6 text-primary" />
+                            <div className="flex flex-col items-center gap-1 p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
+                              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                                <Icon name="Flame" className="h-4 w-4 text-primary" />
                               </div>
-                              <h5 className="font-bold text-sm text-center">Термообработка</h5>
-                              <p className="text-xs text-muted-foreground text-center">Упрочнение металла</p>
+                              <h5 className="font-bold text-xs text-center">Термообработка</h5>
+                              <p className="text-[10px] text-muted-foreground text-center">Упрочнение металла</p>
                             </div>
-                            <div className="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20 hover:shadow-lg transition-all">
-                              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                                <Icon name="Sparkles" className="h-6 w-6 text-primary" />
+                            <div className="flex flex-col items-center gap-1 p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
+                              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                                <Icon name="Sparkles" className="h-4 w-4 text-primary" />
                               </div>
-                              <h5 className="font-bold text-sm text-center">Финишная мойка</h5>
-                              <p className="text-xs text-muted-foreground text-center">Как новая деталь</p>
+                              <h5 className="font-bold text-xs text-center">Финишная мойка</h5>
+                              <p className="text-[10px] text-muted-foreground text-center">Как новая деталь</p>
                             </div>
                           </div>
                         </div>
