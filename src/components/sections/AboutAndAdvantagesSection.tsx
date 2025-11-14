@@ -22,13 +22,13 @@ export const AboutAndAdvantagesSection = () => {
                         Используем оборудование ЧПУ, титановый металл и запатентованные технологии.
                       </p>
                       
-                      <div className="flex items-center gap-2 bg-primary/5 p-2 rounded-lg">
-                        <div className="bg-primary/10 p-1.5 rounded-lg flex-shrink-0">
-                          <Icon name="Award" className="h-4 w-4 text-primary" />
+                      <div className="flex items-center gap-2 bg-primary/5 p-2.5 rounded-lg">
+                        <div className="bg-primary/10 p-2 rounded-lg flex-shrink-0">
+                          <Icon name="Award" className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-xs">Патент РФ № 2829377</h4>
-                          <p className="text-[10px] text-muted-foreground">
+                          <h4 className="font-bold text-sm">Патент РФ № 2829377</h4>
+                          <p className="text-xs text-muted-foreground">
                             Способ восстановления шлицевого соединения
                           </p>
                         </div>
