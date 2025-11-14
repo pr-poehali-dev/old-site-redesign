@@ -44,8 +44,8 @@ export const GalleryCarouselSection = ({ services }: GalleryCarouselSectionProps
                         className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                       />
                     </div>
-                    <CardContent className="p-3">
-                      <h3 className="font-semibold text-xs line-clamp-2">{service.name}</h3>
+                    <CardContent className="p-3 md:p-4">
+                      <h3 className="font-semibold text-xs md:text-sm line-clamp-2">{service.name}</h3>
                       <p className="text-primary font-bold mt-1 text-sm">от {service.price.toLocaleString('ru-RU')} ₽</p>
                     </CardContent>
                   </Card>

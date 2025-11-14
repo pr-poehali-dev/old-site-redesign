@@ -81,16 +81,16 @@ export const AboutAndAdvantagesSection = () => {
             <p className="text-muted-foreground text-xs md:text-sm">Почему восстановление выгоднее покупки новой детали</p>
           </div>
 
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3">
             <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
               <CardHeader className="pb-2 pt-3">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-2">
-                  <Icon name="DollarSign" className="h-6 w-6 text-primary" />
+                  <Icon name="DollarSign" className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
                 <CardTitle className="text-sm">Экономия до 70%</CardTitle>
               </CardHeader>
               <CardContent className="pt-0 pb-3">
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                   Восстановление обходится в 3-5 раз дешевле покупки новых деталей
                 </p>
               </CardContent>
@@ -99,12 +99,12 @@ export const AboutAndAdvantagesSection = () => {
             <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
               <CardHeader className="pb-2 pt-3">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-2">
-                  <Icon name="Zap" className="h-6 w-6 text-primary" />
+                  <Icon name="Zap" className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
                 <CardTitle className="text-sm">Быстрые сроки</CardTitle>
               </CardHeader>
               <CardContent className="pt-0 pb-3">
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                   Ремонт от 1-5 дней. Не нужно ждать заказа запчастей из-за границы
                 </p>
               </CardContent>
@@ -113,12 +113,12 @@ export const AboutAndAdvantagesSection = () => {
             <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
               <CardHeader className="pb-2 pt-3">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-2">
-                  <Icon name="Wrench" className="h-6 w-6 text-primary" />
+                  <Icon name="Wrench" className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
                 <CardTitle className="text-sm">Высокая прочность</CardTitle>
               </CardHeader>
               <CardContent className="pt-0 pb-3">
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                   Используется легированная титаном сталь с дальнейшей термообработкой
                 </p>
               </CardContent>
@@ -127,12 +127,12 @@ export const AboutAndAdvantagesSection = () => {
             <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
               <CardHeader className="pb-2 pt-3">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-2">
-                  <Icon name="Recycle" className="h-6 w-6 text-primary" />
+                  <Icon name="Recycle" className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
                 <CardTitle className="text-sm">Безопасно для узлов</CardTitle>
               </CardHeader>
               <CardContent className="pt-0 pb-3">
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                   Сохраняем оригинальные детали без замены дорогостоящих узлов
                 </p>
               </CardContent>
