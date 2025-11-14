@@ -45,7 +45,7 @@ export const AboutAndAdvantagesSection = () => {
                           <Icon name="Settings" className="h-4 w-4 text-primary" />
                           Производственный процесс
                         </h4>
-                        <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                        <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
                           Восстановление деталей — это сложный технологический процесс. Каждый этап требует значительных временных и трудовых затрат.
                         </p>
                         <div className="grid grid-cols-2 gap-2">
