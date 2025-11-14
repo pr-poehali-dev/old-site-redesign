@@ -53,16 +53,16 @@ export const ServicesSection = ({
 
   return (
     <section id="services" className="py-4 md:py-6 bg-muted/30">
-      <div className="container max-w-5xl">
-        <div className="space-y-3 md:space-y-4">
-          <div className="text-center space-y-1">
-            <h2 className="text-xl md:text-3xl font-bold">Наши услуги</h2>
-            <p className="text-muted-foreground text-xs md:text-sm">
-              Полный спектр работ по восстановлению трансмиссии
-            </p>
-          </div>
+      <div className="container">
+        <div className="text-center space-y-1 mb-4 md:mb-6">
+          <h2 className="text-xl md:text-3xl font-bold">Наши услуги</h2>
+          <p className="text-muted-foreground text-xs md:text-sm">
+            Полный спектр работ по восстановлению трансмиссии
+          </p>
+        </div>
 
-          <div className="flex flex-wrap justify-center gap-1.5 md:gap-2">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-1.5 md:gap-2 mb-3 md:mb-4">
             {categories.map((category) => (
               <Button
                 key={category}
@@ -81,7 +81,7 @@ export const ServicesSection = ({
             ))}
           </div>
 
-          <div className="grid md:grid-cols-3 gap-3 md:gap-4">
+          <div className="grid md:grid-cols-3 gap-3">
             {filteredServices.map((service, index) => (
               <Card 
                 key={service.id} 
