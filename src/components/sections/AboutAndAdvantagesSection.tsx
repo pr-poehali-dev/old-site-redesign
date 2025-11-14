@@ -15,7 +15,7 @@ export const AboutAndAdvantagesSection = () => {
             <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
               <CardContent className="p-3 md:p-4">
                 <div className="space-y-2 md:space-y-3">
-                  <div className="grid md:grid-cols-2 gap-3 md:gap-4">
+                  <div className="grid md:grid-cols-2 gap-3 md:gap-4 items-center">
                     <div className="space-y-3">
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex-1">
@@ -27,7 +27,7 @@ export const AboutAndAdvantagesSection = () => {
                             </div>
                           </div>
                           
-                          <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
+                          <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
                             Производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
                             Работаем с автосервисами и дилерскими центрами по всей России.
                           </p>
@@ -37,15 +37,15 @@ export const AboutAndAdvantagesSection = () => {
                       <div className="space-y-2">
                         <div className="flex items-start gap-2">
                           <Icon name="CheckCircle2" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <p className="text-xs md:text-sm">Оборудование с ЧПУ для высокоточной обработки</p>
+                          <p className="text-sm md:text-base">Оборудование с ЧПУ для высокоточной обработки</p>
                         </div>
                         <div className="flex items-start gap-2">
                           <Icon name="CheckCircle2" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <p className="text-xs md:text-sm">Титановый металл для долговечного соединения</p>
+                          <p className="text-sm md:text-base">Титановый металл для долговечного соединения</p>
                         </div>
                         <div className="flex items-start gap-2">
                           <Icon name="CheckCircle2" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <p className="text-xs md:text-sm">Термообработка и запатентованные технологии</p>
+                          <p className="text-sm md:text-base">Термообработка и запатентованные технологии</p>
                         </div>
                       </div>
 
@@ -54,7 +54,7 @@ export const AboutAndAdvantagesSection = () => {
                           <Icon name="Settings" className="h-4 w-4 text-primary" />
                           Производственный процесс
                         </h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                           Восстановление деталей — это сложный технологический процесс. Каждый этап требует значительных временных и трудовых затрат.
                         </p>
                         <div className="grid grid-cols-2 gap-2">
