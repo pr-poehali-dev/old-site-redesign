@@ -37,16 +37,16 @@ export const GalleryCarouselSection = ({ services }: GalleryCarouselSectionProps
               <CarouselItem key={service.id} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
                   <Card className="overflow-hidden">
-                    <div className="relative h-64 overflow-hidden">
+                    <div className="relative h-48 overflow-hidden">
                       <img 
                         src={service.image} 
                         alt={service.name}
                         className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                       />
                     </div>
-                    <CardContent className="p-4">
-                      <h3 className="font-semibold text-sm line-clamp-2">{service.name}</h3>
-                      <p className="text-primary font-bold mt-2">от {service.price.toLocaleString('ru-RU')} ₽</p>
+                    <CardContent className="p-3">
+                      <h3 className="font-semibold text-xs line-clamp-2">{service.name}</h3>
+                      <p className="text-primary font-bold mt-1 text-sm">от {service.price.toLocaleString('ru-RU')} ₽</p>
                     </CardContent>
                   </Card>
                 </div>
