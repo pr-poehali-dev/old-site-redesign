@@ -15,7 +15,7 @@ export const TurnkeyPricingCards = () => {
           <p className="text-[10px] md:text-xs text-muted-foreground mb-1.5 md:mb-2">ремонт под ключ</p>
           <div className="flex items-center justify-center gap-1 text-[10px] md:text-xs text-muted-foreground mt-2 md:mt-3 pt-2 md:pt-3 border-t">
             <Icon name="Users" className="h-3 w-3" />
-            <span>Более 200 клиентов</span>
+            <span>Более 250 клиентов</span>
           </div>
         </div>
         
@@ -28,7 +28,7 @@ export const TurnkeyPricingCards = () => {
           <p className="text-[10px] md:text-xs text-muted-foreground mb-1.5 md:mb-2">ремонт под ключ</p>
           <div className="flex items-center justify-center gap-1 text-[10px] md:text-xs text-muted-foreground mt-2 md:mt-3 pt-2 md:pt-3 border-t">
             <Icon name="Users" className="h-3 w-3" />
-            <span>Более 50 клиентов</span>
+            <span>Более 150 клиентов</span>
           </div>
         </div>
         
@@ -41,7 +41,7 @@ export const TurnkeyPricingCards = () => {
           <p className="text-[10px] md:text-xs text-muted-foreground mb-1.5 md:mb-2">ремонт под ключ</p>
           <div className="flex items-center justify-center gap-1 text-[10px] md:text-xs text-muted-foreground mt-2 md:mt-3 pt-2 md:pt-3 border-t">
             <Icon name="Users" className="h-3 w-3" />
-            <span>Более 80 клиентов</span>
+            <span>Более 100 клиентов</span>
           </div>
         </div>
       </div>
