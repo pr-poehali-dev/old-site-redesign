@@ -28,42 +28,44 @@ export const Header = ({
 }: HeaderProps) => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-3 cursor-pointer group">
-          <img src="https://cdn.poehali.dev/files/39a50b29-6e3c-455b-b374-e7e4555f1875.jpg" alt="Мега Шлиц" className="h-14 w-14 object-contain transition-transform duration-300 group-hover:scale-110" />
-          <span className="text-xl font-extrabold text-secondary group-hover:text-primary transition-colors duration-300">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
+      <div className="container flex h-14 md:h-16 items-center justify-between">
+        <div className="flex items-center gap-2 md:gap-3 cursor-pointer group">
+          <img src="https://cdn.poehali.dev/files/39a50b29-6e3c-455b-b374-e7e4555f1875.jpg" alt="Мега Шлиц" className="h-10 w-10 md:h-14 md:w-14 object-contain transition-transform duration-300 group-hover:scale-110" />
+          <span className="text-base md:text-xl font-extrabold text-secondary group-hover:text-primary transition-colors duration-300">Мега Шлиц<sup className="text-[10px] md:text-xs ml-0.5">®</sup></span>
         </div>
         
-        <nav className="hidden md:flex items-center gap-6">
-          <button onClick={() => scrollToSection('hero')} className="text-sm font-medium hover:text-primary transition-colors">Главная</button>
-          <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary transition-colors">О компании</button>
-          <button onClick={() => scrollToSection('advantages')} className="text-sm font-medium hover:text-primary transition-colors">Преимущества</button>
-          <button onClick={() => scrollToSection('turnkey')} className="text-sm font-medium hover:text-primary transition-colors">Под ключ</button>
-          <button onClick={() => scrollToSection('process')} className="text-sm font-medium hover:text-primary transition-colors">Как мы работаем</button>
-          <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
-          <button onClick={() => scrollToSection('contacts')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
+        <nav className="hidden md:flex items-center gap-3 lg:gap-6">
+          <button onClick={() => scrollToSection('hero')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Главная</button>
+          <button onClick={() => scrollToSection('about')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">О компании</button>
+          <button onClick={() => scrollToSection('advantages')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Преимущества</button>
+          <button onClick={() => scrollToSection('turnkey')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Под ключ</button>
+          <button onClick={() => scrollToSection('process')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Как мы работаем</button>
+          <button onClick={() => scrollToSection('services')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Услуги</button>
+          <button onClick={() => scrollToSection('contacts')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Контакты</button>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 md:gap-2">
           <Button 
-            className="hidden lg:flex"
+            className="hidden lg:flex text-xs"
+            size="sm"
             onClick={() => window.open('https://wa.me/79202520352', '_blank')}
           >
-            <Icon name="MessageCircle" className="mr-2 h-4 w-4" />
+            <Icon name="MessageCircle" className="mr-1.5 h-3.5 w-3.5" />
             WhatsApp
           </Button>
           <Button 
-            className="hidden md:flex"
+            className="hidden md:flex text-xs"
+            size="sm"
             onClick={() => setQuickConsultOpen(!quickConsultOpen)}
           >
-            <Icon name="Headphones" className="mr-2 h-4 w-4" />
+            <Icon name="Headphones" className="mr-1.5 h-3.5 w-3.5" />
             Консультация
           </Button>
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 hover:bg-muted rounded-md transition-colors"
+            className="md:hidden p-1.5 hover:bg-muted rounded-md transition-colors"
           >
-            <Icon name={mobileMenuOpen ? "X" : "Menu"} className="h-6 w-6" />
+            <Icon name={mobileMenuOpen ? "X" : "Menu"} className="h-5 w-5" />
           </button>
         </div>
       </div>
@@ -123,7 +125,7 @@ export const Header = ({
 
       {mobileMenuOpen && (
         <div className="md:hidden border-t bg-background animate-in slide-in-from-top duration-300">
-          <nav className="container py-4 flex flex-col gap-2">
+          <nav className="container py-3 flex flex-col gap-1">
             <button onClick={() => scrollToSection('hero')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Главная</button>
             <button onClick={() => scrollToSection('about')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">О компании</button>
             <button onClick={() => scrollToSection('advantages')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Преимущества</button>
