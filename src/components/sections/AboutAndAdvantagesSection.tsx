@@ -26,6 +26,7 @@ export const AboutAndAdvantagesSection = () => {
                       </p>
                       
                       <div className="space-y-2">
+                        <h4 className="text-base md:text-lg font-bold text-center mb-2">Как добиться качества</h4>
                         <div className="flex items-start gap-2">
                           <Icon name="CheckCircle2" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                           <p className="text-sm md:text-base">Оборудование с ЧПУ для высокоточной обработки</p>
