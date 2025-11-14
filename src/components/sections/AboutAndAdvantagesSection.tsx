@@ -16,11 +16,29 @@ export const AboutAndAdvantagesSection = () => {
               <CardContent className="p-3 md:p-4">
                 <div className="space-y-2 md:space-y-3">
                   <div className="grid md:grid-cols-2 gap-3 md:gap-4 items-center">
-                    <div className="space-y-2">
-                      <p className="text-sm md:text-base leading-relaxed">
-                        <span className="font-bold text-primary">Мега Шлиц<sup>®</sup></span> — восстановление шлицевых соединений трансмиссии. 
-                        Используем оборудование ЧПУ, титановый металл и запатентованные технологии.
-                      </p>
+                    <div className="space-y-3">
+                      <div>
+                        <h3 className="text-lg md:text-xl font-bold mb-2">Мега Шлиц<sup className="text-xs">®</sup></h3>
+                        <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
+                          Производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
+                          Работаем с автосервисами и дилерскими центрами по всей России.
+                        </p>
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <div className="flex items-start gap-2">
+                          <Icon name="CheckCircle2" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <p className="text-xs md:text-sm">Оборудование с ЧПУ для высокоточной обработки</p>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <Icon name="CheckCircle2" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <p className="text-xs md:text-sm">Титановый металл для долговечного соединения</p>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <Icon name="CheckCircle2" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <p className="text-xs md:text-sm">Термообработка и запатентованные технологии</p>
+                        </div>
+                      </div>
                       
                       <div className="flex items-center gap-2 bg-primary/5 p-2.5 rounded-lg">
                         <div className="bg-primary/10 p-2 rounded-lg flex-shrink-0">
