@@ -85,7 +85,8 @@ export const ServicesSection = ({
             {filteredServices.map((service, index) => (
               <Card 
                 key={service.id} 
-                className="hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border-2 hover:border-primary/50" 
+                className="hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border-2 hover:border-primary/50 animate-in fade-in slide-in-from-bottom-4" 
+                style={{ animationDelay: `${index * 100}ms`, animationDuration: '500ms' }}
                 onClick={() => setSelectedService(service)}
               >
                 {service.image && (
