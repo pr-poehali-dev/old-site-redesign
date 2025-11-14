@@ -14,7 +14,7 @@ export const AboutAndAdvantagesSection = () => {
           <div className="max-w-5xl mx-auto space-y-2 md:space-y-3">
             <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
               <CardContent className="p-3 md:p-4">
-                <div className="space-y-3 md:space-y-4">
+                <div className="space-y-4 md:space-y-5">
                   <div className="flex items-center gap-2 md:gap-3 flex-wrap justify-center md:justify-start">
                     <h3 className="text-xl md:text-2xl font-bold">Мега Шлиц<sup className="text-sm">®</sup></h3>
                     <div className="flex items-center gap-2 bg-primary/5 px-2.5 py-1.5 rounded-lg">
