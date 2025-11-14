@@ -53,7 +53,7 @@ export const ServicesSection = ({
 
   return (
     <section id="services" className="py-4 md:py-6 bg-muted/30">
-      <div className="container">
+      <div className="container max-w-5xl">
         <div className="space-y-3 md:space-y-4">
           <div className="text-center space-y-1">
             <h2 className="text-xl md:text-3xl font-bold">Наши услуги</h2>
@@ -62,7 +62,7 @@ export const ServicesSection = ({
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-1.5 md:gap-2 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-1.5 md:gap-2">
             {categories.map((category) => (
               <Button
                 key={category}
@@ -81,7 +81,7 @@ export const ServicesSection = ({
             ))}
           </div>
 
-          <div className="grid md:grid-cols-3 gap-3 md:gap-4 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-3 md:gap-4">
             {filteredServices.map((service, index) => (
               <Card 
                 key={service.id} 
