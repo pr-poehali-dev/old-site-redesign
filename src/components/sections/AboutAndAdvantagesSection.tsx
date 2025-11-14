@@ -32,7 +32,7 @@ export const AboutAndAdvantagesSection = () => {
                         </div>
                         <div className="flex items-start gap-2">
                           <Icon name="CheckCircle2" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <p className="text-sm md:text-base">Металл с добавлением титана для долговечного соединения</p>
+                          <p className="text-sm md:text-base">Металл с добавлением титана для долговечности</p>
                         </div>
                         <div className="flex items-start gap-2">
                           <Icon name="CheckCircle2" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
