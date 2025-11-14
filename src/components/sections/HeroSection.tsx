@@ -33,7 +33,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   }, []);
 
   return (
-    <section id="hero" className="relative py-8 overflow-hidden">
+    <section id="hero" className="relative py-6 md:py-8 overflow-hidden">
       <div className="absolute inset-0 z-0">
         {backgroundImages.map((image, index) => (
           <img
@@ -49,19 +49,19 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       </div>
       
       <div className="container relative z-10">
-        <div className="max-w-3xl mx-auto text-center space-y-4">
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+        <div className="max-w-3xl mx-auto text-center space-y-3 md:space-y-4">
+          <h1 className="text-2xl md:text-5xl font-bold tracking-tight text-white animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
             Восстановление шлицевых соединений
           </h1>
-          <p className="text-base md:text-lg text-white/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+          <p className="text-sm md:text-lg text-white/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
             Производственная компания по восстановлению шлицевых соединений трансмиссии по всей стране
           </p>
-          <div className="flex flex-wrap gap-3 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
-            <Button size="lg" onClick={() => scrollToSection('services')}>
+          <div className="flex flex-wrap gap-2 md:gap-3 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
+            <Button size="default" className="md:h-11 md:px-8" onClick={() => scrollToSection('services')}>
               Наши услуги
-              <Icon name="ArrowRight" className="ml-2 h-5 w-5" />
+              <Icon name="ArrowRight" className="ml-2 h-4 w-4 md:h-5 md:w-5" />
             </Button>
-            <Button size="lg" onClick={() => scrollToSection('contacts')}>
+            <Button size="default" className="md:h-11 md:px-8" onClick={() => scrollToSection('contacts')}>
               Отправить заявку
             </Button>
           </div>
