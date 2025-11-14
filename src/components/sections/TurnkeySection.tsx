@@ -14,19 +14,19 @@ export const TurnkeySection = () => {
   };
 
   return (
-    <section id="turnkey" className="py-8 bg-gradient-to-b from-background to-muted/30">
+    <section id="turnkey" className="py-6 md:py-8 bg-gradient-to-b from-background to-muted/30">
       <div className="container">
-        <div className="text-center space-y-1 mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold">Ремонт под ключ</h2>
-          <p className="text-muted-foreground text-sm">
+        <div className="text-center space-y-1 mb-4 md:mb-6">
+          <h2 className="text-xl md:text-3xl font-bold">Ремонт под ключ</h2>
+          <p className="text-muted-foreground text-xs md:text-sm">
             Полный цикл работ — от диагностики до установки восстановленных деталей
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto space-y-4">
+        <div className="max-w-5xl mx-auto space-y-3 md:space-y-4">
           <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
-            <CardContent className="p-5">
-              <div className="space-y-4">
+            <CardContent className="p-3 md:p-5">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
                     <Icon name="Wrench" className="h-5 w-5 text-primary" />

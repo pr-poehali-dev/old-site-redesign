@@ -20,18 +20,18 @@ export const ContactsSection = ({
 
 
   return (
-    <section id="contacts" className="py-8 bg-gradient-to-b from-muted/30 to-background">
+    <section id="contacts" className="py-6 md:py-8 bg-gradient-to-b from-muted/30 to-background">
       <div className="container">
-        <div className="text-center space-y-1 mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold">Оставить заявку</h2>
-          <p className="text-muted-foreground text-sm">
+        <div className="text-center space-y-1 mb-4 md:mb-6">
+          <h2 className="text-xl md:text-3xl font-bold">Оставить заявку</h2>
+          <p className="text-muted-foreground text-xs md:text-sm">
             Заполните форму или позвоните нам
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-4xl mx-auto space-y-3 md:space-y-4">
           <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
-            <CardContent className="pt-5 p-5">
+            <CardContent className="pt-4 md:pt-5 p-3 md:p-5">
               {formStatus === 'success' && (
                 <div className="mb-3 p-2 bg-primary/10 text-primary rounded-md text-xs">
                   ✓ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.

@@ -5,17 +5,17 @@ import Icon from '@/components/ui/icon';
 export const AboutAndAdvantagesSection = () => {
   return (
     <>
-      <section id="about" className="py-8 bg-gradient-to-b from-background to-muted/30">
+      <section id="about" className="py-6 md:py-8 bg-gradient-to-b from-background to-muted/30">
         <div className="container">
-          <div className="text-center space-y-1 mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold">О компании</h2>
+          <div className="text-center space-y-1 mb-4 md:mb-6">
+            <h2 className="text-xl md:text-3xl font-bold">О компании</h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-3">
+          <div className="max-w-4xl mx-auto space-y-2 md:space-y-3">
             <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
-              <CardContent className="p-4">
-                <div className="space-y-3">
-                  <p className="text-xs leading-relaxed text-muted-foreground">
+              <CardContent className="p-3 md:p-4">
+                <div className="space-y-2 md:space-y-3">
+                  <p className="text-[10px] md:text-xs leading-relaxed text-muted-foreground">
                     <span className="font-bold text-foreground">Мега Шлиц<sup>®</sup></span> — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
                     Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
                     специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
@@ -23,12 +23,12 @@ export const AboutAndAdvantagesSection = () => {
                   </p>
                   
                   <div className="flex items-center gap-2">
-                    <div className="bg-primary/10 p-2 rounded-lg">
-                      <Icon name="Award" className="h-5 w-5 text-primary" />
+                    <div className="bg-primary/10 p-1.5 md:p-2 rounded-lg">
+                      <Icon name="Award" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-xs">Патент РФ № 2829377</h4>
-                      <p className="text-[10px] text-muted-foreground">
+                      <h4 className="font-bold text-[10px] md:text-xs">Патент РФ № 2829377</h4>
+                      <p className="text-[9px] md:text-[10px] text-muted-foreground">
                         Способ восстановления шлицевого соединения на полноприводных автомобилях
                       </p>
                     </div>
@@ -47,38 +47,38 @@ export const AboutAndAdvantagesSection = () => {
               </CardContent>
             </Card>
 
-            <div className="grid grid-cols-3 gap-2">
-              <Card className="text-center p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
-                  <Icon name="Award" className="h-5 w-5 text-primary" />
+            <div className="grid grid-cols-3 gap-1.5 md:gap-2">
+              <Card className="text-center p-1.5 md:p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
+                  <Icon name="Award" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                 </div>
-                <h3 className="text-sm font-bold mb-0.5">3+ лет</h3>
-                <p className="text-[10px] text-muted-foreground">опыта работы</p>
+                <h3 className="text-xs md:text-sm font-bold mb-0.5">3+ лет</h3>
+                <p className="text-[9px] md:text-[10px] text-muted-foreground">опыта работы</p>
               </Card>
-              <Card className="text-center p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
-                  <Icon name="Car" className="h-5 w-5 text-primary" />
+              <Card className="text-center p-1.5 md:p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
+                  <Icon name="Car" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                 </div>
-                <h3 className="text-sm font-bold mb-0.5">3000+</h3>
-                <p className="text-[10px] text-muted-foreground">восстановленных деталей</p>
+                <h3 className="text-xs md:text-sm font-bold mb-0.5">3000+</h3>
+                <p className="text-[9px] md:text-[10px] text-muted-foreground">восстановленных деталей</p>
               </Card>
-              <Card className="text-center p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
-                  <Icon name="Shield" className="h-5 w-5 text-primary" />
+              <Card className="text-center p-1.5 md:p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
+                  <Icon name="Shield" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                 </div>
-                <h3 className="text-sm font-bold mb-0.5">Гарантия</h3>
-                <p className="text-[10px] text-muted-foreground">18 месяцев без ограничения пробега</p>
+                <h3 className="text-xs md:text-sm font-bold mb-0.5">Гарантия</h3>
+                <p className="text-[9px] md:text-[10px] text-muted-foreground">18 месяцев без ограничения пробега</p>
               </Card>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="advantages" className="py-8 bg-gradient-to-b from-muted/30 to-background">
+      <section id="advantages" className="py-6 md:py-8 bg-gradient-to-b from-muted/30 to-background">
         <div className="container">
-          <div className="text-center space-y-1 mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold">Преимущества нашей технологии</h2>
-            <p className="text-muted-foreground text-sm">Почему восстановление выгоднее покупки новой детали</p>
+          <div className="text-center space-y-1 mb-4 md:mb-6">
+            <h2 className="text-xl md:text-3xl font-bold">Преимущества нашей технологии</h2>
+            <p className="text-muted-foreground text-xs md:text-sm">Почему восстановление выгоднее покупки новой детали</p>
           </div>
 
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -141,11 +141,11 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="process" className="py-8 bg-background">
+      <section id="process" className="py-6 md:py-8 bg-background">
         <div className="container">
-          <div className="text-center space-y-1 mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold">Как мы работаем</h2>
-            <p className="text-muted-foreground text-sm">
+          <div className="text-center space-y-1 mb-4 md:mb-6">
+            <h2 className="text-xl md:text-3xl font-bold">Как мы работаем</h2>
+            <p className="text-muted-foreground text-xs md:text-sm">
               Простой и понятный процесс восстановления
             </p>
           </div>
@@ -334,11 +334,11 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-8 bg-gradient-to-b from-background to-muted/30">
+      <section id="faq" className="py-6 md:py-8 bg-gradient-to-b from-background to-muted/30">
         <div className="container">
-          <div className="text-center space-y-1 mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold">Частые вопросы</h2>
-            <p className="text-muted-foreground text-sm">Ответы на популярные вопросы о восстановлении</p>
+          <div className="text-center space-y-1 mb-4 md:mb-6">
+            <h2 className="text-xl md:text-3xl font-bold">Частые вопросы</h2>
+            <p className="text-muted-foreground text-xs md:text-sm">Ответы на популярные вопросы о восстановлении</p>
           </div>
 
           <div className="max-w-5xl mx-auto">

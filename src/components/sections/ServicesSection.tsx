@@ -54,17 +54,17 @@ export const ServicesSection = ({
   };
 
   return (
-    <section id="services" className="py-8 bg-muted/30">
+    <section id="services" className="py-6 md:py-8 bg-muted/30">
       <div className="container">
-        <div className="space-y-6">
+        <div className="space-y-4 md:space-y-6">
           <div className="text-center space-y-1">
-            <h2 className="text-2xl md:text-3xl font-bold">Наши услуги</h2>
-            <p className="text-muted-foreground text-sm">
+            <h2 className="text-xl md:text-3xl font-bold">Наши услуги</h2>
+            <p className="text-muted-foreground text-xs md:text-sm">
               Полный спектр работ по восстановлению трансмиссии
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-6xl mx-auto">
             {filteredServices.map((service, index) => (
               <Card 
                 key={service.id} 
