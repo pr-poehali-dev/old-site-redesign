@@ -42,7 +42,7 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
           <Icon name="TrendingDown" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
         </div>
         <div>
-          <h3 className="text-sm md:text-base font-bold mb-1.5 md:mb-2">Экономия от 68 000 до 168 000 ₽ по сравнению с новыми деталями</h3>
+          <h3 className="text-sm md:text-base font-bold mb-1.5 md:mb-2">Экономия от 68 000 до 203 000 ₽ по сравнению с новыми деталями</h3>
           <div className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-muted-foreground">
             <p>
               <span className="font-semibold">Hyundai/Kia с АКПП:</span> Новая раздаточная коробка (473003B630) стоит 138 000 ₽, восстановление с установкой — от 69 990 ₽. 
@@ -51,6 +51,10 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
             <p>
               <span className="font-semibold">Hyundai/Kia с МКПП:</span> Новая раздаточная коробка (473003B620) стоит 248 000 ₽, восстановление с установкой — от 79 990 ₽. 
               <span className="text-primary font-semibold"> Экономия 168 000 ₽!</span>
+            </p>
+            <p>
+              <span className="font-semibold">Volkswagen Tiguan:</span> Новая раздаточная коробка (0AU409053T) стоит 318 000 ₽, восстановление с установкой — от 114 990 ₽. 
+              <span className="text-primary font-semibold"> Экономия 203 000 ₽!</span>
             </p>
             <p className="text-[10px] md:text-xs pt-1.5 md:pt-2 border-t">
               Вы получаете такое же качество работы, полную гарантию 18 месяцев и существенную экономию!
@@ -121,6 +125,35 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
                     <div className="text-xs">
                       <p className="font-bold mb-1">Экономия 168 000 ₽ (68%)</p>
                       <p className="opacity-90">473003B620 • Новая 248 000 ₽ → Восст. 79 990 ₽</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+            
+            <div className={`space-y-2 animate-in slide-in-from-left duration-700 delay-300 relative transition-all duration-300 ${activeTooltip === 3 ? 'z-20' : 'z-0'}`}>
+              <div className="flex items-center justify-between text-xs mb-1">
+                <span className="font-semibold">Volkswagen Tiguan</span>
+                <span className="text-green-600 font-bold">-203 000 ₽</span>
+              </div>
+              <div 
+                className="flex gap-2 items-center relative"
+                onClick={() => setActiveTooltip(activeTooltip === 3 ? null : 3)}
+              >
+                <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700 transition-all duration-1000 ease-out delay-300 hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '100%'}}>
+                  318 000 ₽ новая
+                </div>
+                <div className="flex-1 bg-green-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-green-700 transition-all duration-1000 ease-out delay-450 hover:bg-green-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '36%'}}>
+                  114 990 ₽ восст.
+                </div>
+              </div>
+              {activeTooltip === 3 && (
+                <div className="absolute -bottom-20 left-0 right-0 bg-primary text-primary-foreground rounded-lg p-3 shadow-lg z-10 animate-in slide-in-from-top duration-300">
+                  <div className="flex items-start gap-2">
+                    <Icon name="TrendingDown" className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                    <div className="text-xs">
+                      <p className="font-bold mb-1">Экономия 203 000 ₽ (64%)</p>
+                      <p className="opacity-90">0AU409053T • Новая 318 000 ₽ → Восст. 114 990 ₽</p>
                     </div>
                   </div>
                 </div>
