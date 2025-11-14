@@ -36,14 +36,14 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
   }, [activeTooltip]);
 
   return (
-    <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-4 border-2 border-primary/20">
-      <div className="flex items-start gap-3">
-        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-          <Icon name="TrendingDown" className="h-5 w-5 text-primary" />
+    <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-3 md:p-4 border-2 border-primary/20">
+      <div className="flex items-start gap-2 md:gap-3">
+        <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+          <Icon name="TrendingDown" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
         </div>
         <div>
-          <h3 className="text-base font-bold mb-2">Экономия от 68 000 до 203 000 ₽ по сравнению с новыми деталями</h3>
-          <div className="space-y-2 text-sm text-muted-foreground">
+          <h3 className="text-sm md:text-base font-bold mb-1.5 md:mb-2">Экономия от 68 000 до 203 000 ₽ по сравнению с новыми деталями</h3>
+          <div className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-muted-foreground">
             <p>
               <span className="font-semibold">Hyundai/Kia с АКПП:</span> Новая раздаточная коробка (473003B630) стоит 138 000 ₽, восстановление с установкой — от 69 990 ₽. 
               <span className="text-primary font-semibold"> Экономия 68 000 ₽!</span>
@@ -56,25 +56,25 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
               <span className="font-semibold">Volkswagen Tiguan:</span> Новая раздаточная коробка (0AU409053T) стоит 318 000 ₽, восстановление с установкой — от 114 990 ₽. 
               <span className="text-primary font-semibold"> Экономия 203 000 ₽!</span>
             </p>
-            <p className="text-xs pt-2 border-t">
+            <p className="text-[10px] md:text-xs pt-1.5 md:pt-2 border-t">
               Вы получаете такое же качество работы, полную гарантию 18 месяцев и существенную экономию!
             </p>
           </div>
           
-          <div className="mt-6 relative" ref={diagramRef}>
+          <div className="mt-4 md:mt-6 relative" ref={diagramRef}>
             {activeTooltip !== null && (
               <div className="absolute inset-0 -m-6 bg-black/20 rounded-lg animate-in fade-in duration-300 pointer-events-none" />
             )}
             <div className="relative z-10">
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <Icon name="MousePointerClick" className="h-3.5 w-3.5 text-primary animate-pulse" />
+              <div className="flex items-center justify-between mb-2 md:mb-3">
+                <div className="flex items-center gap-1.5 md:gap-2 text-[10px] md:text-xs text-muted-foreground">
+                  <Icon name="MousePointerClick" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary animate-pulse" />
                   <span className="font-medium">Нажмите на диаграмму для деталей</span>
                 </div>
               </div>
-            <div className="space-y-4">
-            <div className={`space-y-2 animate-in slide-in-from-left duration-700 relative transition-all duration-300 ${activeTooltip === 1 ? 'z-20' : 'z-0'}`}>
-              <div className="flex items-center justify-between text-xs mb-1">
+            <div className="space-y-3 md:space-y-4">
+            <div className={`space-y-1.5 md:space-y-2 animate-in slide-in-from-left duration-700 relative transition-all duration-300 ${activeTooltip === 1 ? 'z-20' : 'z-0'}`}>
+              <div className="flex items-center justify-between text-[10px] md:text-xs mb-1">
                 <span className="font-semibold">Hyundai/Kia АКПП</span>
                 <span className="text-green-600 font-bold">-68 000 ₽</span>
               </div>
@@ -82,10 +82,10 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
                 className="flex gap-2 items-center relative"
                 onClick={() => setActiveTooltip(activeTooltip === 1 ? null : 1)}
               >
-                <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700 transition-all duration-1000 ease-out hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '43.4%'}}>
+                <div className="flex-1 bg-red-100 rounded-full h-5 md:h-6 flex items-center px-2 md:px-3 text-[10px] md:text-xs font-semibold text-red-700 transition-all duration-1000 ease-out hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '43.4%'}}>
                   138 000 ₽ новая
                 </div>
-                <div className="flex-1 bg-green-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-green-700 transition-all duration-1000 ease-out delay-200 hover:bg-green-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '22%'}}>
+                <div className="flex-1 bg-green-100 rounded-full h-5 md:h-6 flex items-center px-2 md:px-3 text-[10px] md:text-xs font-semibold text-green-700 transition-all duration-1000 ease-out delay-200 hover:bg-green-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '22%'}}>
                   69 990 ₽ восст.
                 </div>
               </div>
