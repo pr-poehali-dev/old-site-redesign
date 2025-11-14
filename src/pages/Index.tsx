@@ -184,6 +184,8 @@ const Index = () => {
 
       <TurnkeySection />
 
+      <GalleryCarouselSection services={services} />
+
       <ContactsSection
         formData={formData}
         setFormData={setFormData}
