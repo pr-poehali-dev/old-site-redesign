@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { Header } from '@/components/sections/Header';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { GalleryCarouselSection } from '@/components/sections/GalleryCarouselSection';
+import { RutubeSection } from '@/components/sections/RutubeSection';
 import { AboutAndAdvantagesSection } from '@/components/sections/AboutAndAdvantagesSection';
 import { TurnkeySection } from '@/components/sections/TurnkeySection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
@@ -181,6 +182,8 @@ const Index = () => {
         filteredServices={filteredServices}
         categories={categories}
       />
+
+      <RutubeSection />
 
       <TurnkeySection />
 
