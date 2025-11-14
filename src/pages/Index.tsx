@@ -183,8 +183,6 @@ const Index = () => {
         categories={categories}
       />
 
-      <RutubeSection />
-
       <TurnkeySection />
 
       <ContactsSection
@@ -193,6 +191,8 @@ const Index = () => {
         formStatus={formStatus}
         handleFormSubmit={handleFormSubmit}
       />
+
+      <RutubeSection />
 
       <FooterWithButtons viewCount={viewCount} showScrollTop={showScrollTop} />
     </div>
