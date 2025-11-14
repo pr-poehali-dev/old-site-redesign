@@ -17,7 +17,7 @@ export const AboutAndAdvantagesSection = () => {
                 <div className="space-y-2 md:space-y-3">
                   <div className="grid md:grid-cols-2 gap-3 md:gap-4 items-center">
                     <div className="space-y-2">
-                      <p className="text-xs md:text-sm leading-relaxed">
+                      <p className="text-sm md:text-base leading-relaxed">
                         <span className="font-bold text-primary">Мега Шлиц<sup>®</sup></span> — восстановление шлицевых соединений трансмиссии. 
                         Используем оборудование ЧПУ, титановый металл и запатентованные технологии.
                       </p>
