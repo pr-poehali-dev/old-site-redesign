@@ -15,7 +15,7 @@ export const AboutAndAdvantagesSection = () => {
             <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
               <CardContent className="p-3 md:p-4">
                 <div className="space-y-2 md:space-y-3">
-                  <div className="grid md:grid-cols-2 gap-3 md:gap-4 items-start">
+                  <div className="grid md:grid-cols-2 gap-3 md:gap-4">
                     <div className="space-y-3">
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex-1">
