@@ -114,42 +114,42 @@ export const ContactsSection = ({
             </CardContent>
           </Card>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
             <a 
               href="tel:+79202520352"
-              className="flex flex-col items-center gap-2 p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <Icon name="Phone" className="h-6 w-6 text-primary" />
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                <Icon name="Phone" className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               </div>
-              <span className="text-xs font-semibold text-center">Позвонить</span>
+              <span className="text-[10px] md:text-xs font-semibold text-center">Позвонить</span>
             </a>
 
             <a 
               href="https://wa.me/79202520352"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-2 p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <Icon name="MessageCircle" className="h-6 w-6 text-primary" />
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                <Icon name="MessageCircle" className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               </div>
-              <span className="text-xs font-semibold text-center">WhatsApp</span>
+              <span className="text-[10px] md:text-xs font-semibold text-center">WhatsApp</span>
             </a>
 
             <a 
               href="mailto:megashlic@yandex.ru"
-              className="flex flex-col items-center gap-2 p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <Icon name="Mail" className="h-6 w-6 text-primary" />
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                <Icon name="Mail" className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               </div>
-              <span className="text-xs font-semibold text-center">Написать</span>
+              <span className="text-[10px] md:text-xs font-semibold text-center">Написать</span>
             </a>
           </div>
 
-          <div className="space-y-3">
-            <div className="w-full h-[250px] rounded-lg overflow-hidden border-2 shadow-lg">
+          <div className="space-y-2 md:space-y-3">
+            <div className="w-full h-[200px] md:h-[250px] rounded-lg overflow-hidden border-2 shadow-lg">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?ll=43.915409%2C56.253487&z=16&l=map&pt=43.915409,56.253487,pm2rdm"
                 width="100%"

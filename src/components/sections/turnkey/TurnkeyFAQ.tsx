@@ -26,7 +26,7 @@ export const TurnkeyFAQ = () => {
               <p className="text-[10px] md:text-xs text-muted-foreground pl-5 md:pl-6 mb-1.5 md:mb-2">
                 <span className="font-semibold">Стандартный (1 день):</span> восстановление вала или дифференциала, замена корзины фрикционов, установка деталей на обмен.
               </p>
-              <p className="text-xs text-muted-foreground pl-6">
+              <p className="text-[10px] md:text-xs text-muted-foreground pl-5 md:pl-6">
                 <span className="font-semibold">Сложный (3-7 дней):</span> восстановление МКПП, одновременное восстановление вала + дифференциала, ремонт при сильном износе корпуса.
               </p>
             </div>
