@@ -10,18 +10,32 @@ export const RutubeSection = () => {
           <p className="text-xs md:text-sm text-muted-foreground">Смотрите процесс восстановления деталей</p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
-            <div className="relative" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://rutube.ru/play/embed/a2c345d99a6b40181efac28a33770cb9/"
-                frameBorder="0"
-                allow="clipboard-write; autoplay"
-                allowFullScreen
-                className="absolute top-0 left-0 w-full h-full"
-              ></iframe>
-            </div>
-          </Card>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+            <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
+              <div className="relative" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://rutube.ru/play/embed/a2c345d99a6b40181efac28a33770cb9/"
+                  frameBorder="0"
+                  allow="clipboard-write; autoplay"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                ></iframe>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
+              <div className="relative" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://rutube.ru/play/embed/5a6ae8d4fe853385c5407283678149ed/"
+                  frameBorder="0"
+                  allow="clipboard-write; autoplay"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                ></iframe>
+              </div>
+            </Card>
+          </div>
 
           <div className="mt-3 md:mt-4 text-center">
             <a
