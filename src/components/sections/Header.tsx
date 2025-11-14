@@ -37,10 +37,8 @@ export const Header = ({
         <nav className="hidden md:flex items-center gap-3 lg:gap-6">
           <button onClick={() => scrollToSection('hero')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Главная</button>
           <button onClick={() => scrollToSection('about')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">О компании</button>
-          <button onClick={() => scrollToSection('advantages')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Преимущества</button>
-          <button onClick={() => scrollToSection('turnkey')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Под ключ</button>
-          <button onClick={() => scrollToSection('process')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Как мы работаем</button>
           <button onClick={() => scrollToSection('services')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Услуги</button>
+          <button onClick={() => scrollToSection('turnkey')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Под ключ</button>
           <button onClick={() => scrollToSection('contacts')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Контакты</button>
         </nav>
 
@@ -128,10 +126,8 @@ export const Header = ({
           <nav className="container py-3 flex flex-col gap-1">
             <button onClick={() => scrollToSection('hero')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Главная</button>
             <button onClick={() => scrollToSection('about')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">О компании</button>
-            <button onClick={() => scrollToSection('advantages')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Преимущества</button>
-            <button onClick={() => scrollToSection('turnkey')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Ремонт под ключ</button>
-            <button onClick={() => scrollToSection('process')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Как мы работаем</button>
             <button onClick={() => scrollToSection('services')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Услуги</button>
+            <button onClick={() => scrollToSection('turnkey')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Под ключ</button>
             <button onClick={() => scrollToSection('contacts')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Контакты</button>
             <Button className="mt-2" onClick={() => scrollToSection('contacts')}>
               <Icon name="Phone" className="mr-2 h-4 w-4" />
