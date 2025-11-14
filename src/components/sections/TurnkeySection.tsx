@@ -27,81 +27,81 @@ export const TurnkeySection = () => {
           <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
             <CardContent className="p-3 md:p-5">
               <div className="space-y-3 md:space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Wrench" className="h-5 w-5 text-primary" />
+                <div className="flex items-start gap-2 md:gap-3">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Wrench" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-3">Что входит в услугу?</h3>
-                    <div className="grid md:grid-cols-3 gap-3">
-                      <div className="bg-muted/30 rounded-lg p-3 border">
-                        <div className="flex items-start gap-2">
-                          <div className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <Icon name="Search" className="h-3.5 w-3.5 text-primary" />
+                    <h3 className="text-base md:text-lg font-bold mb-2 md:mb-3">Что входит в услугу?</h3>
+                    <div className="grid md:grid-cols-3 gap-2 md:gap-3">
+                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="Search" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
                           </div>
                           <div>
-                            <h4 className="font-bold text-sm mb-1">Диагностика</h4>
-                            <p className="text-xs text-muted-foreground">Полная проверка привода и раздаточной коробки</p>
+                            <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Диагностика</h4>
+                            <p className="text-[10px] md:text-xs text-muted-foreground">Полная проверка привода и раздаточной коробки</p>
                           </div>
                         </div>
                       </div>
                       
-                      <div className="bg-muted/30 rounded-lg p-3 border">
-                        <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <Icon name="Settings" className="h-3.5 w-3.5 text-primary" />
+                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="Settings" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
                           </div>
                           <div>
-                            <h4 className="font-bold text-sm mb-1">Демонтаж</h4>
-                            <p className="text-xs text-muted-foreground">Снятие всех неисправных деталей</p>
+                            <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Демонтаж</h4>
+                            <p className="text-[10px] md:text-xs text-muted-foreground">Снятие всех неисправных деталей</p>
                           </div>
                         </div>
                       </div>
                       
-                      <div className="bg-muted/30 rounded-lg p-3 border">
-                        <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <Icon name="Zap" className="h-3.5 w-3.5 text-primary" />
+                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="Zap" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
                           </div>
                           <div>
-                            <h4 className="font-bold text-sm mb-1">Восстановление</h4>
-                            <p className="text-xs text-muted-foreground">Ремонт шлицев по запатентованной технологии</p>
+                            <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Восстановление</h4>
+                            <p className="text-[10px] md:text-xs text-muted-foreground">Ремонт шлицев по запатентованной технологии</p>
                           </div>
                         </div>
                       </div>
                       
-                      <div className="bg-muted/30 rounded-lg p-3 border">
-                        <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <Icon name="Package" className="h-3.5 w-3.5 text-primary" />
+                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="Package" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
                           </div>
                           <div>
-                            <h4 className="font-bold text-sm mb-1">Замена расходников</h4>
-                            <p className="text-xs text-muted-foreground">Новые сальники, фильтр, масло</p>
+                            <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Замена расходников</h4>
+                            <p className="text-[10px] md:text-xs text-muted-foreground">Новые сальники, фильтр, масло</p>
                           </div>
                         </div>
                       </div>
                       
-                      <div className="bg-muted/30 rounded-lg p-3 border">
-                        <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <Icon name="Wrench" className="h-3.5 w-3.5 text-primary" />
+                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="Wrench" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
                           </div>
                           <div>
-                            <h4 className="font-bold text-sm mb-1">Установка</h4>
-                            <p className="text-xs text-muted-foreground">Монтаж восстановленных деталей</p>
+                            <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Установка</h4>
+                            <p className="text-[10px] md:text-xs text-muted-foreground">Монтаж восстановленных деталей</p>
                           </div>
                         </div>
                       </div>
                       
-                      <div className="bg-muted/30 rounded-lg p-3 border">
-                        <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <Icon name="CheckCircle" className="h-3.5 w-3.5 text-primary" />
+                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <Icon name="CheckCircle" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
                           </div>
                           <div>
-                            <h4 className="font-bold text-sm mb-1">Тест-драйв</h4>
-                            <p className="text-xs text-muted-foreground">Проверка работы полного привода</p>
+                            <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Тест-драйв</h4>
+                            <p className="text-[10px] md:text-xs text-muted-foreground">Проверка работы полного привода</p>
                           </div>
                         </div>
                       </div>
@@ -109,51 +109,51 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="border-t border-dashed border-primary/20 pt-4 mt-4">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
-                      <Icon name="ListOrdered" className="h-5 w-5 text-primary" />
+                <div className="border-t border-dashed border-primary/20 pt-3 md:pt-4 mt-3 md:mt-4">
+                  <div className="flex items-start gap-2 md:gap-3 mb-2 md:mb-3">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
+                      <Icon name="ListOrdered" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold mb-3">Этапы работы</h3>
-                      <div className="space-y-3">
-                        <div className="flex items-start gap-2">
-                          <div className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <span className="text-primary font-bold text-xs">1</span>
+                      <h3 className="text-base md:text-lg font-bold mb-2 md:mb-3">Этапы работы</h3>
+                      <div className="space-y-2 md:space-y-3">
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <span className="text-primary font-bold text-[10px] md:text-xs">1</span>
                           </div>
                           <div>
-                            <h4 className="font-bold text-sm mb-1">Консультация и диагностика</h4>
-                            <p className="text-xs text-muted-foreground">Записываетесь на приём, привозите автомобиль. Мастер проводит диагностику и называет точную стоимость</p>
+                            <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Консультация и диагностика</h4>
+                            <p className="text-[10px] md:text-xs text-muted-foreground">Записываетесь на приём, привозите автомобиль. Мастер проводит диагностику и называет точную стоимость</p>
                           </div>
                         </div>
                         
-                        <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <span className="text-primary font-bold text-xs">2</span>
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <span className="text-primary font-bold text-[10px] md:text-xs">2</span>
                           </div>
                           <div>
-                            <h4 className="font-bold text-sm mb-1">Демонтаж и восстановление</h4>
-                            <p className="text-xs text-muted-foreground">Снимаем неисправные детали, восстанавливаем их по запатентованной технологии. Держим в курсе хода работ</p>
+                            <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Демонтаж и восстановление</h4>
+                            <p className="text-[10px] md:text-xs text-muted-foreground">Снимаем неисправные детали, восстанавливаем их по запатентованной технологии. Держим в курсе хода работ</p>
                           </div>
                         </div>
                         
-                        <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <span className="text-primary font-bold text-xs">3</span>
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <span className="text-primary font-bold text-[10px] md:text-xs">3</span>
                           </div>
                           <div>
-                            <h4 className="font-bold text-sm mb-1">Установка и проверка</h4>
-                            <p className="text-xs text-muted-foreground">Устанавливаем восстановленные детали, меняем расходники, заправляем маслом. Проводим тест-драйв</p>
+                            <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Установка и проверка</h4>
+                            <p className="text-[10px] md:text-xs text-muted-foreground">Устанавливаем восстановленные детали, меняем расходники, заправляем маслом. Проводим тест-драйв</p>
                           </div>
                         </div>
                         
-                        <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <span className="text-primary font-bold text-xs">4</span>
+                        <div className="flex items-start gap-1.5 md:gap-2">
+                          <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <span className="text-primary font-bold text-[10px] md:text-xs">4</span>
                           </div>
                           <div>
-                            <h4 className="font-bold text-sm mb-1">Выдача автомобиля</h4>
-                            <p className="text-xs text-muted-foreground">Передаём вам готовый автомобиль с гарантией 18 месяцев и всеми документами</p>
+                            <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Выдача автомобиля</h4>
+                            <p className="text-[10px] md:text-xs text-muted-foreground">Передаём вам готовый автомобиль с гарантией 18 месяцев и всеми документами</p>
                           </div>
                         </div>
                       </div>
@@ -161,35 +161,35 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="border-t border-dashed border-primary/20 pt-4 mt-4">
-                  <div className="grid md:grid-cols-3 gap-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
-                        <Icon name="Clock" className="h-5 w-5 text-primary" />
+                <div className="border-t border-dashed border-primary/20 pt-3 md:pt-4 mt-3 md:mt-4">
+                  <div className="grid md:grid-cols-3 gap-3 md:gap-4">
+                    <div className="flex items-start gap-2 md:gap-3">
+                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
+                        <Icon name="Clock" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold mb-1">Сроки</h4>
-                        <p className="text-sm text-muted-foreground">1 день (стандарт) / 3-7 дней (сложные случаи)</p>
+                        <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Сроки</h4>
+                        <p className="text-xs md:text-sm text-muted-foreground">1 день (стандарт) / 3-7 дней (сложные случаи)</p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
-                        <Icon name="Shield" className="h-5 w-5 text-primary" />
+                    <div className="flex items-start gap-2 md:gap-3">
+                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
+                        <Icon name="Shield" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold mb-1">Гарантия</h4>
-                        <p className="text-sm text-muted-foreground">18 месяцев на все работы</p>
+                        <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Гарантия</h4>
+                        <p className="text-xs md:text-sm text-muted-foreground">18 месяцев на все работы</p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
-                        <Icon name="Percent" className="h-5 w-5 text-primary" />
+                    <div className="flex items-start gap-2 md:gap-3">
+                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
+                        <Icon name="Percent" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-bold mb-1">Экономия</h4>
-                        <p className="text-sm text-muted-foreground">До 70% от новых деталей</p>
+                        <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Экономия</h4>
+                        <p className="text-xs md:text-sm text-muted-foreground">До 70% от новых деталей</p>
                       </div>
                     </div>
                   </div>
