@@ -17,9 +17,9 @@ export const AboutAndAdvantagesSection = () => {
                 <div className="space-y-3 md:space-y-4">
                   <div className="flex items-center gap-2 md:gap-3 flex-wrap justify-center md:justify-start">
                     <h3 className="text-xl md:text-2xl font-bold">Мега Шлиц<sup className="text-sm">®</sup></h3>
-                    <div className="flex items-center gap-2 bg-primary/5 px-3 py-2 rounded-lg">
-                      <Icon name="Award" className="h-5 w-5 text-primary" />
-                      <span className="font-bold text-sm md:text-base">Патент РФ № 2829377</span>
+                    <div className="flex items-center gap-2 bg-primary/5 px-2.5 py-1.5 rounded-lg">
+                      <Icon name="Award" className="h-4 w-4 text-primary" />
+                      <span className="font-bold text-xs md:text-sm">Патент РФ № 2829377</span>
                     </div>
                   </div>
 
