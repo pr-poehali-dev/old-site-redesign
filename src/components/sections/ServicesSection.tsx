@@ -90,7 +90,7 @@ export const ServicesSection = ({
                 onClick={() => setSelectedService(service)}
               >
                 {service.image && (
-                  <div className="relative h-40 md:h-48 overflow-hidden bg-white flex items-center justify-center p-2">
+                  <div className="relative h-48 md:h-56 overflow-hidden bg-white flex items-center justify-center p-1.5">
                     <img 
                       src={service.image} 
                       alt={service.name}
