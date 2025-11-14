@@ -11,31 +11,31 @@ export const AboutAndAdvantagesSection = () => {
             <h2 className="text-2xl md:text-3xl font-bold">О компании</h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-4">
+          <div className="max-w-4xl mx-auto space-y-3">
             <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
-              <CardContent className="p-5">
-                <div className="space-y-4">
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+              <CardContent className="p-4">
+                <div className="space-y-3">
+                  <p className="text-xs leading-relaxed text-muted-foreground">
                     <span className="font-bold text-foreground">Мега Шлиц<sup>®</sup></span> — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
                     Работаем с автосервисами и дилерскими центрами по всей России. Используем оборудование с ЧПУ, 
                     специальный металл с добавлением титана для долговечного шлицевого соединения, применяем термообработку 
                     и запатентованные технологии восстановления.
                   </p>
                   
-                  <div className="flex items-center gap-3">
-                    <div className="bg-primary/10 p-2.5 rounded-lg">
-                      <Icon name="Award" className="h-6 w-6 text-primary" />
+                  <div className="flex items-center gap-2">
+                    <div className="bg-primary/10 p-2 rounded-lg">
+                      <Icon name="Award" className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-sm">Патент РФ № 2829377</h4>
-                      <p className="text-xs text-muted-foreground">
+                      <h4 className="font-bold text-xs">Патент РФ № 2829377</h4>
+                      <p className="text-[10px] text-muted-foreground">
                         Способ восстановления шлицевого соединения на полноприводных автомобилях
                       </p>
                     </div>
                   </div>
 
-                  <div className="relative group max-w-2xl mx-auto">
-                    <div className="overflow-hidden rounded-lg border-2 border-primary/20 shadow-lg group-hover:border-primary/40 transition-all duration-300">
+                  <div className="relative group max-w-xl mx-auto">
+                    <div className="overflow-hidden rounded-lg border border-primary/20 group-hover:border-primary/40 transition-all duration-300">
                       <img 
                         src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
                         alt="Патент РФ № 2829377"
@@ -47,27 +47,27 @@ export const AboutAndAdvantagesSection = () => {
               </CardContent>
             </Card>
 
-            <div className="grid grid-cols-3 gap-3">
-              <Card className="text-center p-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-2">
-                  <Icon name="Award" className="h-6 w-6 text-primary" />
+            <div className="grid grid-cols-3 gap-2">
+              <Card className="text-center p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
+                  <Icon name="Award" className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="text-base font-bold mb-0.5">3+ лет</h3>
-                <p className="text-xs text-muted-foreground">опыта работы</p>
+                <h3 className="text-sm font-bold mb-0.5">3+ лет</h3>
+                <p className="text-[10px] text-muted-foreground">опыта работы</p>
               </Card>
-              <Card className="text-center p-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-2">
-                  <Icon name="Car" className="h-6 w-6 text-primary" />
+              <Card className="text-center p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
+                  <Icon name="Car" className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="text-base font-bold mb-0.5">3000+</h3>
-                <p className="text-xs text-muted-foreground">восстановленных деталей</p>
+                <h3 className="text-sm font-bold mb-0.5">3000+</h3>
+                <p className="text-[10px] text-muted-foreground">восстановленных деталей</p>
               </Card>
-              <Card className="text-center p-3 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-2">
-                  <Icon name="Shield" className="h-6 w-6 text-primary" />
+              <Card className="text-center p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
+                  <Icon name="Shield" className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="text-base font-bold mb-0.5">Гарантия</h3>
-                <p className="text-xs text-muted-foreground">18 месяцев без ограничения пробега</p>
+                <h3 className="text-sm font-bold mb-0.5">Гарантия</h3>
+                <p className="text-[10px] text-muted-foreground">18 месяцев без ограничения пробега</p>
               </Card>
             </div>
           </div>
