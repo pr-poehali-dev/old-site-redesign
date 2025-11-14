@@ -140,10 +140,10 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
                 className="flex gap-2 items-center relative"
                 onClick={() => setActiveTooltip(activeTooltip === 3 ? null : 3)}
               >
-                <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700 transition-all duration-1000 ease-out delay-300 hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '100%'}}>
+                <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700 hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '100%'}}>
                   318 000 ₽ новая
                 </div>
-                <div className="flex-1 bg-green-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-green-700 transition-all duration-1000 ease-out delay-450 hover:bg-green-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '36%'}}>
+                <div className="flex-1 bg-green-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-green-700 hover:bg-green-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '36%'}}>
                   114 990 ₽ восст.
                 </div>
               </div>
