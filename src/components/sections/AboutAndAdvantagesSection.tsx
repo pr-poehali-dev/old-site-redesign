@@ -17,12 +17,25 @@ export const AboutAndAdvantagesSection = () => {
                 <div className="space-y-2 md:space-y-3">
                   <div className="grid md:grid-cols-2 gap-3 md:gap-4 items-start">
                     <div className="space-y-3">
-                      <div>
-                        <h3 className="text-lg md:text-xl font-bold mb-2">Мега Шлиц<sup className="text-xs">®</sup></h3>
-                        <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
-                          Производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
-                          Работаем с автосервисами и дилерскими центрами по всей России.
-                        </p>
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <h3 className="text-lg md:text-xl font-bold mb-2">Мега Шлиц<sup className="text-xs">®</sup></h3>
+                          <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
+                            Производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
+                            Работаем с автосервисами и дилерскими центрами по всей России.
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-2 bg-primary/5 p-2 rounded-lg flex-shrink-0">
+                          <div className="bg-primary/10 p-1.5 rounded-lg">
+                            <Icon name="Award" className="h-4 w-4 text-primary" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-xs whitespace-nowrap">Патент РФ № 2829377</h4>
+                            <p className="text-[10px] text-muted-foreground">
+                              Способ восстановления<br />шлицевого соединения
+                            </p>
+                          </div>
+                        </div>
                       </div>
                       
                       <div className="space-y-2">
@@ -37,18 +50,6 @@ export const AboutAndAdvantagesSection = () => {
                         <div className="flex items-start gap-2">
                           <Icon name="CheckCircle2" className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                           <p className="text-xs md:text-sm">Термообработка и запатентованные технологии</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center gap-2 bg-primary/5 p-2.5 rounded-lg">
-                        <div className="bg-primary/10 p-2 rounded-lg flex-shrink-0">
-                          <Icon name="Award" className="h-5 w-5 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-sm">Патент РФ № 2829377</h4>
-                          <p className="text-xs text-muted-foreground">
-                            Способ восстановления шлицевого соединения
-                          </p>
                         </div>
                       </div>
 
