@@ -17,7 +17,7 @@ export const AboutAndAdvantagesSection = () => {
                 <div className="space-y-2 md:space-y-3">
                   <div className="grid md:grid-cols-2 gap-3 md:gap-4 items-center">
                     <div className="space-y-3">
-                      <h3 className="text-lg md:text-xl font-bold mb-2">Мега Шлиц<sup className="text-xs">®</sup></h3>
+                      <h3 className="text-2xl md:text-3xl font-bold mb-3 text-center">Мега Шлиц<sup className="text-sm">®</sup></h3>
                       
                       <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
                         Производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей трансмиссии. 
