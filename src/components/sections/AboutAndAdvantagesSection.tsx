@@ -49,6 +49,56 @@ export const AboutAndAdvantagesSection = () => {
               </CardContent>
             </Card>
 
+            <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
+              <CardContent className="p-3 md:p-4">
+                <h3 className="text-base md:text-lg font-bold mb-3 flex items-center gap-2">
+                  <Icon name="Settings" className="h-5 w-5 text-primary" />
+                  Производственный процесс
+                </h3>
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-3">
+                  Восстановление деталей — это сложный технологический процесс. Каждый этап требует значительных временных и трудовых затрат для достижения идеального результата.
+                </p>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
+                  <div className="flex items-start gap-2 p-2 bg-primary/5 rounded-lg">
+                    <div className="bg-primary/10 p-1.5 rounded-lg flex-shrink-0">
+                      <Icon name="Cog" className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xs mb-0.5">Обработка на ЧПУ</h4>
+                      <p className="text-[10px] text-muted-foreground">Высокоточная обработка на станках с программным управлением</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2 p-2 bg-primary/5 rounded-lg">
+                    <div className="bg-primary/10 p-1.5 rounded-lg flex-shrink-0">
+                      <Icon name="Scale" className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xs mb-0.5">Балансировка</h4>
+                      <p className="text-[10px] text-muted-foreground">Тщательная проверка на специализированном оборудовании</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2 p-2 bg-primary/5 rounded-lg">
+                    <div className="bg-primary/10 p-1.5 rounded-lg flex-shrink-0">
+                      <Icon name="Flame" className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xs mb-0.5">Термообработка</h4>
+                      <p className="text-[10px] text-muted-foreground">Упрочнение металла для долговечности соединения</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2 p-2 bg-primary/5 rounded-lg">
+                    <div className="bg-primary/10 p-1.5 rounded-lg flex-shrink-0">
+                      <Icon name="Sparkles" className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xs mb-0.5">Финишная мойка</h4>
+                      <p className="text-[10px] text-muted-foreground">Детальная очистка для внешнего вида новой детали</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             <div className="grid grid-cols-3 gap-1.5 md:gap-2">
               <Card className="text-center p-1.5 md:p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
