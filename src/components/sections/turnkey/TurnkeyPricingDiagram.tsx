@@ -73,7 +73,7 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
                 </div>
               </div>
             <div className="space-y-3 md:space-y-4">
-            <div className={`space-y-1.5 md:space-y-2 animate-in slide-in-from-left duration-700 relative transition-all duration-300 ${activeTooltip === 1 ? 'z-20' : 'z-0'}`}>
+            <div className={`space-y-1.5 md:space-y-2 relative transition-all duration-300 ${activeTooltip === 1 ? 'z-20' : 'z-0'}`}>
               <div className="flex items-center justify-between text-[10px] md:text-xs mb-1">
                 <span className="font-semibold">Hyundai/Kia АКПП</span>
                 <span className="text-green-600 font-bold">-68 000 ₽</span>
@@ -82,10 +82,10 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
                 className="flex gap-2 items-center relative"
                 onClick={() => setActiveTooltip(activeTooltip === 1 ? null : 1)}
               >
-                <div className="flex-1 bg-red-100 rounded-full h-5 md:h-6 flex items-center px-2 md:px-3 text-[10px] md:text-xs font-semibold text-red-700 transition-all duration-1000 ease-out hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '43.4%'}}>
+                <div className="flex-1 bg-red-100 rounded-full h-5 md:h-6 flex items-center px-2 md:px-3 text-[10px] md:text-xs font-semibold text-red-700 hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '43.4%'}}>
                   138 000 ₽ новая
                 </div>
-                <div className="flex-1 bg-green-100 rounded-full h-5 md:h-6 flex items-center px-2 md:px-3 text-[10px] md:text-xs font-semibold text-green-700 transition-all duration-1000 ease-out delay-200 hover:bg-green-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '22%'}}>
+                <div className="flex-1 bg-green-100 rounded-full h-5 md:h-6 flex items-center px-2 md:px-3 text-[10px] md:text-xs font-semibold text-green-700 hover:bg-green-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '22%'}}>
                   69 990 ₽ восст.
                 </div>
               </div>
@@ -102,7 +102,7 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
               )}
             </div>
             
-            <div className={`space-y-2 animate-in slide-in-from-left duration-700 delay-150 relative transition-all duration-300 ${activeTooltip === 2 ? 'z-20' : 'z-0'}`}>
+            <div className={`space-y-2 relative transition-all duration-300 ${activeTooltip === 2 ? 'z-20' : 'z-0'}`}>
               <div className="flex items-center justify-between text-xs mb-1">
                 <span className="font-semibold">Hyundai/Kia МКПП</span>
                 <span className="text-green-600 font-bold">-168 000 ₽</span>
@@ -111,10 +111,10 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
                 className="flex gap-2 items-center relative"
                 onClick={() => setActiveTooltip(activeTooltip === 2 ? null : 2)}
               >
-                <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700 transition-all duration-1000 ease-out delay-150 hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '78%'}}>
+                <div className="flex-1 bg-red-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-red-700 hover:bg-red-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '78%'}}>
                   248 000 ₽ новая
                 </div>
-                <div className="flex-1 bg-green-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-green-700 transition-all duration-1000 ease-out delay-300 hover:bg-green-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '25%'}}>
+                <div className="flex-1 bg-green-100 rounded-full h-6 flex items-center px-3 text-xs font-semibold text-green-700 hover:bg-green-200 hover:scale-105 hover:shadow-md cursor-pointer" style={{width: '25%'}}>
                   79 990 ₽ восст.
                 </div>
               </div>
@@ -131,7 +131,7 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
               )}
             </div>
             
-            <div className={`space-y-2 animate-in slide-in-from-left duration-700 delay-300 relative transition-all duration-300 ${activeTooltip === 3 ? 'z-20' : 'z-0'}`}>
+            <div className={`space-y-2 relative transition-all duration-300 ${activeTooltip === 3 ? 'z-20' : 'z-0'}`}>
               <div className="flex items-center justify-between text-xs mb-1">
                 <span className="font-semibold">Volkswagen Tiguan</span>
                 <span className="text-green-600 font-bold">-203 000 ₽</span>
