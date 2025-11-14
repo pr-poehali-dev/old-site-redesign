@@ -334,15 +334,15 @@ export const AboutAndAdvantagesSection = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-12 bg-gradient-to-b from-background to-muted/30">
+      <section id="faq" className="py-8 bg-gradient-to-b from-background to-muted/30">
         <div className="container">
-          <div className="text-center space-y-2 mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold">Частые вопросы</h2>
-            <p className="text-muted-foreground text-lg">Ответы на популярные вопросы о восстановлении</p>
+          <div className="text-center space-y-1 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Частые вопросы</h2>
+            <p className="text-muted-foreground text-sm">Ответы на популярные вопросы о восстановлении</p>
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
                 { q: 'Как понять, что шлицы изношены?', a: 'Вибрация при разгоне, стук при трогании, рывки при переключении передач, гул со стороны раздатки.', icon: 'TriangleAlert' },
                 { q: 'Сколько времени занимает восстановление?', a: 'От 1 до 5 рабочих дней. Обычно справляемся за 2 дня.', icon: 'Clock' },
@@ -351,20 +351,20 @@ export const AboutAndAdvantagesSection = () => {
                 { q: 'Нужно ли снимать детали самостоятельно?', a: 'Работаем с уже снятыми деталями. Привезите к нам или отправьте через СДЭК.', icon: 'Truck' },
                 { q: 'Работаете со всеми марками?', a: 'Восстанавливаем шлицы на всех полноприводных моделях.', icon: 'Car' },
               ].map((faq, index) => (
-                <Card key={index} className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 hover:border-primary/50 bg-gradient-to-br from-card to-card/50 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: `${index * 100}ms` }}>
-                  <CardHeader>
-                    <div className="relative mx-auto mb-3">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto shadow-lg">
-                        <Icon name={faq.icon} className="h-9 w-9 text-primary" />
+                <Card key={index} className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: `${index * 100}ms` }}>
+                  <CardHeader className="pb-2 pt-3">
+                    <div className="relative mx-auto mb-2">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto">
+                        <Icon name={faq.icon} className="h-6 w-6 text-primary" />
                       </div>
-                      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm shadow-md">
+                      <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center font-bold text-xs">
                         {index + 1}
                       </div>
                     </div>
-                    <CardTitle className="text-lg mb-2">{faq.q}</CardTitle>
+                    <CardTitle className="text-sm mb-1">{faq.q}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+                  <CardContent className="pt-0 pb-3">
+                    <p className="text-xs text-muted-foreground leading-relaxed">{faq.a}</p>
                   </CardContent>
                 </Card>
               ))}
