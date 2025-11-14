@@ -102,30 +102,6 @@ export const AboutAndAdvantagesSection = () => {
                 </div>
               </CardContent>
             </Card>
-
-            <div className="grid grid-cols-3 gap-1.5 md:gap-2">
-              <Card className="text-center p-1.5 md:p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
-                  <Icon name="Award" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
-                </div>
-                <h3 className="text-xs md:text-sm font-bold mb-0.5">3+ лет</h3>
-                <p className="text-[9px] md:text-[10px] text-muted-foreground">опыта работы</p>
-              </Card>
-              <Card className="text-center p-1.5 md:p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
-                  <Icon name="Car" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
-                </div>
-                <h3 className="text-xs md:text-sm font-bold mb-0.5">3000+</h3>
-                <p className="text-[9px] md:text-[10px] text-muted-foreground">восстановленных деталей</p>
-              </Card>
-              <Card className="text-center p-1.5 md:p-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-1">
-                  <Icon name="Shield" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
-                </div>
-                <h3 className="text-xs md:text-sm font-bold mb-0.5">Гарантия</h3>
-                <p className="text-[9px] md:text-[10px] text-muted-foreground">18 месяцев без ограничения пробега</p>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
