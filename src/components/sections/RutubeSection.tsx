@@ -14,7 +14,7 @@ export const RutubeSection = () => {
           <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
             <div className="relative" style={{ paddingBottom: '56.25%' }}>
               <iframe
-                src="https://rutube.ru/play/embed/d8e3c8f4e8a5e3f4c8e3c8f4e8a5e3f4/"
+                src="https://rutube.ru/play/embed/5a6ae8d4fe853385c5407283678149ed/"
                 frameBorder="0"
                 allow="clipboard-write; autoplay"
                 allowFullScreen
