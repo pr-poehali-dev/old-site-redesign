@@ -62,6 +62,25 @@ export const ServicesSection = ({
             </p>
           </div>
 
+          <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedCategory(category)}
+                className="text-xs md:text-sm"
+              >
+                {category}
+                {selectedCategory === category && (
+                  <Badge variant="secondary" className="ml-2 bg-primary-foreground/20">
+                    {filteredServices.length}
+                  </Badge>
+                )}
+              </Button>
+            ))}
+          </div>
+
           <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-6xl mx-auto">
             {filteredServices.map((service, index) => (
               <Card 
