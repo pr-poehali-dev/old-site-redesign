@@ -52,28 +52,28 @@ export const ServicesSection = ({
   };
 
   return (
-    <section id="services" className="py-6 md:py-8 bg-muted/30">
+    <section id="services" className="py-4 md:py-6 bg-muted/30">
       <div className="container">
-        <div className="space-y-4 md:space-y-6">
-          <div className="text-center space-y-2">
+        <div className="space-y-3 md:space-y-4">
+          <div className="text-center space-y-1">
             <h2 className="text-xl md:text-3xl font-bold">Наши услуги</h2>
-            <p className="text-muted-foreground text-sm md:text-base">
+            <p className="text-muted-foreground text-xs md:text-sm">
               Полный спектр работ по восстановлению трансмиссии
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-1.5 md:gap-2 max-w-4xl mx-auto">
             {categories.map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedCategory(category)}
-                className="text-xs md:text-sm"
+                className="text-xs h-7 md:h-8"
               >
                 {category}
                 {selectedCategory === category && (
-                  <Badge variant="secondary" className="ml-2 bg-primary-foreground/20">
+                  <Badge variant="secondary" className="ml-1.5 bg-primary-foreground/20 text-xs px-1.5">
                     {filteredServices.length}
                   </Badge>
                 )}
@@ -81,60 +81,58 @@ export const ServicesSection = ({
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-3 md:gap-4 max-w-7xl mx-auto">
             {filteredServices.map((service, index) => (
               <Card 
                 key={service.id} 
-                className="hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border-2 hover:border-primary/50 animate-in fade-in slide-in-from-bottom-4" 
+                className="hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border hover:border-primary/50 animate-in fade-in slide-in-from-bottom-4" 
                 style={{ animationDelay: `${index * 100}ms`, animationDuration: '500ms' }}
                 onClick={() => setSelectedService(service)}
               >
                 {service.image && (
-                  <div className="relative h-48 md:h-56 overflow-hidden bg-gradient-to-br from-muted/50 to-muted">
+                  <div className="relative h-32 md:h-40 overflow-hidden bg-gradient-to-br from-muted/50 to-muted">
                     <img 
                       src={service.image} 
                       alt={service.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     {service.popular && (
-                      <Badge variant="default" className="absolute top-3 right-3 bg-primary text-xs md:text-sm px-2 md:px-3 py-1">
-                        <Icon name="Star" className="h-3 w-3 md:h-3.5 md:w-3.5 mr-1" />
+                      <Badge variant="default" className="absolute top-2 right-2 bg-primary text-[10px] px-1.5 py-0.5">
+                        <Icon name="Star" className="h-2.5 w-2.5 mr-0.5" />
                         Популярно
                       </Badge>
                     )}
                   </div>
                 )}
-                <CardHeader className="pb-3 space-y-2">
-                  <CardTitle className="text-sm md:text-base leading-snug">
+                <CardHeader className="pb-2 pt-2.5 px-3">
+                  <CardTitle className="text-xs md:text-sm leading-tight line-clamp-2">
                     {service.name}
                   </CardTitle>
-                  <p className="text-xs md:text-sm text-muted-foreground line-clamp-2 leading-relaxed">
-                    {service.description}
-                  </p>
                 </CardHeader>
-                <CardContent className="pt-0 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Icon name="Clock" className="h-4 w-4 md:h-4.5 md:w-4.5" />
-                      <span className="text-xs md:text-sm">{service.duration}</span>
+                <CardContent className="pt-0 pb-2.5 px-3 space-y-2">
+                  <div className="flex items-center justify-between text-[10px] md:text-xs">
+                    <div className="flex items-center gap-1 text-muted-foreground">
+                      <Icon name="Clock" className="h-3 w-3" />
+                      <span>{service.duration}</span>
                     </div>
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-xs text-muted-foreground">от</span>
-                      <span className="text-xl md:text-2xl font-bold text-primary">
+                    <div className="flex items-baseline gap-0.5">
+                      <span className="text-[10px] text-muted-foreground">от</span>
+                      <span className="text-base md:text-lg font-bold text-primary">
                         {service.price.toLocaleString('ru-RU')}
                       </span>
-                      <span className="text-sm text-muted-foreground">₽</span>
+                      <span className="text-[10px] text-muted-foreground">₽</span>
                     </div>
                   </div>
                   <Button 
-                    className="w-full" 
+                    size="sm"
+                    className="w-full h-7 text-[10px]" 
                     variant="outline"
                     onClick={(e) => {
                       e.stopPropagation();
                       setSelectedService(service);
                     }}
                   >
-                    <Icon name="Info" className="mr-2 h-4 w-4" />
+                    <Icon name="Info" className="mr-1 h-3 w-3" />
                     Подробнее
                   </Button>
                 </CardContent>
