@@ -56,7 +56,7 @@ export const ServicesSection = ({
   return (
     <section id="services" className="py-6 md:py-8 bg-muted/30">
       <div className="container">
-        <div className="space-y-4 md:space-y-6">
+        <div className="space-y-3 md:space-y-4">
           <div className="text-center space-y-1">
             <h2 className="text-xl md:text-3xl font-bold">Наши услуги</h2>
             <p className="text-muted-foreground text-xs md:text-sm">
@@ -64,7 +64,7 @@ export const ServicesSection = ({
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 max-w-6xl mx-auto">
             {filteredServices.map((service, index) => (
               <Card 
                 key={service.id} 
@@ -73,21 +73,21 @@ export const ServicesSection = ({
                 onClick={() => setSelectedService(service)}
               >
                 {service.image && (
-                  <div className="relative h-48 overflow-hidden bg-white">
+                  <div className="relative h-40 md:h-48 overflow-hidden bg-white">
                     <img 
                       src={service.image} 
                       alt={service.name}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-2"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-1.5 md:p-2"
                     />
-                    <div className="absolute bottom-3 left-3 right-3">
+                    <div className="absolute bottom-2 md:bottom-3 left-2 md:left-3 right-2 md:right-3">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-foreground text-sm bg-background/90 backdrop-blur-sm px-2 py-1 rounded border">
-                          <Icon name="Clock" className="h-3 w-3" />
-                          <span>{service.duration}</span>
+                        <div className="flex items-center gap-1 md:gap-2 text-foreground text-xs md:text-sm bg-background/90 backdrop-blur-sm px-1.5 md:px-2 py-0.5 md:py-1 rounded border">
+                          <Icon name="Clock" className="h-2.5 w-2.5 md:h-3 md:w-3" />
+                          <span className="text-[10px] md:text-xs">{service.duration}</span>
                         </div>
                         {service.popular && (
-                          <Badge variant="default" className="bg-primary/90 backdrop-blur-sm">
-                            <Icon name="Star" className="h-3 w-3 mr-1" />
+                          <Badge variant="default" className="bg-primary/90 backdrop-blur-sm text-[10px] md:text-xs px-1.5 md:px-2 py-0 md:py-0.5">
+                            <Icon name="Star" className="h-2.5 w-2.5 md:h-3 md:w-3 mr-0.5 md:mr-1" />
                             Популярно
                           </Badge>
                         )}
@@ -95,16 +95,16 @@ export const ServicesSection = ({
                     </div>
                   </div>
                 )}
-                <CardHeader className="pb-3 px-4 pt-4">
-                  <CardTitle className="text-sm leading-tight line-clamp-3">
+                <CardHeader className="pb-2 md:pb-3 px-3 md:px-4 pt-3 md:pt-4">
+                  <CardTitle className="text-xs md:text-sm leading-tight line-clamp-3">
                     {service.name}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-0 px-4 pb-4">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-xs text-muted-foreground">от</span>
-                    <span className="text-2xl font-bold text-primary">{service.price.toLocaleString('ru-RU')}</span>
-                    <span className="text-sm text-muted-foreground">₽</span>
+                <CardContent className="pt-0 px-3 md:px-4 pb-3 md:pb-4">
+                  <div className="flex items-baseline gap-0.5 md:gap-1">
+                    <span className="text-[10px] md:text-xs text-muted-foreground">от</span>
+                    <span className="text-xl md:text-2xl font-bold text-primary">{service.price.toLocaleString('ru-RU')}</span>
+                    <span className="text-xs md:text-sm text-muted-foreground">₽</span>
                   </div>
                 </CardContent>
               </Card>
@@ -112,9 +112,9 @@ export const ServicesSection = ({
           </div>
 
           {filteredServices.length === 0 && (
-            <div className="text-center py-12 text-muted-foreground">
-              <Icon name="Search" className="h-12 w-12 mx-auto mb-3 opacity-50" />
-              <p>Услуги не найдены</p>
+            <div className="text-center py-8 md:py-12 text-muted-foreground">
+              <Icon name="Search" className="h-10 w-10 md:h-12 md:w-12 mx-auto mb-2 md:mb-3 opacity-50" />
+              <p className="text-sm md:text-base">Услуги не найдены</p>
             </div>
           )}
         </div>
