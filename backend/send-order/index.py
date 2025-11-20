@@ -38,14 +38,29 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
             'isBase64Encoded': False
         }
     
-    body_data = json.loads(event.get('body', '{}'))
+    try:
+        body_data = json.loads(event.get('body', '{}'))
+    except json.JSONDecodeError as e:
+        print(f"JSON decode error: {str(e)}")
+        return {
+            'statusCode': 400,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            'body': json.dumps({'error': 'Invalid JSON in request body'}),
+            'isBase64Encoded': False
+        }
     
     name = body_data.get('name', '').strip()
     phone = body_data.get('phone', '').strip()
     detail = body_data.get('detail', '').strip()
     message = body_data.get('message', '').strip()
     
+    print(f"Received form data: name={name}, phone={phone}, detail={detail}")
+    
     if not name or not phone:
+        print("Validation failed: name or phone missing")
         return {
             'statusCode': 400,
             'headers': {
@@ -60,6 +75,20 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     smtp_port = int(os.environ.get('SMTP_PORT', '587'))
     smtp_user = os.environ.get('SMTP_USER')
     smtp_password = os.environ.get('SMTP_PASSWORD')
+    
+    print(f"SMTP config: host={smtp_host}, port={smtp_port}, user={smtp_user}, password={'***' if smtp_password else 'NOT SET'}")
+    
+    if not smtp_user or not smtp_password:
+        print("ERROR: SMTP credentials not configured")
+        return {
+            'statusCode': 500,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            'body': json.dumps({'error': 'SMTP credentials not configured'}),
+            'isBase64Encoded': False
+        }
     
     email_body = f"""
     <html>
@@ -96,12 +125,30 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     msg.attach(html_part)
     
     try:
+        print(f"Connecting to SMTP server {smtp_host}:{smtp_port}")
         server = smtplib.SMTP(smtp_host, smtp_port, timeout=30)
+        print("Starting TLS")
         server.starttls()
+        print("Logging in")
         server.login(smtp_user, smtp_password)
+        print("Sending message")
         server.send_message(msg)
+        print("Closing connection")
         server.quit()
+        print("Email sent successfully")
+    except smtplib.SMTPAuthenticationError as e:
+        print(f"SMTP Authentication Error: {str(e)}")
+        return {
+            'statusCode': 500,
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            'body': json.dumps({'error': 'Email authentication failed. Check SMTP credentials.'}),
+            'isBase64Encoded': False
+        }
     except Exception as e:
+        print(f"Error sending email: {str(e)}")
         return {
             'statusCode': 500,
             'headers': {
