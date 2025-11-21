@@ -56,23 +56,8 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
                 'body': json.dumps({'error': 'Name and phone are required'})
             }
         
-        smtp_user = os.environ.get('SMTP_USER', '').strip()
-        smtp_password = os.environ.get('SMTP_PASSWORD', '').strip()
-        
-        print(f'DEBUG: SMTP_USER exists: {bool(smtp_user)}, SMTP_PASSWORD exists: {bool(smtp_password)}')
-        
-        if not smtp_user or not smtp_password:
-            return {
-                'statusCode': 500,
-                'headers': {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*'
-                },
-                'body': json.dumps({
-                    'error': 'Email configuration missing',
-                    'details': f'Please add SMTP_USER and SMTP_PASSWORD secrets. Current: user={bool(smtp_user)}, pass={bool(smtp_password)}'
-                })
-            }
+        smtp_user = os.environ.get('SMTP_USER', 'megashlic@yandex.ru').strip()
+        smtp_password = os.environ.get('SMTP_PASSWORD', 'towjicbapblkfhen').strip()
         
         msg = MIMEMultipart('alternative')
         msg['From'] = smtp_user
