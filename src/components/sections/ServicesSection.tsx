@@ -26,6 +26,7 @@ interface ServicesSectionProps {
   popularFilter: string;
   setPopularFilter: (value: string) => void;
   filteredServices: Service[];
+  onFormOpen: () => void;
 }
 
 export const ServicesSection = ({
@@ -38,21 +39,15 @@ export const ServicesSection = ({
   popularFilter,
   setPopularFilter,
   filteredServices,
+  onFormOpen,
 }: ServicesSectionProps) => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
-  const scrollToForm = () => {
+  const handleFormOpen = () => {
     setSelectedService(null);
     setTimeout(() => {
-      const element = document.getElementById('contacts');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        element.classList.add('highlight-pulse');
-        setTimeout(() => {
-          element.classList.remove('highlight-pulse');
-        }, 2000);
-      }
-    }, 300);
+      onFormOpen();
+    }, 100);
   };
 
   return (
@@ -167,7 +162,7 @@ export const ServicesSection = ({
               variant="outline" 
               className="w-full" 
               size="lg"
-              onClick={scrollToForm}
+              onClick={handleFormOpen}
             >
               <Icon name="Send" className="mr-2 h-5 w-5" />
               Оставить заявку
