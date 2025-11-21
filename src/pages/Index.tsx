@@ -133,12 +133,18 @@ const Index = () => {
     setFormStatus('sending');
 
     try {
-      const response = await fetch('https://functions.poehali.dev/fd96c7e7-0adf-485f-a51a-abcd609b660d', {
+      const response = await fetch('https://functions.poehali.dev/9b6ada36-da84-4729-b828-3e41115b8136', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          type: 'Полная заявка',
+          name: formData.name,
+          phone: formData.phone,
+          detail: formData.detail,
+          message: formData.message,
+        }),
       });
 
       if (response.ok) {
@@ -165,14 +171,16 @@ const Index = () => {
     setQuickFormStatus('sending');
 
     try {
-      const response = await fetch('https://functions.poehali.dev/fd96c7e7-0adf-485f-a51a-abcd609b660d', {
+      const response = await fetch('https://functions.poehali.dev/9b6ada36-da84-4729-b828-3e41115b8136', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...quickFormData,
-          detail: 'Быстрая консультация',
+          type: 'Быстрая консультация',
+          name: quickFormData.name,
+          phone: quickFormData.phone,
+          detail: '',
           message: 'Запрос на консультацию из шапки сайта'
         }),
       });

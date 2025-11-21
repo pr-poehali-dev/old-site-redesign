@@ -1,0 +1,53 @@
+{
+  "tests": [
+    {
+      "name": "Test quick consultation form",
+      "method": "POST",
+      "body": {
+        "type": "Быстрая консультация",
+        "name": "Иван Петров",
+        "phone": "+7 (920) 252-03-52"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "message": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test full form with all fields",
+      "method": "POST",
+      "body": {
+        "type": "Полная заявка",
+        "name": "Сергей Иванов",
+        "phone": "+7 (831) 260-11-23",
+        "detail": "Вал раздатки Hyundai Santa Fe",
+        "message": "Требуется восстановление шлицев"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test missing required fields",
+      "method": "POST",
+      "body": {
+        "type": "Test",
+        "name": ""
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test OPTIONS for CORS",
+      "method": "OPTIONS",
+      "expectedStatus": 200
+    }
+  ]
+}
