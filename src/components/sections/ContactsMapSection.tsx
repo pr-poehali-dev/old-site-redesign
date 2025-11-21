@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -69,6 +69,25 @@ export const ContactsMapSection = () => {
     setPreviewIndex(newIndex);
     setPreviewImage(URL.createObjectURL(selectedFiles[newIndex]));
   };
+
+  useEffect(() => {
+    if (!previewImage || selectedFiles.length <= 1) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        navigatePreview('prev');
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        navigatePreview('next');
+      } else if (e.key === 'Escape') {
+        setPreviewImage(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [previewImage, previewIndex, selectedFiles.length]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
