@@ -103,7 +103,11 @@ export const ContactsSection = ({
                 </div>
 
                 <Button type="submit" className="w-full" size="lg" disabled={formStatus === 'sending'}>
-                  <Icon name="Send" className="mr-2 h-5 w-5" />
+                  {formStatus === 'sending' ? (
+                    <Icon name="Loader2" className="mr-2 h-5 w-5 animate-spin" />
+                  ) : (
+                    <Icon name="Send" className="mr-2 h-5 w-5" />
+                  )}
                   {formStatus === 'sending' ? 'Отправка...' : 'Отправить заявку'}
                 </Button>
 

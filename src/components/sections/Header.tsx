@@ -132,7 +132,14 @@ export const Header = ({
                     disabled={quickFormStatus === 'sending'}
                   />
                   <Button type="submit" className="w-full" disabled={quickFormStatus === 'sending'}>
-                    {quickFormStatus === 'sending' ? 'Отправка...' : 'Перезвоните мне'}
+                    {quickFormStatus === 'sending' ? (
+                      <>
+                        <Icon name="Loader2" className="mr-2 h-4 w-4 animate-spin" />
+                        Отправка...
+                      </>
+                    ) : (
+                      'Перезвоните мне'
+                    )}
                   </Button>
                 </form>
               </CardContent>
@@ -243,7 +250,11 @@ export const Header = ({
             </div>
 
             <Button type="submit" className="w-full" size="lg" disabled={formStatus === 'sending'}>
-              <Icon name="Send" className="mr-2 h-5 w-5" />
+              {formStatus === 'sending' ? (
+                <Icon name="Loader2" className="mr-2 h-5 w-5 animate-spin" />
+              ) : (
+                <Icon name="Send" className="mr-2 h-5 w-5" />
+              )}
               {formStatus === 'sending' ? 'Отправка...' : 'Отправить заявку'}
             </Button>
 
