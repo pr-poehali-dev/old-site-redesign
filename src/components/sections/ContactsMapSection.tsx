@@ -262,8 +262,7 @@ export const ContactsMapSection = () => {
                 </Button>
                 <Button 
                   size="lg"
-                  variant="outline"
-                  className="w-full"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white"
                   onClick={() => setFormOpen(true)}
                 >
                   <Icon name="Mail" className="mr-2 h-5 w-5" />
