@@ -52,7 +52,7 @@ export const ServicesSection = ({
   };
 
   return (
-    <section id="services" className="py-4 md:py-6 bg-muted/30">
+    <section id="services" className="py-6 md:py-8 bg-muted/30">
       <div className="container">
         <div className="text-center space-y-2 mb-6">
           <h2 className="text-2xl md:text-3xl font-bold">Наши услуги</h2>

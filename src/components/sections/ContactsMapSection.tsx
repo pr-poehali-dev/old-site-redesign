@@ -183,7 +183,7 @@ export const ContactsMapSection = () => {
   };
 
   return (
-    <section id="contacts" className="py-8 md:py-12 bg-muted/30">
+    <section id="contacts" className="py-6 md:py-8 bg-muted/30">
       <div className="container">
         <div className="text-center space-y-2 mb-6">
           <h2 className="text-2xl md:text-3xl font-bold">Контакты</h2>
