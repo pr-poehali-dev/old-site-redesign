@@ -102,6 +102,8 @@
     font-family: "Open Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    line-height: 1.7;
+    font-size: 16px;
   }
 
   h1,
@@ -111,6 +113,11 @@
   h5,
   h6 {
     font-family: "Montserrat", sans-serif;
+    line-height: 1.4;
+  }
+
+  p {
+    line-height: 1.8;
   }
 
   img {
