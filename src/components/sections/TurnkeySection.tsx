@@ -56,72 +56,100 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
             </Card>
           </div>
 
-          <Card className="border-2">
-            <CardContent className="p-4 md:p-6">
-              <h3 className="text-lg md:text-xl font-bold mb-4 text-center">Что входит в ремонт под ключ?</h3>
-              <div className="grid md:grid-cols-2 gap-3">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary font-bold text-sm">1</span>
+          <div>
+            <h3 className="text-lg md:text-xl font-bold mb-4 text-center">Что входит в ремонт под ключ?</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+              <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '0ms' }}>
+                <CardContent className="p-3 pt-3 pb-3">
+                  <div className="relative mx-auto mb-2">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto">
+                      <Icon name="Search" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
+                      1
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-sm mb-1">Диагностика</h4>
-                    <p className="text-xs text-muted-foreground">Полная проверка трансмиссии и раздаточной коробки</p>
-                  </div>
-                </div>
+                  <h4 className="font-bold text-sm mb-1">Диагностика</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Полная проверка трансмиссии и раздаточной коробки</p>
+                </CardContent>
+              </Card>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary font-bold text-sm">2</span>
+              <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '100ms' }}>
+                <CardContent className="p-3 pt-3 pb-3">
+                  <div className="relative mx-auto mb-2">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto">
+                      <Icon name="Wrench" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
+                      2
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-sm mb-1">Демонтаж</h4>
-                    <p className="text-xs text-muted-foreground">Снятие неисправных узлов и деталей</p>
-                  </div>
-                </div>
+                  <h4 className="font-bold text-sm mb-1">Демонтаж</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Снятие неисправных узлов и деталей</p>
+                </CardContent>
+              </Card>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary font-bold text-sm">3</span>
+              <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '200ms' }}>
+                <CardContent className="p-3 pt-3 pb-3">
+                  <div className="relative mx-auto mb-2">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto">
+                      <Icon name="Settings" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
+                      3
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-sm mb-1">Восстановление</h4>
-                    <p className="text-xs text-muted-foreground">Ремонт шлицев по запатентованной технологии</p>
-                  </div>
-                </div>
+                  <h4 className="font-bold text-sm mb-1">Восстановление</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Ремонт шлицев по запатентованной технологии</p>
+                </CardContent>
+              </Card>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary font-bold text-sm">4</span>
+              <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '300ms' }}>
+                <CardContent className="p-3 pt-3 pb-3">
+                  <div className="relative mx-auto mb-2">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto">
+                      <Icon name="Droplet" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
+                      4
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-sm mb-1">Замена расходников</h4>
-                    <p className="text-xs text-muted-foreground">Новые сальники, фильтр и масло</p>
-                  </div>
-                </div>
+                  <h4 className="font-bold text-sm mb-1">Замена расходников</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Новые сальники, фильтр и масло</p>
+                </CardContent>
+              </Card>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary font-bold text-sm">5</span>
+              <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '400ms' }}>
+                <CardContent className="p-3 pt-3 pb-3">
+                  <div className="relative mx-auto mb-2">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto">
+                      <Icon name="Package" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
+                      5
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-sm mb-1">Установка</h4>
-                    <p className="text-xs text-muted-foreground">Монтаж восстановленных деталей</p>
-                  </div>
-                </div>
+                  <h4 className="font-bold text-sm mb-1">Установка</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Монтаж восстановленных деталей</p>
+                </CardContent>
+              </Card>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary font-bold text-sm">6</span>
+              <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '500ms' }}>
+                <CardContent className="p-3 pt-3 pb-3">
+                  <div className="relative mx-auto mb-2">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto">
+                      <Icon name="CheckCircle" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
+                      6
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-sm mb-1">Тест-драйв</h4>
-                    <p className="text-xs text-muted-foreground">Проверка работы полного привода</p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+                  <h4 className="font-bold text-sm mb-1">Тест-драйв</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Проверка работы полного привода</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
 
           <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-background">
             <CardContent className="p-4 md:p-6 text-center space-y-3">
