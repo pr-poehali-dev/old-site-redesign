@@ -45,11 +45,23 @@ export const ContactsMapSection = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const files = Array.from(e.target.files).slice(0, 5);
+      const oversizedFiles: string[] = [];
       const validFiles = files.filter(file => {
         const isImage = file.type.startsWith('image/');
         const isUnder10MB = file.size <= 10 * 1024 * 1024;
+        
+        if (isImage && !isUnder10MB) {
+          const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
+          oversizedFiles.push(`${file.name} (${sizeMB} МБ)`);
+        }
+        
         return isImage && isUnder10MB;
       });
+      
+      if (oversizedFiles.length > 0) {
+        alert(`⚠️ Следующие файлы слишком большие (макс. 10 МБ):\n\n${oversizedFiles.join('\n')}`);
+      }
+      
       setSelectedFiles(validFiles);
     }
   };
@@ -92,6 +104,15 @@ export const ContactsMapSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const totalSize = selectedFiles.reduce((sum, file) => sum + file.size, 0);
+    const totalSizeMB = (totalSize / (1024 * 1024)).toFixed(1);
+    
+    if (totalSize > 50 * 1024 * 1024) {
+      alert(`⚠️ Общий размер файлов слишком большой: ${totalSizeMB} МБ\nМаксимум: 50 МБ`);
+      return;
+    }
+    
     setFormStatus('sending');
     setUploadingPhotos(true);
     setUploadProgress(selectedFiles.map(() => 0));
@@ -99,7 +120,11 @@ export const ContactsMapSection = () => {
     const TELEGRAM_BOT_TOKEN = '7788513036:AAGqjdHnrPZNQfKkrO7DXvzwWgldbxhpXP4';
     const TELEGRAM_CHAT_ID = '1312732538';
 
-    const message = `🔔 Новая заявка с сайта!\n\n👤 Имя: ${formData.name}\n📞 Телефон: ${formData.phone}\n💬 Сообщение: ${formData.message || 'Не указано'}`;
+    let message = `🔔 Новая заявка с сайта!\n\n👤 Имя: ${formData.name}\n📞 Телефон: ${formData.phone}\n💬 Сообщение: ${formData.message || 'Не указано'}`;
+    
+    if (selectedFiles.length > 0) {
+      message += `\n📎 Прикреплено фото: ${selectedFiles.length} шт.`;
+    }
 
     try {
       await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
@@ -111,33 +136,6 @@ export const ContactsMapSection = () => {
           parse_mode: 'HTML'
         })
       });
-
-      if (selectedFiles.length > 0) {
-        for (let i = 0; i < selectedFiles.length; i++) {
-          const file = selectedFiles[i];
-          const formDataPhoto = new FormData();
-          formDataPhoto.append('chat_id', TELEGRAM_CHAT_ID);
-          formDataPhoto.append('photo', file);
-          formDataPhoto.append('caption', `📎 Фото ${i + 1}/${selectedFiles.length} от ${formData.name}`);
-
-          setUploadProgress(prev => {
-            const newProgress = [...prev];
-            newProgress[i] = 50;
-            return newProgress;
-          });
-
-          await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, {
-            method: 'POST',
-            body: formDataPhoto
-          });
-
-          setUploadProgress(prev => {
-            const newProgress = [...prev];
-            newProgress[i] = 100;
-            return newProgress;
-          });
-        }
-      }
 
       setFormStatus('success');
       setFormData({ name: '', phone: '', message: '' });
@@ -319,43 +317,25 @@ export const ContactsMapSection = () => {
                 className="cursor-pointer"
               />
               {selectedFiles.length > 0 && (
-                <div className="mt-3 grid grid-cols-2 gap-2">
-                  {selectedFiles.map((file, index) => {
-                    const imageUrl = URL.createObjectURL(file);
-                    const progress = uploadProgress[index] || 0;
-                    const isUploading = formStatus === 'sending' && progress > 0 && progress < 100;
-                    const isUploaded = progress === 100;
-                    
-                    return (
-                      <div key={index} className="relative group">
-                        <div 
-                          className="aspect-square rounded-lg overflow-hidden border-2 border-muted bg-muted cursor-pointer hover:border-primary transition-colors"
-                          onClick={() => !isUploading && openPreview(index)}
-                        >
-                          <img
-                            src={imageUrl}
-                            alt={`Preview ${index + 1}`}
-                            className={`w-full h-full object-cover transition-all duration-300 ${
-                              isUploading ? 'opacity-50' : 'hover:scale-105'
-                            }`}
-                          />
+                <div className="mt-3 space-y-2">
+                  <div className="grid grid-cols-2 gap-2">
+                    {selectedFiles.map((file, index) => {
+                      const imageUrl = URL.createObjectURL(file);
+                      const fileSizeMB = (file.size / (1024 * 1024)).toFixed(1);
+                      
+                      return (
+                        <div key={index} className="relative group">
+                          <div 
+                            className="aspect-square rounded-lg overflow-hidden border-2 border-muted bg-muted cursor-pointer hover:border-primary transition-colors"
+                            onClick={() => openPreview(index)}
+                          >
+                            <img
+                              src={imageUrl}
+                              alt={`Preview ${index + 1}`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
                           
-                          {isUploading && (
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-                              <Icon name="Loader2" className="h-8 w-8 text-white animate-spin" />
-                            </div>
-                          )}
-                          
-                          {isUploaded && (
-                            <div className="absolute inset-0 flex items-center justify-center bg-green-500/20 pointer-events-none">
-                              <div className="bg-green-500 rounded-full p-2">
-                                <Icon name="Check" className="h-6 w-6 text-white" />
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                        
-                        {!isUploading && !isUploaded && (
                           <Button
                             type="button"
                             variant="destructive"
@@ -369,14 +349,18 @@ export const ContactsMapSection = () => {
                           >
                             <Icon name="X" className="h-4 w-4" />
                           </Button>
-                        )}
-                        
-                        <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs p-1 truncate pointer-events-none">
-                          {isUploading ? 'Загрузка...' : isUploaded ? '✓ Загружено' : file.name}
+                          
+                          <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs p-1 pointer-events-none">
+                            <div className="truncate">{file.name}</div>
+                            <div className="text-[10px] text-white/70">{fileSizeMB} МБ</div>
+                          </div>
                         </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
+                  <div className="text-xs text-muted-foreground text-center">
+                    {selectedFiles.length} {selectedFiles.length === 1 ? 'файл' : 'файла'} • {(selectedFiles.reduce((sum, f) => sum + f.size, 0) / (1024 * 1024)).toFixed(1)} МБ / 50 МБ
+                  </div>
                 </div>
               )}
             </div>
@@ -390,7 +374,7 @@ export const ContactsMapSection = () => {
               {formStatus === 'sending' ? (
                 <>
                   <Icon name="Loader2" className="mr-2 h-5 w-5 animate-spin" />
-                  {uploadingPhotos ? 'Загрузка фото...' : 'Отправка...'}
+                  Отправка...
                 </>
               ) : formStatus === 'success' ? (
                 <>
