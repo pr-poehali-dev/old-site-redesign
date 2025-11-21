@@ -79,6 +79,7 @@ export const ServicesSection = ({
                     <img 
                       src={service.image} 
                       alt={service.name}
+                      loading="lazy"
                       className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     />
                     {service.popular && (

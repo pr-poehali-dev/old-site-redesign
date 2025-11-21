@@ -94,6 +94,7 @@ export const AboutAndAdvantagesSection = () => {
                         <img 
                           src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
                           alt="Патент РФ № 2829377"
+                          loading="lazy"
                           className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>

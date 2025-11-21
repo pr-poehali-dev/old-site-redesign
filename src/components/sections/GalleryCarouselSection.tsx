@@ -41,6 +41,7 @@ export const GalleryCarouselSection = ({ services }: GalleryCarouselSectionProps
                       <img 
                         src={service.image} 
                         alt={service.name}
+                        loading="lazy"
                         className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                       />
                     </div>

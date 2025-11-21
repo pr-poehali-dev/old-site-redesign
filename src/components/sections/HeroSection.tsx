@@ -42,6 +42,7 @@ export const HeroSection = ({ scrollToSection, onConsultClick, onFullFormClick }
             key={image}
             src={image}
             alt="Восстановление шлицевых соединений"
+            loading={index === 0 ? 'eager' : 'lazy'}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             }`}
