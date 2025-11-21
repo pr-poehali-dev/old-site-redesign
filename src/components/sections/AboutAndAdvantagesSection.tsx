@@ -94,20 +94,21 @@ export const AboutAndAdvantagesSection = () => {
                         href="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="block relative overflow-hidden rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 shadow-md cursor-pointer group"
+                        className="block relative overflow-hidden rounded-lg border-4 border-primary/50 hover:border-primary transition-all duration-300 shadow-xl hover:shadow-2xl cursor-pointer group bg-white"
                       >
                         <img 
                           src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
                           alt="Патент РФ № 2829377"
-                          className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-auto min-h-[200px] object-contain group-hover:scale-105 transition-transform duration-500"
+                          loading="eager"
                         />
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center pointer-events-none">
-                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary/90 rounded-full p-3">
-                            <Icon name="ZoomIn" className="h-8 w-8 text-white" />
+                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary rounded-full p-4 shadow-lg">
+                            <Icon name="ZoomIn" className="h-10 w-10 text-white" />
                           </div>
                         </div>
                       </a>
-                      <p className="text-center text-xs text-muted-foreground mt-2 font-medium">Патент РФ № 2829377 — нажмите, чтобы увеличить</p>
+                      <p className="text-center text-sm font-bold text-primary mt-3 bg-primary/10 py-2 px-4 rounded-lg">📜 Патент РФ № 2829377 — нажмите для увеличения</p>
                     </div>
                   </div>
                 </div>
