@@ -10,9 +10,9 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
   return (
     <section id="turnkey" className="py-6 md:py-8 bg-gradient-to-b from-background to-muted/30">
       <div className="container">
-        <div className="text-center space-y-1 mb-4 md:mb-6">
-          <h2 className="text-xl md:text-3xl font-bold">Ремонт под ключ</h2>
-          <p className="text-muted-foreground text-xs md:text-sm">
+        <div className="text-center space-y-2 mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold">Ремонт под ключ</h2>
+          <p className="text-sm md:text-base text-muted-foreground">
             Полный цикл работ — от диагностики до установки восстановленных деталей
           </p>
         </div>
@@ -57,7 +57,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
           </div>
 
           <div>
-            <h3 className="text-lg md:text-xl font-bold mb-4 text-center">Что входит в ремонт под ключ?</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-5 text-center">Что входит в ремонт под ключ?</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
               <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border hover:border-primary/50 bg-gradient-to-br from-card to-card/50 animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: '0ms' }}>
                 <CardContent className="p-3 pt-3 pb-3">
@@ -152,7 +152,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
           </div>
 
           <div>
-            <h3 className="text-lg md:text-xl font-bold mb-4 text-center">Стоимость ремонта под ключ</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-5 text-center">Стоимость ремонта под ключ</h3>
             <div className="grid md:grid-cols-2 gap-3">
               <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50">
                 <CardContent className="p-4 text-center">

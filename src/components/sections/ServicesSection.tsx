@@ -54,9 +54,9 @@ export const ServicesSection = ({
   return (
     <section id="services" className="py-4 md:py-6 bg-muted/30">
       <div className="container">
-        <div className="text-center space-y-1 mb-4 md:mb-6">
-          <h2 className="text-xl md:text-3xl font-bold">Наши услуги</h2>
-          <p className="text-muted-foreground text-xs md:text-sm">
+        <div className="text-center space-y-2 mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold">Наши услуги</h2>
+          <p className="text-sm md:text-base text-muted-foreground">
             Полный спектр работ по восстановлению трансмиссии
           </p>
         </div>

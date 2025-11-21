@@ -8,8 +8,9 @@ export const AboutAndAdvantagesSection = () => {
     <>
       <section id="about" className="py-6 md:py-8 bg-gradient-to-b from-background to-muted/30">
         <div className="container">
-          <div className="text-center space-y-1 mb-4 md:mb-6">
-            <h2 className="text-xl md:text-3xl font-bold">О компании</h2>
+          <div className="text-center space-y-2 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">О компании</h2>
+            <p className="text-sm md:text-base text-muted-foreground">Производство и технологии восстановления</p>
           </div>
 
           <div className="max-w-5xl mx-auto space-y-2 md:space-y-3">
@@ -120,9 +121,9 @@ export const AboutAndAdvantagesSection = () => {
 
       <section id="advantages" className="py-6 md:py-8 bg-gradient-to-b from-muted/30 to-background">
         <div className="container">
-          <div className="text-center space-y-1 mb-4 md:mb-6">
-            <h2 className="text-xl md:text-3xl font-bold">Преимущества нашей технологии</h2>
-            <p className="text-muted-foreground text-xs md:text-sm">Почему восстановление выгоднее покупки новой детали</p>
+          <div className="text-center space-y-2 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Преимущества нашей технологии</h2>
+            <p className="text-sm md:text-base text-muted-foreground">Почему восстановление выгоднее покупки новой детали</p>
           </div>
 
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3">
@@ -187,9 +188,9 @@ export const AboutAndAdvantagesSection = () => {
 
       <section id="process" className="py-6 md:py-8 bg-background">
         <div className="container">
-          <div className="text-center space-y-1 mb-4 md:mb-6">
-            <h2 className="text-xl md:text-3xl font-bold">Как мы работаем по всей России</h2>
-            <p className="text-muted-foreground text-xs md:text-sm">
+          <div className="text-center space-y-2 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Как мы работаем по всей России</h2>
+            <p className="text-sm md:text-base text-muted-foreground">
               Простой и понятный процесс восстановления
             </p>
           </div>
@@ -380,9 +381,9 @@ export const AboutAndAdvantagesSection = () => {
 
       <section id="faq" className="py-6 md:py-8 bg-gradient-to-b from-background to-muted/30">
         <div className="container">
-          <div className="text-center space-y-1 mb-4 md:mb-6">
-            <h2 className="text-xl md:text-3xl font-bold">Частые вопросы</h2>
-            <p className="text-muted-foreground text-xs md:text-sm">Ответы на популярные вопросы о восстановлении</p>
+          <div className="text-center space-y-2 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Частые вопросы</h2>
+            <p className="text-sm md:text-base text-muted-foreground">Ответы на популярные вопросы о восстановлении</p>
           </div>
 
           <div className="max-w-5xl mx-auto">
