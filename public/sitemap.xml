@@ -5,7 +5,7 @@
   <!-- Главная страница -->
   <url>
     <loc>https://megashlic.ru/</loc>
-    <lastmod>2025-01-21</lastmod>
+    <lastmod>2025-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,7 +17,7 @@
   <!-- Раздел Услуги -->
   <url>
     <loc>https://megashlic.ru/#services</loc>
-    <lastmod>2025-01-21</lastmod>
+    <lastmod>2025-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -25,7 +25,7 @@
   <!-- Раздел О компании -->
   <url>
     <loc>https://megashlic.ru/#about</loc>
-    <lastmod>2025-01-21</lastmod>
+    <lastmod>2025-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -33,7 +33,7 @@
   <!-- Раздел Под ключ -->
   <url>
     <loc>https://megashlic.ru/#turnkey</loc>
-    <lastmod>2025-01-21</lastmod>
+    <lastmod>2025-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -41,7 +41,7 @@
   <!-- Раздел Контакты -->
   <url>
     <loc>https://megashlic.ru/#contacts</loc>
-    <lastmod>2025-01-21</lastmod>
+    <lastmod>2025-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
