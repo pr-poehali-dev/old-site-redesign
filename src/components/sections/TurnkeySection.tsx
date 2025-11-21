@@ -155,8 +155,8 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
             <h3 className="text-lg md:text-xl font-bold mb-4 text-center">Стоимость ремонта под ключ</h3>
             <div className="grid md:grid-cols-2 gap-3">
               <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50">
-                <CardContent className="p-4">
-                  <div className="flex items-center gap-3 mb-3">
+                <CardContent className="p-4 text-center">
+                  <div className="flex flex-col items-center gap-2 mb-3">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                       <Icon name="Car" className="h-6 w-6 text-primary" />
                     </div>
@@ -166,7 +166,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <div className="flex items-baseline gap-2">
+                    <div className="flex items-baseline gap-2 justify-center">
                       <span className="text-sm text-muted-foreground">от</span>
                       <span className="text-3xl font-bold text-primary">64990</span>
                       <span className="text-sm text-muted-foreground">₽</span>
@@ -179,8 +179,8 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
               </Card>
 
               <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50">
-                <CardContent className="p-4">
-                  <div className="flex items-center gap-3 mb-3">
+                <CardContent className="p-4 text-center">
+                  <div className="flex flex-col items-center gap-2 mb-3">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                       <Icon name="Car" className="h-6 w-6 text-primary" />
                     </div>
@@ -190,7 +190,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <div className="flex items-baseline gap-2">
+                    <div className="flex items-baseline gap-2 justify-center">
                       <span className="text-sm text-muted-foreground">от</span>
                       <span className="text-3xl font-bold text-primary">94990</span>
                       <span className="text-sm text-muted-foreground">₽</span>
