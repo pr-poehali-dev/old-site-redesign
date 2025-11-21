@@ -9,6 +9,8 @@ export const ContactsMapSection = () => {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [formOpen, setFormOpen] = useState(false);
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [uploadingPhotos, setUploadingPhotos] = useState(false);
 
   const formatPhoneNumber = (value: string) => {
     const cleaned = value.replace(/\D/g, '');
@@ -37,9 +39,21 @@ export const ContactsMapSection = () => {
     setFormData({ ...formData, phone: formatted });
   };
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      const files = Array.from(e.target.files).slice(0, 5);
+      setSelectedFiles(files);
+    }
+  };
+
+  const removeFile = (index: number) => {
+    setSelectedFiles(prev => prev.filter((_, i) => i !== index));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('sending');
+    setUploadingPhotos(true);
 
     const TELEGRAM_BOT_TOKEN = '7788513036:AAGqjdHnrPZNQfKkrO7DXvzwWgldbxhpXP4';
     const TELEGRAM_CHAT_ID = '1312732538';
@@ -47,7 +61,7 @@ export const ContactsMapSection = () => {
     const message = `🔔 Новая заявка с сайта!\n\n👤 Имя: ${formData.name}\n📞 Телефон: ${formData.phone}\n💬 Сообщение: ${formData.message || 'Не указано'}`;
 
     try {
-      const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -57,19 +71,31 @@ export const ContactsMapSection = () => {
         })
       });
 
-      if (response.ok) {
-        setFormStatus('success');
-        setFormData({ name: '', phone: '', message: '' });
-        setTimeout(() => {
-          setFormStatus('idle');
-          setFormOpen(false);
-        }, 3000);
-      } else {
-        setFormStatus('error');
-        setTimeout(() => setFormStatus('idle'), 5000);
+      if (selectedFiles.length > 0) {
+        for (const file of selectedFiles) {
+          const formDataPhoto = new FormData();
+          formDataPhoto.append('chat_id', TELEGRAM_CHAT_ID);
+          formDataPhoto.append('photo', file);
+          formDataPhoto.append('caption', `📎 Фото от ${formData.name}`);
+
+          await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, {
+            method: 'POST',
+            body: formDataPhoto
+          });
+        }
       }
+
+      setFormStatus('success');
+      setFormData({ name: '', phone: '', message: '' });
+      setSelectedFiles([]);
+      setUploadingPhotos(false);
+      setTimeout(() => {
+        setFormStatus('idle');
+        setFormOpen(false);
+      }, 3000);
     } catch {
       setFormStatus('error');
+      setUploadingPhotos(false);
       setTimeout(() => setFormStatus('idle'), 5000);
     }
   };
@@ -223,6 +249,41 @@ export const ContactsMapSection = () => {
               disabled={formStatus === 'sending'}
               rows={4}
             />
+            
+            <div>
+              <label className="block text-sm font-medium mb-2">
+                📷 Прикрепить фото (до 5 штук)
+              </label>
+              <Input
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={handleFileChange}
+                disabled={formStatus === 'sending'}
+                className="cursor-pointer"
+              />
+              {selectedFiles.length > 0 && (
+                <div className="mt-3 space-y-2">
+                  {selectedFiles.map((file, index) => (
+                    <div key={index} className="flex items-center gap-2 p-2 bg-muted rounded-lg">
+                      <Icon name="Image" className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="text-sm flex-1 truncate">{file.name}</span>
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => removeFile(index)}
+                        disabled={formStatus === 'sending'}
+                        className="h-6 w-6 p-0"
+                      >
+                        <Icon name="X" className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Button 
               type="submit" 
               className="w-full" 
@@ -232,7 +293,7 @@ export const ContactsMapSection = () => {
               {formStatus === 'sending' ? (
                 <>
                   <Icon name="Loader2" className="mr-2 h-5 w-5 animate-spin" />
-                  Отправка...
+                  {uploadingPhotos ? 'Загрузка фото...' : 'Отправка...'}
                 </>
               ) : formStatus === 'success' ? (
                 <>
