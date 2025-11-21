@@ -12,6 +12,7 @@ export const ContactsMapSection = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [uploadingPhotos, setUploadingPhotos] = useState(false);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [previewIndex, setPreviewIndex] = useState<number>(0);
 
   const formatPhoneNumber = (value: string) => {
     const cleaned = value.replace(/\D/g, '');
@@ -54,6 +55,19 @@ export const ContactsMapSection = () => {
 
   const removeFile = (index: number) => {
     setSelectedFiles(prev => prev.filter((_, i) => i !== index));
+  };
+
+  const openPreview = (index: number) => {
+    setPreviewIndex(index);
+    setPreviewImage(URL.createObjectURL(selectedFiles[index]));
+  };
+
+  const navigatePreview = (direction: 'prev' | 'next') => {
+    const newIndex = direction === 'prev' 
+      ? (previewIndex - 1 + selectedFiles.length) % selectedFiles.length
+      : (previewIndex + 1) % selectedFiles.length;
+    setPreviewIndex(newIndex);
+    setPreviewImage(URL.createObjectURL(selectedFiles[newIndex]));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -276,7 +290,7 @@ export const ContactsMapSection = () => {
                       <div key={index} className="relative group">
                         <div 
                           className="aspect-square rounded-lg overflow-hidden border-2 border-muted bg-muted cursor-pointer hover:border-primary transition-colors"
-                          onClick={() => setPreviewImage(imageUrl)}
+                          onClick={() => openPreview(index)}
                         >
                           <img
                             src={imageUrl}
@@ -350,6 +364,31 @@ export const ContactsMapSection = () => {
             >
               <Icon name="X" className="h-5 w-5" />
             </Button>
+            
+            {selectedFiles.length > 1 && (
+              <>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => navigatePreview('prev')}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 p-0 bg-black/50 hover:bg-black/70 text-white"
+                >
+                  <Icon name="ChevronLeft" className="h-6 w-6" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => navigatePreview('next')}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 p-0 bg-black/50 hover:bg-black/70 text-white"
+                >
+                  <Icon name="ChevronRight" className="h-6 w-6" />
+                </Button>
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
+                  {previewIndex + 1} / {selectedFiles.length}
+                </div>
+              </>
+            )}
+            
             {previewImage && (
               <img
                 src={previewImage}
