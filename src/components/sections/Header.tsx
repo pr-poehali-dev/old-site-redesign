@@ -64,7 +64,7 @@ export const Header = ({
             WhatsApp
           </Button>
           <Button 
-            className="hidden md:flex text-xs"
+            className="hidden md:flex text-xs bg-green-600 hover:bg-green-700 text-white"
             size="sm"
             onClick={() => window.location.href = 'tel:+79202520352'}
           >

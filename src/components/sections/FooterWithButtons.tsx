@@ -93,11 +93,11 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
 
         <a
           href="tel:+79202520352"
-          className="bg-primary hover:bg-primary/90 text-primary-foreground p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+          className="bg-green-600 hover:bg-green-700 text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
           aria-label="Позвонить"
         >
           <Icon name="Phone" className="h-5 w-5 md:h-6 md:w-6" />
-          <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-secondary text-secondary-foreground px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
             Позвонить
           </span>
         </a>
@@ -119,7 +119,7 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
       {showScrollTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-4 right-20 md:bottom-6 md:right-28 z-50 bg-primary hover:bg-primary/90 text-primary-foreground p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-in fade-in slide-in-from-bottom-4"
+          className="fixed bottom-4 right-20 md:bottom-6 md:right-28 z-50 bg-green-600 hover:bg-green-700 text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-in fade-in slide-in-from-bottom-4"
           aria-label="Вернуться наверх"
         >
           <Icon name="ArrowUp" className="h-5 w-5 md:h-6 md:w-6" />
