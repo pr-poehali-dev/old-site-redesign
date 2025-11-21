@@ -13,7 +13,7 @@ export const ContactsMapSection = () => {
         </div>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-start">
-          <div className="bg-card p-4 md:p-6 rounded-lg border shadow-sm h-full flex flex-col justify-between">
+          <div className="bg-card p-4 md:p-6 rounded-lg border shadow-sm h-full flex flex-col">
             <div className="space-y-4 flex-1">
               <div className="flex items-start gap-3">
                 <Icon name="MapPin" className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
@@ -60,6 +60,37 @@ export const ContactsMapSection = () => {
                 </div>
               </div>
             </div>
+
+            <div className="mt-6 pt-6 border-t space-y-3">
+              <h3 className="font-semibold text-center mb-3">Свяжитесь с нами</h3>
+              <div className="flex flex-col gap-2">
+                <Button 
+                  size="lg"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  onClick={() => window.location.href = 'tel:+79202520352'}
+                >
+                  <Icon name="Phone" className="mr-2 h-5 w-5" />
+                  Позвонить
+                </Button>
+                <Button 
+                  size="lg"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  onClick={() => window.open('https://wa.me/79202520352', '_blank')}
+                >
+                  <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
+                  WhatsApp
+                </Button>
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => window.location.href = 'mailto:megashlic@yandex.ru'}
+                >
+                  <Icon name="Mail" className="mr-2 h-5 w-5" />
+                  Написать на Email
+                </Button>
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-col gap-3 h-full">
@@ -85,44 +116,6 @@ export const ContactsMapSection = () => {
                 Проложить маршрут
               </Button>
             </a>
-          </div>
-        </div>
-
-        <div className="max-w-5xl mx-auto mt-8">
-          <div className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/20 rounded-lg p-6 md:p-8">
-            <div className="text-center space-y-4">
-              <h3 className="text-xl md:text-2xl font-bold">Свяжитесь с нами</h3>
-              <p className="text-sm md:text-base text-muted-foreground">
-                Выберите удобный способ связи — мы ответим на все ваши вопросы
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-2xl mx-auto">
-                <Button 
-                  size="lg"
-                  className="flex-1 bg-green-600 hover:bg-green-700 text-white"
-                  onClick={() => window.location.href = 'tel:+79202520352'}
-                >
-                  <Icon name="Phone" className="mr-2 h-5 w-5" />
-                  Позвонить
-                </Button>
-                <Button 
-                  size="lg"
-                  className="flex-1 bg-green-600 hover:bg-green-700 text-white"
-                  onClick={() => window.open('https://wa.me/79202520352', '_blank')}
-                >
-                  <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
-                  WhatsApp
-                </Button>
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="flex-1"
-                  onClick={() => window.location.href = 'mailto:megashlic@yandex.ru'}
-                >
-                  <Icon name="Mail" className="mr-2 h-5 w-5" />
-                  Email
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
       </div>
