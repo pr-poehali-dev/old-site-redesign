@@ -187,7 +187,11 @@ const Index = () => {
 
       <RutubeSection />
 
-      <FooterWithButtons viewCount={viewCount} showScrollTop={showScrollTop} />
+      <FooterWithButtons 
+        viewCount={viewCount} 
+        showScrollTop={showScrollTop} 
+        onConsultClick={() => setQuickConsultOpen(true)}
+      />
     </div>
   );
 };
