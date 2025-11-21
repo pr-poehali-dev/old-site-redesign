@@ -43,10 +43,12 @@ export const ServicesSection = ({
 
   const scrollToForm = () => {
     setSelectedService(null);
-    const element = document.getElementById('contacts');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    setTimeout(() => {
+      const element = document.getElementById('contacts');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 300);
   };
 
   return (
