@@ -56,6 +56,14 @@ export const Header = ({
 
         <div className="flex items-center gap-1.5 md:gap-2">
           <Button 
+            className="hidden xl:flex text-xs bg-green-600 hover:bg-green-700 text-white"
+            size="sm"
+            onClick={() => scrollToSection('contacts')}
+          >
+            <Icon name="MapPin" className="mr-1.5 h-3.5 w-3.5" />
+            Контакты
+          </Button>
+          <Button 
             className="hidden lg:flex text-xs bg-green-600 hover:bg-green-700 text-white"
             size="sm"
             onClick={() => window.open('https://wa.me/79202520352', '_blank')}
