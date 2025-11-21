@@ -26,22 +26,48 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "AutomotiveBusiness",
       "name": "Мега Шлиц",
       "description": "Производственная компания по восстановлению шлицевых соединений деталей трансмиссии",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Восточный проезд, 11/1",
         "addressLocality": "Нижний Новгород",
+        "addressRegion": "Нижегородская область",
+        "postalCode": "603000",
         "addressCountry": "RU"
       },
-      "telephone": "+79202520352",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "56.253487",
+        "longitude": "43.915409"
+      },
+      "telephone": ["+79202520352", "+78312601123"],
+      "email": "megashlic@yandex.ru",
       "url": "https://megashlic.ru/",
+      "logo": "https://cdn.poehali.dev/files/39a50b29-6e3c-455b-b374-e7e4555f1875.jpg",
       "image": "https://cdn.poehali.dev/files/f668d529-788d-49c9-8c2d-c97a6c3ae8a1.jpg",
       "priceRange": "₽₽",
-      "openingHours": "Mo-Su 09:00-20:00",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:30",
+          "closes": "17:30"
+        }
+      ],
       "areaServed": {
         "@type": "Country",
         "name": "Россия"
+      },
+      "sameAs": [
+        "https://wa.me/79202520352",
+        "https://rutube.ru/channel/35843934/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "150"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -52,7 +78,16 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Восстановление шлицев вала раздатки",
-              "description": "Устраняем износ шлицев на валу раздатки для Hyundai, Kia, Mazda, Volvo, Land Rover, Ford, Haval"
+              "description": "Устраняем износ шлицев на валу раздатки для Hyundai, Kia, Mazda, Volvo, Land Rover, Ford, Haval",
+              "provider": {
+                "@type": "AutomotiveBusiness",
+                "name": "Мега Шлиц"
+              }
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "9990",
+              "priceCurrency": "RUB"
             }
           },
           {
@@ -60,7 +95,11 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Ремонт раздатки под ключ",
-              "description": "Полный цикл работ от диагностики до установки с гарантией 12 месяцев"
+              "description": "Полный цикл работ от диагностики до установки с гарантией 12 месяцев",
+              "provider": {
+                "@type": "AutomotiveBusiness",
+                "name": "Мега Шлиц"
+              }
             }
           },
           {
@@ -68,7 +107,16 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Восстановление дифференциала",
-              "description": "Ремонт корпуса дифференциала и шлицевых соединений"
+              "description": "Ремонт корпуса дифференциала и шлицевых соединений",
+              "provider": {
+                "@type": "AutomotiveBusiness",
+                "name": "Мега Шлиц"
+              }
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "19990",
+              "priceCurrency": "RUB"
             }
           }
         ]
