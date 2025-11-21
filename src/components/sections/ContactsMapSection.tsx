@@ -42,7 +42,12 @@ export const ContactsMapSection = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const files = Array.from(e.target.files).slice(0, 5);
-      setSelectedFiles(files);
+      const validFiles = files.filter(file => {
+        const isImage = file.type.startsWith('image/');
+        const isUnder10MB = file.size <= 10 * 1024 * 1024;
+        return isImage && isUnder10MB;
+      });
+      setSelectedFiles(validFiles);
     }
   };
 
@@ -252,7 +257,7 @@ export const ContactsMapSection = () => {
             
             <div>
               <label className="block text-sm font-medium mb-2">
-                📷 Прикрепить фото (до 5 штук)
+                📷 Прикрепить фото (до 5 штук, макс 10 МБ каждое)
               </label>
               <Input
                 type="file"
@@ -263,21 +268,30 @@ export const ContactsMapSection = () => {
                 className="cursor-pointer"
               />
               {selectedFiles.length > 0 && (
-                <div className="mt-3 space-y-2">
+                <div className="mt-3 grid grid-cols-2 gap-2">
                   {selectedFiles.map((file, index) => (
-                    <div key={index} className="flex items-center gap-2 p-2 bg-muted rounded-lg">
-                      <Icon name="Image" className="h-4 w-4 text-primary flex-shrink-0" />
-                      <span className="text-sm flex-1 truncate">{file.name}</span>
+                    <div key={index} className="relative group">
+                      <div className="aspect-square rounded-lg overflow-hidden border-2 border-muted bg-muted">
+                        <img
+                          src={URL.createObjectURL(file)}
+                          alt={`Preview ${index + 1}`}
+                          className="w-full h-full object-cover"
+                          onLoad={(e) => URL.revokeObjectURL((e.target as HTMLImageElement).src)}
+                        />
+                      </div>
                       <Button
                         type="button"
-                        variant="ghost"
+                        variant="destructive"
                         size="sm"
                         onClick={() => removeFile(index)}
                         disabled={formStatus === 'sending'}
-                        className="h-6 w-6 p-0"
+                        className="absolute top-1 right-1 h-7 w-7 p-0 opacity-0 group-hover:opacity-100 transition-opacity"
                       >
                         <Icon name="X" className="h-4 w-4" />
                       </Button>
+                      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs p-1 truncate">
+                        {file.name}
+                      </div>
                     </div>
                   ))}
                 </div>
