@@ -59,11 +59,11 @@ export const HeroSection = ({ scrollToSection, onConsultClick, onFullFormClick }
             Производственная компания по восстановлению шлицевых соединений трансмиссии по всей стране
           </p>
           <div className="flex flex-wrap gap-2 md:gap-3 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
-            <Button size="default" className="md:h-11 md:px-8 bg-green-600 hover:bg-green-700 text-white" onClick={onConsultClick}>
+            <Button size="default" className="md:h-11 md:px-8 bg-green-600 hover:bg-green-700 text-white transition-all duration-300 hover:scale-110 hover:shadow-xl" onClick={onConsultClick}>
               <Icon name="Headphones" className="mr-2 h-4 w-4 md:h-5 md:w-5" />
               Консультация
             </Button>
-            <Button size="default" className="md:h-11 md:px-8 bg-green-600 hover:bg-green-700 text-white" onClick={onFullFormClick}>
+            <Button size="default" className="md:h-11 md:px-8 bg-green-600 hover:bg-green-700 text-white transition-all duration-300 hover:scale-110 hover:shadow-xl" onClick={onFullFormClick}>
               <Icon name="Send" className="mr-2 h-4 w-4 md:h-5 md:w-5" />
               Отправить заявку
             </Button>
