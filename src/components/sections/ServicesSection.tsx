@@ -135,7 +135,7 @@ export const ServicesSection = ({
       </div>
 
       <Dialog open={selectedService !== null} onOpenChange={(open) => !open && setSelectedService(null)}>
-        <DialogContent className="sm:max-w-lg">
+        <DialogContent className="sm:max-w-lg p-4 sm:p-6">
           <DialogHeader>
             <DialogTitle className="text-lg md:text-xl leading-tight pr-6">{selectedService?.name}</DialogTitle>
             <DialogDescription className="space-y-4 pt-4">

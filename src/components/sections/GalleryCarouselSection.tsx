@@ -53,8 +53,8 @@ export const GalleryCarouselSection = ({ services }: GalleryCarouselSectionProps
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-0 md:-left-12" />
-          <CarouselNext className="right-0 md:-right-12" />
+          <CarouselPrevious className="hidden md:flex md:-left-12" />
+          <CarouselNext className="hidden md:flex md:-right-12" />
         </Carousel>
       </div>
     </section>

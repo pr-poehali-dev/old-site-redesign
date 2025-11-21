@@ -175,7 +175,7 @@ export const Header = ({
       )}
 
       <Dialog open={fullFormOpen} onOpenChange={setFullFormOpen}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-4 sm:p-6">
           <DialogHeader>
             <DialogTitle className="text-2xl">Отправить заявку</DialogTitle>
             <DialogDescription>
@@ -195,7 +195,7 @@ export const Header = ({
             </div>
           )}
 
-          <form className="space-y-4" onSubmit={handleFormSubmit}>
+          <form className="space-y-3 sm:space-y-4" onSubmit={handleFormSubmit}>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="modal-name" className="block text-sm font-medium mb-2">

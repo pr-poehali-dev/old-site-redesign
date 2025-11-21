@@ -11,7 +11,7 @@ export const RutubeSection = () => {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-3 md:gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
               <div className="relative" style={{ paddingBottom: '56.25%' }}>
                 <iframe
@@ -20,6 +20,7 @@ export const RutubeSection = () => {
                   allow="clipboard-write; autoplay"
                   allowFullScreen
                   className="absolute top-0 left-0 w-full h-full"
+                  loading="lazy"
                 ></iframe>
               </div>
             </Card>
@@ -32,11 +33,12 @@ export const RutubeSection = () => {
                   allow="clipboard-write; autoplay"
                   allowFullScreen
                   className="absolute top-0 left-0 w-full h-full"
+                  loading="lazy"
                 ></iframe>
               </div>
             </Card>
 
-            <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
+            <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg md:col-span-2 lg:col-span-1">
               <div className="relative" style={{ paddingBottom: '56.25%' }}>
                 <iframe
                   src="https://rutube.ru/play/embed/cc980b113b77037430a3b1067666c8e1/"
@@ -44,6 +46,7 @@ export const RutubeSection = () => {
                   allow="clipboard-write; autoplay"
                   allowFullScreen
                   className="absolute top-0 left-0 w-full h-full"
+                  loading="lazy"
                 ></iframe>
               </div>
             </Card>
