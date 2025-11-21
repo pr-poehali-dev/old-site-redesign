@@ -168,8 +168,6 @@ const Index = () => {
 
       <HeroSection scrollToSection={scrollToSection} />
 
-      <AboutAndAdvantagesSection />
-
       <ServicesSection
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
@@ -182,6 +180,8 @@ const Index = () => {
         filteredServices={filteredServices}
         categories={categories}
       />
+
+      <AboutAndAdvantagesSection />
 
       <TurnkeySection />
 
