@@ -53,6 +53,7 @@ export const Header = ({
           <button onClick={() => scrollToSection('hero')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Главная</button>
           <button onClick={() => scrollToSection('services')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Услуги</button>
           <button onClick={() => scrollToSection('about')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">О компании</button>
+          <button onClick={() => scrollToSection('process')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Регионам</button>
           <button onClick={() => scrollToSection('turnkey')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Под ключ</button>
         </nav>
 
@@ -159,6 +160,7 @@ export const Header = ({
             <button onClick={() => scrollToSection('hero')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Главная</button>
             <button onClick={() => scrollToSection('services')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Услуги</button>
             <button onClick={() => scrollToSection('about')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">О компании</button>
+            <button onClick={() => scrollToSection('process')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Регионам</button>
             <button onClick={() => scrollToSection('turnkey')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Под ключ</button>
             <div className="flex gap-2 mt-2">
               <Button className="flex-1" variant="outline" onClick={() => { setMobileMenuOpen(false); setQuickConsultOpen(true); }}>
