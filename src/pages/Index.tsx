@@ -50,6 +50,7 @@ const Index = () => {
   const [fullFormOpen, setFullFormOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [viewCount, setViewCount] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const formatPhoneNumber = (value: string) => {
     const cleaned = value.replace(/\D/g, '');
@@ -97,6 +98,13 @@ const Index = () => {
     const newCount = currentCount + 1;
     setViewCount(newCount);
     localStorage.setItem('megashlic_view_count', newCount.toString());
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+    return () => clearTimeout(timer);
   }, []);
 
   const filteredServices = useMemo(() => {
@@ -204,8 +212,31 @@ const Index = () => {
     }
   };
 
+  if (isLoading) {
+    return (
+      <div className="fixed inset-0 z-[100] bg-gradient-to-br from-background via-muted/30 to-background flex items-center justify-center">
+        <div className="text-center space-y-4 animate-in fade-in duration-700">
+          <div className="relative">
+            <div className="w-20 h-20 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-12 h-12 bg-primary/20 rounded-full animate-pulse"></div>
+            </div>
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground animate-in slide-in-from-bottom-4 duration-700 delay-200">
+              Мега Шлиц<sup className="text-sm">®</sup>
+            </h2>
+            <p className="text-sm text-muted-foreground animate-in slide-in-from-bottom-4 duration-700 delay-300">
+              Загрузка...
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-in fade-in duration-500">
       <Header
         mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
