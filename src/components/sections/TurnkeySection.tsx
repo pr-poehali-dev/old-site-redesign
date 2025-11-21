@@ -14,27 +14,27 @@ export const TurnkeySection = () => {
   };
 
   return (
-    <section id="turnkey" className="py-6 md:py-8 bg-gradient-to-b from-background to-muted/30">
+    <section id="turnkey" className="py-4 md:py-6 bg-gradient-to-b from-background to-muted/30">
       <div className="container">
-        <div className="text-center space-y-1 mb-4 md:mb-6">
+        <div className="text-center space-y-1 mb-3 md:mb-4">
           <h2 className="text-xl md:text-3xl font-bold">Ремонт под ключ</h2>
           <p className="text-muted-foreground text-xs md:text-sm">
             Полный цикл работ — от диагностики до установки восстановленных деталей
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto space-y-3 md:space-y-4">
+        <div className="max-w-5xl mx-auto space-y-2 md:space-y-3">
           <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
-            <CardContent className="p-3 md:p-5">
-              <div className="space-y-3 md:space-y-4">
+            <CardContent className="p-2.5 md:p-4">
+              <div className="space-y-2 md:space-y-3">
                 <div className="flex items-start gap-2 md:gap-3">
                   <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
                     <Icon name="Wrench" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-base md:text-lg font-bold mb-2 md:mb-3">Что входит в услугу?</h3>
-                    <div className="grid md:grid-cols-3 gap-2 md:gap-3">
-                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                    <h3 className="text-sm md:text-base font-bold mb-1.5 md:mb-2">Что входит в услугу?</h3>
+                    <div className="grid md:grid-cols-3 gap-1.5 md:gap-2">
+                      <div className="bg-muted/30 rounded-lg p-1.5 md:p-2 border">
                         <div className="flex items-start gap-1.5 md:gap-2">
                           <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <Icon name="Search" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
@@ -46,7 +46,7 @@ export const TurnkeySection = () => {
                         </div>
                       </div>
                       
-                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                      <div className="bg-muted/30 rounded-lg p-1.5 md:p-2 border">
                         <div className="flex items-start gap-1.5 md:gap-2">
                           <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <Icon name="Settings" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
@@ -58,7 +58,7 @@ export const TurnkeySection = () => {
                         </div>
                       </div>
                       
-                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                      <div className="bg-muted/30 rounded-lg p-1.5 md:p-2 border">
                         <div className="flex items-start gap-1.5 md:gap-2">
                           <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <Icon name="Zap" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
@@ -70,7 +70,7 @@ export const TurnkeySection = () => {
                         </div>
                       </div>
                       
-                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                      <div className="bg-muted/30 rounded-lg p-1.5 md:p-2 border">
                         <div className="flex items-start gap-1.5 md:gap-2">
                           <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <Icon name="Package" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
@@ -82,7 +82,7 @@ export const TurnkeySection = () => {
                         </div>
                       </div>
                       
-                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                      <div className="bg-muted/30 rounded-lg p-1.5 md:p-2 border">
                         <div className="flex items-start gap-1.5 md:gap-2">
                           <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <Icon name="Wrench" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
@@ -94,7 +94,7 @@ export const TurnkeySection = () => {
                         </div>
                       </div>
                       
-                      <div className="bg-muted/30 rounded-lg p-2 md:p-3 border">
+                      <div className="bg-muted/30 rounded-lg p-1.5 md:p-2 border">
                         <div className="flex items-start gap-1.5 md:gap-2">
                           <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <Icon name="CheckCircle" className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
@@ -109,14 +109,14 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="border-t border-dashed border-primary/20 pt-3 md:pt-4 mt-3 md:mt-4">
+                <div className="border-t border-dashed border-primary/20 pt-2 md:pt-3 mt-2 md:mt-3">
                   <div className="flex items-start gap-2 md:gap-3 mb-2 md:mb-3">
                     <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
                       <Icon name="ListOrdered" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-base md:text-lg font-bold mb-2 md:mb-3">Как мы работаем по всей России</h3>
-                      <div className="space-y-2 md:space-y-3">
+                      <h3 className="text-sm md:text-base font-bold mb-1.5 md:mb-2">Как мы работаем по всей России</h3>
+                      <div className="space-y-1.5 md:space-y-2">
                         <div className="flex items-start gap-1.5 md:gap-2">
                           <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <span className="text-primary font-bold text-[10px] md:text-xs">1</span>
@@ -161,7 +161,7 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="border-t border-dashed border-primary/20 pt-3 md:pt-4 mt-3 md:mt-4">
+                <div className="border-t border-dashed border-primary/20 pt-2 md:pt-3 mt-2 md:mt-3">
                   <div className="grid md:grid-cols-3 gap-3 md:gap-4">
                     <div className="flex items-start gap-2 md:gap-3">
                       <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
@@ -199,7 +199,7 @@ export const TurnkeySection = () => {
 
                 <TurnkeyPricingCards />
 
-                <div className="border-t border-dashed border-primary/20 pt-3 md:pt-4 mt-3 md:mt-4">
+                <div className="border-t border-dashed border-primary/20 pt-2 md:pt-3 mt-2 md:mt-3">
                   <div className="flex items-start gap-2 md:gap-3 mb-2 md:mb-3">
                     <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
                       <Icon name="Settings" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
@@ -221,7 +221,7 @@ export const TurnkeySection = () => {
                   </div>
                 </div>
 
-                <div className="border-t border-dashed border-primary/20 pt-3 md:pt-4 mt-3 md:mt-4">
+                <div className="border-t border-dashed border-primary/20 pt-2 md:pt-3 mt-2 md:mt-3">
                   <div className="flex items-start gap-2 md:gap-3 mb-2 md:mb-3">
                     <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center flex-shrink-0">
                       <Icon name="CreditCard" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
