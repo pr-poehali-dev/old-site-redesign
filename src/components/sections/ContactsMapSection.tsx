@@ -11,6 +11,7 @@ export const ContactsMapSection = () => {
   const [formOpen, setFormOpen] = useState(false);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [uploadingPhotos, setUploadingPhotos] = useState(false);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   const formatPhoneNumber = (value: string) => {
     const cleaned = value.replace(/\D/g, '');
@@ -269,31 +270,39 @@ export const ContactsMapSection = () => {
               />
               {selectedFiles.length > 0 && (
                 <div className="mt-3 grid grid-cols-2 gap-2">
-                  {selectedFiles.map((file, index) => (
-                    <div key={index} className="relative group">
-                      <div className="aspect-square rounded-lg overflow-hidden border-2 border-muted bg-muted">
-                        <img
-                          src={URL.createObjectURL(file)}
-                          alt={`Preview ${index + 1}`}
-                          className="w-full h-full object-cover"
-                          onLoad={(e) => URL.revokeObjectURL((e.target as HTMLImageElement).src)}
-                        />
+                  {selectedFiles.map((file, index) => {
+                    const imageUrl = URL.createObjectURL(file);
+                    return (
+                      <div key={index} className="relative group">
+                        <div 
+                          className="aspect-square rounded-lg overflow-hidden border-2 border-muted bg-muted cursor-pointer hover:border-primary transition-colors"
+                          onClick={() => setPreviewImage(imageUrl)}
+                        >
+                          <img
+                            src={imageUrl}
+                            alt={`Preview ${index + 1}`}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                        <Button
+                          type="button"
+                          variant="destructive"
+                          size="sm"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            removeFile(index);
+                          }}
+                          disabled={formStatus === 'sending'}
+                          className="absolute top-1 right-1 h-7 w-7 p-0 opacity-0 group-hover:opacity-100 transition-opacity z-10"
+                        >
+                          <Icon name="X" className="h-4 w-4" />
+                        </Button>
+                        <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs p-1 truncate pointer-events-none">
+                          {file.name}
+                        </div>
                       </div>
-                      <Button
-                        type="button"
-                        variant="destructive"
-                        size="sm"
-                        onClick={() => removeFile(index)}
-                        disabled={formStatus === 'sending'}
-                        className="absolute top-1 right-1 h-7 w-7 p-0 opacity-0 group-hover:opacity-100 transition-opacity"
-                      >
-                        <Icon name="X" className="h-4 w-4" />
-                      </Button>
-                      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs p-1 truncate">
-                        {file.name}
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -327,6 +336,28 @@ export const ContactsMapSection = () => {
               )}
             </Button>
           </form>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={previewImage !== null} onOpenChange={(open) => !open && setPreviewImage(null)}>
+        <DialogContent className="sm:max-w-4xl p-0 overflow-hidden">
+          <div className="relative bg-black">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setPreviewImage(null)}
+              className="absolute top-2 right-2 z-10 h-8 w-8 p-0 bg-black/50 hover:bg-black/70 text-white"
+            >
+              <Icon name="X" className="h-5 w-5" />
+            </Button>
+            {previewImage && (
+              <img
+                src={previewImage}
+                alt="Preview"
+                className="w-full h-auto max-h-[80vh] object-contain"
+              />
+            )}
+          </div>
         </DialogContent>
       </Dialog>
     </section>
