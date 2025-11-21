@@ -89,19 +89,19 @@ export const AboutAndAdvantagesSection = () => {
                       </div>
                     </div>
 
-                    <div className="relative group order-first md:order-last">
+                    <div className="order-first md:order-last">
                       <a 
                         href="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="block relative overflow-hidden rounded-lg border-2 border-primary/30 group-hover:border-primary/50 transition-all duration-300 shadow-md cursor-pointer"
+                        className="block relative overflow-hidden rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-all duration-300 shadow-md cursor-pointer group"
                       >
                         <img 
                           src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
                           alt="Патент РФ № 2829377"
                           className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
                         />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center pointer-events-none">
                           <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary/90 rounded-full p-3">
                             <Icon name="ZoomIn" className="h-8 w-8 text-white" />
                           </div>
