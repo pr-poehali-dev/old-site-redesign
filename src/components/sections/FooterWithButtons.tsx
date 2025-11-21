@@ -47,10 +47,6 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
                 <Icon name="MessageCircle" className="h-3.5 w-3.5 flex-shrink-0" />
                 WhatsApp
               </a>
-              <a href="https://rutube.ru/channel/28967026/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
-                <Icon name="Video" className="h-3.5 w-3.5 flex-shrink-0" />
-                Rutube
-              </a>
             </div>
           </div>
 
