@@ -162,9 +162,15 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         smtp_server = 'smtp.yandex.ru' if 'yandex' in smtp_user else 'smtp.gmail.com'
         smtp_port = 465
         
+        print(f'Attempting to connect to {smtp_server}:{smtp_port}')
+        print(f'Using user: {smtp_user}')
+        
         with smtplib.SMTP_SSL(smtp_server, smtp_port) as server:
+            print('Connected to SMTP server')
             server.login(smtp_user, smtp_password)
+            print('Login successful')
             server.send_message(msg)
+            print('Email sent successfully')
         
         return {
             'statusCode': 200,
