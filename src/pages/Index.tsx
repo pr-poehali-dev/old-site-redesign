@@ -36,11 +36,9 @@ const services: Service[] = [
   { id: 10, name: 'Раздатка в сборе + корпус дифференциала на обмен Tiguan с АКПП', category: 'Раздатка', price: 54990, duration: 'В наличии', popular: true, description: 'Полный узел для Tiguan — раздатка и корпус дифференциала. Готово к установке. Обмениваете свой старый на восстановленный. Гарантия 18 месяцев', image: 'https://cdn.poehali.dev/files/b6b6d94e-516d-4aa1-b81b-cb423cf4af49.jpg' },
 ];
 
-const categories = ['Все услуги', ...Array.from(new Set(services.map(s => s.category)))];
-
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('Все услуги');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
   const [popularFilter, setPopularFilter] = useState('all');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -73,7 +71,7 @@ const Index = () => {
     return services.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                            service.description.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'Все услуги' || service.category === selectedCategory;
+      const matchesCategory = selectedCategory === 'all';
       const matchesPopular = popularFilter === 'all' || (popularFilter === 'popular' && service.popular);
       
       let matchesPrice = true;
@@ -193,7 +191,6 @@ const Index = () => {
         popularFilter={popularFilter}
         setPopularFilter={setPopularFilter}
         filteredServices={filteredServices}
-        categories={categories}
       />
 
       <AboutAndAdvantagesSection />

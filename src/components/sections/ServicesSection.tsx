@@ -26,7 +26,6 @@ interface ServicesSectionProps {
   popularFilter: string;
   setPopularFilter: (value: string) => void;
   filteredServices: Service[];
-  categories: string[];
 }
 
 export const ServicesSection = ({
@@ -39,7 +38,6 @@ export const ServicesSection = ({
   popularFilter,
   setPopularFilter,
   filteredServices,
-  categories,
 }: ServicesSectionProps) => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
@@ -62,25 +60,6 @@ export const ServicesSection = ({
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-1.5 md:gap-2 mb-3 md:mb-4">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedCategory(category)}
-                className="text-xs h-7 md:h-8"
-              >
-                {category}
-                {selectedCategory === category && (
-                  <Badge variant="secondary" className="ml-1.5 bg-primary-foreground/20 text-xs px-1.5">
-                    {filteredServices.length}
-                  </Badge>
-                )}
-              </Button>
-            ))}
-          </div>
-
           <div className="grid md:grid-cols-3 gap-3">
             {filteredServices.map((service, index) => (
               <Card 
