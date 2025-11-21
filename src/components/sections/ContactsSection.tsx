@@ -24,9 +24,9 @@ export const ContactsSection = ({
   return (
     <section id="contacts" className="py-6 md:py-8 bg-gradient-to-b from-muted/30 to-background">
       <div className="container">
-        <div className="text-center space-y-1 mb-4 md:mb-6">
-          <h2 className="text-xl md:text-3xl font-bold">Оставить заявку</h2>
-          <p className="text-muted-foreground text-xs md:text-sm">
+        <div className="text-center space-y-2 mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold">Оставить заявку</h2>
+          <p className="text-muted-foreground text-sm md:text-base">
             Заполните форму или позвоните нам
           </p>
         </div>
