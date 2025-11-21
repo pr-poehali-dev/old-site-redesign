@@ -72,7 +72,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
 
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Settings" className="h-4 w-4 text-primary" />
+                    <Icon name="Wrench" className="h-4 w-4 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-bold text-sm mb-1">Демонтаж</h4>
@@ -102,7 +102,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
 
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Wrench" className="h-4 w-4 text-primary" />
+                    <Icon name="Settings" className="h-4 w-4 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-bold text-sm mb-1">Установка</h4>
