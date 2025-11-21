@@ -13,6 +13,7 @@ export const ContactsMapSection = () => {
   const [uploadingPhotos, setUploadingPhotos] = useState(false);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const [previewIndex, setPreviewIndex] = useState<number>(0);
+  const [uploadProgress, setUploadProgress] = useState<number[]>([]);
 
   const formatPhoneNumber = (value: string) => {
     const cleaned = value.replace(/\D/g, '');
@@ -93,6 +94,7 @@ export const ContactsMapSection = () => {
     e.preventDefault();
     setFormStatus('sending');
     setUploadingPhotos(true);
+    setUploadProgress(selectedFiles.map(() => 0));
 
     const TELEGRAM_BOT_TOKEN = '7788513036:AAGqjdHnrPZNQfKkrO7DXvzwWgldbxhpXP4';
     const TELEGRAM_CHAT_ID = '1312732538';
@@ -111,15 +113,28 @@ export const ContactsMapSection = () => {
       });
 
       if (selectedFiles.length > 0) {
-        for (const file of selectedFiles) {
+        for (let i = 0; i < selectedFiles.length; i++) {
+          const file = selectedFiles[i];
           const formDataPhoto = new FormData();
           formDataPhoto.append('chat_id', TELEGRAM_CHAT_ID);
           formDataPhoto.append('photo', file);
-          formDataPhoto.append('caption', `📎 Фото от ${formData.name}`);
+          formDataPhoto.append('caption', `📎 Фото ${i + 1}/${selectedFiles.length} от ${formData.name}`);
+
+          setUploadProgress(prev => {
+            const newProgress = [...prev];
+            newProgress[i] = 50;
+            return newProgress;
+          });
 
           await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, {
             method: 'POST',
             body: formDataPhoto
+          });
+
+          setUploadProgress(prev => {
+            const newProgress = [...prev];
+            newProgress[i] = 100;
+            return newProgress;
           });
         }
       }
@@ -127,6 +142,7 @@ export const ContactsMapSection = () => {
       setFormStatus('success');
       setFormData({ name: '', phone: '', message: '' });
       setSelectedFiles([]);
+      setUploadProgress([]);
       setUploadingPhotos(false);
       setTimeout(() => {
         setFormStatus('idle');
@@ -135,6 +151,7 @@ export const ContactsMapSection = () => {
     } catch {
       setFormStatus('error');
       setUploadingPhotos(false);
+      setUploadProgress([]);
       setTimeout(() => setFormStatus('idle'), 5000);
     }
   };
@@ -305,33 +322,57 @@ export const ContactsMapSection = () => {
                 <div className="mt-3 grid grid-cols-2 gap-2">
                   {selectedFiles.map((file, index) => {
                     const imageUrl = URL.createObjectURL(file);
+                    const progress = uploadProgress[index] || 0;
+                    const isUploading = formStatus === 'sending' && progress > 0 && progress < 100;
+                    const isUploaded = progress === 100;
+                    
                     return (
                       <div key={index} className="relative group">
                         <div 
                           className="aspect-square rounded-lg overflow-hidden border-2 border-muted bg-muted cursor-pointer hover:border-primary transition-colors"
-                          onClick={() => openPreview(index)}
+                          onClick={() => !isUploading && openPreview(index)}
                         >
                           <img
                             src={imageUrl}
                             alt={`Preview ${index + 1}`}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            className={`w-full h-full object-cover transition-all duration-300 ${
+                              isUploading ? 'opacity-50' : 'hover:scale-105'
+                            }`}
                           />
+                          
+                          {isUploading && (
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                              <Icon name="Loader2" className="h-8 w-8 text-white animate-spin" />
+                            </div>
+                          )}
+                          
+                          {isUploaded && (
+                            <div className="absolute inset-0 flex items-center justify-center bg-green-500/20 pointer-events-none">
+                              <div className="bg-green-500 rounded-full p-2">
+                                <Icon name="Check" className="h-6 w-6 text-white" />
+                              </div>
+                            </div>
+                          )}
                         </div>
-                        <Button
-                          type="button"
-                          variant="destructive"
-                          size="sm"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            removeFile(index);
-                          }}
-                          disabled={formStatus === 'sending'}
-                          className="absolute top-1 right-1 h-7 w-7 p-0 opacity-0 group-hover:opacity-100 transition-opacity z-10"
-                        >
-                          <Icon name="X" className="h-4 w-4" />
-                        </Button>
+                        
+                        {!isUploading && !isUploaded && (
+                          <Button
+                            type="button"
+                            variant="destructive"
+                            size="sm"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              removeFile(index);
+                            }}
+                            disabled={formStatus === 'sending'}
+                            className="absolute top-1 right-1 h-7 w-7 p-0 opacity-0 group-hover:opacity-100 transition-opacity z-10"
+                          >
+                            <Icon name="X" className="h-4 w-4" />
+                          </Button>
+                        )}
+                        
                         <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs p-1 truncate pointer-events-none">
-                          {file.name}
+                          {isUploading ? 'Загрузка...' : isUploaded ? '✓ Загружено' : file.name}
                         </div>
                       </div>
                     );
