@@ -11,7 +11,7 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
     <>
       <footer className="border-t border-zinc-800 py-4 md:py-6 bg-black text-white">
         <div className="container">
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-3 md:mb-4">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8 mb-3 md:mb-4">
             <div className="space-y-1.5 md:space-y-2">
               <div className="flex items-center gap-2 md:gap-3 mb-2">
                 <img src="https://cdn.poehali.dev/files/801cdf4b-ac79-4038-902c-da3dda6718fe.jpg" alt="Мега Шлиц" className="h-10 w-10 md:h-14 md:w-14 object-contain" />
@@ -47,21 +47,6 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
                 <Icon name="Video" className="h-3.5 w-3.5 flex-shrink-0" />
                 Rutube
               </a>
-            </div>
-
-            <div className="space-y-1.5 md:space-y-2">
-              <h3 className="font-bold text-xs md:text-sm mb-1.5">Адрес и режим</h3>
-              <div className="flex items-start gap-1.5 text-[10px] md:text-xs">
-                <Icon name="MapPin" className="h-3.5 w-3.5 flex-shrink-0 mt-0.5" />
-                <span>г. Нижний Новгород,<br />Восточный проезд, 11/1</span>
-              </div>
-              <div className="flex items-start gap-1.5 text-[10px] md:text-xs">
-                <Icon name="Clock" className="h-3.5 w-3.5 flex-shrink-0 mt-0.5" />
-                <div>
-                  <div>Пн-Пт: 9:30 - 17:30</div>
-                  <div className="text-secondary-foreground/60">Сб-Вс: выходной</div>
-                </div>
-              </div>
             </div>
           </div>
 
