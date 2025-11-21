@@ -151,6 +151,59 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
             </div>
           </div>
 
+          <div>
+            <h3 className="text-lg md:text-xl font-bold mb-4 text-center">Стоимость ремонта под ключ</h3>
+            <div className="grid md:grid-cols-2 gap-3">
+              <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50">
+                <CardContent className="p-4">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                      <Icon name="Car" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-base">Hyundai / Kia</h4>
+                      <p className="text-xs text-muted-foreground">Полный привод 4WD</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-sm text-muted-foreground">от</span>
+                      <span className="text-3xl font-bold text-primary">35 000</span>
+                      <span className="text-sm text-muted-foreground">₽</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Tucson, Sportage, Santa Fe, Sorento, ix35, Creta и другие модели
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50">
+                <CardContent className="p-4">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                      <Icon name="Car" className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-base">Volkswagen Tiguan</h4>
+                      <p className="text-xs text-muted-foreground">4Motion</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-sm text-muted-foreground">от</span>
+                      <span className="text-3xl font-bold text-primary">45 000</span>
+                      <span className="text-sm text-muted-foreground">₽</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Tiguan 1 и 2 поколения с муфтой Haldex
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
           <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-background">
             <CardContent className="p-4 md:p-6 text-center space-y-3">
               <div className="space-y-2">
