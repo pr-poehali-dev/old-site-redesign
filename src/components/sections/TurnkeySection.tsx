@@ -25,7 +25,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                   <Icon name="Clock" className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-center">
-                  <h3 className="font-bold text-lg mb-1">3-5 дней</h3>
+                  <h3 className="font-bold text-lg mb-1">1 день</h3>
                   <p className="text-sm text-muted-foreground">Средний срок ремонта под ключ</p>
                 </div>
               </CardContent>
