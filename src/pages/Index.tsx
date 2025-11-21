@@ -108,9 +108,11 @@ const Index = () => {
         setFormStatus('success');
         setFormData({ name: '', phone: '', detail: '', message: '' });
         setTimeout(() => {
-          setFormStatus('idle');
           setFullFormOpen(false);
-        }, 2000);
+          setTimeout(() => {
+            setFormStatus('idle');
+          }, 300);
+        }, 2500);
       } else {
         setFormStatus('error');
         setTimeout(() => setFormStatus('idle'), 5000);
@@ -142,9 +144,11 @@ const Index = () => {
         setQuickFormStatus('success');
         setQuickFormData({ name: '', phone: '' });
         setTimeout(() => {
-          setQuickFormStatus('idle');
           setQuickConsultOpen(false);
-        }, 3000);
+          setTimeout(() => {
+            setQuickFormStatus('idle');
+          }, 300);
+        }, 2500);
       } else {
         setQuickFormStatus('error');
         setTimeout(() => setQuickFormStatus('idle'), 5000);

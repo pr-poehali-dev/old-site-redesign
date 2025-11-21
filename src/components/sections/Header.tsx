@@ -106,8 +106,9 @@ export const Header = ({
               </CardHeader>
               <CardContent>
                 {quickFormStatus === 'success' && (
-                  <div className="mb-4 p-3 bg-primary/10 text-primary rounded-md text-sm">
-                    ✓ Спасибо! Мы скоро свяжемся с вами.
+                  <div className="mb-4 p-3 bg-primary/10 text-primary rounded-md text-sm flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-300">
+                    <Icon name="CheckCircle2" className="h-5 w-5 flex-shrink-0" />
+                    <span>Спасибо! Мы скоро свяжемся с вами.</span>
                   </div>
                 )}
                 {quickFormStatus === 'error' && (
@@ -179,8 +180,9 @@ export const Header = ({
           </DialogHeader>
           
           {formStatus === 'success' && (
-            <div className="p-3 bg-primary/10 text-primary rounded-md text-sm">
-              ✓ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
+            <div className="p-3 bg-primary/10 text-primary rounded-md text-sm flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-300">
+              <Icon name="CheckCircle2" className="h-5 w-5 flex-shrink-0" />
+              <span>Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</span>
             </div>
           )}
           {formStatus === 'error' && (

@@ -33,8 +33,9 @@ export const ContactsSection = ({
           <Card className="border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
             <CardContent className="pt-4 md:pt-5 p-3 md:p-5">
               {formStatus === 'success' && (
-                <div className="mb-3 p-2 bg-primary/10 text-primary rounded-md text-xs">
-                  ✓ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
+                <div className="mb-3 p-2 bg-primary/10 text-primary rounded-md text-xs flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-300">
+                  <Icon name="CheckCircle2" className="h-4 w-4 flex-shrink-0" />
+                  <span>Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</span>
                 </div>
               )}
               {formStatus === 'error' && (
