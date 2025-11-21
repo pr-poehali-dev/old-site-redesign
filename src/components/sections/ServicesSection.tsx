@@ -107,14 +107,14 @@ export const ServicesSection = ({
                   </div>
                   <Button 
                     size="sm"
-                    className="w-full h-7 text-[10px]" 
+                    className="w-full h-8 text-xs" 
                     variant="outline"
                     onClick={(e) => {
                       e.stopPropagation();
                       setSelectedService(service);
                     }}
                   >
-                    <Icon name="Info" className="mr-1 h-3 w-3" />
+                    <Icon name="Info" className="mr-1.5 h-3.5 w-3.5" />
                     Подробнее
                   </Button>
                 </CardContent>
