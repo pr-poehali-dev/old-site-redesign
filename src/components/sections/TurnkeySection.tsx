@@ -209,7 +209,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
               <div className="space-y-2">
                 <h3 className="text-xl md:text-2xl font-bold">Нужен ремонт под ключ?</h3>
                 <p className="text-sm md:text-base text-muted-foreground">
-                  Оставьте заявку — мастер проведёт диагностику и назовёт точную стоимость ремонта
+                  Уточните когда есть свободные места для ремонта
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
