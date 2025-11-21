@@ -80,15 +80,16 @@ export const ContactsMapSection = () => {
                   <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
                   WhatsApp
                 </Button>
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="w-full"
-                  onClick={() => window.location.href = 'mailto:megashlic@yandex.ru'}
-                >
-                  <Icon name="Mail" className="mr-2 h-5 w-5" />
-                  Написать на Email
-                </Button>
+                <a href="mailto:megashlic@yandex.ru" className="w-full">
+                  <Button 
+                    size="lg"
+                    variant="outline"
+                    className="w-full"
+                  >
+                    <Icon name="Mail" className="mr-2 h-5 w-5" />
+                    Написать на Email
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
