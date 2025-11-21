@@ -51,7 +51,7 @@ export const RutubeSection = () => {
 
           <div className="mt-3 md:mt-4 text-center">
             <a
-              href="https://rutube.ru/channel/28967026/"
+              href="https://studio.rutube.ru/videos/?show_moderation=1&ordering=calculated_date_asc&period=7_days&tab=main#video"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm md:text-base font-semibold text-primary hover:text-primary/80 transition-colors"
