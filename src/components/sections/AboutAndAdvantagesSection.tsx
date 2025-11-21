@@ -177,7 +177,7 @@ export const AboutAndAdvantagesSection = () => {
       <section id="process" className="py-6 md:py-8 bg-background">
         <div className="container">
           <div className="text-center space-y-1 mb-4 md:mb-6">
-            <h2 className="text-xl md:text-3xl font-bold">Как мы работаем</h2>
+            <h2 className="text-xl md:text-3xl font-bold">Как мы работаем по всей России</h2>
             <p className="text-muted-foreground text-xs md:text-sm">
               Простой и понятный процесс восстановления
             </p>
