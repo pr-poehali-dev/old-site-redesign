@@ -81,11 +81,11 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
         {onConsultClick && (
           <button
             onClick={onConsultClick}
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+            className="bg-green-600 hover:bg-green-700 text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
             aria-label="Написать нам"
           >
             <Icon name="Mail" className="h-5 w-5 md:h-6 md:w-6" />
-            <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-secondary text-secondary-foreground px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
               Написать нам
             </span>
           </button>
