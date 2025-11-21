@@ -241,7 +241,10 @@ const Index = () => {
         popularFilter={popularFilter}
         setPopularFilter={setPopularFilter}
         filteredServices={filteredServices}
-        onFormOpen={() => setFullFormOpen(true)}
+        onFormOpen={(serviceName) => {
+          setFormData(prev => ({ ...prev, detail: serviceName }));
+          setFullFormOpen(true);
+        }}
       />
 
       <AboutAndAdvantagesSection />

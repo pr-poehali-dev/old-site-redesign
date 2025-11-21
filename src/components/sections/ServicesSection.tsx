@@ -26,7 +26,7 @@ interface ServicesSectionProps {
   popularFilter: string;
   setPopularFilter: (value: string) => void;
   filteredServices: Service[];
-  onFormOpen: () => void;
+  onFormOpen: (serviceName: string) => void;
 }
 
 export const ServicesSection = ({
@@ -44,9 +44,10 @@ export const ServicesSection = ({
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   const handleFormOpen = () => {
+    const serviceName = selectedService?.name || '';
     setSelectedService(null);
     setTimeout(() => {
-      onFormOpen();
+      onFormOpen(serviceName);
     }, 100);
   };
 
