@@ -431,9 +431,14 @@ export const ContactsMapSection = () => {
               type="submit" 
               className="w-full" 
               size="lg"
-              disabled={formStatus === 'sending'}
+              disabled={formStatus === 'sending' || uploadingPhotos}
             >
-              {formStatus === 'sending' ? (
+              {uploadingPhotos && uploadProgress.some(p => p < 100) ? (
+                <>
+                  <Icon name="Loader2" className="mr-2 h-5 w-5 animate-spin" />
+                  Подготовка фото...
+                </>
+              ) : formStatus === 'sending' ? (
                 <>
                   <Icon name="Loader2" className="mr-2 h-5 w-5 animate-spin" />
                   Отправка...
