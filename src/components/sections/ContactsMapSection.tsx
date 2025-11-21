@@ -400,8 +400,28 @@ export const ContactsMapSection = () => {
                       );
                     })}
                   </div>
-                  <div className="text-xs text-muted-foreground text-center">
-                    {selectedFiles.length} {selectedFiles.length === 1 ? 'файл' : 'файла'} • {(selectedFiles.reduce((sum, f) => sum + f.size, 0) / (1024 * 1024)).toFixed(1)} МБ / 50 МБ
+                  <div className="space-y-2">
+                    <div className="text-xs text-muted-foreground text-center">
+                      {selectedFiles.length} {selectedFiles.length === 1 ? 'файл' : 'файла'} • {(selectedFiles.reduce((sum, f) => sum + f.size, 0) / (1024 * 1024)).toFixed(1)} МБ / 50 МБ
+                    </div>
+                    {uploadProgress.length > 0 && uploadProgress.some(p => p > 0) && (
+                      <div className="space-y-1">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="text-muted-foreground">Загрузка фото...</span>
+                          <span className="font-medium">
+                            {Math.round(uploadProgress.reduce((sum, p) => sum + p, 0) / uploadProgress.length)}%
+                          </span>
+                        </div>
+                        <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
+                          <div 
+                            className="bg-primary h-full transition-all duration-300 ease-out"
+                            style={{ 
+                              width: `${uploadProgress.reduce((sum, p) => sum + p, 0) / uploadProgress.length}%` 
+                            }}
+                          />
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
