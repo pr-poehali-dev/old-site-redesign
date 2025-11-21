@@ -108,7 +108,10 @@ const Index = () => {
       if (response.ok) {
         setFormStatus('success');
         setFormData({ name: '', phone: '', detail: '', message: '' });
-        setTimeout(() => setFormStatus('idle'), 5000);
+        setTimeout(() => {
+          setFormStatus('idle');
+          setFullFormOpen(false);
+        }, 2000);
       } else {
         setFormStatus('error');
         setTimeout(() => setFormStatus('idle'), 5000);
