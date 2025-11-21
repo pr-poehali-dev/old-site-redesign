@@ -12,9 +12,9 @@ export const ContactsMapSection = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-          <div className="space-y-4">
-            <div className="bg-card p-4 md:p-6 rounded-lg border shadow-sm space-y-4">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-start">
+          <div className="bg-card p-4 md:p-6 rounded-lg border shadow-sm h-full flex flex-col justify-between">
+            <div className="space-y-4 flex-1">
               <div className="flex items-start gap-3">
                 <Icon name="MapPin" className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                 <div>
@@ -62,8 +62,8 @@ export const ContactsMapSection = () => {
             </div>
           </div>
 
-          <div className="space-y-3">
-            <div className="w-full h-[300px] md:h-[350px] rounded-lg overflow-hidden border-2 shadow-lg">
+          <div className="flex flex-col gap-3 h-full">
+            <div className="flex-1 rounded-lg overflow-hidden border-2 shadow-lg min-h-[300px] md:min-h-[350px]">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?ll=43.915409%2C56.253487&z=16&l=map&pt=43.915409,56.253487,pm2rdm"
                 width="100%"
