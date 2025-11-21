@@ -61,13 +61,8 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
               <h3 className="text-lg md:text-xl font-bold mb-4 text-center">Что входит в ремонт под ключ?</h3>
               <div className="grid md:grid-cols-2 gap-3">
                 <div className="flex items-start gap-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Icon name="Search" className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">1</span>
-                    </div>
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary font-bold text-sm">1</span>
                   </div>
                   <div>
                     <h4 className="font-bold text-sm mb-1">Диагностика</h4>
@@ -76,13 +71,8 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Icon name="Wrench" className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">2</span>
-                    </div>
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary font-bold text-sm">2</span>
                   </div>
                   <div>
                     <h4 className="font-bold text-sm mb-1">Демонтаж</h4>
@@ -91,13 +81,8 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Icon name="Zap" className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">3</span>
-                    </div>
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary font-bold text-sm">3</span>
                   </div>
                   <div>
                     <h4 className="font-bold text-sm mb-1">Восстановление</h4>
@@ -106,13 +91,8 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Icon name="Package" className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">4</span>
-                    </div>
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary font-bold text-sm">4</span>
                   </div>
                   <div>
                     <h4 className="font-bold text-sm mb-1">Замена расходников</h4>
@@ -121,13 +101,8 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Icon name="Settings" className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">5</span>
-                    </div>
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary font-bold text-sm">5</span>
                   </div>
                   <div>
                     <h4 className="font-bold text-sm mb-1">Установка</h4>
@@ -136,13 +111,8 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Icon name="CheckCircle" className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">6</span>
-                    </div>
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary font-bold text-sm">6</span>
                   </div>
                   <div>
                     <h4 className="font-bold text-sm mb-1">Тест-драйв</h4>
