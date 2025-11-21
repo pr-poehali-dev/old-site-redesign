@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import Icon from '@/components/ui/icon';
 
 export const ContactsMapSection = () => {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [formOpen, setFormOpen] = useState(false);
 
   const formatPhoneNumber = (value: string) => {
     const cleaned = value.replace(/\D/g, '');
@@ -58,7 +60,10 @@ export const ContactsMapSection = () => {
       if (response.ok) {
         setFormStatus('success');
         setFormData({ name: '', phone: '', message: '' });
-        setTimeout(() => setFormStatus('idle'), 5000);
+        setTimeout(() => {
+          setFormStatus('idle');
+          setFormOpen(false);
+        }, 3000);
       } else {
         setFormStatus('error');
         setTimeout(() => setFormStatus('idle'), 5000);
@@ -147,73 +152,16 @@ export const ContactsMapSection = () => {
                   <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
                   WhatsApp
                 </Button>
-                <a href="mailto:megashlic@yandex.ru" className="w-full">
-                  <Button 
-                    size="lg"
-                    variant="outline"
-                    className="w-full"
-                  >
-                    <Icon name="Mail" className="mr-2 h-5 w-5" />
-                    Написать на Email
-                  </Button>
-                </a>
-              </div>
-            </div>
-
-            <div className="mt-6 pt-6 border-t space-y-3">
-              <h3 className="font-semibold text-center mb-3">Оставить заявку</h3>
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <Input
-                  placeholder="Ваше имя"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                  disabled={formStatus === 'sending'}
-                />
-                <Input
-                  type="tel"
-                  placeholder="+7 (___) ___-__-__"
-                  value={formData.phone}
-                  onChange={(e) => handlePhoneChange(e.target.value)}
-                  required
-                  disabled={formStatus === 'sending'}
-                />
-                <Textarea
-                  placeholder="Ваше сообщение (необязательно)"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  disabled={formStatus === 'sending'}
-                  rows={3}
-                />
                 <Button 
-                  type="submit" 
-                  className="w-full" 
                   size="lg"
-                  disabled={formStatus === 'sending'}
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => setFormOpen(true)}
                 >
-                  {formStatus === 'sending' ? (
-                    <>
-                      <Icon name="Loader2" className="mr-2 h-5 w-5 animate-spin" />
-                      Отправка...
-                    </>
-                  ) : formStatus === 'success' ? (
-                    <>
-                      <Icon name="CheckCircle" className="mr-2 h-5 w-5" />
-                      Отправлено!
-                    </>
-                  ) : formStatus === 'error' ? (
-                    <>
-                      <Icon name="AlertCircle" className="mr-2 h-5 w-5" />
-                      Ошибка
-                    </>
-                  ) : (
-                    <>
-                      <Icon name="Send" className="mr-2 h-5 w-5" />
-                      Отправить заявку
-                    </>
-                  )}
+                  <Icon name="Mail" className="mr-2 h-5 w-5" />
+                  Написать на Email
                 </Button>
-              </form>
+              </div>
             </div>
           </div>
 
@@ -243,6 +191,69 @@ export const ContactsMapSection = () => {
           </div>
         </div>
       </div>
+
+      <Dialog open={formOpen} onOpenChange={setFormOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Оставить заявку</DialogTitle>
+            <DialogDescription>
+              Заполните форму и мы свяжемся с вами в ближайшее время
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <Input
+              placeholder="Ваше имя"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              required
+              disabled={formStatus === 'sending'}
+            />
+            <Input
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              value={formData.phone}
+              onChange={(e) => handlePhoneChange(e.target.value)}
+              required
+              disabled={formStatus === 'sending'}
+            />
+            <Textarea
+              placeholder="Ваше сообщение (необязательно)"
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              disabled={formStatus === 'sending'}
+              rows={4}
+            />
+            <Button 
+              type="submit" 
+              className="w-full" 
+              size="lg"
+              disabled={formStatus === 'sending'}
+            >
+              {formStatus === 'sending' ? (
+                <>
+                  <Icon name="Loader2" className="mr-2 h-5 w-5 animate-spin" />
+                  Отправка...
+                </>
+              ) : formStatus === 'success' ? (
+                <>
+                  <Icon name="CheckCircle" className="mr-2 h-5 w-5" />
+                  Отправлено!
+                </>
+              ) : formStatus === 'error' ? (
+                <>
+                  <Icon name="AlertCircle" className="mr-2 h-5 w-5" />
+                  Ошибка
+                </>
+              ) : (
+                <>
+                  <Icon name="Send" className="mr-2 h-5 w-5" />
+                  Отправить заявку
+                </>
+              )}
+            </Button>
+          </form>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
