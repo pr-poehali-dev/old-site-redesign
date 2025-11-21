@@ -249,7 +249,7 @@ const Index = () => {
 
       <AboutAndAdvantagesSection />
 
-      <TurnkeySection />
+      <TurnkeySection onFormOpen={() => setFullFormOpen(true)} />
 
       <RutubeSection />
 
