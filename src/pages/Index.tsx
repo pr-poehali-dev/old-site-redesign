@@ -48,6 +48,7 @@ const Index = () => {
   const [quickConsultOpen, setQuickConsultOpen] = useState(false);
   const [quickFormData, setQuickFormData] = useState({ name: '', phone: '' });
   const [quickFormStatus, setQuickFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [fullFormOpen, setFullFormOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [viewCount, setViewCount] = useState<number>(0);
 
@@ -164,11 +165,17 @@ const Index = () => {
         quickFormStatus={quickFormStatus}
         handleQuickFormSubmit={handleQuickFormSubmit}
         scrollToSection={scrollToSection}
+        fullFormOpen={fullFormOpen}
+        setFullFormOpen={setFullFormOpen}
+        formData={formData}
+        setFormData={setFormData}
+        formStatus={formStatus}
+        handleFormSubmit={handleFormSubmit}
       />
 
       <HeroSection 
         scrollToSection={scrollToSection} 
-        onConsultClick={() => setQuickConsultOpen(true)}
+        onConsultClick={() => setFullFormOpen(true)}
       />
 
       <ServicesSection
@@ -193,7 +200,7 @@ const Index = () => {
       <FooterWithButtons 
         viewCount={viewCount} 
         showScrollTop={showScrollTop} 
-        onConsultClick={() => setQuickConsultOpen(true)}
+        onConsultClick={() => setFullFormOpen(true)}
       />
     </div>
   );

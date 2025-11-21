@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import Icon from '@/components/ui/icon';
 
 interface HeaderProps {
@@ -13,6 +14,12 @@ interface HeaderProps {
   quickFormStatus: 'idle' | 'sending' | 'success' | 'error';
   handleQuickFormSubmit: (e: React.FormEvent) => void;
   scrollToSection: (section: string) => void;
+  fullFormOpen: boolean;
+  setFullFormOpen: (value: boolean) => void;
+  formData: { name: string; phone: string; detail: string; message: string };
+  setFormData: (value: { name: string; phone: string; detail: string; message: string }) => void;
+  formStatus: 'idle' | 'sending' | 'success' | 'error';
+  handleFormSubmit: (e: React.FormEvent) => void;
 }
 
 export const Header = ({
@@ -25,6 +32,12 @@ export const Header = ({
   quickFormStatus,
   handleQuickFormSubmit,
   scrollToSection,
+  fullFormOpen,
+  setFullFormOpen,
+  formData,
+  setFormData,
+  formStatus,
+  handleFormSubmit,
 }: HeaderProps) => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -134,6 +147,98 @@ export const Header = ({
           </nav>
         </div>
       )}
+
+      <Dialog open={fullFormOpen} onOpenChange={setFullFormOpen}>
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl">Отправить заявку</DialogTitle>
+            <DialogDescription>
+              Заполните форму, и мы свяжемся с вами в ближайшее время
+            </DialogDescription>
+          </DialogHeader>
+          
+          {formStatus === 'success' && (
+            <div className="p-3 bg-primary/10 text-primary rounded-md text-sm">
+              ✓ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
+            </div>
+          )}
+          {formStatus === 'error' && (
+            <div className="p-3 bg-destructive/10 text-destructive rounded-md text-sm">
+              Ошибка отправки. Попробуйте позже или позвоните нам напрямую.
+            </div>
+          )}
+
+          <form className="space-y-4" onSubmit={handleFormSubmit}>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="modal-name" className="block text-sm font-medium mb-2">
+                  Ваше имя <span className="text-destructive">*</span>
+                </label>
+                <Input 
+                  id="modal-name" 
+                  placeholder="Иван Иванов" 
+                  required 
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  disabled={formStatus === 'sending'}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="modal-phone" className="block text-sm font-medium mb-2">
+                  Телефон <span className="text-destructive">*</span>
+                </label>
+                <Input 
+                  id="modal-phone" 
+                  type="tel" 
+                  placeholder="+7 (___) ___-__-__" 
+                  required 
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                  disabled={formStatus === 'sending'}
+                />
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="modal-detail" className="block text-sm font-medium mb-2">
+                Какую деталь нужно восстановить?
+              </label>
+              <Input 
+                id="modal-detail" 
+                placeholder="Например: вал раздатки Hyundai"
+                value={formData.detail}
+                onChange={(e) => setFormData({...formData, detail: e.target.value})}
+                disabled={formStatus === 'sending'}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="modal-message" className="block text-sm font-medium mb-2">
+                Дополнительная информация
+              </label>
+              <textarea 
+                id="modal-message"
+                rows={3}
+                className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+                placeholder="Состояние детали, сроки..."
+                value={formData.message}
+                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                disabled={formStatus === 'sending'}
+              />
+            </div>
+
+            <Button type="submit" className="w-full" size="lg" disabled={formStatus === 'sending'}>
+              <Icon name="Send" className="mr-2 h-5 w-5" />
+              {formStatus === 'sending' ? 'Отправка...' : 'Отправить заявку'}
+            </Button>
+
+            <p className="text-xs text-muted-foreground text-center">
+              Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
+            </p>
+          </form>
+        </DialogContent>
+      </Dialog>
     </header>
   );
 };
