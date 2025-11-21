@@ -1,9 +1,11 @@
 import json
 import os
 import smtplib
+import base64
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from typing import Dict, Any
+from email.mime.image import MIMEImage
+from typing import Dict, Any, List
 from datetime import datetime
 
 def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
@@ -45,6 +47,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         phone = body_data.get('phone', '').strip()
         detail = body_data.get('detail', '').strip()
         message = body_data.get('message', '').strip()
+        photos: List[Dict[str, str]] = body_data.get('photos', [])
         
         if not name or not phone:
             return {
@@ -158,6 +161,15 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         """
         
         msg.attach(MIMEText(html_body, 'html', 'utf-8'))
+        
+        for idx, photo in enumerate(photos):
+            try:
+                image_data = base64.b64decode(photo['data'])
+                image = MIMEImage(image_data)
+                image.add_header('Content-Disposition', 'attachment', filename=photo.get('name', f'photo_{idx+1}.jpg'))
+                msg.attach(image)
+            except Exception as e:
+                print(f'Failed to attach photo {idx}: {str(e)}')
         
         smtp_server = 'smtp.yandex.ru' if 'yandex' in smtp_user else 'smtp.gmail.com'
         smtp_port = 465

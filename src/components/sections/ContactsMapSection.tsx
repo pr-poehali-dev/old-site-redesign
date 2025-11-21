@@ -117,6 +117,31 @@ export const ContactsMapSection = () => {
     setUploadingPhotos(true);
     setUploadProgress(selectedFiles.map(() => 0));
 
+    const photos = await Promise.all(
+      selectedFiles.map(async (file, index) => {
+        setUploadProgress(prev => {
+          const newProgress = [...prev];
+          newProgress[index] = 50;
+          return newProgress;
+        });
+
+        return new Promise<{ name: string; data: string }>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const base64 = (reader.result as string).split(',')[1];
+            setUploadProgress(prev => {
+              const newProgress = [...prev];
+              newProgress[index] = 100;
+              return newProgress;
+            });
+            resolve({ name: file.name, data: base64 });
+          };
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+      })
+    );
+
     let messageText = formData.message || '';
     if (selectedFiles.length > 0) {
       messageText += `\n\n📎 Прикреплено фото: ${selectedFiles.length} шт.`;
@@ -130,7 +155,8 @@ export const ContactsMapSection = () => {
           type: 'Контактная форма',
           name: formData.name,
           phone: formData.phone,
-          message: messageText
+          message: messageText,
+          photos
         })
       });
 
