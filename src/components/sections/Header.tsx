@@ -66,10 +66,10 @@ export const Header = ({
           <Button 
             className="hidden md:flex text-xs"
             size="sm"
-            onClick={() => setQuickConsultOpen(!quickConsultOpen)}
+            onClick={() => window.location.href = 'tel:+79202520352'}
           >
-            <Icon name="Headphones" className="mr-1.5 h-3.5 w-3.5" />
-            Консультация
+            <Icon name="Phone" className="mr-1.5 h-3.5 w-3.5" />
+            Позвонить
           </Button>
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
