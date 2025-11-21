@@ -1,7 +1,44 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import Icon from '@/components/ui/icon';
 
 export const ContactsMapSection = () => {
+  const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
+  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('sending');
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/fd96c7e7-0adf-485f-a51a-abcd609b660d', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          detail: 'Форма из раздела контактов',
+        }),
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        setFormData({ name: '', phone: '', message: '' });
+        setTimeout(() => {
+          setFormStatus('idle');
+        }, 3000);
+      } else {
+        setFormStatus('error');
+        setTimeout(() => setFormStatus('idle'), 5000);
+      }
+    } catch (error) {
+      setFormStatus('error');
+      setTimeout(() => setFormStatus('idle'), 5000);
+    }
+  };
+
   return (
     <section id="contacts" className="py-8 md:py-12 bg-muted/30">
       <div className="container">
@@ -12,7 +49,7 @@ export const ContactsMapSection = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-6">
           <div className="space-y-4">
             <div className="bg-card p-4 md:p-6 rounded-lg border shadow-sm space-y-4">
               <div className="flex items-start gap-3">
@@ -59,6 +96,62 @@ export const ContactsMapSection = () => {
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className="bg-card p-4 md:p-6 rounded-lg border shadow-sm">
+              <h3 className="font-semibold mb-4 flex items-center gap-2">
+                <Icon name="MessageSquare" className="h-5 w-5 text-primary" />
+                Обратная связь
+              </h3>
+
+              {formStatus === 'success' && (
+                <div className="mb-4 p-3 bg-green-600/10 text-green-600 rounded-md text-sm">
+                  ✓ Сообщение отправлено! Мы свяжемся с вами в ближайшее время.
+                </div>
+              )}
+              {formStatus === 'error' && (
+                <div className="mb-4 p-3 bg-destructive/10 text-destructive rounded-md text-sm">
+                  Ошибка отправки. Позвоните нам: +7 (920) 252-03-52
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div>
+                  <Input 
+                    placeholder="Ваше имя" 
+                    required 
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    disabled={formStatus === 'sending'}
+                  />
+                </div>
+                <div>
+                  <Input 
+                    type="tel" 
+                    placeholder="+7 (___) ___-__-__" 
+                    required 
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    disabled={formStatus === 'sending'}
+                  />
+                </div>
+                <div>
+                  <textarea 
+                    rows={3}
+                    className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none text-sm"
+                    placeholder="Ваш вопрос или комментарий..."
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    disabled={formStatus === 'sending'}
+                  />
+                </div>
+                <Button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white" disabled={formStatus === 'sending'}>
+                  <Icon name="Send" className="mr-2 h-4 w-4" />
+                  {formStatus === 'sending' ? 'Отправка...' : 'Отправить'}
+                </Button>
+              </form>
             </div>
           </div>
 
