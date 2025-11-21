@@ -268,7 +268,7 @@ export const TurnkeySection = () => {
                 <div className="pt-4 flex flex-col md:flex-row gap-3">
                   <Button 
                     size="lg" 
-                    className="w-full md:w-auto"
+                    className="w-full md:w-auto bg-green-600 hover:bg-green-700"
                     onClick={() => window.location.href = 'tel:+79202520352'}
                   >
                     <Icon name="Phone" className="mr-2 h-5 w-5" />
@@ -276,11 +276,10 @@ export const TurnkeySection = () => {
                   </Button>
                   <Button 
                     size="lg" 
-                    variant="outline"
-                    className="w-full md:w-auto"
+                    className="w-full md:w-auto bg-green-600 hover:bg-green-700"
                     onClick={scrollToContacts}
                   >
-                    <Icon name="Send" className="mr-2 h-5 w-5" />
+                    <Icon name="Calculator" className="mr-2 h-5 w-5" />
                     Рассчитать стоимость
                   </Button>
                 </div>
