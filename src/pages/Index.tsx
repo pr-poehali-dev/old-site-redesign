@@ -7,6 +7,7 @@ import { AboutAndAdvantagesSection } from '@/components/sections/AboutAndAdvanta
 import { TurnkeySection } from '@/components/sections/TurnkeySection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
 import { ContactsSection } from '@/components/sections/ContactsSection';
+import { ContactsMapSection } from '@/components/sections/ContactsMapSection';
 import { FooterWithButtons } from '@/components/sections/FooterWithButtons';
 
 interface Service {
@@ -200,6 +201,8 @@ const Index = () => {
       <TurnkeySection />
 
       <RutubeSection />
+
+      <ContactsMapSection />
 
       <FooterWithButtons 
         viewCount={viewCount} 

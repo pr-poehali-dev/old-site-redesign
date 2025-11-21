@@ -9,7 +9,7 @@ interface FooterWithButtonsProps {
 export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: FooterWithButtonsProps) => {
   return (
     <>
-      <footer id="contacts" className="border-t border-zinc-800 py-6 md:py-8 bg-black text-white">
+      <footer className="border-t border-zinc-800 py-6 md:py-8 bg-black text-white">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-4 md:mb-6">
             <div className="space-y-2 md:space-y-3">
