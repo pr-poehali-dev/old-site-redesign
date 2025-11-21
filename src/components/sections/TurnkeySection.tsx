@@ -179,7 +179,7 @@ export const TurnkeySection = () => {
                       </div>
                       <div>
                         <h4 className="font-bold text-xs md:text-sm mb-0.5 md:mb-1">Гарантия</h4>
-                        <p className="text-xs md:text-sm text-muted-foreground">18 месяцев на все работы</p>
+                        <p className="text-xs md:text-sm text-muted-foreground">12 месяцев без ограничения пробега</p>
                       </div>
                     </div>
 

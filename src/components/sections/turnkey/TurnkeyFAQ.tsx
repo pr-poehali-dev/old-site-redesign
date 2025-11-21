@@ -36,7 +36,7 @@ export const TurnkeyFAQ = () => {
                 <Icon name="MessageCircle" className="h-3.5 w-3.5 md:h-4 md:w-4 text-primary mt-0.5 flex-shrink-0" />
                 Что делать, если проблема повторится?
               </h4>
-              <p className="text-[10px] md:text-xs text-muted-foreground pl-5 md:pl-6">На все работы действует гарантия 18 месяцев. Если проблема повторится в течение гарантийного срока — устраним бесплатно.</p>
+              <p className="text-[10px] md:text-xs text-muted-foreground pl-5 md:pl-6">На все работы действует гарантия 12 месяцев без ограничения пробега. Если проблема повторится в течение гарантийного срока — устраним бесплатно.</p>
             </div>
             
             <div className="bg-background rounded-lg p-2 md:p-3 border">

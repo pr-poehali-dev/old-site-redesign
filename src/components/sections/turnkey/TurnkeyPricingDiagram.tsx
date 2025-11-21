@@ -57,7 +57,7 @@ export const TurnkeyPricingDiagram = ({ scrollToContacts }: TurnkeyPricingDiagra
               <span className="text-primary font-semibold"> Экономия 203 000 ₽!</span>
             </p>
             <p className="text-[10px] md:text-xs pt-1.5 md:pt-2 border-t">
-              Вы получаете такое же качество работы, полную гарантию 18 месяцев и существенную экономию!
+              Вы получаете такое же качество работы, полную гарантию 12 месяцев без ограничения пробега и существенную экономию!
             </p>
           </div>
           
