@@ -380,7 +380,21 @@ export const ContactsMapSection = () => {
                           
                           <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs p-1 pointer-events-none">
                             <div className="truncate">{file.name}</div>
-                            <div className="text-[10px] text-white/70">{fileSizeMB} МБ</div>
+                            <div className="text-[10px] text-white/70 flex items-center justify-between">
+                              <span>{fileSizeMB} МБ</span>
+                              {uploadProgress[index] > 0 && uploadProgress[index] < 100 && (
+                                <span className="flex items-center gap-1">
+                                  <Icon name="Loader2" className="h-3 w-3 animate-spin" />
+                                  {uploadProgress[index]}%
+                                </span>
+                              )}
+                              {uploadProgress[index] === 100 && (
+                                <span className="text-green-400 flex items-center gap-1">
+                                  <Icon name="CheckCircle" className="h-3 w-3" />
+                                  Загружено
+                                </span>
+                              )}
+                            </div>
                           </div>
                         </div>
                       );
