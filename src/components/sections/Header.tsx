@@ -89,7 +89,7 @@ export const Header = ({
       </div>
 
       {quickConsultOpen && (
-        <div className="hidden md:block border-t bg-background animate-in slide-in-from-top duration-300">
+        <div className="border-t bg-background animate-in slide-in-from-top duration-300">
           <div className="container py-6">
             <Card className="max-w-md mx-auto">
               <CardHeader>
@@ -148,10 +148,16 @@ export const Header = ({
             <button onClick={() => scrollToSection('services')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Услуги</button>
             <button onClick={() => scrollToSection('about')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">О компании</button>
             <button onClick={() => scrollToSection('turnkey')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Под ключ</button>
-            <Button className="mt-2" onClick={() => setQuickConsultOpen(true)}>
-              <Icon name="Phone" className="mr-2 h-4 w-4" />
-              Написать
-            </Button>
+            <div className="flex gap-2 mt-2">
+              <Button className="flex-1" variant="outline" onClick={() => { setMobileMenuOpen(false); setQuickConsultOpen(true); }}>
+                <Icon name="MessageCircle" className="mr-2 h-4 w-4" />
+                Написать
+              </Button>
+              <Button className="flex-1" onClick={() => window.location.href = 'tel:+79202520352'}>
+                <Icon name="Phone" className="mr-2 h-4 w-4" />
+                Позвонить
+              </Button>
+            </div>
           </nav>
         </div>
       )}

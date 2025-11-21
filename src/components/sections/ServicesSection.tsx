@@ -84,7 +84,7 @@ export const ServicesSection = ({
                   </div>
                 )}
                 <CardHeader className="pb-2 pt-2.5 px-3">
-                  <CardTitle className="text-xs md:text-sm leading-tight line-clamp-2">
+                  <CardTitle className="text-xs md:text-sm leading-tight line-clamp-3 min-h-[2.5rem] md:min-h-[3rem]">
                     {service.name}
                   </CardTitle>
                 </CardHeader>

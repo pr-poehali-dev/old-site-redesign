@@ -62,15 +62,15 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
         </div>
       </footer>
 
-      <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col gap-2 md:gap-3">
+      <div className="fixed bottom-3 right-3 md:bottom-6 md:right-6 z-50 flex flex-col gap-2">
         {onConsultClick && (
           <button
             onClick={onConsultClick}
-            className="bg-green-600 hover:bg-green-700 text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+            className="bg-green-600 hover:bg-green-700 text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
             aria-label="Написать нам"
           >
-            <Icon name="Mail" className="h-5 w-5 md:h-6 md:w-6" />
-            <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <Icon name="Mail" className="h-4 w-4 md:h-6 md:w-6" />
+            <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
               Написать нам
             </span>
           </button>
@@ -78,11 +78,11 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
 
         <a
           href="tel:+79202520352"
-          className="bg-green-600 hover:bg-green-700 text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+          className="bg-green-600 hover:bg-green-700 text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
           aria-label="Позвонить"
         >
-          <Icon name="Phone" className="h-5 w-5 md:h-6 md:w-6" />
-          <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          <Icon name="Phone" className="h-4 w-4 md:h-6 md:w-6" />
+          <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
             Позвонить
           </span>
         </a>
@@ -91,11 +91,11 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
           href="https://wa.me/79202520352"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-600 hover:bg-green-700 text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+          className="bg-green-600 hover:bg-green-700 text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
           aria-label="Написать в WhatsApp"
         >
-          <Icon name="MessageCircle" className="h-5 w-5 md:h-6 md:w-6" />
-          <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          <Icon name="MessageCircle" className="h-4 w-4 md:h-6 md:w-6" />
+          <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
             Написать в WhatsApp
           </span>
         </a>
@@ -104,10 +104,10 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
       {showScrollTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-4 right-20 md:bottom-6 md:right-28 z-50 bg-green-600 hover:bg-green-700 text-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-in fade-in slide-in-from-bottom-4"
+          className="fixed bottom-3 left-3 md:bottom-6 md:left-6 z-50 bg-green-600 hover:bg-green-700 text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-in fade-in slide-in-from-bottom-4"
           aria-label="Вернуться наверх"
         >
-          <Icon name="ArrowUp" className="h-5 w-5 md:h-6 md:w-6" />
+          <Icon name="ArrowUp" className="h-4 w-4 md:h-6 md:w-6" />
         </button>
       )}
     </>

@@ -50,20 +50,20 @@ export const HeroSection = ({ scrollToSection, onConsultClick, onFullFormClick }
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50"></div>
       </div>
       
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-4">
         <div className="max-w-5xl mx-auto text-center space-y-3 md:space-y-4">
-          <h1 className="text-2xl md:text-5xl font-bold tracking-tight text-white animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+          <h1 className="text-xl md:text-5xl font-bold tracking-tight text-white animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 leading-tight">
             Восстановление шлицевых соединений
           </h1>
-          <p className="text-sm md:text-lg text-white/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+          <p className="text-xs md:text-lg text-white/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 px-2">
             Производственная компания по восстановлению шлицевых соединений трансмиссии по всей стране
           </p>
-          <div className="flex flex-wrap gap-2 md:gap-3 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
-            <Button size="default" className="md:h-11 md:px-8 bg-green-600 hover:bg-green-700 text-white transition-all duration-300 hover:scale-110 hover:shadow-xl" onClick={onConsultClick}>
+          <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700 px-4">
+            <Button size="default" className="w-full sm:w-auto md:h-11 md:px-8 bg-green-600 hover:bg-green-700 text-white transition-all duration-300 hover:scale-110 hover:shadow-xl" onClick={onConsultClick}>
               <Icon name="Headphones" className="mr-2 h-4 w-4 md:h-5 md:w-5" />
               Консультация
             </Button>
-            <Button size="default" className="md:h-11 md:px-8 bg-green-600 hover:bg-green-700 text-white transition-all duration-300 hover:scale-110 hover:shadow-xl" onClick={onFullFormClick}>
+            <Button size="default" className="w-full sm:w-auto md:h-11 md:px-8 bg-green-600 hover:bg-green-700 text-white transition-all duration-300 hover:scale-110 hover:shadow-xl" onClick={onFullFormClick}>
               <Icon name="Send" className="mr-2 h-4 w-4 md:h-5 md:w-5" />
               Отправить заявку
             </Button>

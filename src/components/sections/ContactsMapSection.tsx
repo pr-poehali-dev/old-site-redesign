@@ -63,7 +63,7 @@ export const ContactsMapSection = () => {
           </div>
 
           <div className="flex flex-col gap-3 h-full">
-            <div className="flex-1 rounded-lg overflow-hidden border-2 shadow-lg min-h-[300px] md:min-h-[350px]">
+            <div className="flex-1 rounded-lg overflow-hidden border-2 shadow-lg min-h-[350px] md:min-h-[400px]">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?ll=43.915409%2C56.253487&z=16&l=map&pt=43.915409,56.253487,pm2rdm"
                 width="100%"
