@@ -9,6 +9,7 @@ interface ContactsSectionProps {
   setFormData: (value: { name: string; phone: string; detail: string; message: string }) => void;
   formStatus: 'idle' | 'sending' | 'success' | 'error';
   handleFormSubmit: (e: React.FormEvent) => void;
+  handlePhoneChange: (value: string, setter: (data: any) => void, currentData: any) => void;
 }
 
 export const ContactsSection = ({
@@ -16,6 +17,7 @@ export const ContactsSection = ({
   setFormData,
   formStatus,
   handleFormSubmit,
+  handlePhoneChange,
 }: ContactsSectionProps) => {
 
 
@@ -68,8 +70,10 @@ export const ContactsSection = ({
                       type="tel" 
                       placeholder="+7 (___) ___-__-__" 
                       required 
+                      minLength={18}
+                      maxLength={18}
                       value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      onChange={(e) => handlePhoneChange(e.target.value, setFormData, formData)}
                       disabled={formStatus === 'sending'}
                     />
                   </div>

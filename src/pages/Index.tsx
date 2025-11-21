@@ -51,6 +51,38 @@ const Index = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [viewCount, setViewCount] = useState<number>(0);
 
+  const formatPhoneNumber = (value: string) => {
+    const cleaned = value.replace(/\D/g, '');
+    
+    if (cleaned.length === 0) return '';
+    
+    let formatted = '+7';
+    
+    if (cleaned.length > 1) {
+      const withoutCountryCode = cleaned.startsWith('7') || cleaned.startsWith('8') ? cleaned.slice(1) : cleaned;
+      
+      if (withoutCountryCode.length > 0) {
+        formatted += ' (' + withoutCountryCode.slice(0, 3);
+      }
+      if (withoutCountryCode.length >= 4) {
+        formatted += ') ' + withoutCountryCode.slice(3, 6);
+      }
+      if (withoutCountryCode.length >= 7) {
+        formatted += '-' + withoutCountryCode.slice(6, 8);
+      }
+      if (withoutCountryCode.length >= 9) {
+        formatted += '-' + withoutCountryCode.slice(8, 10);
+      }
+    }
+    
+    return formatted;
+  };
+
+  const handlePhoneChange = (value: string, setter: (data: any) => void, currentData: any) => {
+    const formatted = formatPhoneNumber(value);
+    setter({ ...currentData, phone: formatted });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
@@ -89,6 +121,11 @@ const Index = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setMobileMenuOpen(false);
+  };
+
+  const isPhoneValid = (phone: string) => {
+    const cleaned = phone.replace(/\D/g, '');
+    return cleaned.length === 11;
   };
 
   const handleFormSubmit = async (e: React.FormEvent) => {
@@ -177,6 +214,7 @@ const Index = () => {
         setFormData={setFormData}
         formStatus={formStatus}
         handleFormSubmit={handleFormSubmit}
+        handlePhoneChange={handlePhoneChange}
       />
 
       <HeroSection 

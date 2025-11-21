@@ -20,6 +20,7 @@ interface HeaderProps {
   setFormData: (value: { name: string; phone: string; detail: string; message: string }) => void;
   formStatus: 'idle' | 'sending' | 'success' | 'error';
   handleFormSubmit: (e: React.FormEvent) => void;
+  handlePhoneChange: (value: string, setter: (data: any) => void, currentData: any) => void;
 }
 
 export const Header = ({
@@ -38,6 +39,7 @@ export const Header = ({
   setFormData,
   formStatus,
   handleFormSubmit,
+  handlePhoneChange,
 }: HeaderProps) => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -128,8 +130,10 @@ export const Header = ({
                     type="tel" 
                     placeholder="+7 (___) ___-__-__" 
                     required 
+                    minLength={18}
+                    maxLength={18}
                     value={quickFormData.phone}
-                    onChange={(e) => setQuickFormData({...quickFormData, phone: e.target.value})}
+                    onChange={(e) => handlePhoneChange(e.target.value, setQuickFormData, quickFormData)}
                     disabled={quickFormStatus === 'sending'}
                   />
                   <Button type="submit" className="w-full" disabled={quickFormStatus === 'sending'}>
@@ -216,8 +220,10 @@ export const Header = ({
                   type="tel" 
                   placeholder="+7 (___) ___-__-__" 
                   required 
+                  minLength={18}
+                  maxLength={18}
                   value={formData.phone}
-                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                  onChange={(e) => handlePhoneChange(e.target.value, setFormData, formData)}
                   disabled={formStatus === 'sending'}
                 />
               </div>
