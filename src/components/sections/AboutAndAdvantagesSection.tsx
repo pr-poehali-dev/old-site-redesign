@@ -90,14 +90,19 @@ export const AboutAndAdvantagesSection = () => {
                     </div>
 
                     <div className="relative group order-first md:order-last">
-                      <div className="overflow-hidden rounded-lg border-2 border-primary/30 group-hover:border-primary/50 transition-all duration-300 shadow-md">
+                      <a 
+                        href="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block overflow-hidden rounded-lg border-2 border-primary/30 group-hover:border-primary/50 transition-all duration-300 shadow-md cursor-pointer"
+                      >
                         <img 
                           src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
                           alt="Патент РФ № 2829377"
                           className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
                         />
-                      </div>
-                      <p className="text-center text-xs text-muted-foreground mt-2 font-medium">Патент РФ № 2829377</p>
+                      </a>
+                      <p className="text-center text-xs text-muted-foreground mt-2 font-medium">Патент РФ № 2829377 — нажмите, чтобы открыть</p>
                     </div>
                   </div>
                 </div>
