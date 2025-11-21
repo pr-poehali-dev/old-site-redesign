@@ -185,7 +185,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                       <Icon name="Car" className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-base">Volkswagen Tiguan</h4>
+                      <h4 className="font-bold text-base">Volkswagen Tiguan 1</h4>
                       <p className="text-xs text-muted-foreground">4Motion</p>
                     </div>
                   </div>
@@ -196,7 +196,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                       <span className="text-sm text-muted-foreground">₽</span>
                     </div>
                     <p className="text-xs text-muted-foreground">
-                      Tiguan 1 и 2 поколения с муфтой Haldex
+                      Первое поколение с муфтой Haldex
                     </p>
                   </div>
                 </CardContent>
