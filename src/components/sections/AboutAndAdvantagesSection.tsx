@@ -89,15 +89,15 @@ export const AboutAndAdvantagesSection = () => {
                       </div>
                     </div>
 
-                    <div className="relative group">
-                      <div className="overflow-hidden rounded-lg border border-primary/20 group-hover:border-primary/40 transition-all duration-300">
+                    <div className="relative group order-first md:order-last">
+                      <div className="overflow-hidden rounded-lg border-2 border-primary/30 group-hover:border-primary/50 transition-all duration-300 shadow-md">
                         <img 
                           src="https://cdn.poehali.dev/files/bd4c62cb-eb60-4650-bf0c-77c2bbd65ed0.jpg"
                           alt="Патент РФ № 2829377"
-                          loading="lazy"
                           className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
+                      <p className="text-center text-xs text-muted-foreground mt-2 font-medium">Патент РФ № 2829377</p>
                     </div>
                   </div>
                 </div>
