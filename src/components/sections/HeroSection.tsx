@@ -4,6 +4,7 @@ import Icon from '@/components/ui/icon';
 
 interface HeroSectionProps {
   scrollToSection: (section: string) => void;
+  onConsultClick?: () => void;
 }
 
 const backgroundImages = [
@@ -21,7 +22,7 @@ const backgroundImages = [
   'https://cdn.poehali.dev/files/b3c88cc7-9023-4aeb-b40d-6c50c585b3bd.jpg',
 ];
 
-export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
+export const HeroSection = ({ scrollToSection, onConsultClick }: HeroSectionProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -61,7 +62,7 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               Наши услуги
               <Icon name="ArrowRight" className="ml-2 h-4 w-4 md:h-5 md:w-5" />
             </Button>
-            <Button size="default" className="md:h-11 md:px-8" onClick={() => scrollToSection('contacts')}>
+            <Button size="default" className="md:h-11 md:px-8" onClick={onConsultClick}>
               Отправить заявку
             </Button>
           </div>

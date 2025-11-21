@@ -166,7 +166,10 @@ const Index = () => {
         scrollToSection={scrollToSection}
       />
 
-      <HeroSection scrollToSection={scrollToSection} />
+      <HeroSection 
+        scrollToSection={scrollToSection} 
+        onConsultClick={() => setQuickConsultOpen(true)}
+      />
 
       <ServicesSection
         searchQuery={searchQuery}
