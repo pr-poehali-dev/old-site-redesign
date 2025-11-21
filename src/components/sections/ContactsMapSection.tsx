@@ -117,25 +117,26 @@ export const ContactsMapSection = () => {
     setUploadingPhotos(true);
     setUploadProgress(selectedFiles.map(() => 0));
 
-    const TELEGRAM_BOT_TOKEN = '7788513036:AAGqjdHnrPZNQfKkrO7DXvzwWgldbxhpXP4';
-    const TELEGRAM_CHAT_ID = '1312732538';
-
-    let message = `🔔 Новая заявка с сайта!\n\n👤 Имя: ${formData.name}\n📞 Телефон: ${formData.phone}\n💬 Сообщение: ${formData.message || 'Не указано'}`;
-    
+    let messageText = formData.message || '';
     if (selectedFiles.length > 0) {
-      message += `\n📎 Прикреплено фото: ${selectedFiles.length} шт.`;
+      messageText += `\n\n📎 Прикреплено фото: ${selectedFiles.length} шт.`;
     }
 
     try {
-      await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      const response = await fetch('https://functions.poehali.dev/9b6ada36-da84-4729-b828-3e41115b8136', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
-          text: message,
-          parse_mode: 'HTML'
+          type: 'Контактная форма',
+          name: formData.name,
+          phone: formData.phone,
+          message: messageText
         })
       });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
 
       setFormStatus('success');
       setFormData({ name: '', phone: '', message: '' });
@@ -146,7 +147,8 @@ export const ContactsMapSection = () => {
         setFormStatus('idle');
         setFormOpen(false);
       }, 3000);
-    } catch {
+    } catch (error) {
+      console.error('Error sending form:', error);
       setFormStatus('error');
       setUploadingPhotos(false);
       setUploadProgress([]);
