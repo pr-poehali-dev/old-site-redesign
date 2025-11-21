@@ -192,7 +192,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                   <div className="space-y-2">
                     <div className="flex items-baseline gap-2">
                       <span className="text-sm text-muted-foreground">от</span>
-                      <span className="text-3xl font-bold text-primary">45 000</span>
+                      <span className="text-3xl font-bold text-primary">94990</span>
                       <span className="text-sm text-muted-foreground">₽</span>
                     </div>
                     <p className="text-xs text-muted-foreground">
