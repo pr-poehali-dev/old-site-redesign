@@ -11,22 +11,22 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
     <>
       <footer className="border-t border-zinc-800 py-4 md:py-6 bg-black text-white">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-4 md:gap-8 mb-3 md:mb-4">
-            <div className="space-y-1.5 md:space-y-2">
-              <div className="flex items-center gap-2 md:gap-3 mb-2">
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-6 md:gap-12 mb-3 md:mb-4">
+            <div className="space-y-1.5 md:space-y-2 text-center md:text-left">
+              <div className="flex flex-col md:flex-row items-center gap-2 md:gap-3 mb-2">
                 <img src="https://cdn.poehali.dev/files/801cdf4b-ac79-4038-902c-da3dda6718fe.jpg" alt="Мега Шлиц" className="h-10 w-10 md:h-14 md:w-14 object-contain" />
                 <div className="flex flex-col">
                   <span className="text-base md:text-lg font-extrabold">Мега Шлиц<sup className="text-[10px] md:text-xs ml-0.5">®</sup></span>
                   <span className="text-[10px] md:text-xs text-zinc-400">Патент РФ № 2829377</span>
                 </div>
               </div>
-              <p className="text-[10px] md:text-xs text-zinc-400 leading-relaxed">
+              <p className="text-[10px] md:text-xs text-zinc-400 leading-relaxed max-w-xs">
                 Восстановление шлицевых соединений деталей трансмиссии
               </p>
             </div>
 
             <div className="space-y-1.5 md:space-y-2">
-              <h3 className="font-bold text-xs md:text-sm mb-1.5">Контакты</h3>
+              <h3 className="font-bold text-xs md:text-sm mb-1.5 text-center md:text-left">Контакты</h3>
               <a href="tel:+79202520352" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
                 <Icon name="Phone" className="h-3.5 w-3.5 flex-shrink-0" />
                 +7 (920) 252-03-52
