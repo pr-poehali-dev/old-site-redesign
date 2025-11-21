@@ -39,7 +39,6 @@ export const Header = ({
           <button onClick={() => scrollToSection('services')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Услуги</button>
           <button onClick={() => scrollToSection('about')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">О компании</button>
           <button onClick={() => scrollToSection('turnkey')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Под ключ</button>
-          <button onClick={() => scrollToSection('contacts')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Контакты</button>
         </nav>
 
         <div className="flex items-center gap-1.5 md:gap-2">
@@ -128,10 +127,9 @@ export const Header = ({
             <button onClick={() => scrollToSection('services')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Услуги</button>
             <button onClick={() => scrollToSection('about')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">О компании</button>
             <button onClick={() => scrollToSection('turnkey')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Под ключ</button>
-            <button onClick={() => scrollToSection('contacts')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Контакты</button>
-            <Button className="mt-2" onClick={() => scrollToSection('contacts')}>
+            <Button className="mt-2" onClick={() => setQuickConsultOpen(true)}>
               <Icon name="Phone" className="mr-2 h-4 w-4" />
-              Связаться
+              Написать
             </Button>
           </nav>
         </div>

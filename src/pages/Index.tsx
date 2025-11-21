@@ -185,13 +185,6 @@ const Index = () => {
 
       <TurnkeySection />
 
-      <ContactsSection
-        formData={formData}
-        setFormData={setFormData}
-        formStatus={formStatus}
-        handleFormSubmit={handleFormSubmit}
-      />
-
       <RutubeSection />
 
       <FooterWithButtons viewCount={viewCount} showScrollTop={showScrollTop} />
