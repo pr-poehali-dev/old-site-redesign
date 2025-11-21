@@ -178,7 +178,8 @@ const Index = () => {
 
       <HeroSection 
         scrollToSection={scrollToSection} 
-        onConsultClick={() => setFullFormOpen(true)}
+        onConsultClick={() => setQuickConsultOpen(true)}
+        onFullFormClick={() => setFullFormOpen(true)}
       />
 
       <ServicesSection

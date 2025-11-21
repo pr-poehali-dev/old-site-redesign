@@ -5,6 +5,7 @@ import Icon from '@/components/ui/icon';
 interface HeroSectionProps {
   scrollToSection: (section: string) => void;
   onConsultClick?: () => void;
+  onFullFormClick?: () => void;
 }
 
 const backgroundImages = [
@@ -22,7 +23,7 @@ const backgroundImages = [
   'https://cdn.poehali.dev/files/b3c88cc7-9023-4aeb-b40d-6c50c585b3bd.jpg',
 ];
 
-export const HeroSection = ({ scrollToSection, onConsultClick }: HeroSectionProps) => {
+export const HeroSection = ({ scrollToSection, onConsultClick, onFullFormClick }: HeroSectionProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -58,12 +59,12 @@ export const HeroSection = ({ scrollToSection, onConsultClick }: HeroSectionProp
             Производственная компания по восстановлению шлицевых соединений трансмиссии по всей стране
           </p>
           <div className="flex flex-wrap gap-2 md:gap-3 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
-            <Button size="default" className="md:h-11 md:px-8" onClick={onConsultClick}>
+            <Button size="default" className="md:h-11 md:px-8" variant="secondary" onClick={onConsultClick}>
               Консультация
               <Icon name="Headphones" className="ml-2 h-4 w-4 md:h-5 md:w-5" />
             </Button>
-            <Button size="default" className="md:h-11 md:px-8" variant="secondary" onClick={() => scrollToSection('services')}>
-              Наши услуги
+            <Button size="default" className="md:h-11 md:px-8" onClick={onFullFormClick}>
+              Отправить заявку
             </Button>
           </div>
         </div>
