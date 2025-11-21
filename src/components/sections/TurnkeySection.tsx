@@ -115,7 +115,7 @@ export const TurnkeySection = () => {
                       <Icon name="ListOrdered" className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-base md:text-lg font-bold mb-2 md:mb-3">Этапы работы</h3>
+                      <h3 className="text-base md:text-lg font-bold mb-2 md:mb-3">Как мы работаем по всей России</h3>
                       <div className="space-y-2 md:space-y-3">
                         <div className="flex items-start gap-1.5 md:gap-2">
                           <div className="w-6 h-6 md:w-7 md:h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
