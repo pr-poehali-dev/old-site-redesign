@@ -57,7 +57,7 @@ export const HeroSection = ({ scrollToSection, onConsultClick, onFullFormClick }
             Восстановление шлицевых соединений
           </h1>
           <p className="text-sm md:text-lg text-white/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 px-2">
-            Производственная компания по восстановлению шлицевых соединений трансмиссии по всей стране
+            Производственная компания по восстановлению шлицевых соединений деталей полного привода по всей стране
           </p>
           <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700 px-4">
             <Button size="default" className="w-full sm:w-auto md:h-11 md:px-8 bg-green-600 hover:bg-green-700 text-white transition-all duration-300 hover:scale-110 hover:shadow-xl" onClick={onConsultClick}>

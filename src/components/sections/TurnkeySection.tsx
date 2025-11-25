@@ -70,7 +70,7 @@ export const TurnkeySection = ({ onFormOpen }: TurnkeySectionProps) => {
                     </div>
                   </div>
                   <h4 className="font-bold text-sm mb-1">Диагностика</h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed">Полная проверка трансмиссии и раздаточной коробки</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Полная проверка деталей полного привода и раздаточной коробки</p>
                 </CardContent>
               </Card>
 

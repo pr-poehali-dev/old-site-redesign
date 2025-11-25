@@ -21,7 +21,7 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
                 </div>
               </div>
               <p className="text-[10px] md:text-xs text-zinc-400 leading-relaxed">
-                Восстановление шлицевых соединений деталей трансмиссии
+                Восстановление шлицевых соединений деталей полного привода
               </p>
             </div>
 
