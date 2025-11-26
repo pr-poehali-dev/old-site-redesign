@@ -10,7 +10,12 @@ export default function PushNotifications() {
       
       const hasAsked = localStorage.getItem('notification-asked');
       if (!hasAsked && Notification.permission === 'default') {
-        setTimeout(() => setShowPrompt(true), 5000);
+        setTimeout(() => {
+          setShowPrompt(true);
+          if (window.ym) {
+            window.ym(98848026, 'reachGoal', 'push_prompt_shown');
+          }
+        }, 5000);
       }
     }
   }, []);
@@ -22,6 +27,14 @@ export default function PushNotifications() {
       localStorage.setItem('notification-asked', 'true');
       setShowPrompt(false);
 
+      if (window.ym) {
+        if (result === 'granted') {
+          window.ym(98848026, 'reachGoal', 'push_allowed');
+        } else if (result === 'denied') {
+          window.ym(98848026, 'reachGoal', 'push_denied');
+        }
+      }
+
       if (result === 'granted' && 'serviceWorker' in navigator) {
         const registration = await navigator.serviceWorker.ready;
         await registration.pushManager.subscribe({
@@ -30,16 +43,26 @@ export default function PushNotifications() {
             'BEl62iUYgUivxIkv69yViEuiBIa-Ib37J8-fanoTkQ8'
           )
         });
+        
+        if (window.ym) {
+          window.ym(98848026, 'reachGoal', 'push_subscribed');
+        }
       }
     } catch (error) {
       console.error('Push notification error:', error);
       setShowPrompt(false);
+      if (window.ym) {
+        window.ym(98848026, 'reachGoal', 'push_error');
+      }
     }
   };
 
   const closePrompt = () => {
     setShowPrompt(false);
     localStorage.setItem('notification-asked', 'true');
+    if (window.ym) {
+      window.ym(98848026, 'reachGoal', 'push_later');
+    }
   };
 
   if (!showPrompt || permission !== 'default') {

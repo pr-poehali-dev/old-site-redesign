@@ -246,6 +246,20 @@ if ('serviceWorker' in navigator) {
         window.location.reload();
       }
     });
+    
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      const { type, campaign, url } = event.data;
+      
+      if (window.ym) {
+        if (type === 'NOTIFICATION_RECEIVED') {
+          window.ym(98848026, 'reachGoal', 'push_received', { campaign: campaign });
+        } else if (type === 'NOTIFICATION_CLICKED') {
+          window.ym(98848026, 'reachGoal', 'push_clicked', { campaign: campaign, url: url });
+        } else if (type === 'NOTIFICATION_CLOSED') {
+          window.ym(98848026, 'reachGoal', 'push_closed', { campaign: campaign });
+        }
+      }
+    });
   });
 }
 </script>

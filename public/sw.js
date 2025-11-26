@@ -63,7 +63,8 @@ self.addEventListener('push', (event) => {
     badge: '/favicon.svg',
     vibrate: [200, 100, 200],
     data: {
-      url: data.url || '/'
+      url: data.url || '/',
+      campaign: data.campaign || 'default'
     },
     actions: [
       { action: 'open', title: 'Открыть' },
@@ -72,17 +73,48 @@ self.addEventListener('push', (event) => {
   };
   
   event.waitUntil(
-    self.registration.showNotification(title, options)
+    self.registration.showNotification(title, options).then(() => {
+      return self.clients.matchAll({ type: 'window' }).then(clients => {
+        clients.forEach(client => {
+          client.postMessage({
+            type: 'NOTIFICATION_RECEIVED',
+            campaign: data.campaign || 'default'
+          });
+        });
+      });
+    })
   );
 });
 
 self.addEventListener('notificationclick', (event) => {
+  const campaign = event.notification.data.campaign || 'default';
   event.notification.close();
   
-  if (event.action === 'open' || !event.action) {
+  if (event.action === 'close') {
+    event.waitUntil(
+      self.clients.matchAll({ type: 'window' }).then(clients => {
+        clients.forEach(client => {
+          client.postMessage({
+            type: 'NOTIFICATION_CLOSED',
+            campaign: campaign
+          });
+        });
+      })
+    );
+  } else {
     const urlToOpen = event.notification.data.url || '/';
     event.waitUntil(
-      clients.openWindow(urlToOpen)
+      clients.openWindow(urlToOpen).then(() => {
+        return self.clients.matchAll({ type: 'window' }).then(clients => {
+          clients.forEach(client => {
+            client.postMessage({
+              type: 'NOTIFICATION_CLICKED',
+              campaign: campaign,
+              url: urlToOpen
+            });
+          });
+        });
+      })
     );
   }
 });
