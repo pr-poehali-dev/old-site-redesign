@@ -1,17 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
     <style>
-      .gear { fill: #22c55e; }
-      .center { fill: #1a1a1a; }
+      .green-gear { fill: #22c55e; }
+      .black-text { fill: #1a1a1a; }
     </style>
   </defs>
   
-  <!-- Outer gear teeth -->
-  <path class="gear" d="M50 5 L55 15 L60 5 L65 15 L70 5 L75 15 L80 10 L82 20 L90 15 L87 25 L95 25 L90 30 L95 40 L87 37 L90 47 L82 45 L80 55 L75 52 L70 60 L65 55 L60 65 L55 60 L50 70 L45 60 L40 65 L35 55 L30 60 L25 52 L20 55 L18 45 L10 47 L13 37 L5 40 L10 30 L5 25 L13 25 L10 15 L18 20 L20 10 L25 15 L30 5 L35 15 L40 5 L45 15 Z"/>
+  <!-- Зелёная шестерня (верхняя часть) -->
+  <path class="green-gear" d="M256 50 C180 50 120 80 120 120 C120 140 140 160 170 170 L170 200 L190 200 L190 170 L210 200 L230 200 L230 170 L250 200 L270 200 L270 170 L290 200 L310 200 L310 170 L330 200 L350 200 L350 170 C380 160 400 140 400 120 C400 80 340 50 256 50 Z"/>
   
-  <!-- Center circle -->
-  <circle class="center" cx="50" cy="35" r="15"/>
+  <!-- Зубцы шестерни -->
+  <path class="green-gear" d="M170 140 L175 170 L180 140 M190 140 L195 170 L200 140 M210 140 L215 170 L220 140 M230 140 L235 170 L240 140 M250 140 L255 170 L260 140 M270 140 L275 170 L280 140 M290 140 L295 170 L300 140 M310 140 L315 170 L320 140 M330 140 L335 170 L340 140"/>
   
-  <!-- Inner spline detail -->
-  <path class="gear" d="M50 25 L52 30 L54 25 L56 30 L58 25 L58 30 L56 35 L54 30 L52 35 L50 30 L48 35 L46 30 L44 35 L42 30 L42 25 L44 30 L46 25 L48 30 Z"/>
+  <!-- Буквы МШ (чёрные) -->
+  <g class="black-text">
+    <!-- Буква М -->
+    <rect x="140" y="220" width="40" height="200" rx="5"/>
+    <rect x="220" y="220" width="40" height="200" rx="5"/>
+    <polygon points="140,220 190,320 240,220 220,220 190,280 160,220"/>
+    
+    <!-- Буква Ш -->
+    <rect x="280" y="220" width="35" height="200" rx="5"/>
+    <rect x="360" y="220" width="35" height="200" rx="5"/>
+    <rect x="315" y="300" width="45" height="120" rx="5"/>
+    <rect x="280" y="390" width="115" height="30" rx="5"/>
+  </g>
+  
+  <!-- Нижняя линия основания -->
+  <rect class="black-text" x="120" y="430" width="280" height="20" rx="5"/>
 </svg>
