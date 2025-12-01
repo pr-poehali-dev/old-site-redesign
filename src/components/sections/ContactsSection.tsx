@@ -126,6 +126,11 @@ export const ContactsSection = ({
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
             <a 
               href="tel:+79202520352"
+              onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).ym) {
+                  (window as any).ym(96856709, 'reachGoal', 'phone_click');
+                }
+              }}
               className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
@@ -136,6 +141,11 @@ export const ContactsSection = ({
 
             <a 
               href="https://wa.me/79202520352"
+              onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).ym) {
+                  (window as any).ym(96856709, 'reachGoal', 'whatsapp_click');
+                }
+              }}
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"

@@ -27,11 +27,19 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
 
             <div className="space-y-1.5 md:space-y-2">
               <h3 className="font-bold text-xs md:text-sm mb-1.5">Телефоны</h3>
-              <a href="tel:+79202520352" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
+              <a href="tel:+79202520352" onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).ym) {
+                  (window as any).ym(96856709, 'reachGoal', 'phone_click');
+                }
+              }} className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
                 <Icon name="Phone" className="h-3.5 w-3.5 flex-shrink-0" />
                 +7 (920) 252-03-52
               </a>
-              <a href="tel:+78312601123" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
+              <a href="tel:+78312601123" onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).ym) {
+                  (window as any).ym(96856709, 'reachGoal', 'phone_click');
+                }
+              }} className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
                 <Icon name="Phone" className="h-3.5 w-3.5 flex-shrink-0" />
                 +7 (831) 260-11-23 <span className="text-[9px] md:text-[10px] text-secondary-foreground/60">(произ.)</span>
               </a>
@@ -78,6 +86,11 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
 
         <a
           href="tel:+79202520352"
+          onClick={() => {
+            if (typeof window !== 'undefined' && (window as any).ym) {
+              (window as any).ym(96856709, 'reachGoal', 'phone_click');
+            }
+          }}
           className="bg-green-600 hover:bg-green-700 text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
           aria-label="Позвонить"
         >
@@ -89,6 +102,11 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
 
         <a
           href="https://wa.me/79202520352"
+          onClick={() => {
+            if (typeof window !== 'undefined' && (window as any).ym) {
+              (window as any).ym(96856709, 'reachGoal', 'whatsapp_click');
+            }
+          }}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-600 hover:bg-green-700 text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
