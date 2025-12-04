@@ -122,7 +122,7 @@ export const ReviewsSection = () => {
               <span className="text-xs font-semibold text-yellow-700">5.0 на Авито</span>
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-              Что говорят клиенты
+              Реальные отзывы
             </h2>
           </div>
 
