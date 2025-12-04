@@ -332,8 +332,6 @@ const Index = () => {
 
       <RutubeSection />
 
-      <GalleryCarouselSection services={services} />
-
       <ReviewsSection />
 
       <ContactsMapSection />
