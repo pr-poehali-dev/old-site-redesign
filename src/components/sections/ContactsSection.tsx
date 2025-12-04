@@ -141,7 +141,7 @@ export const ContactsSection = ({
             </a>
 
             <a 
-              href="https://web.max.ru/"
+              href="https://max.ru/u/f9LHodD0cOLWWOaBM-XjtcptXDn8CCp6qu0oslBwvx5DB5I-Vk7ZZC1M3kw"
               onClick={() => {
                 if (typeof window !== 'undefined' && (window as any).ym) {
                   (window as any).ym(96856709, 'reachGoal', 'whatsapp_click');

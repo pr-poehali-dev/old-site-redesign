@@ -74,7 +74,7 @@ export const Header = ({
           <Button 
             className="hidden lg:flex text-xs bg-green-600 hover:bg-green-700 text-white"
             size="sm"
-            onClick={() => window.open('https://web.max.ru/', '_blank')}
+            onClick={() => window.open('https://max.ru/u/f9LHodD0cOLWWOaBM-XjtcptXDn8CCp6qu0oslBwvx5DB5I-Vk7ZZC1M3kw', '_blank')}
           >
             <Icon name="MessageCircle" className="mr-1.5 h-3.5 w-3.5" />
             MAX
