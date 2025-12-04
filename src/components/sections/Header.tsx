@@ -3,6 +3,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import Icon from '@/components/ui/icon';
+import { Link } from 'react-router-dom';
 
 interface HeaderProps {
   mobileMenuOpen: boolean;
@@ -55,6 +56,7 @@ export const Header = ({
           <button onClick={() => scrollToSection('about')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">О компании</button>
           <button onClick={() => scrollToSection('process')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Регионам</button>
           <button onClick={() => scrollToSection('turnkey')} className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Под ключ</button>
+          <Link to="/reviews" className="text-xs lg:text-sm font-medium hover:text-primary transition-colors">Отзывы</Link>
         </nav>
 
         <div className="flex items-center gap-1.5 md:gap-2">
@@ -167,6 +169,7 @@ export const Header = ({
             <button onClick={() => scrollToSection('about')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">О компании</button>
             <button onClick={() => scrollToSection('process')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Регионам</button>
             <button onClick={() => scrollToSection('turnkey')} className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors">Под ключ</button>
+            <Link to="/reviews" className="text-left py-2 px-4 hover:bg-muted rounded-md transition-colors block">Отзывы</Link>
             <div className="flex gap-2 mt-2">
               <Button className="flex-1" variant="outline" onClick={() => { setMobileMenuOpen(false); setQuickConsultOpen(true); }}>
                 <Icon name="MessageCircle" className="mr-2 h-4 w-4" />
