@@ -123,11 +123,11 @@ const Reviews = () => {
             Вернуться на главную
           </Link>
 
-          <div className="mb-6">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          <div className="mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
               Отзывы клиентов
             </h1>
-            <div className="flex items-center gap-4 text-sm text-gray-600">
+            <div className="flex items-center gap-4 text-sm text-gray-600 mb-2">
               <div className="flex items-center gap-1">
                 <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                 <span className="font-semibold">5.0</span>
@@ -135,6 +135,7 @@ const Reviews = () => {
               <span>•</span>
               <span>50 отзывов на Авито</span>
             </div>
+            <p className="text-sm text-primary font-medium">✓ Компактная версия — обновлено 04.12.2024</p>
           </div>
 
           {/* Отзывы в одну колонку */}
