@@ -141,7 +141,7 @@ export const ContactsSection = ({
             </a>
 
             <a 
-              href="https://wa.me/79202520352"
+              href="https://wa.me/79202520352?text=Здравствуйте!%20Хочу%20узнать%20о%20восстановлении%20деталей"
               onClick={() => {
                 if (typeof window !== 'undefined' && (window as any).ym) {
                   (window as any).ym(96856709, 'reachGoal', 'whatsapp_click');

@@ -52,7 +52,7 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
                 <Icon name="Mail" className="h-3.5 w-3.5 flex-shrink-0" />
                 Email
               </a>
-              <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
+              <a href="https://wa.me/79202520352?text=Здравствуйте!%20Хочу%20узнать%20о%20восстановлении%20деталей" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
                 <Icon name="MessageCircle" className="h-3.5 w-3.5 flex-shrink-0" />
                 MAX
               </a>
@@ -119,7 +119,7 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
         </a>
 
         <a
-          href="https://wa.me/79202520352"
+          href="https://wa.me/79202520352?text=Здравствуйте!%20Хочу%20узнать%20о%20восстановлении%20деталей"
           onClick={() => {
             if (typeof window !== 'undefined' && (window as any).ym) {
               (window as any).ym(96856709, 'reachGoal', 'whatsapp_click');
