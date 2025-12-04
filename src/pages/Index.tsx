@@ -262,6 +262,53 @@ const Index = () => {
         onFullFormClick={() => setFullFormOpen(true)}
       />
 
+      {/* Виджет рейтинга Авито */}
+      <section className="py-4 md:py-6 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <a 
+              href="https://www.avito.ru/brands/i366874101/all?sellerId=84ca6aad385f8193bb13b75db9fe17ae"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-4 md:p-6 border-2 border-primary/20 hover:border-primary/40"
+            >
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-2xl md:text-3xl font-bold text-white">A</span>
+                  </div>
+                  <div className="text-center md:text-left">
+                    <h3 className="text-lg md:text-xl font-bold text-gray-900">Мега Шлиц на Авито</h3>
+                    <p className="text-sm text-gray-600">Надёжный продавец • Документы проверены</p>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col items-center gap-2 bg-primary/10 rounded-lg p-3 md:p-4 min-w-[160px]">
+                  <div className="flex items-center gap-1">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg key={star} className="w-5 h-5 md:w-6 md:h-6 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl md:text-3xl font-bold text-gray-900">5.0</div>
+                    <div className="text-xs md:text-sm text-gray-600 font-semibold">50 отзывов</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-4 pt-4 border-t border-gray-200 flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                <span className="text-sm md:text-base font-semibold">Читать все отзывы на Авито</span>
+                <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <ServicesSection
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
