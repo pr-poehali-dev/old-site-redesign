@@ -61,7 +61,7 @@ export const ReviewForm = ({ onSuccess }: ReviewFormProps) => {
         <Button
           onClick={() => setIsOpen(true)}
           size="default"
-          className="gap-2 bg-primary hover:bg-primary/90"
+          className="gap-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900"
         >
           <Icon name="MessageSquarePlus" className="h-4 w-4" />
           Оставить отзыв
