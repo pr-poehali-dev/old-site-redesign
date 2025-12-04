@@ -132,14 +132,26 @@ export const ReviewForm = ({ onSuccess }: ReviewFormProps) => {
           <label htmlFor="car" className="block text-sm font-semibold text-gray-700 mb-2">
             Автомобиль или услуга
           </label>
-          <input
-            type="text"
+          <select
             id="car"
             value={formData.car}
             onChange={(e) => setFormData({ ...formData, car: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-            placeholder="Volkswagen Tiguan"
-          />
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all bg-white"
+          >
+            <option value="">Выберите автомобиль</option>
+            <option value="Volkswagen Tiguan">Volkswagen Tiguan</option>
+            <option value="Hyundai Tucson">Hyundai Tucson</option>
+            <option value="Kia Sportage">Kia Sportage</option>
+            <option value="Hyundai Santa Fe">Hyundai Santa Fe</option>
+            <option value="Kia Sorento">Kia Sorento</option>
+            <option value="Mazda CX-7">Mazda CX-7</option>
+            <option value="Mazda CX-9">Mazda CX-9</option>
+            <option value="Volvo XC90">Volvo XC90</option>
+            <option value="Land Rover Freelander">Land Rover Freelander</option>
+            <option value="Ford Kuga">Ford Kuga</option>
+            <option value="Haval F7">Haval F7</option>
+            <option value="Другое">Другое</option>
+          </select>
         </div>
 
         {/* Текст отзыва */}
