@@ -157,19 +157,9 @@ const Reviews = () => {
             <Quote size={200} className="text-primary" />
           </div>
           <div className="relative z-10">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <svg className="w-16 h-16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="24" fill="#5A9E4A"/>
-                <path d="M18 26L22 30L30 18" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
-                Отзывы наших клиентов
-              </h1>
-              <svg className="w-16 h-16" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="60" rx="12" fill="#5A9E4A"/>
-                <text x="20" y="38" fill="white" fontSize="32" fontWeight="bold" fontFamily="Arial, sans-serif">avito</text>
-              </svg>
-            </div>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent mb-4">
+              Отзывы наших клиентов
+            </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-4 max-w-3xl mx-auto">
               Реальные истории автовладельцев, которые доверили нам восстановление своих автомобилей
             </p>
@@ -207,7 +197,7 @@ const Reviews = () => {
         </div>
 
         {/* Список отзывов в одну колонку */}
-        <div className="max-w-4xl mx-auto space-y-6 mb-12">
+        <div className="space-y-6 mb-12">
           {reviews.map((review, index) => (
             <div 
               key={review.id}
