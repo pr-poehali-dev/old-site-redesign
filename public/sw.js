@@ -1,4 +1,4 @@
-const CACHE_NAME = 'megashlic-v1';
+const CACHE_NAME = 'megashlic-v2-compact-reviews';
 const urlsToCache = [
   '/',
   '/favicon.svg',
