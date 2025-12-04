@@ -2,16 +2,18 @@ import { Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import { useState, useEffect } from "react";
 
 interface Review {
-  id: number;
+  id?: number;
   name: string;
   date: string;
-  car: string;
+  car?: string;
   text: string;
+  rating?: string;
 }
 
-const reviews: Review[] = [
+const fallbackReviews: Review[] = [
   {
     id: 1,
     name: "Антон",
@@ -57,6 +59,33 @@ const reviews: Review[] = [
 ];
 
 export const ReviewsSection = () => {
+  const [reviews, setReviews] = useState<Review[]>(fallbackReviews);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const response = await fetch('https://functions.poehali.dev/493bf302-2718-4771-8fa1-8d6463379db3');
+        if (response.ok) {
+          const data = await response.json();
+          if (data.reviews && data.reviews.length > 0) {
+            setReviews(data.reviews.slice(0, 6).map((review: Review, index: number) => ({
+              ...review,
+              id: index + 1,
+              car: review.car || 'Клиент',
+            })));
+          }
+        }
+      } catch (error) {
+        console.log('Используются статичные отзывы');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchReviews();
+  }, []);
+
   return (
     <section id="reviews" className="py-4 md:py-6 bg-white">
       <div className="container">
