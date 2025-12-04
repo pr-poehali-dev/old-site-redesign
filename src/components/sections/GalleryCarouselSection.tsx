@@ -20,11 +20,6 @@ export const GalleryCarouselSection = ({ services }: GalleryCarouselSectionProps
   return (
     <section className="py-6 md:py-8 bg-muted/20">
       <div className="container">
-        <div className="text-center space-y-2 mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold">Наши работы</h2>
-          <p className="text-sm md:text-base text-muted-foreground">Фотографии выполненных работ</p>
-        </div>
-        
         <Carousel
           opts={{
             align: "start",
