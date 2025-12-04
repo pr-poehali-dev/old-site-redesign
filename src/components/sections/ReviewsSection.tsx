@@ -58,11 +58,11 @@ const reviews: Review[] = [
 
 export const ReviewsSection = () => {
   return (
-    <section id="reviews" className="py-6 md:py-10 bg-white">
+    <section id="reviews" className="py-4 md:py-6 bg-white">
       <div className="container">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center space-y-1 mb-6">
-            <h2 className="text-xl md:text-2xl font-bold">Реальные отзывы</h2>
+          <div className="text-center space-y-1 mb-4">
+            <h2 className="text-lg md:text-xl font-bold">Реальные отзывы</h2>
             <div className="flex items-center justify-center gap-3 text-xs text-gray-600">
               <div className="flex items-center gap-1">
                 <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
@@ -73,14 +73,14 @@ export const ReviewsSection = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-3 mb-6">
+          <div className="grid md:grid-cols-2 gap-2 mb-4">
             {reviews.map((review, index) => (
               <div 
                 key={review.id}
-                className="bg-white border border-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow animate-in fade-in slide-in-from-bottom-4"
+                className="bg-white border border-gray-200 rounded-lg p-2.5 hover:shadow-md transition-shadow animate-in fade-in slide-in-from-bottom-4"
                 style={{ animationDelay: `${index * 100}ms`, animationDuration: '500ms' }}
               >
-                <div className="flex items-start justify-between mb-1.5">
+                <div className="flex items-start justify-between mb-1">
                   <div>
                     <h3 className="font-semibold text-sm text-gray-900">{review.name}</h3>
                     <p className="text-xs text-gray-500">{review.car}</p>
@@ -94,7 +94,7 @@ export const ReviewsSection = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-gray-700 text-xs leading-relaxed mb-1.5 line-clamp-3">
+                <p className="text-gray-700 text-xs leading-snug mb-1 line-clamp-2">
                   {review.text}
                 </p>
                 <p className="text-[10px] text-gray-400">{review.date}</p>
@@ -104,8 +104,8 @@ export const ReviewsSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
             <Link to="/reviews">
-              <Button variant="outline" className="w-full sm:w-auto">
-                <Icon name="Star" className="mr-2 h-4 w-4" />
+              <Button variant="outline" size="sm" className="w-full sm:w-auto">
+                <Icon name="Star" className="mr-1.5 h-3.5 w-3.5" />
                 Все отзывы
               </Button>
             </Link>
@@ -114,8 +114,8 @@ export const ReviewsSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="w-full sm:w-auto">
-                <Icon name="ExternalLink" className="mr-2 h-4 w-4" />
+              <Button size="sm" className="w-full sm:w-auto">
+                <Icon name="ExternalLink" className="mr-1.5 h-3.5 w-3.5" />
                 Отзывы на Авито
               </Button>
             </a>
