@@ -154,7 +154,7 @@ export const ContactsSection = ({
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                 <Icon name="MessageCircle" className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               </div>
-              <span className="text-[10px] md:text-xs font-semibold text-center">WhatsApp</span>
+              <span className="text-[10px] md:text-xs font-semibold text-center">MAX</span>
             </a>
 
             <a 

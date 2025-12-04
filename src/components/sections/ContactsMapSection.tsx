@@ -259,7 +259,7 @@ export const ContactsMapSection = () => {
                   onClick={() => window.open('https://wa.me/79202520352', '_blank')}
                 >
                   <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
-                  WhatsApp
+                  MAX
                 </Button>
                 <Button 
                   size="lg"

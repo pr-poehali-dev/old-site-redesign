@@ -54,7 +54,7 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
               </a>
               <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
                 <Icon name="MessageCircle" className="h-3.5 w-3.5 flex-shrink-0" />
-                WhatsApp
+                MAX
               </a>
             </div>
           </div>
@@ -128,11 +128,11 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-600 hover:bg-green-700 text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
-          aria-label="Написать в WhatsApp"
+          aria-label="Написать в MAX"
         >
           <Icon name="MessageCircle" className="h-4 w-4 md:h-6 md:w-6" />
           <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Написать в WhatsApp
+            Написать в MAX
           </span>
         </a>
       </div>
