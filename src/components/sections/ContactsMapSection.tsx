@@ -185,14 +185,15 @@ export const ContactsMapSection = () => {
   return (
     <section id="contacts" className="py-6 md:py-8 bg-muted/30">
       <div className="container">
-        <div className="text-center space-y-2 mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold">Контакты</h2>
-          <p className="text-muted-foreground text-sm md:text-base">
-            Мы находимся в Нижнем Новгороде
-          </p>
-        </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center space-y-2 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Контакты</h2>
+            <p className="text-muted-foreground text-sm md:text-base">
+              Мы находимся в Нижнем Новгороде
+            </p>
+          </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-3 items-start">
+          <div className="grid md:grid-cols-2 gap-3 items-start">
           <div className="bg-card p-4 md:p-6 rounded-lg border shadow-sm h-full flex flex-col">
             <div className="space-y-4 flex-1">
               <div className="flex items-start gap-3">

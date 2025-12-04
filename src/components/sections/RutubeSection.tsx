@@ -5,12 +5,11 @@ export const RutubeSection = () => {
   return (
     <section id="video" className="py-6 md:py-8 bg-gradient-to-b from-muted/30 to-background">
       <div className="container">
-        <div className="text-center space-y-2 mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold">Видео наших работ</h2>
-          <p className="text-sm md:text-base text-muted-foreground">Смотрите процесс восстановления деталей</p>
-        </div>
-
         <div className="max-w-5xl mx-auto">
+          <div className="text-center space-y-2 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Видео наших работ</h2>
+            <p className="text-sm md:text-base text-muted-foreground">Смотрите процесс восстановления деталей</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
               <div className="relative" style={{ paddingBottom: '56.25%' }}>

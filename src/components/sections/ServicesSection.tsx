@@ -54,14 +54,13 @@ export const ServicesSection = ({
   return (
     <section id="services" className="py-6 md:py-8 bg-muted/30">
       <div className="container">
-        <div className="text-center space-y-2 mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold">Наши услуги</h2>
-          <p className="text-sm md:text-base text-muted-foreground">
-            Полный спектр работ по восстановлению трансмиссии
-          </p>
-        </div>
-
         <div className="max-w-5xl mx-auto">
+          <div className="text-center space-y-2 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold">Наши услуги</h2>
+            <p className="text-sm md:text-base text-muted-foreground">
+              Полный спектр работ по восстановлению трансмиссии
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-3">
             {filteredServices.map((service, index) => (
               <Card 
