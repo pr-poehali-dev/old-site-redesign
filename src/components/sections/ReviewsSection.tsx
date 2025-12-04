@@ -111,66 +111,56 @@ export const ReviewsSection = () => {
   }, []);
 
   return (
-    <section id="reviews" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-      {/* Декоративные элементы */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
-      
-      <div className="container relative z-10">
+    <section id="reviews" className="py-12 md:py-16 bg-white">
+      <div className="container">
         <div className="max-w-6xl mx-auto">
           {/* Заголовок */}
-          <div className="text-center space-y-4 mb-12">
-            <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 rounded-full px-4 py-2 mb-2">
-              <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-              <span className="text-sm font-semibold text-yellow-700">Рейтинг 5.0 на Авито</span>
+          <div className="text-center space-y-2 mb-8">
+            <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 rounded-full px-3 py-1.5">
+              <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+              <span className="text-xs font-semibold text-yellow-700">5.0 на Авито</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Что говорят наши клиенты
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Что говорят клиенты
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Более 50 довольных клиентов оставили отзывы о качестве нашей работы
-            </p>
           </div>
 
           {/* Карусель на мобильных, сетка на десктопе */}
-          <div className="mb-12">
+          <div className="mb-8">
             {/* Мобильная карусель */}
             <div className="md:hidden relative">
               <div className="overflow-hidden" ref={emblaRef}>
-                <div className="flex gap-4">
-                  {reviews.map((review, index) => (
+                <div className="flex gap-3">
+                  {reviews.map((review) => (
                     <div 
                       key={review.id}
                       className="flex-[0_0_85%] min-w-0"
                     >
-                      <div className="group bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full">
+                      <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 h-full">
                         {/* Звезды */}
-                        <div className="flex items-center gap-1 mb-4">
+                        <div className="flex items-center gap-0.5 mb-3">
                           {[1, 2, 3, 4, 5].map((star) => (
                             <Star 
                               key={star} 
-                              className="h-5 w-5 fill-yellow-400 text-yellow-400" 
+                              className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" 
                             />
                           ))}
                         </div>
 
                         {/* Текст отзыва */}
-                        <p className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-4">
-                          "{review.text}"
+                        <p className="text-gray-700 text-sm leading-snug mb-3 line-clamp-3">
+                          {review.text}
                         </p>
 
                         {/* Автор */}
-                        <div className="pt-4 border-t border-gray-100">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm">
-                              {review.name.charAt(0)}
-                            </div>
-                            <div className="flex-1">
-                              <h3 className="font-semibold text-sm text-gray-900">{review.name}</h3>
-                              <p className="text-xs text-gray-500">{review.car}</p>
-                            </div>
+                        <div className="flex items-center gap-2 pt-3 border-t border-gray-200">
+                          <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">
+                            {review.name.charAt(0)}
                           </div>
-                          <p className="text-xs text-gray-400 mt-2">{review.date}</p>
+                          <div className="flex-1 min-w-0">
+                            <h3 className="font-semibold text-xs text-gray-900 truncate">{review.name}</h3>
+                            <p className="text-[10px] text-gray-500 truncate">{review.car}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -179,62 +169,57 @@ export const ReviewsSection = () => {
               </div>
               
               {/* Кнопки навигации карусели */}
-              <div className="flex justify-center gap-3 mt-6">
+              <div className="flex justify-center gap-2 mt-4">
                 <button
                   onClick={scrollPrev}
                   disabled={!canScrollPrev}
-                  className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-50 transition-all shadow-md"
+                  className="w-8 h-8 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-200 transition-all"
                   aria-label="Previous review"
                 >
-                  <Icon name="ChevronLeft" className="h-5 w-5" />
+                  <Icon name="ChevronLeft" className="h-4 w-4" />
                 </button>
                 <button
                   onClick={scrollNext}
                   disabled={!canScrollNext}
-                  className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-50 transition-all shadow-md"
+                  className="w-8 h-8 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-200 transition-all"
                   aria-label="Next review"
                 >
-                  <Icon name="ChevronRight" className="h-5 w-5" />
+                  <Icon name="ChevronRight" className="h-4 w-4" />
                 </button>
               </div>
             </div>
 
             {/* Десктопная сетка */}
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="hidden md:grid md:grid-cols-3 gap-4">
               {reviews.map((review, index) => (
                 <div 
                   key={review.id}
-                  className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-4"
-                  style={{ animationDelay: `${index * 100}ms`, animationDuration: '600ms' }}
+                  className="group bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-primary/30 hover:shadow-md transition-all"
                 >
                   {/* Звезды */}
-                  <div className="flex items-center gap-1 mb-4">
+                  <div className="flex items-center gap-0.5 mb-3">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star 
                         key={star} 
-                        className="h-5 w-5 fill-yellow-400 text-yellow-400 transition-transform group-hover:scale-110" 
-                        style={{ transitionDelay: `${star * 50}ms` }}
+                        className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" 
                       />
                     ))}
                   </div>
 
                   {/* Текст отзыва */}
-                  <p className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-4">
-                    "{review.text}"
+                  <p className="text-gray-700 text-sm leading-snug mb-3 line-clamp-3">
+                    {review.text}
                   </p>
 
                   {/* Автор */}
-                  <div className="pt-4 border-t border-gray-100">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm">
-                        {review.name.charAt(0)}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-sm text-gray-900">{review.name}</h3>
-                        <p className="text-xs text-gray-500">{review.car}</p>
-                      </div>
+                  <div className="flex items-center gap-2 pt-3 border-t border-gray-200">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">
+                      {review.name.charAt(0)}
                     </div>
-                    <p className="text-xs text-gray-400 mt-2">{review.date}</p>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-semibold text-xs text-gray-900 truncate">{review.name}</h3>
+                      <p className="text-[10px] text-gray-500 truncate">{review.car}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -242,14 +227,14 @@ export const ReviewsSection = () => {
           </div>
 
           {/* Кнопки */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <Link to="/reviews" className="w-full sm:w-auto">
               <Button 
                 variant="outline" 
-                size="lg" 
-                className="w-full sm:w-auto border-2 hover:bg-gray-50 hover:border-gray-300 transition-all"
+                size="default" 
+                className="w-full sm:w-auto"
               >
-                <Icon name="Star" className="mr-2 h-5 w-5" />
+                <Icon name="Star" className="mr-2 h-4 w-4" />
                 Все отзывы
               </Button>
             </Link>
@@ -260,10 +245,10 @@ export const ReviewsSection = () => {
               className="w-full sm:w-auto"
             >
               <Button 
-                size="lg" 
-                className="w-full sm:w-auto bg-gradient-to-r from-primary to-accent hover:shadow-xl transition-all"
+                size="default" 
+                className="w-full sm:w-auto"
               >
-                <Icon name="ExternalLink" className="mr-2 h-5 w-5" />
+                <Icon name="ExternalLink" className="mr-2 h-4 w-4" />
                 Отзывы на Авито
               </Button>
             </a>
