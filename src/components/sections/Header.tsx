@@ -77,7 +77,7 @@ export const Header = ({
             onClick={() => window.open('https://wa.me/79202520352', '_blank')}
           >
             <Icon name="MessageCircle" className="mr-1.5 h-3.5 w-3.5" />
-            WhatsApp
+            MAX
           </Button>
           <Button 
             className="hidden md:flex text-xs bg-green-600 hover:bg-green-700 text-white"
