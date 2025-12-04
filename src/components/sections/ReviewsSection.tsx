@@ -112,7 +112,7 @@ export const ReviewsSection = () => {
   }, [fetchReviews]);
 
   return (
-    <section id="reviews" className="py-6 md:py-8 bg-white">
+    <section id="reviews" className="py-6 md:py-8 bg-background">
       <div className="container">
         <div className="max-w-5xl mx-auto">
           {/* Заголовок */}

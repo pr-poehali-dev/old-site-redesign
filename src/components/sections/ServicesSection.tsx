@@ -52,7 +52,7 @@ export const ServicesSection = ({
   };
 
   return (
-    <section id="services" className="py-6 md:py-8 bg-muted/30">
+    <section id="services" className="py-6 md:py-8 bg-background">
       <div className="container">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-2 mb-6">

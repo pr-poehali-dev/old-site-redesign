@@ -7,7 +7,7 @@ import Icon from '@/components/ui/icon';
 export const AboutAndAdvantagesSection = () => {
   return (
     <>
-      <section id="about" className="py-6 md:py-8 bg-gradient-to-b from-background to-muted/30">
+      <section id="about" className="py-6 md:py-8 bg-background">
         <div className="container">
           <div className="text-center space-y-2 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold">О компании</h2>

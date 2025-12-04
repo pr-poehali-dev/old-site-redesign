@@ -22,7 +22,7 @@ export const ContactsSection = ({
 
 
   return (
-    <section id="contacts" className="py-6 md:py-8 bg-gradient-to-b from-muted/30 to-background">
+    <section id="contacts" className="py-6 md:py-8 bg-background">
       <div className="container">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-2 mb-6">
