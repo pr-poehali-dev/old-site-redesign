@@ -192,7 +192,7 @@ export const ContactsMapSection = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-start">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-3 items-start">
           <div className="bg-card p-4 md:p-6 rounded-lg border shadow-sm h-full flex flex-col">
             <div className="space-y-4 flex-1">
               <div className="flex items-start gap-3">

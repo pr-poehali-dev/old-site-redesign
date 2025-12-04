@@ -112,11 +112,11 @@ export const ReviewsSection = () => {
   }, [fetchReviews]);
 
   return (
-    <section id="reviews" className="py-12 md:py-16 bg-white">
+    <section id="reviews" className="py-6 md:py-8 bg-white">
       <div className="container">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Заголовок */}
-          <div className="text-center space-y-2 mb-8">
+          <div className="text-center space-y-2 mb-6">
             <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 rounded-full px-3 py-1.5">
               <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
               <span className="text-xs font-semibold text-yellow-700">5.0 на Авито</span>
@@ -127,7 +127,7 @@ export const ReviewsSection = () => {
           </div>
 
           {/* Карусель на мобильных, сетка на десктопе */}
-          <div className="mb-8">
+          <div className="mb-6">
             {/* Мобильная карусель */}
             <div className="md:hidden relative">
               <div className="overflow-hidden" ref={emblaRef}>
@@ -228,7 +228,7 @@ export const ReviewsSection = () => {
           </div>
 
           {/* Форма отзыва */}
-          <div className="mb-8">
+          <div className="mb-6">
             <ReviewForm onSuccess={fetchReviews} />
           </div>
 

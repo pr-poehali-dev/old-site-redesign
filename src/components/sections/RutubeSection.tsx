@@ -10,8 +10,8 @@ export const RutubeSection = () => {
           <p className="text-sm md:text-base text-muted-foreground">Смотрите процесс восстановления деталей</p>
         </div>
 
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
               <div className="relative" style={{ paddingBottom: '56.25%' }}>
                 <iframe
