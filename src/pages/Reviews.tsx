@@ -1,3 +1,4 @@
+// Компактная версия отзывов v2.0
 import { ArrowLeft, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
