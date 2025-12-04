@@ -240,6 +240,19 @@ const Reviews = () => {
           ))}
         </div>
 
+        {/* Ссылка на Авито */}
+        <div className="mt-8 text-center">
+          <a 
+            href="https://www.avito.ru/brands/i366874101/all?sellerId=84ca6aad385f8193bb13b75db9fe17ae"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg font-semibold underline"
+          >
+            <Icon name="ExternalLink" size={20} />
+            Посмотреть все 50 отзывов на Авито
+          </a>
+        </div>
+
         {/* Призыв к действию */}
         <div className="mt-12 bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/20 rounded-lg p-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
