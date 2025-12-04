@@ -143,16 +143,18 @@ const Reviews = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-primary/5">
       <div className="container px-4 py-8">
-        <Link 
-          to="/" 
-          className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 font-semibold"
-        >
-          <ArrowLeft size={20} />
-          Вернуться на главную
-        </Link>
+        <div className="max-w-5xl mx-auto">
+          <Link 
+            to="/" 
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 font-semibold"
+          >
+            <ArrowLeft size={20} />
+            Вернуться на главную
+          </Link>
+        </div>
 
         {/* Заголовок с градиентом */}
-        <div className="text-center mb-16 relative">
+        <div className="text-center mb-16 relative max-w-5xl mx-auto">
           <div className="absolute inset-0 flex items-center justify-center opacity-10">
             <Quote size={200} className="text-primary" />
           </div>
@@ -275,7 +277,7 @@ const Reviews = () => {
         </div>
 
         {/* Ссылка на Авито */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 max-w-5xl mx-auto">
           <a 
             href="https://www.avito.ru/brands/i366874101/all?sellerId=84ca6aad385f8193bb13b75db9fe17ae"
             target="_blank"
@@ -288,7 +290,7 @@ const Reviews = () => {
         </div>
 
         {/* Призыв к действию */}
-        <div className="bg-gradient-to-br from-primary/10 via-white to-primary/5 border-2 border-primary/20 rounded-3xl p-8 md:p-12 text-center shadow-xl">
+        <div className="bg-gradient-to-br from-primary/10 via-white to-primary/5 border-2 border-primary/20 rounded-3xl p-8 md:p-12 text-center shadow-xl max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Станьте одним из наших довольных клиентов!
           </h2>
