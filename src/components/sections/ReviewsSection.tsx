@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import { ReviewForm } from "@/components/ReviewForm";
 
 interface Review {
   id?: number;
@@ -224,6 +225,11 @@ export const ReviewsSection = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Форма отзыва */}
+          <div className="mb-8">
+            <ReviewForm />
           </div>
 
           {/* Кнопки */}

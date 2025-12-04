@@ -1,4 +1,5 @@
 {
+  "submit-review": "https://functions.poehali.dev/080f0a56-0c76-4937-9436-f8416b3b1da9",
   "avito-reviews": "https://functions.poehali.dev/493bf302-2718-4771-8fa1-8d6463379db3",
   "send-email": "https://functions.poehali.dev/9b6ada36-da84-4729-b828-3e41115b8136",
   "send-order": "https://functions.poehali.dev/fd96c7e7-0adf-485f-a51a-abcd609b660d"
