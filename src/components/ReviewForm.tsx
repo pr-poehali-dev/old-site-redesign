@@ -60,9 +60,8 @@ export const ReviewForm = ({ onSuccess }: ReviewFormProps) => {
       <div className="text-center">
         <Button
           onClick={() => setIsOpen(true)}
-          variant="outline"
           size="default"
-          className="gap-2"
+          className="gap-2 bg-primary hover:bg-primary/90"
         >
           <Icon name="MessageSquarePlus" className="h-4 w-4" />
           Оставить отзыв

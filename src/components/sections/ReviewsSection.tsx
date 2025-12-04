@@ -236,9 +236,8 @@ export const ReviewsSection = () => {
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <Link to="/reviews" className="w-full sm:w-auto">
               <Button 
-                variant="outline" 
                 size="default" 
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto bg-primary hover:bg-primary/90"
               >
                 <Icon name="Star" className="mr-2 h-4 w-4" />
                 Все отзывы
