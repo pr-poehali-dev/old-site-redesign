@@ -332,8 +332,6 @@ const Index = () => {
 
       <RutubeSection />
 
-      <ReviewsSection />
-
       <ContactsMapSection />
 
       <FooterWithButtons 
