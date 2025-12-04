@@ -232,17 +232,8 @@ export const ReviewsSection = () => {
             <ReviewForm onSuccess={fetchReviews} />
           </div>
 
-          {/* Кнопки */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <Link to="/reviews" className="w-full sm:w-auto">
-              <Button 
-                size="default" 
-                className="w-full sm:w-auto bg-primary hover:bg-primary/90"
-              >
-                <Icon name="Star" className="mr-2 h-4 w-4" />
-                Все отзывы
-              </Button>
-            </Link>
+          {/* Кнопка */}
+          <div className="flex justify-center">
             <a 
               href="https://www.avito.ru/brands/i366874101/all?sellerId=84ca6aad385f8193bb13b75db9fe17ae"
               target="_blank"
