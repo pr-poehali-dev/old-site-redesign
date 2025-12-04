@@ -256,7 +256,7 @@ export const ContactsMapSection = () => {
                 <Button 
                   size="lg"
                   className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  onClick={() => window.open('https://wa.me/79202520352?text=Здравствуйте!%20Хочу%20узнать%20о%20восстановлении%20деталей', '_blank')}
+                  onClick={() => window.open('https://web.max.ru/', '_blank')}
                 >
                   <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
                   MAX
