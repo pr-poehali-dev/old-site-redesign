@@ -58,14 +58,14 @@ const reviews: Review[] = [
 
 export const ReviewsSection = () => {
   return (
-    <section id="reviews" className="py-8 md:py-12 bg-white">
+    <section id="reviews" className="py-6 md:py-10 bg-white">
       <div className="container">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center space-y-2 mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold">Реальные отзывы</h2>
-            <div className="flex items-center justify-center gap-4 text-sm text-gray-600">
+          <div className="text-center space-y-1 mb-6">
+            <h2 className="text-xl md:text-2xl font-bold">Реальные отзывы</h2>
+            <div className="flex items-center justify-center gap-3 text-xs text-gray-600">
               <div className="flex items-center gap-1">
-                <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                 <span className="font-semibold">5.0</span>
               </div>
               <span>•</span>
@@ -73,39 +73,39 @@ export const ReviewsSection = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4 mb-8">
+          <div className="grid md:grid-cols-2 gap-3 mb-6">
             {reviews.map((review, index) => (
               <div 
                 key={review.id}
-                className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow animate-in fade-in slide-in-from-bottom-4"
+                className="bg-white border border-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow animate-in fade-in slide-in-from-bottom-4"
                 style={{ animationDelay: `${index * 100}ms`, animationDuration: '500ms' }}
               >
-                <div className="flex items-start justify-between mb-2">
+                <div className="flex items-start justify-between mb-1.5">
                   <div>
-                    <h3 className="font-semibold text-gray-900">{review.name}</h3>
-                    <p className="text-sm text-gray-500">{review.car}</p>
+                    <h3 className="font-semibold text-sm text-gray-900">{review.name}</h3>
+                    <p className="text-xs text-gray-500">{review.car}</p>
                   </div>
                   <div className="flex items-center gap-1">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star 
                         key={star} 
-                        className="h-4 w-4 fill-yellow-400 text-yellow-400" 
+                        className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" 
                       />
                     ))}
                   </div>
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed mb-2 line-clamp-3">
+                <p className="text-gray-700 text-xs leading-relaxed mb-1.5 line-clamp-3">
                   {review.text}
                 </p>
-                <p className="text-xs text-gray-400">{review.date}</p>
+                <p className="text-[10px] text-gray-400">{review.date}</p>
               </div>
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row gap-2 justify-center">
             <Link to="/reviews">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                <Icon name="Star" className="mr-2 h-5 w-5" />
+              <Button variant="outline" className="w-full sm:w-auto">
+                <Icon name="Star" className="mr-2 h-4 w-4" />
                 Все отзывы
               </Button>
             </Link>
@@ -114,8 +114,8 @@ export const ReviewsSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="w-full sm:w-auto">
-                <Icon name="ExternalLink" className="mr-2 h-5 w-5" />
+              <Button className="w-full sm:w-auto">
+                <Icon name="ExternalLink" className="mr-2 h-4 w-4" />
                 Отзывы на Авито
               </Button>
             </a>
