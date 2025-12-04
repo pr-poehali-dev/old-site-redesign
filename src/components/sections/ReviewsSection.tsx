@@ -227,13 +227,9 @@ export const ReviewsSection = () => {
             </div>
           </div>
 
-          {/* Форма отзыва */}
-          <div className="mb-6">
+          {/* Кнопки */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <ReviewForm onSuccess={fetchReviews} />
-          </div>
-
-          {/* Кнопка */}
-          <div className="flex justify-center">
             <a 
               href="https://www.avito.ru/brands/i366874101/all?sellerId=84ca6aad385f8193bb13b75db9fe17ae"
               target="_blank"
