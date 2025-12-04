@@ -62,7 +62,7 @@ export const ReviewsSection = () => {
       <div className="container">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-2 mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold">Отзывы клиентов</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">Реальные отзывы клиентов</h2>
             <div className="flex items-center justify-center gap-4 text-sm text-gray-600">
               <div className="flex items-center gap-1">
                 <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
