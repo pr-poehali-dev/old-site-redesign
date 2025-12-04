@@ -142,7 +142,7 @@ const Reviews = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-primary/5">
-      <div className="container mx-auto px-4 py-8 max-w-5xl">
+      <div className="container px-4 py-8">
         <Link 
           to="/" 
           className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 font-semibold"
@@ -197,7 +197,7 @@ const Reviews = () => {
         </div>
 
         {/* Список отзывов в одну колонку */}
-        <div className="space-y-6 mb-12">
+        <div className="max-w-5xl mx-auto space-y-6 mb-12">
           {reviews.map((review, index) => (
             <div 
               key={review.id}
