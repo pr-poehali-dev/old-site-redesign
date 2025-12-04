@@ -6,6 +6,7 @@ import { RutubeSection } from '@/components/sections/RutubeSection';
 import { AboutAndAdvantagesSection } from '@/components/sections/AboutAndAdvantagesSection';
 import { TurnkeySection } from '@/components/sections/TurnkeySection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
+import { ReviewsSection } from '@/components/sections/ReviewsSection';
 import { ContactsSection } from '@/components/sections/ContactsSection';
 import { ContactsMapSection } from '@/components/sections/ContactsMapSection';
 import { FooterWithButtons } from '@/components/sections/FooterWithButtons';
@@ -330,6 +331,8 @@ const Index = () => {
       <TurnkeySection onFormOpen={() => setFullFormOpen(true)} />
 
       <RutubeSection />
+
+      <ReviewsSection />
 
       <ContactsMapSection />
 
