@@ -87,29 +87,29 @@ export const ReviewsSection = () => {
     emblaApi.on('reInit', onSelect);
   }, [emblaApi, onSelect]);
 
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch('https://functions.poehali.dev/493bf302-2718-4771-8fa1-8d6463379db3');
-        if (response.ok) {
-          const data = await response.json();
-          if (data.reviews && data.reviews.length > 0) {
-            setReviews(data.reviews.slice(0, 6).map((review: Review, index: number) => ({
-              ...review,
-              id: index + 1,
-              car: review.car || 'Клиент',
-            })));
-          }
+  const fetchReviews = useCallback(async () => {
+    try {
+      const response = await fetch('https://functions.poehali.dev/493bf302-2718-4771-8fa1-8d6463379db3');
+      if (response.ok) {
+        const data = await response.json();
+        if (data.reviews && data.reviews.length > 0) {
+          setReviews(data.reviews.slice(0, 6).map((review: Review, index: number) => ({
+            ...review,
+            id: index + 1,
+            car: review.car || 'Клиент',
+          })));
         }
-      } catch (error) {
-        console.log('Используются статичные отзывы');
-      } finally {
-        setIsLoading(false);
       }
-    };
-
-    fetchReviews();
+    } catch (error) {
+      console.log('Используются статичные отзывы');
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    fetchReviews();
+  }, [fetchReviews]);
 
   return (
     <section id="reviews" className="py-12 md:py-16 bg-white">
@@ -229,7 +229,7 @@ export const ReviewsSection = () => {
 
           {/* Форма отзыва */}
           <div className="mb-8">
-            <ReviewForm />
+            <ReviewForm onSuccess={fetchReviews} />
           </div>
 
           {/* Кнопки */}
