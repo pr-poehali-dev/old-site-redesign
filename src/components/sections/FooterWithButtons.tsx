@@ -1,4 +1,5 @@
 import Icon from '@/components/ui/icon';
+import { Link } from 'react-router-dom';
 
 interface FooterWithButtonsProps {
   viewCount: number;
@@ -59,9 +60,17 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
           </div>
 
           <div className="border-t border-zinc-800 pt-2 md:pt-3 flex flex-col md:flex-row justify-between items-center gap-1.5 md:gap-2">
-            <p className="text-[10px] md:text-xs text-zinc-400">
-              © 2024 Мега Шлиц. Все права защищены.
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2">
+              <p className="text-[10px] md:text-xs text-zinc-400">
+                © 2024 Мега Шлиц. Все права защищены.
+              </p>
+              <Link 
+                to="/privacy" 
+                className="text-[10px] md:text-xs text-zinc-400 hover:text-primary transition-colors underline"
+              >
+                Политика конфиденциальности
+              </Link>
+            </div>
             <div className="flex items-center gap-1.5 text-[10px] md:text-xs text-zinc-400">
               <Icon name="Eye" className="h-3.5 w-3.5" />
               <span>Просмотров: {viewCount.toLocaleString('ru-RU')}</span>
