@@ -2,7 +2,8 @@ import { Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 
 interface Review {
   id?: number;
@@ -61,6 +62,29 @@ const fallbackReviews: Review[] = [
 export const ReviewsSection = () => {
   const [reviews, setReviews] = useState<Review[]>(fallbackReviews);
   const [isLoading, setIsLoading] = useState(true);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true, 
+    align: 'start',
+    slidesToScroll: 1,
+  });
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
+  }, [emblaApi, onSelect]);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -108,45 +132,113 @@ export const ReviewsSection = () => {
             </p>
           </div>
 
-          {/* Сетка отзывов */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {reviews.map((review, index) => (
-              <div 
-                key={review.id}
-                className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-4"
-                style={{ animationDelay: `${index * 100}ms`, animationDuration: '600ms' }}
-              >
-                {/* Звезды */}
-                <div className="flex items-center gap-1 mb-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star 
-                      key={star} 
-                      className="h-5 w-5 fill-yellow-400 text-yellow-400 transition-transform group-hover:scale-110" 
-                      style={{ transitionDelay: `${star * 50}ms` }}
-                    />
+          {/* Карусель на мобильных, сетка на десктопе */}
+          <div className="mb-12">
+            {/* Мобильная карусель */}
+            <div className="md:hidden relative">
+              <div className="overflow-hidden" ref={emblaRef}>
+                <div className="flex gap-4">
+                  {reviews.map((review, index) => (
+                    <div 
+                      key={review.id}
+                      className="flex-[0_0_85%] min-w-0"
+                    >
+                      <div className="group bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full">
+                        {/* Звезды */}
+                        <div className="flex items-center gap-1 mb-4">
+                          {[1, 2, 3, 4, 5].map((star) => (
+                            <Star 
+                              key={star} 
+                              className="h-5 w-5 fill-yellow-400 text-yellow-400" 
+                            />
+                          ))}
+                        </div>
+
+                        {/* Текст отзыва */}
+                        <p className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-4">
+                          "{review.text}"
+                        </p>
+
+                        {/* Автор */}
+                        <div className="pt-4 border-t border-gray-100">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm">
+                              {review.name.charAt(0)}
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="font-semibold text-sm text-gray-900">{review.name}</h3>
+                              <p className="text-xs text-gray-500">{review.car}</p>
+                            </div>
+                          </div>
+                          <p className="text-xs text-gray-400 mt-2">{review.date}</p>
+                        </div>
+                      </div>
+                    </div>
                   ))}
                 </div>
-
-                {/* Текст отзыва */}
-                <p className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-4">
-                  "{review.text}"
-                </p>
-
-                {/* Автор */}
-                <div className="pt-4 border-t border-gray-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm">
-                      {review.name.charAt(0)}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-sm text-gray-900">{review.name}</h3>
-                      <p className="text-xs text-gray-500">{review.car}</p>
-                    </div>
-                  </div>
-                  <p className="text-xs text-gray-400 mt-2">{review.date}</p>
-                </div>
               </div>
-            ))}
+              
+              {/* Кнопки навигации карусели */}
+              <div className="flex justify-center gap-3 mt-6">
+                <button
+                  onClick={scrollPrev}
+                  disabled={!canScrollPrev}
+                  className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-50 transition-all shadow-md"
+                  aria-label="Previous review"
+                >
+                  <Icon name="ChevronLeft" className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={scrollNext}
+                  disabled={!canScrollNext}
+                  className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-50 transition-all shadow-md"
+                  aria-label="Next review"
+                >
+                  <Icon name="ChevronRight" className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Десктопная сетка */}
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {reviews.map((review, index) => (
+                <div 
+                  key={review.id}
+                  className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-4"
+                  style={{ animationDelay: `${index * 100}ms`, animationDuration: '600ms' }}
+                >
+                  {/* Звезды */}
+                  <div className="flex items-center gap-1 mb-4">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star 
+                        key={star} 
+                        className="h-5 w-5 fill-yellow-400 text-yellow-400 transition-transform group-hover:scale-110" 
+                        style={{ transitionDelay: `${star * 50}ms` }}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Текст отзыва */}
+                  <p className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-4">
+                    "{review.text}"
+                  </p>
+
+                  {/* Автор */}
+                  <div className="pt-4 border-t border-gray-100">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm">
+                        {review.name.charAt(0)}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-sm text-gray-900">{review.name}</h3>
+                        <p className="text-xs text-gray-500">{review.car}</p>
+                      </div>
+                    </div>
+                    <p className="text-xs text-gray-400 mt-2">{review.date}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Кнопки */}
