@@ -1,4 +1,4 @@
-import { ArrowLeft, Star, ThumbsUp, Calendar, User } from "lucide-react";
+import { ArrowLeft, Star, Calendar, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
@@ -141,124 +141,158 @@ const Reviews = () => {
   const totalReviews = reviews.length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4 py-8 max-w-6xl">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-primary/5">
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
         <Link 
           to="/" 
-          className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 font-semibold"
         >
           <ArrowLeft size={20} />
           Вернуться на главную
         </Link>
 
-        {/* Заголовок */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Отзывы наших клиентов
-          </h1>
-          <p className="text-lg text-gray-600 mb-6">
-            Реальные отзывы клиентов с Авито о восстановлении шлицевых соединений
-          </p>
-          <p className="text-sm text-primary font-semibold">
-            Рейтинг 5.0 ⭐ • 50 отзывов на Авито
-          </p>
-          
-          {/* Общая статистика */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 bg-primary/5 border border-primary/20 rounded-lg p-6 max-w-2xl mx-auto">
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star 
-                    key={star} 
-                    className={`h-6 w-6 ${star <= averageRating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} 
-                  />
-                ))}
+        {/* Заголовок с градиентом */}
+        <div className="text-center mb-16 relative">
+          <div className="absolute inset-0 flex items-center justify-center opacity-10">
+            <Quote size={200} className="text-primary" />
+          </div>
+          <div className="relative z-10">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent mb-4">
+              Отзывы наших клиентов
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 mb-4 max-w-3xl mx-auto">
+              Реальные истории автовладельцев, которые доверили нам восстановление своих автомобилей
+            </p>
+            
+            {/* Статистика в красивых карточках */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-8">
+              <div className="bg-white rounded-2xl shadow-xl p-6 border-2 border-primary/20 hover:border-primary/40 transition-all hover:scale-105 hover:shadow-2xl">
+                <div className="flex items-center gap-3">
+                  <div className="flex">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star 
+                        key={star} 
+                        className="h-7 w-7 fill-yellow-400 text-yellow-400 drop-shadow-sm" 
+                      />
+                    ))}
+                  </div>
+                  <div className="text-left">
+                    <div className="text-4xl font-bold text-gray-900">{averageRating.toFixed(1)}</div>
+                    <div className="text-sm text-gray-600 font-medium">Средняя оценка</div>
+                  </div>
+                </div>
               </div>
-              <span className="text-2xl font-bold text-gray-900">{averageRating.toFixed(1)}</span>
-            </div>
-            <div className="text-gray-600">
-              <span className="font-semibold text-gray-900">{totalReviews}</span> отзывов от реальных клиентов
+
+              <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl shadow-xl p-6 text-white hover:scale-105 transition-all hover:shadow-2xl">
+                <div className="text-5xl font-bold mb-1">50</div>
+                <div className="text-sm font-medium opacity-90">отзывов на Авито</div>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-xl p-6 border-2 border-primary/20 hover:border-primary/40 transition-all hover:scale-105 hover:shadow-2xl">
+                <div className="text-5xl font-bold text-primary mb-1">{totalReviews}</div>
+                <div className="text-sm text-gray-600 font-medium">на этой странице</div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Список отзывов */}
-        <div className="space-y-6">
-          {reviews.map((review) => (
+        {/* Сетка отзывов */}
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          {reviews.map((review, index) => (
             <div 
-              key={review.id} 
-              className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+              key={review.id}
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-primary/30"
+              style={{
+                animation: `fadeInUp 0.5s ease-out ${index * 0.1}s both`
+              }}
             >
-              {/* Шапка отзыва */}
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4 pb-4 border-b border-gray-100">
-                <div className="flex items-center gap-3">
-                  <div className="bg-primary/10 rounded-full p-3">
-                    <User className="h-6 w-6 text-primary" />
+              {/* Цветная полоска сверху */}
+              <div className="h-1.5 bg-gradient-to-r from-primary via-primary/80 to-primary"></div>
+              
+              <div className="p-6">
+                {/* Шапка с аватаром */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="relative">
+                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center text-2xl font-bold text-primary border-2 border-primary/20">
+                        {review.name.charAt(0)}
+                      </div>
+                      <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-lg">{review.name}</h3>
+                      <p className="text-sm text-gray-500 font-medium">{review.car}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 text-lg">{review.name}</h3>
-                    <p className="text-sm text-gray-500">{review.car}</p>
+                  <div className="flex items-center gap-1 text-sm text-gray-500 bg-gray-50 px-3 py-1 rounded-full">
+                    <Calendar className="h-3.5 w-3.5" />
+                    <span className="whitespace-nowrap">{review.date.split(' ')[0]} {review.date.split(' ')[1]}</span>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Calendar className="h-4 w-4" />
-                  {review.date}
-                </div>
-              </div>
 
-              {/* Рейтинг */}
-              <div className="flex items-center gap-2 mb-3">
-                <div className="flex">
+                {/* Рейтинг */}
+                <div className="flex items-center gap-1 mb-3">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star 
                       key={star} 
-                      className={`h-5 w-5 ${star <= review.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} 
+                      className="h-5 w-5 fill-yellow-400 text-yellow-400" 
                     />
                   ))}
                 </div>
-                <span className="text-sm font-medium text-gray-700">
-                  {review.rating}.0
-                </span>
-              </div>
 
-              {/* Услуга */}
-              <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4">
-                {review.service}
-              </div>
+                {/* Бейдж услуги */}
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-primary/5 text-primary px-3 py-1.5 rounded-full text-xs font-semibold mb-4 border border-primary/20">
+                  <Icon name="Wrench" size={14} />
+                  {review.service}
+                </div>
 
-              {/* Текст отзыва */}
-              <p className="text-gray-700 leading-relaxed mb-4">
-                {review.text}
-              </p>
+                {/* Текст отзыва с кавычками */}
+                <div className="relative">
+                  <Quote className="absolute -left-2 -top-2 h-8 w-8 text-primary/10" />
+                  <p className="text-gray-700 leading-relaxed pl-6 italic">
+                    {review.text}
+                  </p>
+                </div>
 
-              {/* Полезность */}
-              <div className="flex items-center gap-2 text-sm text-gray-500 pt-4 border-t border-gray-100">
-                <ThumbsUp className="h-4 w-4" />
-                <span>Полезно: {review.helpful}</span>
+                {/* Футер с лайками */}
+                <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <div className="flex items-center gap-1 bg-primary/5 px-3 py-1 rounded-full">
+                      <Icon name="ThumbsUp" size={14} className="text-primary" />
+                      <span className="font-semibold text-primary">{review.helpful}</span>
+                    </div>
+                    <span className="text-xs">человек нашли полезным</span>
+                  </div>
+                  <Icon name="CheckCircle2" size={20} className="text-green-500" />
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Ссылка на Авито */}
-        <div className="mt-8 text-center">
+        <div className="text-center mb-12">
           <a 
             href="https://www.avito.ru/brands/i366874101/all?sellerId=84ca6aad385f8193bb13b75db9fe17ae"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg font-semibold underline"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
           >
-            <Icon name="ExternalLink" size={20} />
+            <Icon name="ExternalLink" size={24} />
             Посмотреть все 50 отзывов на Авито
           </a>
         </div>
 
         {/* Призыв к действию */}
-        <div className="mt-12 bg-gradient-to-r from-primary/10 to-primary/5 border-2 border-primary/20 rounded-lg p-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Хотите так же?
+        <div className="bg-gradient-to-br from-primary/10 via-white to-primary/5 border-2 border-primary/20 rounded-3xl p-8 md:p-12 text-center shadow-xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Станьте одним из наших довольных клиентов!
           </h2>
-          <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-700 mb-8 max-w-2xl mx-auto text-lg">
             Восстановим шлицевые соединения вашего автомобиля с гарантией 12 месяцев. 
             Работаем со всей Россией. Цены в 2-3 раза ниже покупки новых деталей.
           </p>
@@ -270,9 +304,9 @@ const Reviews = () => {
                   (window as any).ym(96856709, 'reachGoal', 'phone_click');
                 }
               }}
-              className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
+              className="inline-flex items-center justify-center gap-3 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
             >
-              <Icon name="Phone" size={20} />
+              <Icon name="Phone" size={24} />
               +7 (920) 252-03-52
             </a>
             <a 
@@ -284,14 +318,27 @@ const Reviews = () => {
               }}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
+              className="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
             >
-              <Icon name="MessageCircle" size={20} />
+              <Icon name="MessageCircle" size={24} />
               Написать в WhatsApp
             </a>
           </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </div>
   );
 };
