@@ -64,12 +64,21 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
               <p className="text-[10px] md:text-xs text-zinc-400">
                 © 2024 Мега Шлиц. Все права защищены.
               </p>
-              <Link 
-                to="/privacy" 
-                className="text-[10px] md:text-xs text-zinc-400 hover:text-primary transition-colors underline"
-              >
-                Политика конфиденциальности
-              </Link>
+              <div className="flex items-center gap-2">
+                <Link 
+                  to="/reviews" 
+                  className="text-[10px] md:text-xs text-zinc-400 hover:text-primary transition-colors underline"
+                >
+                  Отзывы
+                </Link>
+                <span className="text-zinc-600">•</span>
+                <Link 
+                  to="/privacy" 
+                  className="text-[10px] md:text-xs text-zinc-400 hover:text-primary transition-colors underline"
+                >
+                  Политика конфиденциальности
+                </Link>
+              </div>
             </div>
             <div className="flex items-center gap-1.5 text-[10px] md:text-xs text-zinc-400">
               <Icon name="Eye" className="h-3.5 w-3.5" />

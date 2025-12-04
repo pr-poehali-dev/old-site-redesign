@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 
@@ -180,6 +181,26 @@ export const AboutAndAdvantagesSection = () => {
                 <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                   Сохраняем оригинальные детали без замены дорогостоящих узлов
                 </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 border-primary/50 bg-gradient-to-br from-primary/10 to-primary/5">
+              <CardHeader className="pb-2 pt-3">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mx-auto mb-2">
+                  <Icon name="Star" className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+                </div>
+                <CardTitle className="text-sm">Довольные клиенты</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-0 pb-3 space-y-2">
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                  8 реальных отзывов от автовладельцев со всей России
+                </p>
+                <Link 
+                  to="/reviews"
+                  className="inline-block text-xs font-semibold text-primary hover:text-primary/80 transition-colors underline"
+                >
+                  Читать отзывы →
+                </Link>
               </CardContent>
             </Card>
           </div>
