@@ -63,7 +63,7 @@ export const ReviewForm = ({ onSuccess }: ReviewFormProps) => {
           size="default"
           className="gap-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900"
         >
-          <Icon name="MessageSquarePlus" className="h-4 w-4" />
+          <Icon name="Star" className="h-4 w-4 fill-yellow-600" />
           Оставить отзыв
         </Button>
       </div>
