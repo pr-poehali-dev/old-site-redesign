@@ -299,6 +299,7 @@ export const ContactsMapSection = () => {
           </div>
         </div>
       </div>
+      </div>
 
       <Dialog open={formOpen} onOpenChange={setFormOpen}>
         <DialogContent className="sm:max-w-md">
