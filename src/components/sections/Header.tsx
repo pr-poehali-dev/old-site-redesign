@@ -76,7 +76,7 @@ export const Header = ({
             size="sm"
             onClick={() => window.open('https://web.telegram.org/a/#777000', '_blank')}
           >
-            <Icon name="MessageCircle" className="mr-1.5 h-3.5 w-3.5" />
+            <img src="https://cdn.poehali.dev/files/85c43a5d-8a97-431b-a973-3b648bc96312.png" alt="Telegram" className="mr-1.5 h-3.5 w-3.5" />
             Telegram
           </Button>
           <Button 

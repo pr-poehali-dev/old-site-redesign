@@ -152,7 +152,7 @@ export const ContactsSection = ({
               className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <Icon name="MessageCircle" className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+                <img src="https://cdn.poehali.dev/files/85c43a5d-8a97-431b-a973-3b648bc96312.png" alt="Telegram" className="h-5 w-5 md:h-6 md:w-6" />
               </div>
               <span className="text-[10px] md:text-xs font-semibold text-center">Telegram</span>
             </a>
