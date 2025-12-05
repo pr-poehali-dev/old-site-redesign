@@ -46,7 +46,7 @@ export const Header = ({
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 md:h-16 items-center justify-between">
         <div className="flex items-center gap-2 md:gap-3 cursor-pointer group">
-          <img src="https://cdn.poehali.dev/files/39a50b29-6e3c-455b-b374-e7e4555f1875.jpg" alt="Мега Шлиц" className="h-10 w-10 md:h-14 md:w-14 object-contain transition-transform duration-300 group-hover:scale-110" />
+          <img src="https://cdn.poehali.dev/files/3b7acb48-4a62-4ce2-83d2-80821e9215a3.jpg" alt="Мега Шлиц" className="h-10 w-10 md:h-12 md:w-12 object-contain transition-transform duration-300 group-hover:scale-110" />
           <span className="text-base md:text-xl font-extrabold text-secondary group-hover:text-primary transition-colors duration-300">Мега Шлиц<sup className="text-[10px] md:text-xs ml-0.5">®</sup></span>
         </div>
         
