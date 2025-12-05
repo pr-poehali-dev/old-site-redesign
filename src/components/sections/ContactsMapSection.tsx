@@ -258,7 +258,7 @@ export const ContactsMapSection = () => {
                   className="w-full bg-green-600 hover:bg-green-700 text-white"
                   onClick={() => window.open('https://web.telegram.org/a/#777000', '_blank')}
                 >
-                  <img src="https://cdn.poehali.dev/files/85c43a5d-8a97-431b-a973-3b648bc96312.png" alt="Telegram" className="mr-2 h-5 w-5" />
+                  <img src="https://cdn.poehali.dev/files/85c43a5d-8a97-431b-a973-3b648bc96312.png" alt="Telegram" className="mr-2 h-5 w-5" style={{filter: 'brightness(0) invert(1)'}} />
                   Telegram
                 </Button>
                 <Button 
