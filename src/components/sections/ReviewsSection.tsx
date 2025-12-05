@@ -190,40 +190,64 @@ export const ReviewsSection = () => {
               </div>
             </div>
 
-            {/* Десктопная сетка */}
-            <div className="hidden md:grid md:grid-cols-3 gap-4">
-              {reviews.map((review, index) => (
-                <div 
-                  key={review.id}
-                  className="group bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-primary/30 hover:shadow-md transition-all"
-                >
-                  {/* Звезды */}
-                  <div className="flex items-center gap-0.5 mb-3">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star 
-                        key={star} 
-                        className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" 
-                      />
-                    ))}
-                  </div>
+            {/* Десктопная карусель */}
+            <div className="hidden md:block relative">
+              <div className="overflow-hidden" ref={emblaRef}>
+                <div className="flex gap-4">
+                  {reviews.map((review) => (
+                    <div 
+                      key={review.id}
+                      className="flex-[0_0_calc(33.333%-11px)] min-w-0 group bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-primary/30 hover:shadow-md transition-all"
+                    >
+                      {/* Звезды */}
+                      <div className="flex items-center gap-0.5 mb-3">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star 
+                            key={star} 
+                            className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" 
+                          />
+                        ))}
+                      </div>
 
-                  {/* Текст отзыва */}
-                  <p className="text-gray-700 text-sm leading-snug mb-3 line-clamp-3">
-                    {review.text}
-                  </p>
+                      {/* Текст отзыва */}
+                      <p className="text-gray-700 text-sm leading-snug mb-3 line-clamp-3">
+                        {review.text}
+                      </p>
 
-                  {/* Автор */}
-                  <div className="flex items-center gap-2 pt-3 border-t border-gray-200">
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">
-                      {review.name.charAt(0)}
+                      {/* Автор */}
+                      <div className="flex items-center gap-2 pt-3 border-t border-gray-200">
+                        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">
+                          {review.name.charAt(0)}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-semibold text-xs text-gray-900 truncate">{review.name}</h3>
+                          <p className="text-[10px] text-gray-500 truncate">{review.car}</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-semibold text-xs text-gray-900 truncate">{review.name}</h3>
-                      <p className="text-[10px] text-gray-500 truncate">{review.car}</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              
+              {/* Кнопки навигации для десктопа */}
+              <div className="flex justify-center gap-2 mt-4">
+                <button
+                  onClick={scrollPrev}
+                  disabled={!canScrollPrev}
+                  className="w-8 h-8 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-200 transition-all"
+                  aria-label="Previous review"
+                >
+                  <Icon name="ChevronLeft" className="h-4 w-4" />
+                </button>
+                <button
+                  onClick={scrollNext}
+                  disabled={!canScrollNext}
+                  className="w-8 h-8 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-gray-200 transition-all"
+                  aria-label="Next review"
+                >
+                  <Icon name="ChevronRight" className="h-4 w-4" />
+                </button>
+              </div>
             </div>
           </div>
 
