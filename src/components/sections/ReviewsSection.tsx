@@ -87,6 +87,20 @@ export const ReviewsSection = () => {
     emblaApi.on('reInit', onSelect);
   }, [emblaApi, onSelect]);
 
+  useEffect(() => {
+    if (!emblaApi) return;
+    
+    const autoplay = setInterval(() => {
+      if (emblaApi.canScrollNext()) {
+        emblaApi.scrollNext();
+      } else {
+        emblaApi.scrollTo(0);
+      }
+    }, 5000);
+
+    return () => clearInterval(autoplay);
+  }, [emblaApi]);
+
   const fetchReviews = useCallback(async () => {
     try {
       const response = await fetch('https://functions.poehali.dev/493bf302-2718-4771-8fa1-8d6463379db3');
