@@ -151,8 +151,8 @@ export const ContactsSection = ({
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <img src="https://cdn.poehali.dev/files/f2871fc3-49b5-405a-9d41-3a4448fdf56b.png" alt="Telegram" className="h-6 w-6 md:h-8 md:w-8" />
+              <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                <img src="https://cdn.poehali.dev/files/f2871fc3-49b5-405a-9d41-3a4448fdf56b.png" alt="Telegram" className="h-10 w-10 md:h-12 md:w-12" />
               </div>
               <span className="text-[10px] md:text-xs font-semibold text-center">Telegram</span>
             </a>
