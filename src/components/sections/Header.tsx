@@ -76,7 +76,9 @@ export const Header = ({
             size="sm"
             onClick={() => window.open('https://web.telegram.org/a/#777000', '_blank')}
           >
-            <img src="https://cdn.poehali.dev/files/f2871fc3-49b5-405a-9d41-3a4448fdf56b.png" alt="Telegram" className="mr-1.5 h-3.5 w-3.5" />
+            <svg className="mr-1.5 h-3.5 w-3.5 fill-white" viewBox="0 0 24 24">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.648 7.77c-.124.557-.453.692-.917.431l-2.536-1.871-1.224 1.178c-.135.135-.248.248-.51.248l.182-2.588 4.709-4.254c.204-.182-.045-.283-.318-.101l-5.821 3.665-2.51-.784c-.546-.171-.557-.546.114-.809l9.812-3.78c.455-.171.852.101.703.809z"/>
+            </svg>
             Telegram
           </Button>
           <Button 
