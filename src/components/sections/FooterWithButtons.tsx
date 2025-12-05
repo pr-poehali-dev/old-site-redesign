@@ -52,9 +52,9 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
                 <Icon name="Mail" className="h-3.5 w-3.5 flex-shrink-0" />
                 Email
               </a>
-              <a href="https://max.ru/u/f9LHodD0cOLWWOaBM-XjtcptXDn8CCp6qu0oslBwvx5DB5I-Vk7ZZC1M3kw" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
+              <a href="https://web.telegram.org/a/#777000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
                 <Icon name="MessageCircle" className="h-3.5 w-3.5 flex-shrink-0" />
-                MAX
+                Telegram
               </a>
             </div>
           </div>
@@ -119,20 +119,20 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
         </a>
 
         <a
-          href="https://max.ru/u/f9LHodD0cOLWWOaBM-XjtcptXDn8CCp6qu0oslBwvx5DB5I-Vk7ZZC1M3kw"
+          href="https://web.telegram.org/a/#777000"
           onClick={() => {
             if (typeof window !== 'undefined' && (window as any).ym) {
-              (window as any).ym(96856709, 'reachGoal', 'whatsapp_click');
+              (window as any).ym(96856709, 'reachGoal', 'telegram_click');
             }
           }}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-600 hover:bg-green-700 text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
-          aria-label="Написать в MAX"
+          aria-label="Написать в Telegram"
         >
           <Icon name="MessageCircle" className="h-4 w-4 md:h-6 md:w-6" />
           <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Написать в MAX
+            Написать в Telegram
           </span>
         </a>
       </div>

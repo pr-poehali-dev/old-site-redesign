@@ -256,10 +256,10 @@ export const ContactsMapSection = () => {
                 <Button 
                   size="lg"
                   className="w-full bg-green-600 hover:bg-green-700 text-white"
-                  onClick={() => window.open('https://max.ru/u/f9LHodD0cOLWWOaBM-XjtcptXDn8CCp6qu0oslBwvx5DB5I-Vk7ZZC1M3kw', '_blank')}
+                  onClick={() => window.open('https://web.telegram.org/a/#777000', '_blank')}
                 >
                   <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
-                  MAX
+                  Telegram
                 </Button>
                 <Button 
                   size="lg"

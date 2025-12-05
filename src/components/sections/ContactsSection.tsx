@@ -141,10 +141,10 @@ export const ContactsSection = ({
             </a>
 
             <a 
-              href="https://max.ru/u/f9LHodD0cOLWWOaBM-XjtcptXDn8CCp6qu0oslBwvx5DB5I-Vk7ZZC1M3kw"
+              href="https://web.telegram.org/a/#777000"
               onClick={() => {
                 if (typeof window !== 'undefined' && (window as any).ym) {
-                  (window as any).ym(96856709, 'reachGoal', 'whatsapp_click');
+                  (window as any).ym(96856709, 'reachGoal', 'telegram_click');
                 }
               }}
               target="_blank"
@@ -154,7 +154,7 @@ export const ContactsSection = ({
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                 <Icon name="MessageCircle" className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               </div>
-              <span className="text-[10px] md:text-xs font-semibold text-center">MAX</span>
+              <span className="text-[10px] md:text-xs font-semibold text-center">Telegram</span>
             </a>
 
             <a 
