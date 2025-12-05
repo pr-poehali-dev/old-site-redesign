@@ -76,7 +76,7 @@ export const Header = ({
             size="sm"
             onClick={() => window.open('https://web.telegram.org/a/#777000', '_blank')}
           >
-            <img src="https://cdn.poehali.dev/files/85c43a5d-8a97-431b-a973-3b648bc96312.png" alt="Telegram" className="mr-1.5 h-3.5 w-3.5" style={{filter: 'brightness(0) invert(1)'}} />
+            <img src="https://cdn.poehali.dev/files/f2871fc3-49b5-405a-9d41-3a4448fdf56b.png" alt="Telegram" className="mr-1.5 h-3.5 w-3.5" />
             Telegram
           </Button>
           <Button 
