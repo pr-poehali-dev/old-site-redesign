@@ -141,7 +141,7 @@ export const ContactsSection = ({
             </a>
 
             <a 
-              href="https://t.me/Megaholic"
+              href="https://t.me/Megahlic"
               onClick={() => {
                 if (typeof window !== 'undefined' && (window as any).ym) {
                   (window as any).ym(96856709, 'reachGoal', 'telegram_click');
