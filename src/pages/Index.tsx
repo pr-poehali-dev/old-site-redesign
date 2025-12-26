@@ -60,7 +60,6 @@ const services: Service[] = [
   { id: 3, name: 'Восстановление вала + дифференциал в оригинальное шлицевое Hyundai/Kia с МКПП', category: 'Раздатка', price: 34990, duration: '1-3 дня', popular: true, description: `Восстанавливаем обе детали — вал и дифференциал в заводские размеры.
 
 Подходит для автомобилей с МКПП:
-• Hyundai Santa Fe Classic
 • Hyundai Tucson (дизель)
 • Kia Sorento (дизель)
 • Kia Sportage (механика)
