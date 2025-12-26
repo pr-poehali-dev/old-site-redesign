@@ -23,7 +23,7 @@ interface Service {
 }
 
 const services: Service[] = [
-  { id: 1, name: 'Восстановление шлицев вала раздатки Hyundai/Kia / Mazda CX-7 / Mazda CX-9 / Volvo / Land Rover / Ford Kuga / Haval F7', category: 'Раздатка', price: 9990, duration: '1-3 дня', popular: true, description: 'Устраняем износ шлицев на валу раздатки. Деталь восстанавливается до заводских размеров.
+  { id: 1, name: 'Восстановление шлицев вала раздатки Hyundai/Kia / Mazda CX-7 / Mazda CX-9 / Volvo / Land Rover / Ford Kuga / Haval F7', category: 'Раздатка', price: 9990, duration: '1-3 дня', popular: true, description: `Устраняем износ шлицев на валу раздатки. Деталь восстанавливается до заводских размеров.
 
 Подходит для:
 • Hyundai Santa Fe (2006-2018)
@@ -36,9 +36,17 @@ const services: Service[] = [
 • Ford Kuga
 • Haval F7, H6
 
-Экономия до 90% от стоимости новой детали', image: 'https://cdn.poehali.dev/files/f668d529-788d-49c9-8c2d-c97a6c3ae8a1.jpg' },
-  { id: 12, name: 'Ремонт корзины фрикционов муфты Hyundai/Kia 47800-3B520', category: 'Раздатка', price: 4990, duration: '1-2 дня', popular: true, description: 'Ремонтируем корзину фрикционов муфты полного привода роботизированной лазерной сваркой. Высокая точность и прочность шва. Деталь № 47800-3B520.\n\nПодходит для:\n• Hyundai Santa Fe (2006-2012, CM)\n• Hyundai ix55 (Veracruz)\n• Kia Sorento (2009-2015, XM)\n• Kia Mohave (Borrego)\n\nОригинальная деталь стоит в 3 раза дороже. Мы восстанавливаем за 4990₽ с гарантией 12 месяцев', image: 'https://cdn.poehali.dev/files/b3c88cc7-9023-4aeb-b40d-6c50c585b3bd.jpg' },
-  { id: 2, name: 'Восстановление вала + дифференциал в усиленное шлицевое Hyundai/Kia с АКПП', category: 'Раздатка', price: 24990, duration: '1-3 дня', popular: true, description: 'Восстанавливаем обе детали — вал и дифференциал. Делаем усиленное соединение — прослужит дольше оригинала.
+Экономия до 90% от стоимости новой детали`, image: 'https://cdn.poehali.dev/files/f668d529-788d-49c9-8c2d-c97a6c3ae8a1.jpg' },
+  { id: 12, name: 'Ремонт корзины фрикционов муфты Hyundai/Kia 47800-3B520', category: 'Раздатка', price: 4990, duration: '1-2 дня', popular: true, description: `Ремонтируем корзину фрикционов муфты полного привода роботизированной лазерной сваркой. Высокая точность и прочность шва. Деталь № 47800-3B520.
+
+Подходит для:
+• Hyundai Santa Fe (2006-2012, CM)
+• Hyundai ix55 (Veracruz)
+• Kia Sorento (2009-2015, XM)
+• Kia Mohave (Borrego)
+
+Оригинальная деталь стоит в 3 раза дороже. Мы восстанавливаем за 4990₽ с гарантией 12 месяцев`, image: 'https://cdn.poehali.dev/files/b3c88cc7-9023-4aeb-b40d-6c50c585b3bd.jpg' },
+  { id: 2, name: 'Восстановление вала + дифференциал в усиленное шлицевое Hyundai/Kia с АКПП', category: 'Раздатка', price: 24990, duration: '1-3 дня', popular: true, description: `Восстанавливаем обе детали — вал и дифференциал. Делаем усиленное соединение — прослужит дольше оригинала.
 
 Подходит для автомобилей с АКПП:
 • Hyundai Santa Fe (все поколения)
@@ -46,8 +54,8 @@ const services: Service[] = [
 • Kia Sorento (все поколения)
 • Kia Sportage, Mohave
 
-Усиленное шлицевое соединение увеличивает срок службы на 40%', image: 'https://cdn.poehali.dev/files/d28fc2e5-f77d-4575-9e54-ee54ff497afb.jpg' },
-  { id: 3, name: 'Восстановление вала + дифференциал в оригинальное шлицевое Hyundai/Kia с МКПП', category: 'Раздатка', price: 34990, duration: '1-3 дня', popular: true, description: 'Восстанавливаем обе детали — вал и дифференциал в заводские размеры.
+Усиленное шлицевое соединение увеличивает срок службы на 40%`, image: 'https://cdn.poehali.dev/files/d28fc2e5-f77d-4575-9e54-ee54ff497afb.jpg' },
+  { id: 3, name: 'Восстановление вала + дифференциал в оригинальное шлицевое Hyundai/Kia с МКПП', category: 'Раздатка', price: 34990, duration: '1-3 дня', popular: true, description: `Восстанавливаем обе детали — вал и дифференциал в заводские размеры.
 
 Подходит для автомобилей с МКПП:
 • Hyundai Santa Fe Classic
@@ -55,24 +63,24 @@ const services: Service[] = [
 • Kia Sorento (дизель)
 • Kia Sportage (механика)
 
-Точное соблюдение оригинальных размеров. Гарантия 12 месяцев', image: 'https://cdn.poehali.dev/files/ec06826c-c9b9-4e9c-ab6c-918a959f73f1.jpg' },
-  { id: 6, name: 'Вал раздатки Tiguan под оригинальный корпус дифференциала', category: 'Раздатка', price: 19990, duration: '1-3 дня', popular: true, description: 'Восстанавливаем вал раздатки для Volkswagen Tiguan. Встанет в ваш родной корпус дифференциала без доработок.
+Точное соблюдение оригинальных размеров. Гарантия 12 месяцев`, image: 'https://cdn.poehali.dev/files/ec06826c-c9b9-4e9c-ab6c-918a959f73f1.jpg' },
+  { id: 6, name: 'Вал раздатки Tiguan под оригинальный корпус дифференциала', category: 'Раздатка', price: 19990, duration: '1-3 дня', popular: true, description: `Восстанавливаем вал раздатки для Volkswagen Tiguan. Встанет в ваш родной корпус дифференциала без доработок.
 
 Подходит для:
 • VW Tiguan (2007-2016, 5N)
 • VW Tiguan (2016-2024, 5NA)
 • Раздаточная коробка Haldex Gen 4, Gen 5
 
-Восстановление до заводских размеров. Установка без переделок', image: 'https://cdn.poehali.dev/files/d850d4f8-78b4-4b63-b223-ab3fcd4b27a2.jpg' },
+Восстановление до заводских размеров. Установка без переделок`, image: 'https://cdn.poehali.dev/files/d850d4f8-78b4-4b63-b223-ab3fcd4b27a2.jpg' },
   { id: 7, name: 'Дифференциал Tiguan под оригинальный вал раздатки', category: 'Раздатка', price: 19990, duration: '1-3 дня', popular: true, description: 'Восстанавливаем дифференциал для Volkswagen Tiguan. Подойдёт к вашему родному валу раздатки без замены других деталей', image: 'https://cdn.poehali.dev/files/b3566624-d327-4f7d-9698-b55c4cc7560f.jpg' },
   { id: 8, name: 'Комплект вал + чашка Tiguan под оригинальный размер', category: 'Раздатка', price: 34990, duration: '1-3 дня', popular: true, description: 'Комплект из двух деталей — вал раздатки и чашка дифференциала для Tiguan. Восстанавливаем обе детали в заводские размеры', image: 'https://cdn.poehali.dev/files/7c988958-4822-4b53-8f44-c03391e2be03.jpeg' },
-  { id: 11, name: 'Восстановление вала + дифференциал шлицевое Mazda CX-7', category: 'Раздатка', price: 34990, duration: '1-3 дня', popular: true, description: 'Восстанавливаем обе детали — вал и дифференциал для Mazda CX-7. Возвращаем заводские размеры.
+  { id: 11, name: 'Восстановление вала + дифференциал шлицевое Mazda CX-7', category: 'Раздатка', price: 34990, duration: '1-3 дня', popular: true, description: `Восстанавливаем обе детали — вал и дифференциал для Mazda CX-7. Возвращаем заводские размеры.
 
 Подходит для:
 • Mazda CX-7 (2006-2012)
 • Mazda CX-9 (2007-2015)
 
-Термообработка для увеличения прочности. Срок службы как у новой детали', image: 'https://cdn.poehali.dev/files/58a834b2-a324-4430-878a-40a9de358bd1.jpg' },
+Термообработка для увеличения прочности. Срок службы как у новой детали`, image: 'https://cdn.poehali.dev/files/58a834b2-a324-4430-878a-40a9de358bd1.jpg' },
   { id: 4, name: 'Раздатка в сборе на обмен под оригинальный корпус дифференциала Hyundai/Kia', category: 'Раздатка', price: 19990, duration: 'В наличии', popular: true, description: 'Готовая раздатка — сразу на обмен. Вы отдаёте свою старую, получаете восстановленную. Встанет в ваш корпус дифференциала. Гарантия 12 месяцев без ограничения пробега', image: 'https://cdn.poehali.dev/files/48d37a61-c9c0-4999-983a-ee9cc1088257.jpg' },
   { id: 5, name: 'Раздатка в сборе на обмен + корпус дифференциала Hyundai/Kia', category: 'Раздатка', price: 29990, duration: 'В наличии', popular: true, description: 'Полный комплект — раздатка и корпус дифференциала. Готово к установке. Меняете свой старый узел на восстановленный. Гарантия 12 месяцев без ограничения пробега', image: 'https://cdn.poehali.dev/files/7d01f14d-b68f-4ce2-9a08-95b5a33d5bec.jpg' },
   { id: 9, name: 'Раздатка в сборе Tiguan на обмен с АКПП', category: 'Раздатка', price: 34990, duration: 'В наличии', popular: true, description: 'Готовая раздатка для Tiguan с автоматом — сразу на обмен. Встанет в ваш корпус дифференциала. Гарантия 12 месяцев без ограничения пробега', image: 'https://cdn.poehali.dev/files/91489e6b-a3d8-4934-8dec-a8899a6b6b63.jpg' },
