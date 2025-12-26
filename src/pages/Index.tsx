@@ -42,7 +42,9 @@ const services: Service[] = [
 Подходит для:
 • Hyundai Santa Fe (2006-2012, CM)
 • Hyundai ix55 (Veracruz)
+• Hyundai ix35
 • Kia Sorento (2009-2015, XM)
+• Kia Sportage
 • Kia Mohave (Borrego)
 
 Оригинальная деталь стоит в 3 раза дороже. Мы восстанавливаем за 4990₽ с гарантией 12 месяцев`, image: 'https://cdn.poehali.dev/files/b3c88cc7-9023-4aeb-b40d-6c50c585b3bd.jpg' },
