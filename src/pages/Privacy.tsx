@@ -1,7 +1,16 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Privacy = () => {
+  useEffect(() => {
+    document.title = "Политика конфиденциальности — Мега Шлиц";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Политика конфиденциальности и защиты персональных данных клиентов компании Мега Шлиц. Обработка данных в соответствии с законодательством РФ.');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
@@ -19,7 +28,7 @@ const Privacy = () => {
         
         <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
           <p className="text-sm text-gray-500">
-            Последнее обновление: 04 декабря 2025 г.
+            Последнее обновление: 31 декабря 2025 г.
           </p>
 
           <section>

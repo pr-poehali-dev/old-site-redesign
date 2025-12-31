@@ -1,6 +1,7 @@
 // Компактная версия отзывов v2.0
 import { ArrowLeft, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 interface Review {
   id: number;
@@ -111,6 +112,14 @@ const reviews: Review[] = [
 ];
 
 const Reviews = () => {
+  useEffect(() => {
+    document.title = "Отзывы клиентов — Мега Шлиц | Восстановление раздатки Нижний Новгород";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Отзывы клиентов о восстановлении шлицевых соединений раздатки и деталей полного привода. 50+ положительных отзывов на Авито. Рейтинг 5.0 ⭐');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <div className="container px-4 py-8">
@@ -135,7 +144,7 @@ const Reviews = () => {
               <span>•</span>
               <span>50 отзывов на Авито</span>
             </div>
-            <p className="text-sm text-primary font-medium">✓ Компактная версия — обновлено 04.12.2024</p>
+            <p className="text-sm text-primary font-medium">✓ Компактная версия — обновлено 31.12.2025</p>
           </div>
 
           {/* Отзывы в одну колонку */}

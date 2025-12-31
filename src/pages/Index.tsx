@@ -334,6 +334,60 @@ const Index = () => {
 
       <ContactsMapSection />
 
+      {/* SEO текстовый блок */}
+      <section className="py-12 bg-muted/30">
+        <div className="container max-w-4xl">
+          <div className="prose prose-sm md:prose-base max-w-none">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Восстановление шлицевых соединений в Нижнем Новгороде</h2>
+            
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                <strong className="text-foreground">Мега Шлиц</strong> — производственная компания, специализирующаяся на восстановлении шлицевых соединений деталей полного привода. 
+                Мы используем запатентованную технологию (патент РФ № 2829377), которая позволяет восстанавливать изношенные детали до заводских параметров с гарантией качества на 12 месяцев.
+              </p>
+              
+              <p>
+                Наша компания работает с автомобилями всех популярных марок с полным приводом: <strong className="text-foreground">Hyundai Santa Fe</strong>, Hyundai Tucson, Hyundai ix35, Hyundai Creta, 
+                <strong className="text-foreground"> Kia Sorento</strong>, Kia Sportage, Kia Mohave, <strong className="text-foreground">Volkswagen Tiguan</strong>, Mazda CX-7, Mazda CX-9, 
+                Volvo XC60, Volvo XC90, Land Rover Freelander, Ford Kuga, Haval F7, Haval H6 и многих других моделей.
+              </p>
+              
+              <h3 className="text-xl md:text-2xl font-bold mt-8 mb-4 text-foreground">Почему выбирают нас?</h3>
+              
+              <p>
+                <strong className="text-foreground">Экономия до 90%</strong> — восстановление шлицевых соединений обходится значительно дешевле покупки новой детали. 
+                Например, новая раздатка 47800-3B520 для Hyundai Santa Fe стоит более 200 000 рублей, а мы восстанавливаем её под ключ за 64 990 рублей с полной гарантией.
+              </p>
+              
+              <p>
+                <strong className="text-foreground">Высокое качество</strong> — мы используем современное оборудование для восстановления шлицев, включая роботизированную лазерную сварку. 
+                В работе применяем специальные сплавы с добавлением титана и обязательную термообработку, что увеличивает срок службы восстановленных деталей.
+              </p>
+              
+              <p>
+                <strong className="text-foreground">Работаем со всей Россией</strong> — принимаем детали на восстановление от частных лиц, автосервисов и дилерских центров из любого региона. 
+                Отправить деталь можно через транспортные компании (СДЭК, ПЭК, Деловые Линии). После восстановления отправляем обратно в ваш город.
+              </p>
+              
+              <h3 className="text-xl md:text-2xl font-bold mt-8 mb-4 text-foreground">Наши услуги</h3>
+              
+              <p>
+                • <strong className="text-foreground">Восстановление вала раздатки</strong> — устраняем износ шлицев, восстанавливаем геометрию до заводских размеров (от 9 990 ₽)<br/>
+                • <strong className="text-foreground">Ремонт дифференциала</strong> — восстановление внутренних шлицев корпуса дифференциала (от 19 990 ₽)<br/>
+                • <strong className="text-foreground">Ремонт корзины фрикционов</strong> — лазерная сварка трещин муфты 47800-3B520 (4 990 ₽)<br/>
+                • <strong className="text-foreground">Ремонт раздатки под ключ</strong> — полный цикл работ от снятия до установки (от 64 990 ₽)<br/>
+                • <strong className="text-foreground">Восстановление вала + дифференциал</strong> — комплексное восстановление обеих деталей (34 990 ₽)
+              </p>
+              
+              <p className="mt-6 text-center">
+                <strong className="text-foreground text-lg">Звоните прямо сейчас: </strong>
+                <a href="tel:+79202520352" className="text-primary hover:underline font-bold text-lg">+7 (920) 252-03-52</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <FooterWithButtons 
         viewCount={viewCount} 
         showScrollTop={showScrollTop} 

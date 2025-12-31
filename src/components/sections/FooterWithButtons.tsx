@@ -64,7 +64,7 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
           <div className="border-t border-zinc-800 pt-2 md:pt-3 flex flex-col md:flex-row justify-between items-center gap-1.5 md:gap-2">
             <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2">
               <p className="text-[10px] md:text-xs text-zinc-400">
-                © 2024 Мега Шлиц. Все права защищены.
+                © 2025 Мега Шлиц. Все права защищены.
               </p>
               <div className="flex items-center gap-2">
                 <Link 
