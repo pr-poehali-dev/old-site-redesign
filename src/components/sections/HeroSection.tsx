@@ -59,6 +59,14 @@ export const HeroSection = ({ scrollToSection, onConsultClick, onFullFormClick }
           <p className="text-sm md:text-lg text-white/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 px-2">
             Производственная компания по восстановлению деталей полного привода по всей стране
           </p>
+          <div className="bg-green-600/20 backdrop-blur-sm border border-green-500/30 rounded-xl p-4 md:p-6 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-600">
+            <p className="text-white text-base md:text-xl font-semibold mb-2">
+              💰 Экономия до 90% от стоимости новой детали!
+            </p>
+            <p className="text-white/90 text-sm md:text-base">
+              Например, новая раздатка <span className="font-bold text-green-300">0AU409053T</span> для Volkswagen Tiguan I стоит более <span className="line-through text-red-300">350 000 ₽</span>, а мы восстанавливаем её под ключ за <span className="font-bold text-green-300 text-lg md:text-2xl">34 990 ₽</span> с полной гарантией
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700 px-4">
             <Button size="default" className="w-full sm:w-auto md:h-11 md:px-8 bg-green-600 hover:bg-green-700 text-white transition-all duration-300 hover:scale-110 hover:shadow-xl" onClick={onConsultClick}>
               <Icon name="Headphones" className="mr-2 h-4 w-4 md:h-5 md:w-5" />
