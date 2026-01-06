@@ -372,11 +372,11 @@ const Index = () => {
               <h3 className="text-xl md:text-2xl font-bold mt-8 mb-4 text-foreground">Наши услуги</h3>
               
               <p>
-                • <strong className="text-foreground">Восстановление вала раздатки</strong> — устраняем износ шлицев, восстанавливаем геометрию до заводских размеров (от 9 990 ₽)<br/>
                 • <strong className="text-foreground">Ремонт корзины фрикционов</strong> — лазерная сварка корзины муфты 47800-3B520 (4 990 ₽)<br/>
                 • <strong className="text-foreground">Ремонт дифференциала</strong> — восстановление внутренних шлицев корпуса дифференциала (от 19 990 ₽)<br/>
                 • <strong className="text-foreground">Ремонт раздатки под ключ</strong> — полный цикл работ от изношенной до новой (от 19 990 ₽)<br/>
-                • <strong className="text-foreground">Восстановление вала + дифференциал</strong> — комплексное восстановление обеих деталей (от 24 990 ₽)
+                • <strong className="text-foreground">Восстановление вала + дифференциал</strong> — комплексное восстановление обеих деталей (от 24 990 ₽)<br/>
+                • <strong className="text-foreground">Восстановление вала раздатки</strong> — устраняем износ шлицев, восстанавливаем геометрию до заводских размеров (от 9 990 ₽)
               </p>
               
               <p className="mt-6 text-center">
