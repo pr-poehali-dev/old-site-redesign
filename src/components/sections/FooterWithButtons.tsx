@@ -52,11 +52,9 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
                 <Icon name="Mail" className="h-3.5 w-3.5 flex-shrink-0" />
                 Email
               </a>
-              <a href="https://t.me/Megahlic" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
-                <svg className="h-3.5 w-3.5 flex-shrink-0 fill-white" viewBox="0 0 24 24">
-                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.648 7.77c-.124.557-.453.692-.917.431l-2.536-1.871-1.224 1.178c-.135.135-.248.248-.51.248l.182-2.588 4.709-4.254c.204-.182-.045-.283-.318-.101l-5.821 3.665-2.51-.784c-.546-.171-.557-.546.114-.809l9.812-3.78c.455-.171.852.101.703.809z"/>
-                </svg>
-                Telegram
+              <a href="https://max.ru/u/f9LHodD0cOLK7jFd5IH7RbsbWZ3pxXLAyN_yA1iSUVFyIaGSN23SjOZsaHQ" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
+                <span className="font-black text-[10px] leading-none text-[#FF5C00]">MAX</span>
+                MAX
               </a>
             </div>
           </div>
@@ -121,22 +119,20 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
         </a>
 
         <a
-          href="https://t.me/Megahlic"
+          href="https://max.ru/u/f9LHodD0cOLK7jFd5IH7RbsbWZ3pxXLAyN_yA1iSUVFyIaGSN23SjOZsaHQ"
           onClick={() => {
             if (typeof window !== 'undefined' && (window as any).ym) {
-              (window as any).ym(96856709, 'reachGoal', 'telegram_click');
+              (window as any).ym(96856709, 'reachGoal', 'max_click');
             }
           }}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-600 hover:bg-green-700 text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
-          aria-label="Написать в Telegram"
+          className="bg-[#FF5C00] hover:bg-[#e05200] text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group flex items-center justify-center"
+          aria-label="Написать в MAX"
         >
-          <svg className="h-4 w-4 md:h-6 md:w-6 fill-white" viewBox="0 0 24 24">
-            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.648 7.77c-.124.557-.453.692-.917.431l-2.536-1.871-1.224 1.178c-.135.135-.248.248-.51.248l.182-2.588 4.709-4.254c.204-.182-.045-.283-.318-.101l-5.821 3.665-2.51-.784c-.546-.171-.557-.546.114-.809l9.812-3.78c.455-.171.852.101.703.809z"/>
-          </svg>
-          <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Написать в Telegram
+          <span className="font-black text-xs md:text-sm leading-none">MAX</span>
+          <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-[#FF5C00] text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            Написать в MAX
           </span>
         </a>
       </div>

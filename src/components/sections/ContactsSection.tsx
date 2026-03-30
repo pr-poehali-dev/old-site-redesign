@@ -141,22 +141,20 @@ export const ContactsSection = ({
             </a>
 
             <a 
-              href="https://t.me/Megahlic"
+              href="https://max.ru/u/f9LHodD0cOLK7jFd5IH7RbsbWZ3pxXLAyN_yA1iSUVFyIaGSN23SjOZsaHQ"
               onClick={() => {
                 if (typeof window !== 'undefined' && (window as any).ym) {
-                  (window as any).ym(96856709, 'reachGoal', 'telegram_click');
+                  (window as any).ym(96856709, 'reachGoal', 'max_click');
                 }
               }}
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#0088cc] flex items-center justify-center">
-                <svg className="h-5 w-5 md:h-6 md:w-6 fill-white" viewBox="0 0 24 24">
-                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.648 7.77c-.124.557-.453.692-.917.431l-2.536-1.871-1.224 1.178c-.135.135-.248.248-.51.248l.182-2.588 4.709-4.254c.204-.182-.045-.283-.318-.101l-5.821 3.665-2.51-.784c-.546-.171-.557-.546.114-.809l9.812-3.78c.455-.171.852.101.703.809z"/>
-                </svg>
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#FF5C00] flex items-center justify-center">
+                <span className="text-white font-black text-sm md:text-base leading-none">MAX</span>
               </div>
-              <span className="text-[10px] md:text-xs font-semibold text-center">Telegram</span>
+              <span className="text-[10px] md:text-xs font-semibold text-center">MAX</span>
             </a>
 
             <a 
