@@ -151,7 +151,7 @@ export const ContactsSection = ({
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 rounded-lg border-2 bg-gradient-to-br from-card to-card/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#FF5C00] flex items-center justify-center">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-green-600 flex items-center justify-center">
                 <span className="text-white font-black text-sm md:text-base leading-none">MAX</span>
               </div>
               <span className="text-[10px] md:text-xs font-semibold text-center">MAX</span>

@@ -72,7 +72,7 @@ export const Header = ({
             Контакты
           </Button>
           <Button 
-            className="hidden lg:flex text-xs bg-[#FF5C00] hover:bg-[#e05200] text-white"
+            className="hidden lg:flex text-xs bg-green-600 hover:bg-green-700 text-white"
             size="sm"
             onClick={() => window.open('https://max.ru/u/f9LHodD0cOLK7jFd5IH7RbsbWZ3pxXLAyN_yA1iSUVFyIaGSN23SjOZsaHQ', '_blank')}
           >

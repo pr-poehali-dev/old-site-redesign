@@ -53,7 +53,7 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
                 Email
               </a>
               <a href="https://max.ru/u/f9LHodD0cOLK7jFd5IH7RbsbWZ3pxXLAyN_yA1iSUVFyIaGSN23SjOZsaHQ" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
-                <span className="font-black text-[10px] leading-none text-[#FF5C00]">MAX</span>
+                <span className="font-black text-[10px] leading-none text-green-600">MAX</span>
                 MAX
               </a>
             </div>
@@ -127,11 +127,11 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
           }}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#FF5C00] hover:bg-[#e05200] text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group flex items-center justify-center"
+          className="bg-green-600 hover:bg-green-700 text-white p-2.5 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group flex items-center justify-center"
           aria-label="Написать в MAX"
         >
           <span className="font-black text-xs md:text-sm leading-none">MAX</span>
-          <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-[#FF5C00] text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
             Написать в MAX
           </span>
         </a>

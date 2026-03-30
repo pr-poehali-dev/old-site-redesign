@@ -255,7 +255,7 @@ export const ContactsMapSection = () => {
                 </Button>
                 <Button 
                   size="lg"
-                  className="w-full bg-[#FF5C00] hover:bg-[#e05200] text-white"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white"
                   onClick={() => window.open('https://max.ru/u/f9LHodD0cOLK7jFd5IH7RbsbWZ3pxXLAyN_yA1iSUVFyIaGSN23SjOZsaHQ', '_blank')}
                 >
                   <span className="mr-2 font-black text-sm leading-none">MAX</span>
