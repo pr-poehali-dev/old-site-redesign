@@ -53,7 +53,6 @@ export const FooterWithButtons = ({ viewCount, showScrollTop, onConsultClick }: 
                 Email
               </a>
               <a href="https://max.ru/u/f9LHodD0cOLK7jFd5IH7RbsbWZ3pxXLAyN_yA1iSUVFyIaGSN23SjOZsaHQ" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[10px] md:text-xs hover:text-primary transition-colors">
-                <span className="font-black text-[10px] leading-none text-green-600">MAX</span>
                 MAX
               </a>
             </div>

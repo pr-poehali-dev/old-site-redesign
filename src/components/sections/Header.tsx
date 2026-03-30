@@ -76,7 +76,6 @@ export const Header = ({
             size="sm"
             onClick={() => window.open('https://max.ru/u/f9LHodD0cOLK7jFd5IH7RbsbWZ3pxXLAyN_yA1iSUVFyIaGSN23SjOZsaHQ', '_blank')}
           >
-            <span className="mr-1.5 font-black text-xs leading-none">MAX</span>
             MAX
           </Button>
           <Button 
