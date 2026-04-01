@@ -37,10 +37,23 @@ export const RutubeSection = () => {
               </div>
             </Card>
 
-            <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg md:col-span-2 lg:col-span-1">
+            <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg">
               <div className="relative" style={{ paddingBottom: '56.25%' }}>
                 <iframe
                   src="https://rutube.ru/play/embed/cc980b113b77037430a3b1067666c8e1/"
+                  frameBorder="0"
+                  allow="clipboard-write; autoplay"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 shadow-lg md:col-span-2 lg:col-span-1">
+              <div className="relative" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://rutube.ru/play/embed/70abbfbea2c82c3f54b19c2ac8ff85b6/"
                   frameBorder="0"
                   allow="clipboard-write; autoplay"
                   allowFullScreen
