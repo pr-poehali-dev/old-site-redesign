@@ -70,12 +70,12 @@ export const ServicesSection = ({
                 onClick={() => setSelectedService(service)}
               >
                 {service.image && (
-                  <div className="relative h-64 overflow-hidden bg-white flex items-center justify-center p-2 shrink-0">
+                  <div className="relative h-56 overflow-hidden bg-white flex items-center justify-center p-3 shrink-0">
                     <img 
                       src={service.image} 
                       alt={service.name}
                       loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     />
                     {service.popular && (
                       <Badge variant="default" className="absolute top-2 right-2 bg-primary text-[10px] px-1.5 py-0.5">
