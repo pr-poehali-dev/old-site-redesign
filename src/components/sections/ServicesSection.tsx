@@ -65,17 +65,17 @@ export const ServicesSection = ({
             {filteredServices.map((service, index) => (
               <Card 
                 key={service.id} 
-                className="hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border hover:border-primary/50 animate-in fade-in slide-in-from-bottom-4" 
+                className="hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border hover:border-primary/50 animate-in fade-in slide-in-from-bottom-4 flex flex-col" 
                 style={{ animationDelay: `${index * 100}ms`, animationDuration: '500ms' }}
                 onClick={() => setSelectedService(service)}
               >
                 {service.image && (
-                  <div className="relative h-48 md:h-56 overflow-hidden bg-white flex items-center justify-center p-1.5">
+                  <div className="relative h-52 overflow-hidden bg-white flex items-center justify-center p-2 shrink-0">
                     <img 
                       src={service.image} 
                       alt={service.name}
                       loading="lazy"
-                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     {service.popular && (
                       <Badge variant="default" className="absolute top-2 right-2 bg-primary text-[10px] px-1.5 py-0.5">
@@ -86,7 +86,7 @@ export const ServicesSection = ({
                   </div>
                 )}
                 <CardHeader className="pb-2 pt-2.5 px-3">
-                  <CardTitle className="text-xs md:text-sm leading-tight line-clamp-3 min-h-[2.5rem] md:min-h-[3rem]">
+                  <CardTitle className="text-xs md:text-sm leading-tight line-clamp-3 min-h-[3rem] md:min-h-[3.5rem]">
                     {service.name}
                   </CardTitle>
                 </CardHeader>
