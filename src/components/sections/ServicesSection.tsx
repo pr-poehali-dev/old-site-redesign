@@ -70,7 +70,7 @@ export const ServicesSection = ({
                 onClick={() => setSelectedService(service)}
               >
                 {service.image && (
-                  <div className="relative h-52 overflow-hidden bg-white flex items-center justify-center p-2 shrink-0">
+                  <div className="relative h-64 overflow-hidden bg-white flex items-center justify-center p-2 shrink-0">
                     <img 
                       src={service.image} 
                       alt={service.name}
@@ -86,7 +86,7 @@ export const ServicesSection = ({
                   </div>
                 )}
                 <CardHeader className="pb-2 pt-2.5 px-3">
-                  <CardTitle className="text-xs md:text-sm leading-tight line-clamp-3 min-h-[3rem] md:min-h-[3.5rem]">
+                  <CardTitle className="text-[11px] md:text-xs leading-tight line-clamp-3 min-h-[2.5rem] md:min-h-[3rem]">
                     {service.name}
                   </CardTitle>
                 </CardHeader>
