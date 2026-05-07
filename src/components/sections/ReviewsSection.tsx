@@ -174,7 +174,7 @@ export const ReviewsSection = () => {
                           </div>
                           <div className="flex-1 min-w-0">
                             <h3 className="font-semibold text-xs text-gray-900 truncate">{review.name}</h3>
-                            <p className="text-[10px] text-gray-500 truncate">{review.car}</p>
+                            <p className="text-xs text-gray-500 truncate">{review.car}</p>
                           </div>
                         </div>
                       </div>

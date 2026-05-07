@@ -106,7 +106,7 @@ export const ServicesSection = ({
                   </div>
                   <Button 
                     size="sm"
-                    className="w-full h-8 text-xs" 
+                    className="w-full h-11 text-xs" 
                     variant="outline"
                     onClick={(e) => {
                       e.stopPropagation();

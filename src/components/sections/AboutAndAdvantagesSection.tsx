@@ -63,28 +63,28 @@ export const AboutAndAdvantagesSection = () => {
                                 <Icon name="Cog" className="h-4 w-4 text-primary" />
                               </div>
                               <h5 className="font-bold text-xs text-center">ЧПУ обработка</h5>
-                              <p className="text-[10px] text-muted-foreground text-center">Высокая точность</p>
+                              <p className="text-xs text-muted-foreground text-center">Высокая точность</p>
                             </div>
                             <div className="flex flex-col items-center gap-1 p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
                               <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
                                 <Icon name="Scale" className="h-4 w-4 text-primary" />
                               </div>
                               <h5 className="font-bold text-xs text-center">Балансировка</h5>
-                              <p className="text-[10px] text-muted-foreground text-center">Проверка на стенде</p>
+                              <p className="text-xs text-muted-foreground text-center">Проверка на стенде</p>
                             </div>
                             <div className="flex flex-col items-center gap-1 p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
                               <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
                                 <Icon name="Flame" className="h-4 w-4 text-primary" />
                               </div>
                               <h5 className="font-bold text-xs text-center">Термообработка</h5>
-                              <p className="text-[10px] text-muted-foreground text-center">Упрочнение металла</p>
+                              <p className="text-xs text-muted-foreground text-center">Упрочнение металла</p>
                             </div>
                             <div className="flex flex-col items-center gap-1 p-2 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border border-primary/20">
                               <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
                                 <Icon name="Sparkles" className="h-4 w-4 text-primary" />
                               </div>
                               <h5 className="font-bold text-xs text-center">Финишная мойка</h5>
-                              <p className="text-[10px] text-muted-foreground text-center">Как новая деталь</p>
+                              <p className="text-xs text-muted-foreground text-center">Как новая деталь</p>
                             </div>
                           </div>
                         </div>

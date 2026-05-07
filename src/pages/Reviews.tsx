@@ -116,7 +116,7 @@ const Reviews = () => {
     document.title = "Отзывы клиентов — Мега Шлиц | Восстановление раздатки Нижний Новгород";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Отзывы клиентов о восстановлении шлицевых соединений раздатки и деталей полного привода. 50+ положительных отзывов на Авито. Рейтинг 5.0 ⭐');
+      metaDescription.setAttribute('content', 'Отзывы клиентов о восстановлении шлицевых соединений раздатки и деталей полного привода. Более 50 положительных отзывов на Авито. Рейтинг 5.0.');
     }
   }, []);
 
